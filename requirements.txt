@@ -1,0 +1,10 @@
+numpy
+torch
+networkx
+scikit-learn
+transformers
+huggingface-hub
+bitsandbytes
+wandb
+datasets
+loguru

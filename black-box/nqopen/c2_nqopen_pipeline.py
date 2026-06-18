@@ -1,74 +1,26 @@
 """
 Repo-faithful WHITE-BOX KLE pipeline on TriviaQA.
+C2 KOŞULU: Zero-shot CoT prompting + HOLISTIC KLE (tüm zincir metni tek birim).
+HPC (Slurm) Uyumlu Versiyon
 
-Source:
-  Nikitin et al., "Kernel Language Entropy", NeurIPS 2024.
-  Repo: github.com/AlexanderVNikitin/kernel-language-entropy
-
-This script imports the repo's KLE package directly
-(`kle.core.vn_entropy`, `kle.kernels.heat_kernel`) and replicates
-the repo's helper functions verbatim where they had wandb / pickle
-caching dependencies that we cannot keep in a Colab notebook.
-
-What "white-box" means here, per the repo's own code:
-  - Token logprobs from the generator are accessible.
-  - The WB measure of interest is `full_klu_<heat>_alpha_<a>`,
-    constructed in `compute_uncertainty_measures.full_sem_unc_plus_klu`:
-        K_normalized = normalize_kernel(K_HEAT) / n
-        K_FULL       = alpha * K_normalized + (1 - alpha) * K_SE
-        score        = vn_entropy(K_FULL, normalize=False, scale=False)
-    where K_SE is the block-diagonal semantic-cluster kernel built
-    from per-cluster log-likelihoods (Thm. B.1).
-
-Pipeline per question (matches the repo's main loop in
-compute_uncertainty_measures.py lines 395–458):
-  1. Sample n=10 answers, T=1.0, top_p=0.9, top_k=50, max 64 tokens.
-  2. Per-sample length-normalized log-likelihood:
-         log_lik_agg_i = mean( per-token logprobs )         (line 413)
-  3. Semantic clustering with non-strict equivalence:
-         equivalent iff (0 not in [impl_1, impl_2]) and
-                         ([1, 1] != [impl_1, impl_2])       (semantic_entropy.py:204)
-  4. Per-cluster log-likelihood via logsumexp_by_id(... 'sum_normalized')
-                                                            (line 419)
-  5. Weighted entailment graph (manual strategy):
-         w(i,j) = 1*(impl_1==2) + 1*(impl_2==2)
-                + 0.5*(impl_1==1) + 0.5*(impl_2==1)         (kernel_uncertainty.py:30)
-  6. Heat kernel K = exp(-t * L), t = 0.3                   (Appendix C default)
-  7. Reorder graph by semantic ids, build K_SE block-diag,
-     K_FULL = alpha*norm(K_HEAT) + (1-alpha)*K_SE, alpha=0.5
-  8. KLE score = vn_entropy(K_FULL, normalize=False, scale=False)
-  9. Label: T=0.1 sample judged by Llama-3 8B Instruct (Sec. 5).
-  10. Report AUROC.
-
-Hardware toggle:
-  PRECISION = "4bit"   -> Colab Free T4 (4-bit NF4 Llama, fp16 NLI)
-  PRECISION = "bf16"   -> A100 / Colab Pro+
-
-Colab setup:
-  !git clone https://github.com/AlexanderVNikitin/kernel-language-entropy.git
-  %cd kernel-language-entropy
-  !pip install -q -e .
-  !pip install -q transformers datasets accelerate bitsandbytes \
-                   sentencepiece protobuf scipy scikit-learn networkx
-  %cd ..
-
-  from google.colab import userdata
-  from huggingface_hub import login
-  login(token=userdata.get("HF_TOKEN"))
-
-  !python wb_kle_triviaqa_repo.py
+Standart prompting baseline'a (C1) göre TEK fark prompting katmanıdır:
+  - build_prompt -> zero-shot CoT ("Let's think step by step")
+  - MAX_NEW_TOKENS artırıldı (reasoning zinciri 64 token'a sığmaz)
+KLE matematiği, semantic clustering, judge ve metrikler C1 ile AYNIDIR.
+KLE girdisi = örneklenen TAM CoT çıktısı (holistic; final answer ayıklanmaz).
 """
 
 import os
+import sys
 import json
 import math
 from collections import defaultdict
-
+import time
 import numpy as np
 import torch
 import torch.nn.functional as F
 import networkx as nx
-import datasets
+
 from sklearn.metrics import roc_auc_score
 from transformers import (
     AutoModelForCausalLM,
@@ -76,44 +28,65 @@ from transformers import (
     AutoModelForSequenceClassification,
     BitsAndBytesConfig,
 )
-import sys
-sys.path.insert(0, "/content/kernel-language-entropy")
-# ---- repo imports (THIS is the "use the repo birebir" part) ----
-# Requires: pip install -e . inside the cloned repo.
+from huggingface_hub import login
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+root_dir = os.path.abspath(os.path.join(current_dir, "..", ".."))
+sys.path.insert(0, os.path.join(root_dir, "kernel-language-entropy"))
+
 import kle.core
 import kle.kernels
 
-
+sys.path.insert(0, root_dir)
+from dataset.frozen_utils import load_frozen
+import time
 # =====================================================================
 # Config
 # =====================================================================
+
+DATASET    = "triviaqa"    
+FROZEN_DIR = os.path.join(root_dir, "dataset")
+
 SEED         = 42
-N_QUESTIONS  = 100
+N_QUESTIONS  = 1000
 N_SAMPLES    = 10
 
 GEN_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-NLI_MODEL_NAME = "microsoft/deberta-v2-xlarge-mnli"   # repo default
+NLI_MODEL_NAME = "microsoft/deberta-v2-xlarge-mnli"
 
-PRECISION = "4bit"   # "4bit" (T4 free tier) | "bf16" (A100 / Pro+)
+PRECISION = "bf16"
 
 # Sampling (paper Sec. 5)
 TEMPERATURE    = 1.0
 TOP_P          = 0.9
 TOP_K          = 50
-MAX_NEW_TOKENS = 64
+# CoT zincirleri tek cümleden uzun olduğu için artırıldı.
+# 64 token'da reasoning kesilir, final answer hiç üretilmez.
+MAX_NEW_TOKENS = 200
 
 # Judge (paper Sec. 5)
 JUDGE_TEMP     = 0.1
 
-# KLE hyperparameters (repo + Appendix C defaults)
+# Zero-shot CoT "magic phrase" (Kojima et al., 2024)
+COT_TRIGGER = "Let's think step by step."
+
+# KLE hyperparameters
 HEAT_T = 0.3
 ALPHA  = 0.5
+STRICT_ENTAILMENT = True
 
-# Clustering: repo default (non-strict)
-STRICT_ENTAILMENT = False
+# Çıktı Dizini (Colab Drive yerine HPC'de yerel bir klasör kullanıyoruz)
+OUT_DIR     = "./results/"
+RESULT_FILE = f"c2_{DATASET}_results.json"
 
-OUT_DIR     = "/content/drive/MyDrive/kle_phase1/"
-RESULT_FILE = "wb_kle_triviaqa_repo.json"
+# =====================================================================
+# Hugging Face Login (Slurm script'ten gelen çevresel değişken ile)
+# =====================================================================
+hf_token = os.environ.get("HF_TOKEN")
+if hf_token:
+    login(token=hf_token)
+else:
+    print("No HF Token!")
 
 
 # =====================================================================
@@ -124,7 +97,6 @@ def set_seed(seed):
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
-
 
 # =====================================================================
 # Models
@@ -155,12 +127,6 @@ def load_generator():
     return tok, model
 
 
-# =====================================================================
-# DeBERTa wrapper that mimics repo's EntailmentDeberta API
-# (semantic_entropy.py:51, check_implication signature)
-# Stripped of wandb/pickle caching; same output semantics.
-#   prediction: 0 = contradiction, 1 = neutral, 2 = entailment
-# =====================================================================
 class EntailmentDebertaLite:
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained(NLI_MODEL_NAME)
@@ -187,11 +153,8 @@ class EntailmentDebertaLite:
 
 
 # =====================================================================
-# === Helpers copied verbatim from the repo (with caching stripped) ===
-# Sources are noted on each function.
+# Helpers
 # =====================================================================
-
-# semantic_entropy.py: get_semantic_ids   (lines 191–227)
 def get_semantic_ids(strings_list, model, strict_entailment=False, example=None):
     def are_equivalent(text1, text2):
         impl_1, _ = model.check_implication(text1, text2, example=example)
@@ -215,7 +178,6 @@ def get_semantic_ids(strings_list, model, strict_entailment=False, example=None)
     return semantic_set_ids
 
 
-# semantic_entropy.py: logsumexp_by_id   (lines 230–252)
 def logsumexp_by_id(semantic_ids, log_likelihoods, agg='sum_normalized'):
     unique_ids = sorted(list(set(semantic_ids)))
     assert unique_ids == list(range(len(unique_ids)))
@@ -232,9 +194,7 @@ def logsumexp_by_id(semantic_ids, log_likelihoods, agg='sum_normalized'):
     return unique_ids, log_likelihood_per_semantic_id
 
 
-# kernel_uncertainty.py: get_entailment_graph   (lines 22–66)
-def get_entailment_graph(strings_list, model, is_weighted=False, example=None,
-                        weight_strategy="manual"):
+def get_entailment_graph(strings_list, model, is_weighted=False, example=None, weight_strategy="manual"):
     def get_edge(t1, t2, is_weighted=False, example=None):
         impl_1, p1 = model.check_implication(t1, t2, example=example)
         impl_2, p2 = model.check_implication(t2, t1, example=example)
@@ -270,7 +230,6 @@ def get_entailment_graph(strings_list, model, is_weighted=False, example=None,
     return G
 
 
-# compute_uncertainty_measures.py:46–61 (helper fns), 89–95 (block diag)
 def get_from_sem_to_sentence_id(ordered_ids):
     out = defaultdict(list)
     for i, el in enumerate(ordered_ids):
@@ -288,8 +247,7 @@ def reorder_by_semantic_ids(graph, semantic_ids, ordered_sem_ids):
     return new_graph
 
 
-def get_block_diagonal_sem_kernel(log_likelihoods_per_sem_id,
-                                  semantic_ids, ordered_sem_ids):
+def get_block_diagonal_sem_kernel(log_likelihoods_per_sem_id, semantic_ids, ordered_sem_ids):
     from_sem_to_sentence_id = get_from_sem_to_sentence_id(semantic_ids)
     blocks = []
     for sem_id in ordered_sem_ids:
@@ -300,14 +258,9 @@ def get_block_diagonal_sem_kernel(log_likelihoods_per_sem_id,
     return torch.block_diag(*blocks)
 
 
-# compute_uncertainty_measures.py:98–129 (full_sem_unc_plus_klu, single t/alpha)
-def full_klu_score(graph, log_lik_per_sem_id, semantic_ids, ordered_sem_ids,
-                  t=HEAT_T, alpha=ALPHA):
-    """The repo's K_FULL = alpha * normalize(K_HEAT)/n + (1-alpha) * K_SE."""
+def full_klu_score(graph, log_lik_per_sem_id, semantic_ids, ordered_sem_ids, t=HEAT_T, alpha=ALPHA):
     graph = reorder_by_semantic_ids(graph, semantic_ids, ordered_sem_ids)
-    block_diag = get_block_diagonal_sem_kernel(
-        log_lik_per_sem_id, semantic_ids, ordered_sem_ids
-    )
+    block_diag = get_block_diagonal_sem_kernel(log_lik_per_sem_id, semantic_ids, ordered_sem_ids)
     K_heat   = kle.kernels.heat_kernel(graph, t=t)
     K_normed = kle.core.normalize_kernel(K_heat) / K_heat.shape[0]
     K_full   = alpha * torch.tensor(K_normed) + (1.0 - alpha) * block_diag
@@ -315,34 +268,27 @@ def full_klu_score(graph, log_lik_per_sem_id, semantic_ids, ordered_sem_ids,
 
     for jitter in [0, 1e-16, 1e-12]:
         try:
-            return kle.core.vn_entropy(
-                K_full, normalize=False, scale=False, jitter=jitter
-            )
+            return kle.core.vn_entropy(K_full, normalize=False, scale=False, jitter=jitter)
         except Exception:
             continue
     raise ValueError("VNE did not converge for any jitter")
 
 
 # =====================================================================
-# Generation with per-token logprobs (matches huggingface_models.py:222)
+# Generation & Judging
 # =====================================================================
 def build_prompt(tokenizer, question):
+    # Zero-shot CoT: sistem mesajı reasoning'i serbest bırakır,
+    # kullanıcı mesajına "magic phrase" eklenir.
     msgs = [
-        {"role": "system",
-         "content": "Answer the following question in a single brief but complete sentence."},
-        {"role": "user", "content": question},
+        {"role": "system", "content": "You are a helpful assistant. Reason step by step, but keep your reasoning concise (under 3 sentences). Always conclude with your final answer."},
+        {"role": "user", "content": f"{question}\n\n{COT_TRIGGER}"},
     ]
-    return tokenizer.apply_chat_template(
-        msgs, tokenize=False, add_generation_prompt=True
-    )
+    return tokenizer.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
 
 
 @torch.no_grad()
 def sample_with_logliks(tokenizer, model, question):
-    """Returns (texts, log_liks_per_sample)
-       where each entry of log_liks_per_sample is a list of per-token
-       logprobs of the sampled tokens (matches the repo's
-       transition_scores convention)."""
     prompt = build_prompt(tokenizer, question)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     in_len = inputs["input_ids"].shape[1]
@@ -360,12 +306,9 @@ def sample_with_logliks(tokenizer, model, question):
         gen_ids = out.sequences[0, in_len:]
         text = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
 
-        # Repo uses model.compute_transition_scores(..., normalize_logits=True)
-        ts = model.compute_transition_scores(
-            out.sequences, out.scores, normalize_logits=True
-        )
-        logliks = [s.item() for s in ts[0]]   # repo: huggingface_models.py:349
-        # safe fallback for empty generations
+        ts = model.compute_transition_scores(out.sequences, out.scores, normalize_logits=True)
+        logliks = [s.item() for s in ts[0]]
+
         if len(logliks) == 0:
             logliks = [0.0]
 
@@ -375,9 +318,6 @@ def sample_with_logliks(tokenizer, model, question):
     return texts, all_logliks
 
 
-# =====================================================================
-# LLM-as-Judge (paper Appendix C, multi-correct-answer prompt)
-# =====================================================================
 @torch.no_grad()
 def low_temp_sample(tokenizer, model, question):
     prompt = build_prompt(tokenizer, question)
@@ -405,9 +345,7 @@ def llm_judge(tokenizer, model, question, gold_answers, predicted_answer):
         "Respond only with yes or no.\nResponse:"
     )
     msgs = [{"role": "user", "content": prompt}]
-    text = tokenizer.apply_chat_template(
-        msgs, tokenize=False, add_generation_prompt=True
-    )
+    text = tokenizer.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(text, return_tensors="pt").to(model.device)
     out = model.generate(
         **inputs, do_sample=False, max_new_tokens=8,
@@ -426,9 +364,10 @@ def main():
     set_seed(SEED)
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    print("Loading TriviaQA…")
-    ds = datasets.load_dataset("trivia_qa", "rc.nocontext", split="validation")
-    ds = ds.shuffle(seed=SEED).select(range(N_QUESTIONS))
+    print(f"Loading frozen dataset: {DATASET}")
+    ds = load_frozen(DATASET, frozen_dir=FROZEN_DIR)
+    if N_QUESTIONS:
+        ds = ds[:N_QUESTIONS]  
 
     print(f"Loading generator: {GEN_MODEL_NAME}  ({PRECISION})")
     gen_tok, gen_model = load_generator()
@@ -439,46 +378,45 @@ def main():
     kle_scores, labels, details = [], [], []
 
     for idx, ex in enumerate(ds):
+        t0 = time.perf_counter()
         question = ex["question"]
-        golds    = ex["answer"]["aliases"] or [ex["answer"]["value"]]
+        golds = ex["gold_answers"]
 
-        # 1. Sample + per-token logprobs
         responses, log_liks = sample_with_logliks(gen_tok, gen_model, question)
-
-        # 2. Length-normalized aggregate (repo line 413)
         log_liks_agg = [float(np.mean(ll)) for ll in log_liks]
 
-        # 3. Semantic clustering (repo non-strict default)
         semantic_ids = get_semantic_ids(
             responses, model=nli,
             strict_entailment=STRICT_ENTAILMENT, example=None,
         )
 
-        # 4. Per-cluster log-likelihood
         unique_ids, log_lik_per_sem_id = logsumexp_by_id(
             semantic_ids, log_liks_agg, agg="sum_normalized",
         )
 
-        # 5. Weighted entailment graph (manual strategy = repo default for K_FULL)
         weighted_graph = get_entailment_graph(
             responses, model=nli, is_weighted=True, weight_strategy="manual",
         )
 
-        # 6-8. K_FULL + VNE
         score = full_klu_score(
             weighted_graph, log_lik_per_sem_id,
             semantic_ids=semantic_ids, ordered_sem_ids=unique_ids,
             t=HEAT_T, alpha=ALPHA,
         )
 
-        # 9. Accuracy label (paper's LLM-as-Judge)
         candidate  = low_temp_sample(gen_tok, gen_model, question)
         is_correct = llm_judge(gen_tok, gen_model, question, golds, candidate)
         is_halluc  = (not is_correct)
 
         kle_scores.append(score)
         labels.append(int(is_halluc))
+        cost = {
+            "t_seconds":       time.perf_counter() - t0,
+            "n_gen_tokens":    int(sum(len(ll) for ll in log_liks)),   # tüm sample'lar toplamı, exact
+            "n_prompt_tokens": int(len(gen_tok(build_prompt(gen_tok, question))["input_ids"])),
+        }
         details.append({
+            "id":                   ex["id"],
             "question":             question,
             "responses":            responses,
             "log_lik_agg":          log_liks_agg,
@@ -487,6 +425,7 @@ def main():
             "judge_candidate":      candidate,
             "judge_correct":        is_correct,
             "kle_full":             score,
+            "cost":                 cost,
         })
 
         if (idx + 1) % 10 == 0:
@@ -501,6 +440,7 @@ def main():
 
     out = {
         "config": {
+            "condition":         "C2_cot_holistic",
             "generator":         GEN_MODEL_NAME,
             "precision":         PRECISION,
             "nli":               NLI_MODEL_NAME,
@@ -508,6 +448,7 @@ def main():
             "n_samples":         N_SAMPLES,
             "temperature":       TEMPERATURE, "top_p": TOP_P, "top_k": TOP_K,
             "max_new_tokens":    MAX_NEW_TOKENS,
+            "cot_trigger":       COT_TRIGGER,
             "heat_t":            HEAT_T,
             "alpha":             ALPHA,
             "strict_entailment": STRICT_ENTAILMENT,
@@ -521,7 +462,6 @@ def main():
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
     print(f"Saved -> {path}")
-
 
 if __name__ == "__main__":
     main()

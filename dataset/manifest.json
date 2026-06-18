@@ -1,0 +1,30 @@
+{
+  "triviaqa": {
+    "hf_id": "mandarjoshi/trivia_qa",
+    "config": "rc.nocontext",
+    "split": "validation",
+    "seed": 42,
+    "n_target": 1000,
+    "n_written": 1000,
+    "n_unique": 1000,
+    "dedupe": true,
+    "source_split_size": 17944,
+    "datasets_version": "4.5.0",
+    "sha256": "010e033930cca45076444054d3234f28aa279f90bebfe3cb2054f5e16b4c87f5",
+    "built_at": "2026-06-14T23:36:51"
+  },
+  "nq_open": {
+    "hf_id": "google-research-datasets/nq_open",
+    "config": null,
+    "split": "validation",
+    "seed": 42,
+    "n_target": 1000,
+    "n_written": 1000,
+    "n_unique": 1000,
+    "dedupe": true,
+    "source_split_size": 3610,
+    "datasets_version": "4.5.0",
+    "sha256": "9ed4821a656e429ed69c8af902b9cac92e0cabd99e494164af1f2f73da73c5e7",
+    "built_at": "2026-06-14T23:37:08"
+  }
+}
