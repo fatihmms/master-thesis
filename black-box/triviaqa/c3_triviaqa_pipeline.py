@@ -9,7 +9,7 @@ KLE girdisi = Final answer
 import os
 import sys
 import json
-import math
+import argparse
 from collections import defaultdict
 
 import numpy as np
@@ -46,7 +46,16 @@ SEED         = 42
 N_QUESTIONS  = 1000
 N_SAMPLES    = 10
 
-GEN_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+MODEL_MAP = {
+    "8b":      "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "70b":     "meta-llama/Meta-Llama-3-70B-Instruct",
+    "mistral": "mistralai/Mistral-7B-Instruct-v0.3",
+}
+_ap = argparse.ArgumentParser()
+_ap.add_argument("--model", default="8b", help="alias (8b/70b/mistral) veya tam HF id")
+_args, _ = _ap.parse_known_args()
+GEN_MODEL_NAME = str(MODEL_MAP.get(_args.model, _args.model))
+MODEL_TAG      = _args.model if _args.model in MODEL_MAP else "custom"
 NLI_MODEL_NAME = "microsoft/deberta-v2-xlarge-mnli"
 
 PRECISION = "bf16"
@@ -72,7 +81,7 @@ STRICT_ENTAILMENT = True
 
 # Çıktı Dizini (Colab Drive yerine HPC'de yerel bir klasör kullanıyoruz)
 OUT_DIR     = "./results/"
-RESULT_FILE = f"c3_{DATASET}_results.json"
+RESULT_FILE = f"c3_{DATASET}_{MODEL_TAG}_results.json"
 
 # =====================================================================
 # Hugging Face Login (Slurm script'ten gelen çevresel değişken ile)

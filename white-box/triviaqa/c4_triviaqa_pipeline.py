@@ -71,7 +71,7 @@ import re
 import json
 import string
 from collections import Counter, defaultdict
-
+import argparse
 import numpy as np
 import torch
 
@@ -104,7 +104,16 @@ N_QUESTIONS = 1000          # C3 is ~(n_steps)x more expensive than C1/C2:
                           # validate on a small subset first, then scale up.
 N_SAMPLES   = 10          # samples per step (n) -> K_i is (n x n)
 
-GEN_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+MODEL_MAP = {
+    "8b":      "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "70b":     "meta-llama/Meta-Llama-3-70B-Instruct",
+    "mistral": "mistralai/Mistral-7B-Instruct-v0.3",
+}
+_ap = argparse.ArgumentParser()
+_ap.add_argument("--model", default="8b", help="alias (8b/70b/mistral) veya tam HF id")
+_args, _ = _ap.parse_known_args()
+GEN_MODEL_NAME = str(MODEL_MAP.get(_args.model, _args.model))
+MODEL_TAG      = _args.model if _args.model in MODEL_MAP else "custom"
 PRECISION      = "bf16"
 
 # Sampling for continuations (uncertainty arises from this distribution;
@@ -148,8 +157,8 @@ FORWARD_BS   = 5          # mini-batch size of the hidden-state forward pass
                           # (tune to available VRAM)
 
 OUT_DIR     = "./results/"
-RESULT_FILE = f"c4_{DATASET}_results.json"
-CKPT_FILE   = f"c4_{DATASET}_checkpoint.jsonl"   # resumable per-question ckpt
+RESULT_FILE = f"c4_{DATASET}_{MODEL_TAG}_results.json"
+CKPT_FILE   = f"c4_{DATASET}_{MODEL_TAG}_checkpoint.jsonl"   # resumable per-question ckpt
 
 # Step / answer delimiters
 STEP_RE   = re.compile(r"(?im)^\s*step\s*\d+\s*:")
