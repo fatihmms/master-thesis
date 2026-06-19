@@ -12,6 +12,7 @@
 #SBATCH --array=0-3                       # 4 tasks = one per condition (0->C1, 1->C2, 2->C3, 3->C4)
 
 # ---- dataset (one script per dataset, so just change this name to reuse) ----
+DATASET="nqopen"
 SCRIPTS=(c1 c2 c3 c4)
 MODELS=(8b mistral)
 NAME=${SCRIPTS[$SLURM_ARRAY_TASK_ID]}
