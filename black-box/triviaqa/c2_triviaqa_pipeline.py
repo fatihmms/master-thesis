@@ -48,7 +48,7 @@ DATASET    = "triviaqa"
 FROZEN_DIR = os.path.join(root_dir, "dataset")
 
 SEED         = 42
-N_QUESTIONS  = 1000
+N_QUESTIONS  = 20
 N_SAMPLES    = 10
 MODEL_MAP = {
     "8b":      "meta-llama/Meta-Llama-3.1-8B-Instruct",

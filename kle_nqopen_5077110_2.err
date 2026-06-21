@@ -1,0 +1,15 @@
+/pfs/data6/home/ka/ka_ksri/ka_cx3082/git-code/master-thesis/venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:34<01:44, 34.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:10<01:10, 35.29s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:45<00:35, 35.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:53<00:00, 24.40s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:53<00:00, 28.32s/it]
+/pfs/data6/home/ka/ka_ksri/ka_cx3082/git-code/master-thesis/kernel-language-entropy/kle/core.py:51: ComplexWarning: Casting complex values to real discards the imaginary part
+  eigvs = np.linalg.eig(K + jitter * np.eye(K.shape[0])).eigenvalues.astype(np.float64)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+/pfs/data6/home/ka/ka_ksri/ka_cx3082/git-code/master-thesis/venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.70s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:03<00:01,  1.71s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.65s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:04<00:00,  1.67s/it]
+/pfs/data6/home/ka/ka_ksri/ka_cx3082/git-code/master-thesis/kernel-language-entropy/kle/core.py:51: ComplexWarning: Casting complex values to real discards the imaginary part
+  eigvs = np.linalg.eig(K + jitter * np.eye(K.shape[0])).eigenvalues.astype(np.float64)

@@ -1,0 +1,1143 @@
+{
+  "config": {
+    "condition": "C2_cot_holistic",
+    "generator": "mistralai/Mistral-7B-Instruct-v0.3",
+    "precision": "bf16",
+    "nli": "microsoft/deberta-v2-xlarge-mnli",
+    "n_questions": 20,
+    "n_samples": 10,
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 200,
+    "cot_trigger": "Let's think step by step.",
+    "heat_t": 0.3,
+    "alpha": 0.5,
+    "strict_entailment": true,
+    "judge_temp": 0.1
+  },
+  "auroc": 0.65625,
+  "hallucination_rate": 0.4,
+  "details": [
+    {
+      "id": "triviaqa-000000",
+      "question": "In April 1963, Lester Bowles Pearson became Prime Minister of which country?",
+      "responses": [
+        "Lester Bowles Pearson served as Prime Minister of Canada. He assumed office in April 1963, after the death of John Diefenbaker in August 1963, but as an interim prime minister until the Liberal Party won a federal election in April 1963. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "Lester Bowles Pearson was a Canadian politician who served as Prime Minister of Canada. He assumed office on April 22, 1963, following the resignation of John Diefenbaker. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "Lester Bowles Pearson served as Prime Minister of Canada. He took office after John Diefenbaker's Liberal Party won the federal election in April 1963. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "1. Lester Bowles Pearson served as Prime Minister from April 22, 1963, to April 4, 1968, succeeding John George Diefenbaker.\n2. Pearson's tenure as Prime Minister was during the Cold War era, a fact that narrows down the geographical location significantly.\n3. Therefore, Lester Bowles Pearson was Prime Minister of Canada.",
+        "1. Lester Bowles Pearson served as the Prime Minister of Canada, not the United States or any other country.\n2. He became Prime Minister on April 22, 1963, following the retirement of John Diefenbaker.\n3. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "1. Lester Bowles Pearson served as Prime Minister from April 22, 1963, to April 4, 1968, so he held the position during the 21st century.\n2. However, the 21st century began in 2001, and Lester Pearson's term started in 1963, so he was Prime Minister of Canada, as Canada is the only country where he served as Prime Minister.\n3. Final answer: Lester Bowles Pearson was the Prime Minister of Canada in April 1963.",
+        "1. Lester Bowles Pearson served as Prime Minister of Canada, not the United States or any other country.\n2. He was appointed as Prime Minister of Canada on April 22, 1963.\n3. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "Lester Bowles Pearson served as Prime Minister of Canada. He assumed the position on April 22, 1963, following the resignation of John G. Diefenbaker. Pearson was a prominent Canadian politician who was awarded the Nobel Peace Prize in 1957 for his work in resolving the Suez Canal Crisis. Therefore, Lester Bowles Pearson was the Prime Minister of Canada in April 1963.",
+        "1. Lester Bowles Pearson served as Prime Minister of Canada, not the United States, United Kingdom, or any other country. He is known for being the Prime Minister of Canada.\n2. Pearson succeeded John G. Diefenbaker as Prime Minister of Canada in April 1963.\n3. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+        "1. Lester Bowles Pearson was a Canadian politician who served as Prime Minister of Canada from April 22, 1963, to April 4, 1968.\n2. He served as Leader of the Liberal Party of Canada from 1963 to 1968.\n3. Therefore, in April 1963, Lester Bowles Pearson became Prime Minister of Canada.\n\nFinal answer: Lester Bowles Pearson became Prime Minister of Canada in April 1963."
+      ],
+      "log_lik_agg": [
+        -0.3060921803983145,
+        -0.1274051863813039,
+        -0.1758403747032086,
+        -0.3582547915346445,
+        -0.134656972438097,
+        -0.2908792410497413,
+        -0.13094393225157097,
+        -0.1730339409727039,
+        -0.2759107943255823,
+        -0.11287173847941791
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        4,
+        1,
+        1,
+        5,
+        4
+      ],
+      "log_lik_per_sem_id": [
+        -2.4036788444696606,
+        -0.8526345262674917,
+        -2.2734270387745545,
+        -2.4558414556059907,
+        -1.6023593577858926,
+        -2.3734974583969284
+      ],
+      "judge_candidate": "1. Lester Bowles Pearson served as Prime Minister of Canada, not the United States or any other country.\n2. He assumed office on April 22, 1963, following the resignation of John Diefenbaker.\n3. Therefore, Lester Bowles Pearson became Prime Minister of Canada in April 1963.",
+      "judge_correct": true,
+      "kle_full": 1.4219848287848478,
+      "cost": {
+        "t_seconds": 24.50144852604717,
+        "n_gen_tokens": 900,
+        "n_prompt_tokens": 68
+      }
+    },
+    {
+      "id": "triviaqa-000001",
+      "question": "Which US President was born Lesley Lynch King Jr?",
+      "responses": [
+        "1. President John F. Kennedy was known by the name John F. Kennedy, not Lesley Lynch King Jr., but they are the same person.\n2. His father, Joseph P. Kennedy, changed his name when he divorced and remarried.\n3. Therefore, President John F. Kennedy was originally named Lesley Lynch King Jr. but was later renamed.",
+        "1. The name \"Lesley Lynch King Jr\" is the birth name of a former U.S. President.\n2. After his parents' divorce, he took his mother's second husband's last name, becoming Leslie Arthur 'Lieu' Sanvaan.\n3. Later, he changed his name again to \"Nelson Aldrich Rockfeller\" as a teen, adopting his mother's second husband's middle name and the famous Rockfeller surname.\n\nThe President born as Lesley Lynch King Jr is Gerald Ford, as he eventually dropped the 'Lieu' part of his middle name when he joined the Navy and took 'Gerald' as his official name.",
+        "1. The name Lesley Lynch King Jr. was the birth name of a U.S. President.\n2. He changed his name after his mother's second marriage, which was uncommon for U.S. Presidents.\n3. The person who eventually became known as John F. Kennedy was the U.S. President born as Lesley Lynch King Jr.",
+        "1. The person known as President John F. Kennedy was born with the name Leslie Lynch King Jr., but his father changed his name shortly after his birth.\n2. The name change was reportedly due to a disagreement between his parents.\n3. Thus, President John F. Kennedy (1917-1963) was originally named Leslie Lynch King Jr.",
+        "1. Lesley Lynch King Jr. was the birth name of a US President.\n2. After his mother's remarriage, his name was changed to Jack Kennedy.\n3. Therefore, the US President who was born Lesley Lynch King Jr. is John F. Kennedy.",
+        "1. First, we are looking for a US President who was born under a specific name, Lesley Lynch King Jr.\n2. One such person with a name change is John F. Kennedy, who was born Leslie Lynch King Jr. but his name was later changed by his father.\n3. John F. Kennedy was indeed a US President, serving from 1961 until his assassination in 1963.\n\nTherefore, John F. Kennedy was the US President who was born Lesley Lynch King Jr.",
+        "1. The question asks for the US President who was born as Lesley Lynch King Jr.\n2. After a brief search, it's revealed that Leslie Lynch King Jr. was the original birth name of President John F. Kennedy.\n3. Therefore, President John F. Kennedy was born as Lesley Lynch King Jr.",
+        "1. The given name \"Lesley Lynch King Jr.\" is not commonly associated with any U.S. president.\n2. However, the name \"Jack Kennedy\" was the adult name of the 35th U.S. President, John F. Kennedy.\n3. Therefore, John F. Kennedy, born as Lesley Lynch King Jr., is the US President who was born under that name.",
+        "1. The President in question was originally named Lesley Lynch King Jr. before his name was later changed.\n2. This President's mother later remarried to a man named Joseph P. Kennedy, a prominent political figure.\n3. The President adopted his stepfather's last name, Kennedy, and is known as John F. Kennedy, the 35th President of the United States.",
+        "1. To find the US President born as Lesley Lynch King Jr, we need to identify presidents who had a name change.\n2. One of the presidents, John F. Kennedy, changed his name from John Fitzgerald after his father's remarriage; his original given name at birth was Lesley Lynch King Jr.\n3. Therefore, John F. Kennedy was the US President born as Lesley Lynch King Jr."
+      ],
+      "log_lik_agg": [
+        -0.44588670870516356,
+        -0.6094345012739781,
+        -0.33742024131664416,
+        -0.33022887847002813,
+        -0.23015685041900724,
+        -0.37436313759851253,
+        -0.25104743191922035,
+        -0.3614399955932344,
+        -0.32964120257174834,
+        -0.3003895253749545
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        4
+      ],
+      "log_lik_per_sem_id": [
+        -2.396469927592668,
+        -2.5600177201614827,
+        -2.288003460204149,
+        -2.2808120973575328,
+        -1.5220927743269985,
+        -2.324946356486017,
+        -2.2016306508067247,
+        -2.312023214480739,
+        -2.280224421459253
+      ],
+      "judge_candidate": "1. The name Lesley Lynch King Jr. is not commonly associated with any U.S. President. However, it's known that a U.S. President changed his name.\n2. The U.S. President who changed his name is John F. Kennedy. His birth name was John Fitzgerald Kennedy, but he was originally named Leslie, which was later changed to John.\n3. Therefore, John F. Kennedy was born Lesley Lynch King Jr. initially.",
+      "judge_correct": false,
+      "kle_full": 1.94235644311976,
+      "cost": {
+        "t_seconds": 24.890002254978754,
+        "n_gen_tokens": 933,
+        "n_prompt_tokens": 59
+      }
+    },
+    {
+      "id": "triviaqa-000002",
+      "question": "Rapidly boiling a liquid to make it thicker and more concentrated is called what?",
+      "responses": [
+        "1. Rapid boiling of a liquid reduces its volume due to evaporation.\n2. The remaining liquid becomes more concentrated because the solids or solutes are left behind.\n3. This process is known as boiling down or simmering. Final answer: Boiling down or simmering is the process of rapidly boiling a liquid to make it thicker and more concentrated.",
+        "1. Rapid boiling reduces the volume of a liquid due to evaporation, leaving behind a more concentrated solution.\n2. This process is used to thicken liquids, such as reducing a sauce.\n3. Therefore, the process of rapidly boiling a liquid to make it thicker and more concentrated is called reducing.",
+        "1. Boiling a liquid rapidly reduces its volume due to the formation of steam and evaporation.\n2. This process leaves behind a more concentrated liquid because the solids or water-soluble substances remain.\n3. Therefore, this method is known as \"Reducing or Concentrating a Liquid by Rapid Boiling.\"",
+        "1. Rapid boiling reduces the volume of a liquid due to evaporation, which leaves behind a more concentrated solution.\n2. The remaining liquid is thicker because of the higher concentration of solids or solutes compared to the original liquid.\n3. This process is called reducing or concentrating a liquid. The final answer is that rapidly boiling a liquid to make it thicker and more concentrated is called reducing or concentrating a liquid.",
+        "This process is called evaporation and concentration. Rapid boiling causes water (or other volatile components) to evaporate, leaving behind a more concentrated liquid due to a higher solute-to-solvent ratio. This is a common method for thickening and concentrating liquids.\n\nFinal answer: The process of rapidly boiling a liquid to make it thicker and more concentrated is called evaporation and concentration.",
+        "This process is called reduction. Reduction involves heating a liquid (often a sauce or a broth) rapidly to evaporate water, thereby concentrating the liquid and making it thicker. The result is a more intense flavor due to the increased concentration of solutes.\n\nFinal answer: The process of rapidly boiling a liquid to make it thicker and more concentrated is called reduction.",
+        "Rapid boiling reduces the volume of a liquid by evaporating some of it, leaving behind a more concentrated solution. This process is referred to as \"Reduction by boiling.\" The result is a thicker liquid due to a higher concentration of solids or solutes.",
+        "Boiling a liquid rapidly increases its temperature and causes evaporation, leaving behind a more concentrated liquid. This process is called Reduction or Simmering Down, as it reduces the volume of the liquid due to evaporation. The remaining liquid becomes thicker because of the increased concentration.\n\nFinal answer: The process of rapidly boiling a liquid to make it thicker and more concentrated is called Reduction or Simmering Down.",
+        "Rapid boiling evaporates water from a liquid, leaving behind the remaining solids and a more concentrated solution. This process is called evaporation or reduction, as it reduces the volume of the liquid. The thickening effect is a result of the increased concentration of solids in the liquid.\n\nFinal answer: Rapid boiling a liquid is called evaporation or reduction.",
+        "Rapid boiling causes water to evaporate, leaving behind the liquid's solids or other constituents. This process concentrates the liquid, making it thicker. Therefore, this method is known as \"evaporation concentration\" or \"reduction by boiling down.\"\n\nFinal answer: The process is called evaporation concentration or reduction by boiling down."
+      ],
+      "log_lik_agg": [
+        -0.3355869056547389,
+        -0.23114391757358968,
+        -0.436732368690795,
+        -0.3466847570768247,
+        -0.2838226476063331,
+        -0.32166706995073574,
+        -0.39414253704628704,
+        -0.3604216678375071,
+        -0.4395087215083617,
+        -0.3845419010406808
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -0.5057397897881794,
+        -0.9239683123900384
+      ],
+      "judge_candidate": "Boiling a liquid rapidly causes evaporation, which reduces the volume of the liquid. As the liquid evaporates, the remaining liquid becomes more concentrated because the solute (the solid or dissolved substance in the liquid) is not being diluted by the evaporated water. This process is called reducing or concentrating a liquid.\n\nFinal answer: Reducing or concentrating a liquid.",
+      "judge_correct": true,
+      "kle_full": 0.7004483439879363,
+      "cost": {
+        "t_seconds": 21.71750935597811,
+        "n_gen_tokens": 811,
+        "n_prompt_tokens": 67
+      }
+    },
+    {
+      "id": "triviaqa-000003",
+      "question": "8Â  Fort Ville-Marie was the original name of which Canadian city?",
+      "responses": [
+        "1. Fort Ville-Marie was the original French settlement in the area that is now Montreal, Quebec.\n2. The settlement was founded by Paul Chomedey de Maisonneuve in 1642.\n3. Therefore, Montreal was originally named Fort Ville-Marie.",
+        "Fort Ville-Marie was the original name of the city we know today as Montreal, which was founded by French explorer and missionary, Paul de Chomedey, Sieur de Maisonneuve, in 1642. The fort was established to serve as a base for the establishment of the Mission de Sainte-Marie-de-Gabriel-de-Lalemant among the Huron-Wendat people in what is now Quebec, Canada. So, Montreal was originally named Fort Ville-Marie.",
+        "1. Fort Ville-Marie was the first settlement established by French explorer Paul Chomedey de Maisonneuve in 1642, on the island of Montreal in North America.\n2. It was later renamed Ville-Marie, and eventually evolved into the city we know today as Montreal.\n3. So, Fort Ville-Marie was the original name of Montreal, Canada.",
+        "1. Fort Ville-Marie was the original name of a French trading post established by Paul Chomedey de Maisonneuve in 1642 on the island of Montreal in present-day Quebec, Canada.\n2. This fort later developed into a settlement and was eventually named Ville-Marie, which was shortened to Montreal in 1767 under British rule.\n3. Therefore, the final answer is that Fort Ville-Marie was the original name of Montreal, Canada.",
+        "Fort Ville-Marie was the original name of Montreal, a city in Quebec, Canada. This fort was built by French colonists in 1642 under the leadership of Paul Chomedey de Maisonneuve. The name was later shortened to Montreal in the 18th century. Thus, the final answer is Montreal.",
+        "1. Fort Ville-Marie was the first permanent European settlement in the region that is now Montreal, Quebec.\n2. It was established by Paul Chomedey de Maisonneuve in 1642.\n3. Therefore, Montreal was originally known as Fort Ville-Marie.",
+        "1. Fort Ville-Marie was the initial French settlement in what is now the island of Montreal, established in 1642 by Paul Chomedey de Maisonneuve.\n2. This name was chosen to honor Marie de l'Incarnation, a famous French-Canadian nun and co-foundress of the Ursuline Order.\n3. Therefore, the city originally known as Fort Ville-Marie is Montreal, Canada.",
+        "1. Fort Ville-Marie was the first French settlement in present-day Montreal, established by Paul Chomedey de Maisonneuve in 1642.\n2. In 1768, the city was renamed \"City of Montreal\" (Ville-Marie) by Royal Charter to distinguish it from other places with similar names.\n3. Therefore, the original name of the Canadian city that is now known as Montreal was Fort Ville-Marie.",
+        "1. Fort Ville-Marie was the first French settlement in what is now the island of Montreal, established by Paul Chomedey de Maisonneuve in 1642.\n2. The city was renamed to Montreal (Ville-Marie in French) in 1705, which is the name it has retained to the present day.\n3. Therefore, the original name of the Canadian city Montreal was Fort Ville-Marie.",
+        "Fort Ville-Marie was the original French name of Montreal, a city in Canada. This fort was built in 1642 by Paul de Chomedy de Maisonneuve, who was under the orders of Jeanne Mance, the founder of the Hôtel-Dieu de Montréal. Therefore, the city of Montreal was originally named Fort Ville-Marie."
+      ],
+      "log_lik_agg": [
+        -0.25988334629398124,
+        -0.4339484393211274,
+        -0.2767682217396377,
+        -0.33785461705516684,
+        -0.29990742263728626,
+        -0.24605332523810142,
+        -0.4034775645278468,
+        -0.3224751050628367,
+        -0.2516309052333236,
+        -0.3581905622656147
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -1.1965361828269907,
+        -1.2315847703943277,
+        -2.3232879408313902,
+        -1.1777205271675764
+      ],
+      "judge_candidate": "1. Fort Ville-Marie was the first French settlement in present-day Montreal, established in 1642 by Paul de Chomedey, Sieur de Maisonneuve.\n2. The name was changed to \"Ville-Marie\" in 1645 and then to \"Montreal\" in 1767, during the British rule.\n3. Therefore, the original name of the Canadian city that Fort Ville-Marie became was Montreal.",
+      "judge_correct": true,
+      "kle_full": 1.1932663838562856,
+      "cost": {
+        "t_seconds": 24.342215372947976,
+        "n_gen_tokens": 909,
+        "n_prompt_tokens": 65
+      }
+    },
+    {
+      "id": "triviaqa-000004",
+      "question": "\"What year did Jean-Francois Champollion publish the first correct translation of Egyptian hieroglyphs from the Rosetta Stone, the Roman Catholic Church take Galileo Galilei's \"\"Dialogue\"\" off their list of banned books, and Britain repeal the death penalty for over 100 crimes?\"",
+      "responses": [
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835, during the papacy of Pope Pius IX.\n3. Britain repealed the death penalty for over 100 crimes in stages, but the significant change occurred in 1965 under the Homicide Act, which abolished the death penalty for all but a few crimes, such as treason and piracy. Therefore, there isn't a specific year that covers all the repeals. However, if we consider the year when a major shift occurred, 1965 would be an appropriate answer.",
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835, but it was not until 1992 that the church officially lifted the ban.\n3. Britain did not repeal the death penalty for over 100 crimes until the Criminal Justice Act of 1996, although it had already been significantly reduced by the 1965 Homicide Act.",
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from their list of banned books in 1835.\n3. Britain repealed the death penalty for over 100 crimes in 1965 with the Homicide Act.",
+        "1. Jean-Francois Champollion published his first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain did not completely repeal the death penalty for over 100 crimes until the late 1960s and early 1970s, with the last one being the abolition of the death penalty for murder in 1965. The repeal for most other crimes took place in the 1970s.\n\nSo, Jean-Francois Champollion's translation was in 1822, the Catholic Church removed Galileo's book in 1835, and Britain repealed the death penalty for over 100 crimes primarily",
+        "1. Jean-Francois Champollion published the first correct translation of the Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835, after nearly 200 years of prohibition.\n3. Britain repealed the death penalty for over 100 crimes in 1965. Specifically, the Murder (Abolition of Death Penalty) Act 1965 ended capital punishment for murder, treason, and piracy with violence.\n\nThe correct year for all three events is 1822, 1835, and 1965.",
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835, nearly 200 years after its initial publication.\n3. Britain did not repeal the death penalty for over 100 crimes until the Criminal Justice Act of 1998, which took effect in 1999. So, the events you've asked about did not occur in the same year.",
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain did not repeal the death penalty for over 100 crimes until 1965.\n\nSo, the year that all these events occurred is 1822, 1835, and 1965.",
+        "1. Jean-Francois Champollion published his correct translation of the Egyptian hieroglyphs on the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain did not fully repeal the death penalty for over 100 crimes until 1965, although it had been gradually reduced throughout the 20th century. Therefore, the events are not all in the same year.",
+        "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs on the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835, during the Pontificate of Pope Gregory XVI.\n3. Britain repealed the death penalty for over 100 crimes in 1965 under the Homicide Act, though it had been partially abolished before this in 1957. The full abolition of the death penalty in the UK occurred in 1965.\n\nSo, the year all these events occurred is 1822, 1835, and 1965.",
+        "1. Jean-Francois Champollion published the first correct translation of the Rosetta Stone's hieroglyphs in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain repealed the death penalty for over 100 crimes in 1965, with the Homicide Act. The specific year for all 100 crimes being decriminalized is not clearly defined, but this act is a significant milestone in that direction.\n\nSo, the event sequence you've asked for occurred between the years 1822 and 1965."
+      ],
+      "log_lik_agg": [
+        -0.32101890783609643,
+        -0.26171230043481736,
+        -0.08174701437962298,
+        -0.2355458004772663,
+        -0.20986961437498822,
+        -0.1798503101951834,
+        -0.09587176662683487,
+        -0.26141877690992077,
+        -0.22984419310422138,
+        -0.2347640729151994
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        4,
+        5,
+        2,
+        2
+      ],
+      "log_lik_per_sem_id": [
+        -1.2391220600269484,
+        -2.35565142091498,
+        -1.1748842717357182,
+        -2.303808734855151,
+        -2.1898108871069977,
+        -2.3553578973900837
+      ],
+      "judge_candidate": "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain repealed the death penalty for over 100 crimes in 1965, with the Homicide Act.\n\nSo, the year all these events occurred is 1822, 1835, and 1965.",
+      "judge_correct": false,
+      "kle_full": 1.693686581607791,
+      "cost": {
+        "t_seconds": 38.045373777044006,
+        "n_gen_tokens": 1497,
+        "n_prompt_tokens": 116
+      }
+    },
+    {
+      "id": "triviaqa-000005",
+      "question": "What is Marge Simpson's maiden name ?",
+      "responses": [
+        "Marge Simpson is the wife of Homer Simpson, and they have three children together. In the episode \"The Way We Was\" (Season 9, Episode 12), it is revealed that Marge's parents were named Jacob and Agnes Bouvier, and Homer found out her maiden name was \"Bouvier.\" Therefore, Marge Simpson's maiden name is Bouvier.",
+        "1. Marge Simpson was married to Homer Simpson, but we know that they have three children together.\n2. Naming patterns in The Simpsons often follow real-life traditions, with women often retaining their maiden names.\n3. Therefore, Marge Simpson's maiden name is likely to be the same as one of her daughters, who are named Lisa, Maggie, and Bart.\n\nFinal answer: Marge Simpson's maiden name is unknown, as it has not been explicitly stated in the series and is not one of her daughters' names. However, it's a common fan theory that her maiden name could be Bouvier, based on Lisa Simpson's surname.",
+        "1. Marge Simpson is the wife of Homer Simpson, and their daughter, Lisa, has the same last name.\n2. Lisa Simpson reveals her grandmother's name, Mona, during a school presentation, indicating that it's Mona's maiden name.\n3. Therefore, Marge's maiden name is Simpson, as it is passed down to her children.",
+        "1. Marge Simpson is the wife of Homer Simpson in the animated series \"The Simpsons.\"\n2. Her married name is Marge Bouvier Simpson, indicating that Bouvier was her maiden name.\n3. Therefore, Marge Simpson's maiden name is Bouvier.",
+        "1. Marge Simpson got married to Homer Simpson in the Simpsons series.\n2. She is known as Marge Bouvier before her marriage.\n3. Therefore, Marge Simpson's maiden name is Bouvier.",
+        "1. Marge Simpson is the wife of Homer Simpson, and they have three children together.\n2. During their wedding episode, it is mentioned that Marge's father gave Homer his permission to marry her, and he reveals her maiden name as \"Bouvier.\"\n3. Therefore, Marge Simpson's maiden name is Bouvier.",
+        "1. Marge Simpson's husband is Homer Simpson, and Homer's father's name is Abraham Simpson. This suggests that the Simpson surname was passed down from father to son.\n2. Marge's father, Jacob, is mentioned in the show, but no surname is explicitly given. However, in the episode \"The Old Man and the Lisa,\" it is revealed that Jacob was once married to Abe's sister, so it can be inferred that they share the same last name.\n3. Therefore, Marge Simpson's maiden name is likely Simpson.",
+        "1. Marge Simpson is Homer Simpson's wife in the animated TV series \"The Simpsons.\"\n2. The episode \"Who Shot Mr. Burns?\" (season 7, episode 18) reveals Marge's backstory, including her growing up in Springfield.\n3. In the flashback scenes, Marge's mother, Jacqueline Bouvier, mentions Marge's brother, \"Roy.\" This indicates that Marge's maiden name is Bouvier. So, Marge Simpson's maiden name is Bouvier.",
+        "1. Marge Simpson is the wife of Homer Simpson in the animated series \"The Simpsons.\"\n2. Their daughter, Lisa Simpson, refers to Marge's mother as Mona Simpson in several episodes.\n3. As Mona Simpson is Marge's mother, it implies that Marge's maiden name is Simpson. Therefore, Marge Simpson's maiden name is Simpson.",
+        "1. Marge Simpson is the wife of Homer Simpson, and they have three children together.\n2. In the show's timeline, their first child, Bart, is born after Homer and Marge are married.\n3. Therefore, Marge had a maiden name before her marriage, and it has been confirmed as \"Bouvier\" in several episodes of the series.\n\nFinal answer: Marge Simpson's maiden name is Bouvier."
+      ],
+      "log_lik_agg": [
+        -0.4162142694917288,
+        -0.3916554659939347,
+        -0.5746015054173768,
+        -0.239098406780292,
+        -0.25694059160622684,
+        -0.35068315686083135,
+        -0.45052108686781467,
+        -0.467265276859204,
+        -0.2781043746508658,
+        -0.46293189734793627
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "log_lik_per_sem_id": [
+        -2.335197480237407,
+        -2.3106386767396128,
+        -2.493584716163055,
+        -1.473815736961887,
+        -2.2696663676065096,
+        -2.369504297613493,
+        -2.386248487604882,
+        -2.197087585396544,
+        -2.3819151080936143
+      ],
+      "judge_candidate": "1. Marge Simpson is the wife of Homer Simpson in the animated series \"The Simpsons.\"\n2. In the episode \"I Married Marge,\" it is revealed that Marge was originally named Marjorie Bouvier.\n3. Therefore, Marge Simpson's maiden name is Bouvier.",
+      "judge_correct": true,
+      "kle_full": 2.1219920711757068,
+      "cost": {
+        "t_seconds": 25.426702517084777,
+        "n_gen_tokens": 999,
+        "n_prompt_tokens": 59
+      }
+    },
+    {
+      "id": "triviaqa-000006",
+      "question": "What percentage of the earth's surface is covered by Europe?",
+      "responses": [
+        "1. The total surface area of the Earth is approximately 510 million square kilometers.\n2. Europe, including countries like Russia (European part), covers an area of around 10.18 million square kilometers.\n3. To find the percentage, we divide the European land area by the Earth's total surface area and multiply by 100: (10.18/510)*100 ≈ 2%. Therefore, Europe covers about 2% of the Earth's surface.",
+        "1. The total land area of Europe is approximately 10,180,000 square kilometers.\n2. The total land area of the Earth is approximately 148,940,000 square kilometers.\n3. Therefore, Europe covers about 6.85% of the Earth's surface.",
+        "1. Europe, the continent, covers an area of approximately 10,180,000 square kilometers.\n2. The total land area of the Earth is about 148,940,000 square kilometers.\n3. Therefore, Europe represents approximately 6.86% of the Earth's total land surface.",
+        "Europe occupies approximately 2% of the Earth's total surface area. This calculation is based on the continent's total land area, which is about 10,180,000 square kilometers, when compared to the Earth's total surface area of 510 million square kilometers.",
+        "1. Europe is the 2nd smallest continent in terms of land area after Australia, and slightly larger than Russia (when not considering its Asian territory).\n2. The total land area of Europe is approximately 10,180,000 square kilometers.\n3. The total surface area of the Earth is about 510,072,000 square kilometers, so Europe covers approximately 2% of the Earth's surface.\n\nSo, approximately 2% of the Earth's surface is covered by Europe.",
+        "Europe, the continent, covers approximately 2% of the Earth's total surface area. This includes all the countries from Portugal in the west to Russia in the east. However, when considering only the geographical area of the European landmass (excluding the Russian part), it represents around 10% of the Earth's total surface.",
+        "1. Europe covers approximately 2% of the Earth's total land area.\n2. The Earth's total land area is about 148.9 million square kilometers.\n3. Therefore, the surface area of Europe, which is approximately 10.18 million square kilometers, is 2% of the Earth's total land area.",
+        "1. Europe occupies approximately 2% of the Earth's total land area.\n2. The Earth's total land area is about 148.9 million square kilometers.\n3. Europe has a land area of around 10.18 million square kilometers.\n\nHence, about 6.8% of the Earth's surface (considering only land) is covered by Europe.",
+        "1. The total land area of Earth is approximately 148.9 million square kilometers. Europe occupies about 10.18 million square kilometers.\n2. To find the percentage, we divide the area of Europe by the total land area of Earth and multiply by 100.\n3. Therefore, Europe covers approximately 6.83% of Earth's surface.",
+        "Europe covers approximately 2% of the Earth's total surface area. This estimate is based on the continent having a land area of around 10,180,000 square kilometers, compared to the Earth's total land area of about 148,939,484 square kilometers."
+      ],
+      "log_lik_agg": [
+        -0.2583165100624419,
+        -0.13476576964910092,
+        -0.18091673580929638,
+        -0.2191867031814421,
+        -0.29219872880106174,
+        -0.6021520391821045,
+        -0.21263768328353763,
+        -0.20065097863315254,
+        -0.17890760103579273,
+        -0.24983610999836048
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.693264619635798,
+        -0.8439033362316622,
+        -2.65883127906922
+      ],
+      "judge_candidate": "1. Europe covers approximately 2% of the Earth's total surface area, making it the sixth largest continent by size.\n2. The total land area of Europe is about 10,180,000 square kilometers.\n3. The Earth's total surface area is approximately 510 million square kilometers, so the percentage of Earth's surface covered by Europe is (10,180,000 / 510,000,000) * 100%, which equals approximately 2%.",
+      "judge_correct": true,
+      "kle_full": 1.054193746208113,
+      "cost": {
+        "t_seconds": 23.88391022302676,
+        "n_gen_tokens": 866,
+        "n_prompt_tokens": 60
+      }
+    },
+    {
+      "id": "triviaqa-000007",
+      "question": "Which artist has a daughter and two sons with Jane Asher, whom he married in 1981?",
+      "responses": [
+        "1. To identify the artist who has a daughter and two sons with a specific person, we first need to know the name of the person. In this case, the person is Jane Asher.\n2. A search for famous artists who married Jane Asher reveals that English actor and musician Paul McCartney is one such person.\n3. Therefore, Paul McCartney is the artist who has a daughter and two sons with Jane Asher.",
+        "The artist in question is Paul McCartney. He married actress Jane Asher in 1981, and they had four children together, with three being sons (Martha being their daughter, and the other three being boys). Therefore, Paul McCartney has a daughter and two sons with Jane Asher.",
+        "The artist in question is Paul McCartney, a member of the famous band The Beatles. He married actress Jane Asher in 1981. It is known that McCartney has a daughter and two sons. Therefore, Paul McCartney is the artist who has a daughter and two sons with Jane Asher.",
+        "The artist in question is English musician and actor Paul McCartney, who married actress Jane Asher in 1981. McCartney has a daughter, Mary, and two sons, James and Alfie, with Asher. Therefore, Paul McCartney is the artist who has a daughter and two sons with Jane Asher.",
+        "1. We know that Jane Asher is a British actress who was married to a well-known British artist.\n2. She had children with this artist, including a daughter and two sons.\n3. The correct answer, therefore, is Paul McCartney, who married Jane Asher in 1981 and has a daughter and two sons with her.",
+        "The artist in question is Paul McCartney, a former member of The Beatles. He married actress Jane Asher in 1981. McCartney has a daughter, Stella McCartney, and two sons, James McCartney and Alasdhair McCartney, with Jane Asher. Therefore, Paul McCartney is the artist with a daughter and two sons married to Jane Asher.",
+        "The artist in question is Paul McCartney, former member of The Beatles. He married Jane Asher in 1981, and as stated, he has a daughter and two sons with her. Therefore, Paul McCartney is the artist who has these children with Jane Asher.",
+        "The artist in question is British actor and musician Paul McCartney. He married actress Jane Asher in 1981, and they had a daughter, Stella McCartney, and two sons, James and Alasdhair, together. Hence, Paul McCartney is the answer.",
+        "The artist in question is Paul McCartney, who is a member of the famous band The Beatles. He married actress Jane Asher in 1981, and they have three children together: a daughter named Mary, and two sons named James and Stella (named after Stella McCartney, Paul's fashion designer daughter from his first marriage). Therefore, Paul McCartney has a daughter and two sons with Jane Asher.",
+        "The artist in question is Paul McCartney, who married Jane Asher in 1981. McCartney is a well-known musician, formerly of The Beatles. He has one daughter and two sons with Asher, making them his children."
+      ],
+      "log_lik_agg": [
+        -0.2616158684993044,
+        -0.4079177799954343,
+        -0.1983706143455229,
+        -0.2512467564411566,
+        -0.3887821805591767,
+        -0.1478831541131843,
+        -0.2509959451854229,
+        -0.3261557456756395,
+        -0.1857481321059568,
+        -0.32684167515147816
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "log_lik_per_sem_id": [
+        -2.2929890779168884,
+        -1.6647432037518082,
+        -1.2089654222513122,
+        -0.8884552959605675
+      ],
+      "judge_candidate": "The artist in question is Paul McCartney, a member of the iconic band The Beatles. He married actress Jane Asher in 1981, and they have a daughter named Stella McCartney and two sons named James McCartney and Alasdhair McCartney. Therefore, Paul McCartney is the artist who has a daughter and two sons with Jane Asher.",
+      "judge_correct": false,
+      "kle_full": 1.2489766169568852,
+      "cost": {
+        "t_seconds": 20.38336125796195,
+        "n_gen_tokens": 740,
+        "n_prompt_tokens": 70
+      }
+    },
+    {
+      "id": "triviaqa-000008",
+      "question": "Which famous fishing town of east Scotland lies roughly half-way between Montrose and Dundee?",
+      "responses": [
+        "We first calculate the midpoint between Montrose and Dundee, assuming equal distances. Since Montrose is approximately 15 miles north of Dundee, the midpoint would be around 7.5 miles north of each. The nearest famous fishing town in east Scotland that fits this description is Arbroath, which is approximately 6 miles north of the calculated midpoint.\n\nFinal answer: Arbroath is the famous fishing town of east Scotland that lies roughly half-way between Montrose and Dundee.",
+        "1. To find the midpoint between Montrose and Dundee, we divide the distance by 2. Since both Montrose and Dundee are located on the coast of east Scotland, the midpoint would most likely be a coastal town.\n2. Arbroath, located roughly halfway between Montrose and Dundee, fits this description, as it is a well-known fishing town on the east coast of Scotland.\n3. Therefore, Arbroath is the correct answer.",
+        "First, we need to identify the geographical midpoint between Montrose and Dundee on a map or by using distance calculation. After that, we compare this midpoint with known fishing towns in East Scotland. The town of Arbroath, located between Montrose and Dundee, is a significant fishing town in East Scotland.\n\nFinal answer: Arbroath is the famous fishing town of East Scotland that lies roughly half-way between Montrose and Dundee.",
+        "1. To find a town that lies halfway between Montrose and Dundee, we would calculate the midpoint along their route. The distance between Montrose (56.74°N, 2.56°W) and Dundee (56.46°N, 2.94°W) can be found using latitude and longitude coordinates.\n\n2. Once the distance is calculated, the midpoint can be determined by averaging the latitude and longitude values.\n\nFinal answer: Arbroath, with coordinates approximately (56.60°N, 2.75°W), is the town that lies roughly half-way between Montrose and Dundee.",
+        "First, let's consider the midpoint between Montrose and Dundee on a map. The distance between these two towns is approximately 35 miles.\n\nHalf of 35 miles is 17.5 miles. Therefore, the town lying roughly half-way between Montrose and Dundee would be Arbroath, which is approximately 17 miles from Montrose and 18 miles from Dundee.\n\nFinal answer: The famous fishing town of east Scotland that lies roughly half-way between Montrose and Dundee is Arbroath.",
+        "1. First, we need to find a location that is approximately equidistant between Montrose and Dundee. To do this, we can check a map or calculate the midpoint between these two cities.\n\n2. Upon checking, we find that Arbroath is located around the halfway point between Montrose and Dundee.\n\n3. Therefore, Arbroath is the famous fishing town of East Scotland that lies roughly half-way between Montrose and Dundee.",
+        "1. First, we note the location of Montrose and Dundee on a map, with Montrose to the northeast and Dundee to the southwest.\n2. A location roughly halfway between them would be closer to the center, geographically speaking.\n3. The famous fishing town in east Scotland that is centrally located between Montrose and Dundee is Arbroath.",
+        "1. First, let's consider the location of Montrose and Dundee on a map. Montrose is to the northeast of Dundee.\n2. We need to find a town roughly halfway between these two points, taking the shortest route on a map.\n3. Arbroath, located southeast of Montrose and northwest of Dundee, appears to be in this position, making it the famous fishing town of east Scotland that is roughly halfway between Montrose and Dundee.\n\nFinal answer: Arbroath is the town in question.",
+        "We'll find the midpoint between Montrose and Dundee on a map or use an online distance calculator, which indicates Stonehaven as the town that's roughly equidistant from both Montrose and Dundee. Therefore, Stonehaven is the famous fishing town of East Scotland that lies halfway between Montrose and Dundee.",
+        "First, we need to find a town that is approximately equidistant between Montrose and Dundee. To do this, we would look for a location at about halfway along the straight line connecting the two cities.\n\nThe A921 road connects Montrose and Dundee, and a town named Arbroath is located along this route, approximately halfway. Therefore, Arbroath is the famous fishing town of east Scotland that lies roughly half-way between Montrose and Dundee."
+      ],
+      "log_lik_agg": [
+        -0.3546789987439956,
+        -0.42176512994158727,
+        -0.387815952602059,
+        -0.33571889518927306,
+        -0.28726342556680123,
+        -0.31730964844955983,
+        -0.47385630834587783,
+        -0.3560005471534361,
+        -0.44995872797192754,
+        -0.39319203801098324
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        2,
+        5,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.2810698390151396,
+        -2.3481559702127313,
+        -1.6050253874220066,
+        -2.262109735460417,
+        -1.1839697922885273,
+        -2.3763495682430715,
+        -2.3195828782821275
+      ],
+      "judge_candidate": "1. To find the midpoint between Montrose and Dundee, we'll calculate the average of their latitudes and longitudes.\n2. The midpoint will be approximately at the same distance from both Montrose and Dundee, making it equidistant.\n3. The town that fits this description is Arbroath, a famous fishing town in east Scotland, which is indeed roughly halfway between Montrose and Dundee.",
+      "judge_correct": false,
+      "kle_full": 1.6662295537360037,
+      "cost": {
+        "t_seconds": 27.89908538002055,
+        "n_gen_tokens": 1082,
+        "n_prompt_tokens": 67
+      }
+    },
+    {
+      "id": "triviaqa-000009",
+      "question": "Which was the first commercial jet airliner to go into service in the UK?",
+      "responses": [
+        "1. The first commercial jet airliner in the world was the De Havilland Comet, which began service in 1952, but it was not the first in the UK.\n2. The first British-built jet airliner was the Vickers Viscount, which made its first commercial flight in 1953.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the Vickers Viscount.",
+        "1. The first commercial jet airliner was the De Havilland Comet, which made its maiden commercial flight in 1952.\n2. The Comet 1 entered service with British Overseas Airways Corporation (BOAC), a British airline.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the De Havilland Comet 1 with BOAC in 1952.",
+        "1. The first commercial jet airliner to enter service in the UK was the de Havilland Comet, a British aircraft.\n2. It made its first commercial flight on May 27, 1952, operated by British Overseas Airways Corporation (BOAC) from London to Johannesburg via Cairo and Khartoum.\n3. Therefore, the de Havilland Comet was the first commercial jet airliner to go into service in the UK.",
+        "1. The first commercial jet airliner was the De Havilland Comet, which made its maiden flight in 1949, but it wasn't until 1952 that the Comet 1 entered commercial service with British Overseas Airways Corporation (BOAC).\n2. Another significant jetliner, the Boeing 707, first flew in 1957, but it wasn't until 1959 that British Airways (then BOAC) started operating it.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the De Havilland Comet 1 in 1952.",
+        "1. Commercial jet airliners were introduced in the 1950s. The first commercial jet to fly was the De Havilland Comet, but it did not go into service in the UK until 1952.\n2. Another notable early jet, the Boeing 707, made its maiden flight in 1957, but its first commercial flight was with Pan Am in the United States.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the De Havilland Comet.",
+        "1. The first commercial jet airliner in the world was the De Havilland Comet, which made its maiden commercial flight in 1952.\n2. The Comet 1 entered service with British Overseas Airways Corporation (BOAC), a UK-based airline, on January 24, 1952, making it the first commercial jet airliner to go into service in the UK.\n3. Therefore, the De Havilland Comet 1 was the first commercial jet airliner to go into service in the UK.",
+        "1. The first commercial jet airliner in the world was the De Havilland Comet, which made its maiden flight in 1949.\n2. The De Havilland Comet began commercial service with British Overseas Airways Corporation (BOAC) in 1952.\n3. Therefore, the De Havilland Comet was the first commercial jet airliner to go into service in the UK.",
+        "1. The first commercial jet airliner was the De Havilland Comet, but it didn't start its service in the UK until May 1952, making it slightly later than the first service in the US.\n2. The Boeing 707 and Douglas DC-8, both introduced in the US in 1958, were the first commercial jets to operate transatlantic flights, but not the first commercial jets overall.\n3. The first commercial jet airliner to go into service in the UK was the Vickers Viscount, a turbo-prop airliner, which started its service in 1950. Therefore, the first commercial jet airliner in the UK was not the De Havilland Comet.",
+        "1. The first commercial jet airliner to operate in the UK was the de Havilland Comet 1, which made its maiden commercial flight on May 2, 1952, between London and Johannesburg by British Overseas Airways Corporation (BOAC).\n2. However, the first scheduled domestic flight of a commercial jet in the UK took place on July 1, 1952, with BOAC operating a Comet 1 flight between London Heathrow and Edinburgh.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the de Havilland Comet 1 on its maiden commercial flight on May 2, 1952.",
+        "1. The De Havilland Comet was the world's first jet-powered commercial airliner, first entering service in 1952 with British Overseas Airways Corporation (BOAC), which later became British Airways.\n2. De Havilland produced the Comet in the UK.\n3. Therefore, the first commercial jet airliner to go into service in the UK was the De Havilland Comet."
+      ],
+      "log_lik_agg": [
+        -0.15431628654738075,
+        -0.13270302414894103,
+        -0.17770850531897456,
+        -0.18906293540502225,
+        -0.3047893626115671,
+        -0.15676232147216798,
+        -0.10414436432377745,
+        -0.2980989391347889,
+        -0.2614529361136449,
+        -0.19806180789601058
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        5,
+        6,
+        7
+      ],
+      "log_lik_per_sem_id": [
+        -2.2613009017699075,
+        -1.532159182731952,
+        -2.2846931205415015,
+        -2.296047550627549,
+        -1.6418767731520378,
+        -2.405083554357316,
+        -2.368437551336172,
+        -2.3050464231185375
+      ],
+      "judge_candidate": "1. The first commercial jet airliner in the world was the De Havilland Comet, which made its maiden flight in 1949.\n2. The De Havilland Comet 1 made its first scheduled commercial flight on May 2, 1952, operated by British Overseas Airways Corporation (BOAC).\n3. Therefore, the De Havilland Comet 1 was the first commercial jet airliner to go into service in the UK.",
+      "judge_correct": true,
+      "kle_full": 1.9947754154359467,
+      "cost": {
+        "t_seconds": 31.174575516954064,
+        "n_gen_tokens": 1225,
+        "n_prompt_tokens": 64
+      }
+    },
+    {
+      "id": "triviaqa-000010",
+      "question": "The word Tet in the Tet Offensive (N Vietnam/Viet Cong against S Vietnam/US forces on 30 Jan 1968) referred to the national?",
+      "responses": [
+        "The Tet Offensive was a series of coordinated attacks by North Vietnam and the Viet Cong during the Vietnam War. The word \"Tet\" refers to the Vietnamese Lunar New Year, and the offensive was launched during this time (30 January 1968) for its symbolic significance. Therefore, \"Tet\" in the Tet Offensive refers to the Vietnamese Lunar New Year, which is a national event in Vietnam.\n\nFinal answer: The word \"Tet\" in the Tet Offensive refers to the Vietnamese Lunar New Year, a national event in Vietnam.",
+        "The Tet Offensive was a series of attacks by the North Vietnam/Viet Cong forces against South Vietnam and U.S. forces in 1968. The term \"Tet\" refers to the Vietnamese New Year, a significant national holiday in Vietnam. Hence, Tet is a national term, specifically referring to the Vietnamese New Year.",
+        "The Tet Offensive was a series of coordinated attacks by the North Vietnamese (Viet Cong) against South Vietnamese and US forces, starting on January 30, 1968. The term \"Tet\" refers to the Vietnamese lunar new year celebration, named Tết Nguyên Đán, a national holiday in Vietnam. Hence, the Tet Offensive was named after this national holiday.",
+        "The Tet Offensive was a series of attacks launched by North Vietnam and the Viet Cong against South Vietnam and the US forces on various holidays, one of which was Tet Nguyen Dan, the Vietnamese Lunar New Year. This holiday is known as Tet in Vietnamese. Therefore, the word Tet in the Tet Offensive refers to the Vietnamese Lunar New Year.",
+        "The Tet Offensive was a series of attacks by North Vietnam and the Viet Cong against South Vietnam and US forces in 1968. The word \"Tet\" refers to the Vietnamese Lunar New Year, which falls on the same day as the Gregorian date of January 30th. So, Tet in the Tet Offensive refers to the Vietnamese New Year.",
+        "The word \"Tet\" in the Tet Offensive is a Vietnamese term for Lunar New Year. The Tet Offensive was a large-scale military campaign that occurred during the Tet holiday, which is why it was named the Tet Offensive. Therefore, the Tet Offensive was not a national, but rather a celebration of the Vietnamese New Year.",
+        "The Tet Offensive, a significant event in the Vietnam War, was named after Tet Nguyen Dan, a traditional Vietnamese New Year festival. In the Vietnamese language, \"Tet\" translates to \"New Year,\" which is the origin of its use in this context. Therefore, Tet refers to the Vietnamese New Year, a national event.",
+        "The Tet Offensive was a series of attacks by North Vietnamese and Viet Cong forces during the Vietnam War. The name \"Tet\" refers to Tet Nguyen Dan, the Vietnamese Lunar New Year. This annual festival is a significant national holiday in Vietnam, so the name Tet for the offensive highlights the timing of the attacks.\n\nTherefore, Tet in the Tet Offensive refers to the Vietnamese New Year, which is a national holiday in both North and South Vietnam.",
+        "The Tet Offensive was a series of coordinated attacks by North Vietnam (Viet Cong) against South Vietnam and US forces on January 30, 1968. The word \"Tet\" is a Vietnamese term meaning \"New Year,\" as it occurred during the Tet holiday. Therefore, the Tet in the Tet Offensive is a reference to the Vietnamese Lunar New Year.",
+        "The Tet Offensive was a series of coordinated attacks launched by North Vietnam and the Viet Cong against South Vietnam and the United States. The word \"Tet\" refers to the Vietnamese Lunar New Year, which falls on the same date as the offensive, January 30. Therefore, Tet in this context is a reference to the holiday and not a specific nation. The offensive was not an attack by one nation against another but a complex military operation involving multiple factions in the Vietnam War."
+      ],
+      "log_lik_agg": [
+        -0.2403000217320314,
+        -0.38525134337122563,
+        -0.34752089309040457,
+        -0.23916181168434295,
+        -0.23995764639185763,
+        -0.36320184143941575,
+        -0.4006569138555615,
+        -0.31894807198697384,
+        -0.3104395264552699,
+        -0.36677033784535695
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        4,
+        3,
+        5
+      ],
+      "log_lik_per_sem_id": [
+        -1.6001264232613888,
+        -1.6637108207711182,
+        -1.589234622502142,
+        -1.5645525583591204,
+        -2.3020700579209477,
+        -2.3498923237793305
+      ],
+      "judge_candidate": "The Tet Offensive was a series of attacks by North Vietnam and the Viet Cong against South Vietnam and US forces, which occurred on January 30, 1968. The term \"Tet\" refers to the Vietnamese Lunar New Year, a national holiday in Vietnam. Therefore, the word Tet in the Tet Offensive refers to the Vietnamese Lunar New Year, a national holiday.",
+      "judge_correct": true,
+      "kle_full": 1.5938474229910553,
+      "cost": {
+        "t_seconds": 25.016682310961187,
+        "n_gen_tokens": 952,
+        "n_prompt_tokens": 86
+      }
+    },
+    {
+      "id": "triviaqa-000011",
+      "question": "What are marram, fescue, and rye?",
+      "responses": [
+        "Marram, fescue, and rye are types of grasses commonly found in various regions of the world. Marram grass (Ammophila arenaria) is a dune-forming grass, often found on sandy coastlines. Fescue (Festuca spp.) is a genus of cool-season grasses that include tall fescue and hard fescue, commonly used in lawns and pastures. Rye grass (Lolium spp.) is another genus of cool-season grasses, including annual ryegrass and perennial ryegrass, often used for temporary erosion control and in mixtures with other grasses for lawns and pastures.\n\nFinal answer: Marram, fescue, and rye are different types of grasses, each having specific uses in various landscapes.",
+        "Marram, fescue, and rye are types of grasses commonly found in various parts of the world. Marram grass (Ammophila spp.) is a type of beach grass that stabilizes sand dunes. Fescue grass (Festuca spp.) is a diverse group of cool-season grasses used for turf, forage, and erosion control. Lastly, rye grass (Lolium spp.) is another cool-season grass commonly used for lawns and pastures.\n\nFinal answer: Marram is a beach grass, fescue is a diverse group of cool-season grasses, and rye is another cool-season grass.",
+        "Marram, fescue, and rye are types of grasses commonly used in agriculture and landscaping, specifically for erosion control and turf establishment. Marram grass (Ammophila arenaria) is a type of beach grass native to Europe and Asia, often used in coastal dune restoration. Fescue grass (Festuca spp.) is a genus of cool-season grasses found worldwide, valued for its drought tolerance and use in lawns, golf courses, and pastures. Rye grass (Lolium spp.) is another genus of cool-season grasses, which includes annual, perennial, and Italian rye grasses, commonly used for forage, turf, and erosion control. In summary, marram, fescue, and rye are grass species used for various purposes, primarily in the management of soil, landscapes, and agriculture.",
+        "Marram, fescue, and rye are all types of grasses commonly used in agriculture and landscaping. Marram grass (Ammophila arenaria) is a type of coastal grass often used for dune stabilization. Fescue grass (Festuca spp.) includes a variety of species like tall fescue and creeping red fescue, commonly used for lawns and pastures. Rye grass (Lolium spp.) refers to several species such as perennial ryegrass and Italian ryegrass, often used as a quick-growing, winter cover crop.\n\nFinal answer: Marram, fescue, and rye are species of grasses known for their uses in landscaping, agriculture, and dune stabilization.",
+        "Marram, fescue, and rye are types of grasses commonly used in agriculture and for landscaping. Marram grass, also known as Ammophila, is a species of beach grass. Fescue grass, such as creeping red fescue and tall fescue, are cool-season grasses known for their resistance to drought and foot traffic. Lastly, rye grass, like perennial ryegrass and annual ryegrass, are quick-growing and are often used as a cover crop or turf grass.\n\nFinal answer: Marram, fescue, and rye are grass species that are utilized in various applications, such as stabilizing dunes, landscaping, and turf management.",
+        "Marram, fescue, and rye are types of grasses. Marram grass (Ammophila arenaria) is a hardy, salt-tolerant species often found on sandy shores. Fescue grass (Festuca spp.) is a diverse genus of grasses known for their hardiness and drought tolerance, common in cool-temperate regions. Lastly, rye grass (Lolium spp.) is another grass genus, with annual and perennial species, often used in agricultural and turf grass applications.",
+        "Marram, fescue, and rye are types of grasses. Marram grass (Ammophila arenaria) is a species of flowering plant that's commonly found on sandy coastlines and dunes. Fescue grass (Festuca spp.) includes many species and is often used for pasture, lawns, and golf courses due to its hardiness. Rye grass (Lolium spp.) is another genus of grass widely used for lawns and pastures, and includes species like tall fescue and perennial rye grass.\n\nIn summary, marram, fescue, and rye are grasses that are used for various purposes such as stabilizing dunes, lawns, and pastures.",
+        "Marram, fescue, and rye are all types of grasses commonly found in different regions around the world. Marram grass (Ammophila arenaria) is a type of beach grass that stabilizes sand dunes. Fescue grass (Festuca spp.) is a diverse genus of grasses known for their use in lawns, pastures, and golf courses. Rye grass (Lolium spp.) is a type of grass used extensively in cool-season lawns, pastures, and cereal production. These grasses are important for soil conservation, wildlife habitat, and human use.",
+        "Marram, fescue, and rye are types of grasses commonly used for grasslands and turf. Marram grass (Ammophila spp.) is a type of beach grass that stabilizes sand dunes. Fescue grass (Festuca spp.) is a family of cool-season grasses known for their drought tolerance and is often used in lawns and golf courses. Rye grass (Lolium spp.) is another cool-season grass, frequently used in lawns and sports fields due to its fast growth rate and ability to withstand high traffic.\n\nFinal answer: Marram, fescue, and rye are three types of grasses known for their versatility and ability to thrive in various conditions.",
+        "Marram, fescue, and rye are types of grasses commonly used in agriculture and landscaping. Marram grass, also known as Ammophila arenaria, is a type of dune grass found in coastal areas. Fescue grass (Festuca) is a genus of cool-season grasses known for their drought tolerance. Rye grass (Lolium spp.) is a type of annual or perennial grass used for pasture, lawns, and sports fields. In conclusion, marram, fescue, and rye are grass species that serve various purposes due to their distinctive growth habits and adaptability."
+      ],
+      "log_lik_agg": [
+        -0.3477311304577902,
+        -0.22459416846500946,
+        -0.3631806582173643,
+        -0.26123521199280564,
+        -0.3827448536635964,
+        -0.39300050887589655,
+        -0.3991677578515518,
+        -0.3416953251269975,
+        -0.34840430822913293,
+        -0.3677378700923746
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.10533529620215556,
+        -2.302812096720596
+      ],
+      "judge_candidate": "Marram, fescue, and rye are types of grasses commonly used in agriculture and landscaping. Marram grass (Ammophila spp.) is a type of beach grass found in sandy coastal areas. Fescue grass (Festuca spp.) is a group of cool-season grasses known for their drought tolerance and are often used in lawns and pastures. Rye grass (Lolium spp.) is a type of annual or perennial grass used for forage, turf, and erosion control.\n\nFinal answer: Marram, fescue, and rye are grass species, with marram being a beach grass, fescue being a group of cool-season grasses, and rye being a grass used for forage, turf, and erosion control.",
+      "judge_correct": true,
+      "kle_full": 0.37605307749171096,
+      "cost": {
+        "t_seconds": 39.87991930101998,
+        "n_gen_tokens": 1555,
+        "n_prompt_tokens": 60
+      }
+    },
+    {
+      "id": "triviaqa-000012",
+      "question": "What was the name of politician Cecil Parkinson's mistress and mother of his child?",
+      "responses": [
+        "1. Cecil Parkinson, a British politician, had a well-publicized extramarital affair. His mistress gave birth to his child in 1983.\n2. The child's mother was Sally Jones, who was a member of Parkinson's staff at the time.\n3. Therefore, Sally Jones was Parkinson's mistress and the mother of his child.",
+        "1. Cecil Parkinson was a British Conservative politician active in the late 20th century. His personal life gained significant attention due to a scandal in 1983.\n2. The scandal revolved around his extramarital affair with a younger woman. This is often a subject of public interest in politics, particularly when children are involved.\n3. The woman, Sarah Cunliffe-Lister, was a 24-year-old secretary at the time. She became Parkinson's mistress and had a child with him, named Emma. Therefore, Sarah Cunliffe-Lister was Parkinson's mistress.",
+        "The politician Cecil Parkinson's mistress and mother of his child was Sarah Hughes. She became well-known due to their public scandal in 1983. Parkinson was a prominent member of the Conservative Party in the United Kingdom at the time.",
+        "Cecil Parkinson was a British politician who had a highly publicized affair. His mistress, who became pregnant with his child, was known as Sarah Hoskyns, later Sarah Keays. This event led to his resignation from the position of Trade and Industry Secretary in Margaret Thatcher's cabinet in 1983.",
+        "1. Cecil Parkinson, a British Conservative politician, had a well-publicized extramarital affair during the late 1980s.\n2. His mistress was a 24-year-old Sally Ann Beresford, who was a researcher at the Conservative Party Central Office at the time.\n3. She gave birth to his son, Liam, in 1987.\n\nSo, the name of Cecil Parkinson's mistress and the mother of his child is Sally Ann Beresford.",
+        "1. Cecil Parkinson was a British Conservative politician who served in the Margaret Thatcher government.\n2. In 1983, news broke about his affair with Sara Keays, a young journalist.\n3. Sara Keays gave birth to his daughter, Emily, in 1985.\n\nFinal answer: Sara Keays was the name of Cecil Parkinson's mistress and the mother of his child.",
+        "1. Cecil Parkinson, a British Conservative politician, became infamous for a personal scandal in 1983 when he resigned from Margaret Thatcher's cabinet after it was revealed that he had a child with a woman who was not his wife.\n2. The identity of the woman was later disclosed to be Sarah (later known as Sarah Hogg) who worked for the Conservative Party.\n3. Sarah Hogg gave birth to their daughter Emily Parkinson in 1983.\n\nFinal answer: Sarah Hogg was Cecil Parkinson's mistress.",
+        "1. Sir Cecil Parkinson, a British politician, had a notable public scandal in 1983 when it was revealed he had an extramarital affair.\n2. The woman involved, who gave birth to his daughter, was named Sara Keays.\n3. Therefore, Sara Keays is the name of Sir Cecil Parkinson's mistress and mother of his child.",
+        "The British politician Cecil Parkinson's mistress was Sarah Hogg, who was a journalist at The Times. She had a son with Parkinson in 1983, and this relationship led to Parkinson's resignation as Trade and Industry Secretary. So, the name of Cecil Parkinson's mistress and mother of his child is Sarah Hogg.",
+        "Cecil Parkinson, a British Conservative politician, was involved in a well-publicized scandal in 1983 when it was revealed he had a relationship with Sara Keay, who later became his wife. However, the mistress who gave birth to his child prior to this was Sarah Hogg, a journalist. So, Sarah Hogg is the name of the mistress who was the mother of Cecil Parkinson's child."
+      ],
+      "log_lik_agg": [
+        -0.353147566058608,
+        -0.5250604346926723,
+        -0.49867854162373326,
+        -0.4442735080135195,
+        -0.4097083961685835,
+        -0.3321145328644075,
+        -0.44055777229368687,
+        -0.31305516812772977,
+        -0.3894601287438145,
+        -0.4348741361425947
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.2437745604727066,
+        -2.4156874291067707,
+        -2.3893055360378317,
+        -2.334900502427618,
+        -2.300335390582682,
+        -2.2227415272785063,
+        -2.3311847667077856,
+        -2.203682162541828,
+        -2.280087123157913,
+        -2.325501130556693
+      ],
+      "judge_candidate": "1. Cecil Parkinson was a British Conservative politician who had a high-profile scandal in 1983 when it was revealed he had an affair with a woman named Sarah Keays.\n2. Sarah Keays was a research assistant in Parkinson's office at the time.\n3. Their daughter, Amelia, was born in 1984.\n\nTherefore, Sarah Keays was the name of Cecil Parkinson's mistress and the mother of his child.",
+      "judge_correct": true,
+      "kle_full": 2.2269251279116786,
+      "cost": {
+        "t_seconds": 25.30931923398748,
+        "n_gen_tokens": 948,
+        "n_prompt_tokens": 67
+      }
+    },
+    {
+      "id": "triviaqa-000013",
+      "question": "Name the Archbishop of Canterbury who was burnt at the stake in 1556?",
+      "responses": [
+        "The Archbishop of Canterbury who was martyred in 1556 was Thomas Cranmer. He was a key figure during King Henry VIII's reign and a key participant in the English Reformation. He was eventually condemned and executed during the reign of Mary I for his religious beliefs, specifically his support for the Protestant faith.\n\nFinal answer: Thomas Cranmer was the Archbishop of Canterbury who was burned at the stake in 1556.",
+        "The Archbishop of Canterbury is the Primate of the Church of England. The Archbishop of Canterbury who was martyred in 1556 was Thomas Cranmer. He was a key figure during the English Reformation, but his beliefs conflicted with those of King Edward VI's successor, Queen Mary I, leading to his execution for heresy. Final answer: Thomas Cranmer.",
+        "The Archbishop of Canterbury is the leader of the Church of England. The individual who held this position and was burnt at the stake in 1556 was Thomas Cranmer. This event took place during the reign of Queen Mary I, also known as Bloody Mary due to her persecution of Protestants. Cranmer was a key figure in the English Reformation under Henry VIII and was initially supportive of Mary's succession, but he soon fell out of favor for his Protestant beliefs. He was tried for heresy and ultimately executed in Oxford.",
+        "1. The Archbishop of Canterbury is the spiritual head of the Church of England.\n2. The Archbishop who was burnt at the stake in 1556 was a prominent figure during the reign of Queen Mary I, also known as Bloody Mary due to her persecution of Protestants.\n3. Therefore, the Archbishop of Canterbury burnt at the stake in 1556 was Thomas Cranmer.",
+        "1. The Archbishop of Canterbury is the highest-ranking bishop in the Church of England, and as this question refers to the 16th century, we're looking for a Church of England leader.\n2. The Church of England was established in the 16th century under King Henry VIII, and the Archbishop who was martyred during Mary I's reign was Thomas Cranmer.\n3. Thomas Cranmer was indeed the Archbishop of Canterbury and was burnt at the stake in 1556 for his role in the Protestant Reformation, making him the correct answer.",
+        "The Archbishop of Canterbury who was burnt at the stake was Thomas Cranmer. This was during the reign of Queen Mary I, known as Bloody Mary due to her persecution of Protestants. Cranmer, who had supported the English Reformation under King Henry VIII, was convicted of heresy under Mary's Catholic rule and executed in 1556.",
+        "The Archbishop of Canterbury who was martyred during the reign of Queen Mary I (1553-1558) was Thomas Cranmer. He was a key figure during the reign of Henry VIII, who had previously legitimized Henry's divorce from Catherine of Aragon. However, during Mary's rule, Cranmer was accused of heresy and was burned at the stake on March 21, 1556. Therefore, Thomas Cranmer is the correct answer.",
+        "The Archbishop of Canterbury was a high-ranking religious figure in England, and the one who was martyred in 1556, during the reign of Queen Mary I, was Thomas Cranmer. This tragic event took place because Cranmer, a key figure in the English Reformation, supported the separation of the Church of England from the Roman Catholic Church, which was not in alignment with Mary's Catholic policies. The method of his execution was burning at the stake.",
+        "The Archbishop of Canterbury is the leader of the Church of England, and the position is held by a bishop. In 1556, the Archbishop of Canterbury who was burnt at the stake was Thomas Cranmer, a key figure during the English Reformation. He was a leading evangelical and contributed to the Book of Common Prayer. However, his religious beliefs led to his trial, conviction, and execution during Mary I's reign, as she was opposed to the Protestant reforms he supported.",
+        "The Archbishop of Canterbury who was burnt at the stake was Thomas Cranmer. He was a key figure during the English Reformation and was an early advocate for the break with the Roman Catholic Church. However, under Mary I, a Catholic, he was accused of heresy and executed in 1556. Therefore, the correct answer is Thomas Cranmer."
+      ],
+      "log_lik_agg": [
+        -0.3745223044083928,
+        -0.2804975439996823,
+        -0.3058145379995912,
+        -0.1754856899380684,
+        -0.3634759497513874,
+        -0.26118283727694125,
+        -0.30037424088056597,
+        -0.40416136164040795,
+        -0.5361302992571955,
+        -0.344884404912591
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        0,
+        3,
+        0,
+        4,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.7110759791993717,
+        -2.2525460833292135,
+        -1.517429772620343,
+        -2.272422780210097,
+        -2.5081788385867263
+      ],
+      "judge_candidate": "The Archbishop of Canterbury who was martyred in 1556 was Thomas Cranmer. He was a key figure during the English Reformation, but his beliefs clashed with the Catholic Queen Mary I, leading to his trial for heresy and eventual execution by burning at the stake. This tragic event occurred during Mary I's reign, known as \"Bloody Mary\" due to her persecution of Protestants.",
+      "judge_correct": true,
+      "kle_full": 1.2933580097735728,
+      "cost": {
+        "t_seconds": 27.556964967981912,
+        "n_gen_tokens": 1058,
+        "n_prompt_tokens": 70
+      }
+    },
+    {
+      "id": "triviaqa-000014",
+      "question": "\"What organisation was founded in 1831 by James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills to \"\"tend to the regeneration of the Drama\"\"?\"",
+      "responses": [
+        "The organisation was founded in 1831 with the aim of \"tending to the regeneration of the Drama.\" The founders were James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. This description and the names of the founders suggest that the organisation was likely the Dramatic Copyright Society, which was established to improve the quality of British drama and protect the rights of authors.",
+        "The organisation was founded in 1831 by James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills with the aim of \"tending to the regeneration of the Drama.\" This group formed the Dramatic Copyright Act's committee, and the most well-known and lasting result of their efforts was the establishment of the Dramatic Copyright Society (DCS), an organisation that protects the rights of playwrights and theatre producers.",
+        "The organisation was founded in 1831, with the purpose of \"tending to the regeneration of the Drama.\" The founders were James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. The organisation that fits these criteria is the \"Dramatic Copyright Act Association,\" which was established to advocate for the protection of playwrights' rights and promote the improvement of drama.",
+        "The organisation in question was founded by a group that included James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. The goal of this organisation was to \"tend to the regeneration of the Drama\". Given this information, the organisation they established was the Dramatic Copyright Act Society, as this organisation was founded in 1831 with the specific purpose of promoting and protecting the rights of playwrights and the development of drama.",
+        "The group in question was established in 1831 with the intention of revitalizing the theater scene. The founders were James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. They sought to restore the drama, thus hinting at their mission for the theater. The organization founded is known as the \"Dramatic Copyright Act Association,\" which was an early attempt to secure legal and financial protections for playwrights and theatrical productions.",
+        "1. The organisation in question was established in 1831, and its founders include James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills.\n2. The primary purpose of the organisation was to focus on the \"regeneration of the Drama,\" which suggests a focus on theatre or drama.\n3. Given the information provided, the organisation founded in 1831 by these individuals for the purpose of improving the theatre or drama is the Drury Lane Theatre Company, as it was refounded in that year by this group and operated for a significant period at the Drury Lane theatre.",
+        "The organization was founded in 1831 with the aim of \"tending to the regeneration of the Drama.\" The founders were James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. Therefore, the organization in question is the \"Dramatic Copyright Society,\" a copyright agency founded to protect the rights of playwrights and dramatists.",
+        "1. The organization in question was founded in 1831, so we are looking for a theatrical or dramatic organization established around that time.\n2. The given names are all associated with theater or drama, suggesting the organization is related to these fields.\n3. The purpose stated, \"tending to the regeneration of the Drama,\" further confirms this is a dramatic or theatrical organization.\n\nFinal answer: The organization was the Dramatic Copyright Society of the United States, founded to protect the rights of playwrights and stimulate dramatic literature.",
+        "The organisation in question was established in 1831. It was founded to promote the revival of drama, and its founders were James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. The answer is the Drury Lane Theatre Company, also known as the \"New Drury Lane Theatre.\"",
+        "The organization was founded in 1831 by James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills. They aimed to \"tend to the regeneration of the Drama.\" This points towards a focus on theater and dramatic arts. The organization that fits this description is the Dramatic Copyright Society of the United Kingdom, which was established to protect and manage the rights of playwrights and dramatists, thereby contributing to the growth and improvement of the drama."
+      ],
+      "log_lik_agg": [
+        -0.33311644549432556,
+        -0.3863581048922156,
+        -0.27000067985438286,
+        -0.3803089067626458,
+        -0.6685342340281716,
+        -0.4868518975926629,
+        -0.3595581268891692,
+        -0.5184608258066639,
+        -0.40380469415532916,
+        -0.36093894663182174
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.2244915614860927,
+        -2.277733220883983,
+        -0.9139994375297638,
+        -2.3782270135844303,
+        -2.4098359417984314,
+        -2.2951798101470966,
+        -2.252314062623589
+      ],
+      "judge_candidate": "The organization in question was founded by James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills in 1831. They aimed to \"tend to the regeneration of the Drama.\" This organization is known as the Dramatic Copyright Society, as it was established to protect and manage the copyrights of playwrights and promote the development of drama.",
+      "judge_correct": false,
+      "kle_full": 1.6339769928090182,
+      "cost": {
+        "t_seconds": 27.380259767058305,
+        "n_gen_tokens": 1046,
+        "n_prompt_tokens": 97
+      }
+    },
+    {
+      "id": "triviaqa-000015",
+      "question": "Which famous British actor is/was married to Anouk Aimee?",
+      "responses": [
+        "1. Anouk Aimee is a French actress known for movies like \"A Man and a Woman.\"\n2. Her husband was a renowned British actor who worked extensively in both film and television.\n3. The actor is Lawrence Harvey, who was married to Anouk Aimee from 1966 to 1975.",
+        "1. Anouk Aimée is a French actress, best known for her role in \"A Man and a Woman.\"\n2. Her husband, Lawrence Olivier, is a British actor, widely regarded as one of the greatest in the history of English theatre and cinema.\n3. Therefore, Lawrence Olivier is the famous British actor who was married to Anouk Aimée.",
+        "1. Anouk Aimee is a French actress, so we're looking for a British actor who was married to a French actress.\n2. One of the few British actors who was married to a French actress is Laurence Olivier, who was married to Vivien Leigh, another famous French actress.\n3. However, Laurence Olivier's wife was not Anouk Aimee. After some research, it was found that the British actor Terence Stamp was married to Anouk Aimee from 1980 to 1982.\n\nAnswer: Terence Stamp is the British actor who was married to Anouk Aimee.",
+        "1. Anouk Aimee is a French actress known for her work in movies like \"A Man and a Woman.\" She has been married twice, with her first marriage being to French screenwriter Jean-Claude Carrière.\n\n2. After her divorce from Carrière, she married her second husband, a British actor.\n\n3. The British actor who was married to Anouk Aimee is Patrick Mower. Patrick Mower is a British actor who was known for his roles in shows like \"Dynasty\" and \"The Professionals.\"",
+        "1. Anouk Aimee is a French actress, known for her work in films such as \"A Man and a Woman\" and \"Carnal Knowledge.\"\n2. After working together in the film \"The Sailor Who Fell from Grace with the Sea,\" Anouk Aimee married her co-star, the British actor Robert Shaw.\n3. Therefore, the famous British actor who is/was married to Anouk Aimee is Robert Shaw.",
+        "1. Anouk Aimée is a French actress, so her spouse would likely be a well-known actor, particularly one who worked in French or international cinema.\n2. One such actor is James Bond actor Roger Moore, who starred in the French film La Mamour Fou (1984) with Anouk Aimée.\n3. Roger Moore and Anouk Aimée were indeed married from 2002 until Moore's death in 2017.",
+        "1. Anouk Aimee is a French actress who had a career spanning over six decades, so it's likely that any British actor she would marry would also be well-established and active during the same period.\n2. The British actor Laurence Olivier and Anouk Aimee were co-stars in the film \"The Night Porter\" in 1974.\n3. They did not play romantic roles together in the film, but married shortly after filming, so it can be inferred that they likely met on set and eventually became a couple.\n\nFinal answer: Laurence Olivier is the British actor who was married to Anouk Aimee.",
+        "1. Anouk Aimée is a French actress known for movies like \"A Man and a Woman.\"\n2. It was revealed in 2010 that she was married to a British actor, but the identity of this actor is not widely known.\n3. The British actor in question is Jack Huston, who is best known for his work in television and film, including \"Boardwalk Empire\" and \"American Hustle.\"",
+        "1. Anouk Aimee is a French actress who had a notable career in both France and Hollywood.\n2. One of her significant Hollywood roles was opposite Richard Burton in the film \"Who's Afraid of Virginia Woolf?\"\n3. Richard Burton was a Welsh actor, prominent in the 1960s and 1970s, known for his passionate and intense performances. Therefore, Richard Burton is the British actor married to Anouk Aimee.",
+        "1. Anouk Aimée is a French actress, known for her roles in films such as \"A Man and a Woman\" and \"Love Letters.\"\n2. The British actor Lawrence Olivier was married four times, but none of his wives were French.\n3. However, Terence Stamp, a British actor, was married to French actress Joanna Schimmelpenning (1968-1973), who is of French-Polish descent and was born Anouk Aimée in honor of the actress. Therefore, Terence Stamp is the British actor who was married to Anouk Aimée."
+      ],
+      "log_lik_agg": [
+        -0.3797231644200973,
+        -0.2618037379839841,
+        -0.20154003387219027,
+        -0.41920633669480806,
+        -0.3383038891479373,
+        -0.4457346850454255,
+        -0.45709612426142415,
+        -0.4487822144292295,
+        -0.38925659772726373,
+        -0.4016700868361763
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.311298324486646,
+        -2.1933788980505327,
+        -2.133115193938739,
+        -2.350781496761357,
+        -2.2698790492144862,
+        -2.377309845111974,
+        -2.3886712843279727,
+        -2.3803573744957784,
+        -2.3208317577938127,
+        -2.333245246902725
+      ],
+      "judge_candidate": "1. Anouk Aimee is a French actress, so we're looking for a British actor who was married to a French actress.\n2. One of the few British actors who was married to a French actress is Laurence Olivier, who was married to Vivien Leigh, a British actress of French-Canadian descent.\n3. However, the correct answer is Terence Stamp, who was married to Anouk Aimee from 1962 to 1967.",
+      "judge_correct": false,
+      "kle_full": 2.2673398551701616,
+      "cost": {
+        "t_seconds": 29.9635552871041,
+        "n_gen_tokens": 1147,
+        "n_prompt_tokens": 63
+      }
+    },
+    {
+      "id": "triviaqa-000016",
+      "question": "The River Durance flows into the Rhone near to which French town or city?",
+      "responses": [
+        "The River Durance is located in southeastern France. It flows from the Alps and empties into the Rhône River. The town where the Durance meets the Rhône is Avignon. So, the final answer is Avignon.",
+        "The River Durance originates in the Southern Alps and flows southwest. To find its eventual destination, we need to identify a major river that flows west from the same region. The Rhone, a significant westward-flowing river in France, is a likely candidate. The confluence of the Durance and Rhone occurs near the town of Avignon.\n\nTherefore, the River Durance flows into the Rhone near Avignon.",
+        "The River Durance originates in the southern French Alps and flows west before joining another major river. The Rhone is the primary westward-flowing river in the region. Given the directions and the Rhone's proximity to the Mediterranean, the city of Avignon is a likely candidate as it is a major city on the Rhone and close to the Mediterranean.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is located in southeastern France. It drains into the Rhône River, so we'll look for a town or city near where the Rhône River's flow is increased by the Durance's inflow. The nearest significant city along the Rhône River after the confluence of the Durance is Avignon.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is located in southeastern France, specifically in the Alps region. It drains into the Rhone River. The city where this confluence occurs is Avignon.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is a major river in southeastern France. It flows from the Southern Alps, southward, eventually joining the Rhône River. The city where they meet is Avignon, located in the Provence-Alpes-Côte d'Azur region.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is located in southeastern France, and it drains into the Rhone River. The confluence of these two rivers is near the city of Valence, making it the city where the River Durance flows into the Rhone.\n\nFinal answer: The River Durance flows into the Rhone near Valence.",
+        "The River Durance is a significant river in southeastern France. It flows through the Alps and empties into the Rhone River. The city where this confluence occurs is Avignon, a historical city known for its medieval architecture, such as the Palais des Papes.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is located in southeastern France, draining part of the southern Alps. It flows generally southeast before meeting the Rhone River. The city where it meets the Rhone is Avignon.\n\nFinal answer: The River Durance flows into the Rhone near Avignon.",
+        "The River Durance is located in southeastern France, draining from the Southern Alps. It flows northward before turning west towards the Rhône River. The city where the Durance flows into the Rhône is Avignon.\n\nFinal answer: The River Durance flows into the Rhône near Avignon."
+      ],
+      "log_lik_agg": [
+        -0.36554252843965185,
+        -0.4969556841771213,
+        -0.45991607512138327,
+        -0.37856869783598124,
+        -0.21659886091947556,
+        -0.2873154801351053,
+        -0.24697259228883517,
+        -0.2340161378029734,
+        -0.3418766170965903,
+        -0.3080126334809595
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.2279612134103663,
+        -2.3515044266534506,
+        -2.2199083211063044
+      ],
+      "judge_candidate": "The River Durance is a major tributary of the Rhone River in southeastern France. It flows from the Southern Alps and empties into the Rhone near the city of Valence. Therefore, the River Durance flows into the Rhone near Valence.",
+      "judge_correct": false,
+      "kle_full": 0.7804111405576568,
+      "cost": {
+        "t_seconds": 20.803231896949,
+        "n_gen_tokens": 780,
+        "n_prompt_tokens": 64
+      }
+    },
+    {
+      "id": "triviaqa-000017",
+      "question": "What would you expect if you asked for Focaccia in an Italian restaurant?",
+      "responses": [
+        "In an Italian restaurant, Focaccia is a common bread dish known for its thick texture and olive oil-seasoned surface. The expectation when asking for Focaccia is to receive a flattish, slightly raised bread, usually served as a side or appetizer, with a soft interior and a crunchy exterior. It may come plain or with toppings like olives, herbs, or onions. So, you would expect to receive a serving of Focaccia bread when you order it in an Italian restaurant.",
+        "1. In an Italian restaurant, traditional Italian dishes are typically offered.\n2. Focaccia is an Italian flatbread, a popular food originating from the region of Liguria.\n3. Therefore, you can expect to find Focaccia on the menu in an Italian restaurant.",
+        "1. Focaccia is a type of Italian flatbread, typically topped with olive oil, salt, and sometimes herbs. It is a common side dish or snack in Italian cuisine.\n2. If you ask for Focaccia in an Italian restaurant, you would expect to receive a fresh, fluffy flatbread, baked with olive oil, and possibly herbs and salt.\n3. Therefore, you should receive a dish that resembles a flattened, oily, and potentially herbed bread.",
+        "1. In an Italian restaurant, the menu is likely to include traditional Italian dishes. Focaccia is a popular Italian flatbread.\n2. It would be reasonable to expect a fluffy, slightly oily bread with various toppings like olives, rosemary, or sea salt.\n3. Therefore, you would likely receive a serving of Focaccia bread with the mentioned toppings, or at least the option to order it with those toppings.",
+        "1. Focaccia is a traditional Italian flat oven-baked bread, typically seasoned with olive oil, salt, and other toppings like rosemary.\n2. Asking for Focaccia in an Italian restaurant would likely result in being served this type of bread as a side, starter, or accompaniment to a meal.\n3. You can expect a fluffy, flavorful bread served warm, with the distinctive dimples on its surface.",
+        "1. In an Italian restaurant, the menu typically offers traditional Italian dishes. Focaccia is an Italian flat oven-baked bread, seasoned with herbs, salt, and olive oil.\n2. As a starter or side dish, Focaccia is often served with olive oil for dipping. Sometimes, it can also be used as a base for various toppings like onions, olives, or tomatoes.\n3. Therefore, you would expect to receive a fresh, herb-topped flatbread when asking for Focaccia in an Italian restaurant.",
+        "In an Italian restaurant, you'd expect to find a variety of traditional Italian dishes. Focaccia is an Italian flat oven-baked bread, originating from the Mediterranean region of Liguria. Therefore, it is reasonable to expect that a Focaccia will be offered as a side, starter, or bread option on the menu of an Italian restaurant. Your final answer is that you would expect to find Focaccia served as a bread or side dish in an Italian restaurant.",
+        "1. Focaccia is a popular Italian flatbread, typically seasoned with olive oil, salt, and often herbs. It's usually served as an appetizer or side dish.\n2. In an Italian restaurant, it's reasonable to expect that the menu would offer Focaccia as a bread option or as a standalone dish.\n3. Therefore, you should expect to find Focaccia listed on the menu or available as a bread option in an Italian restaurant.",
+        "1. Focaccia is a traditional Italian flat oven-baked bread, often seasoned with olive oil, salt, and sometimes herbs.\n2. When ordering Focaccia in an Italian restaurant, you would typically receive a soft, airy, and flavorful flatbread that may have dimples or a rough surface.\n3. Thus, in an Italian restaurant, you can expect to receive a serving of Focaccia as a bread option or as an appetizer with olive oil for dipping.",
+        "1. Focaccia is a type of Italian flatbread, known for its dimpled surface and olive oil drizzle. It's often seasoned with salt, herbs, and sometimes other toppings.\n\n2. Given its Italian origin, asking for Focaccia in an Italian restaurant would typically result in receiving a traditional Italian Focaccia, prepared according to the local culinary traditions.\n\nFinal answer: You should expect to receive a traditional Italian Focaccia in an Italian restaurant."
+      ],
+      "log_lik_agg": [
+        -0.5307544606976804,
+        -0.45577516773572335,
+        -0.42590662987347233,
+        -0.48012805486669635,
+        -0.43477413699030876,
+        -0.3649789264928254,
+        -0.4376788000265757,
+        -0.3170224953265417,
+        -0.4405586779117584,
+        -0.3420823223821752
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.2168410133485486,
+        -1.6350529574044246
+      ],
+      "judge_candidate": "1. Focaccia is a type of Italian flatbread, typically seasoned with olive oil, salt, and sometimes herbs. It's often served as an appetizer or side dish.\n2. In an Italian restaurant, you would expect to find Focaccia on the menu as a bread option, either as a standalone item or as part of a larger dish.\n3. Therefore, if you ask for Focaccia in an Italian restaurant, you should receive a plate of this Italian flatbread, prepared in the traditional style.",
+      "judge_correct": true,
+      "kle_full": 0.5690716669645548,
+      "cost": {
+        "t_seconds": 27.854718393995427,
+        "n_gen_tokens": 1050,
+        "n_prompt_tokens": 64
+      }
+    },
+    {
+      "id": "triviaqa-000018",
+      "question": "'Professor Cuthbert Calculus' is an associate of which character?",
+      "responses": [
+        "1. The character 'Professor Cuthbert Calculus' is a well-known associate of the main characters in the comic strip 'Calvin and Hobbes'.\n2. Calvin, the main character, often seeks the professor's advice on various subjects, particularly physics and math.\n3. Therefore, 'Professor Cuthbert Calculus' is an associate of Calvin, the central character in 'Calvin and Hobbes'.",
+        "'Professor Cuthbert Calculus' is a character in the comic strip \"Calvin and Hobbes.\" Calvin is the main character, and Professor Calculus is his imagined teacher. Therefore, Professor Cuthbert Calculus is an associate of Calvin from the \"Calvin and Hobbes\" comic strip.",
+        "The character 'Professor Cuthbert Calculus' is a companion of Charlie Brown from the comic strip 'Peanuts', created by Charles M. Schulz. He is a bespectacled, brainy, and eccentric character who is often seen participating in science projects with Charlie Brown. Therefore, 'Professor Calculus' is associated with the character Charlie Brown.",
+        "1. Professor Calculus is a recurring character in the comic strip \"Calvin and Hobbes,\" created by Bill Watterson.\n2. Calvin, the main character, is a precocious young boy and Hobbes is his stuffed tiger with anthropomorphic qualities.\n3. Therefore, Professor Calculus is an associate of Calvin, not Hobbes.\n\nAnswer: Professor Cuthbert Calculus is an associate of Calvin from Calvin and Hobbes.",
+        "'Professor Calculus' is an associate character of 'Calvin' and 'Hobbes', from the popular comic strip 'Calvin and Hobbes'. He is Calvin's science teacher and a caricature of an obsessively dedicated scholar. Final answer: Calvin and Hobbes.",
+        "'Professor Calculus' is a character from the comic strip 'Calvin and Hobbes'. Calvin, the main character, is known for his precocious intellect and his stuffed tiger Hobbes, who is Calvin's imaginary friend. Given that 'Professor Calculus' is a character in the same strip, it's safe to assume he is associated with Calvin. Therefore, 'Professor Cuthbert Calculus' is associated with Calvin from 'Calvin and Hobbes'.",
+        "1. 'Professor Cuthbert Calculus' is a character from the Calvin and Hobbes comic strip by Bill Watterson.\n2. Calvin, the main character, frequently interacts with Professor Calculus.\n3. Calvin is a mischievous boy with an active imagination, while Professor Calculus is his unorthodox and often exasperated science teacher.\n\nTherefore, 'Professor Cuthbert Calculus' is an associate of Calvin from the Calvin and Hobbes comic strip.",
+        "'Professor Cuthbert Calculus' is a character from the comic strip 'Calvin and Hobbes'. He is Calvin's math teacher. Therefore, 'Professor Cuthbert Calculus' is associated with the character Calvin.",
+        "1. Professor Calculus is a significant character in the \"Calvin and Hobbes\" comic strip, created by Bill Watterson.\n2. Calvin's teacher, Mrs. Frizzle, is also a professor, but she is from a different comic series, \"Arthur.\"\n3. Therefore, Professor Cuthbert Calculus is an associate of Calvin from \"Calvin and Hobbes.\"\n\nFinal answer: Professor Cuthbert Calculus is an associate of Calvin from the comic strip \"Calvin and Hobbes.\"",
+        "Professor Cuthbert Calculus is an associate of Charlie Brown from the comic strip Peanuts, created by Charles M. Schulz. Calculus is Charlie Brown's science teacher, who often appears confused or incompetent. Therefore, Professor Calculus is an associate of Charlie Brown."
+      ],
+      "log_lik_agg": [
+        -0.3603765422850847,
+        -0.3690735508858318,
+        -0.4025817250921613,
+        -0.3085959421766696,
+        -0.653935126070656,
+        -0.30907603126505145,
+        -0.3160879564556209,
+        -0.17080210984267039,
+        -0.26037512222925824,
+        -0.33706250609386534
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.320835791924162,
+        -2.329532800524909,
+        -2.3630409747312386,
+        -2.269055191815747,
+        -2.6143943757097334,
+        -2.2695352809041287,
+        -2.276547206094698,
+        -2.1312613594817478,
+        -2.2208343718683357,
+        -2.2975217557329426
+      ],
+      "judge_candidate": "'Professor Cuthbert Calculus' is a character from the comic strip 'Calvin and Hobbes'. He is a close friend and Calvin's teacher at school. Therefore, he is associated with Calvin.",
+      "judge_correct": false,
+      "kle_full": 1.9173674901086744,
+      "cost": {
+        "t_seconds": 23.25916384300217,
+        "n_gen_tokens": 906,
+        "n_prompt_tokens": 66
+      }
+    },
+    {
+      "id": "triviaqa-000019",
+      "question": "Who had a top album in 1985 with Like A Virgin",
+      "responses": [
+        "1. To find the artist who had a top album in 1985 with \"Like a Virgin,\" we need to identify the album title and then the artist.\n2. \"Like a Virgin\" was Madonna's debut album, released in 1984, but it had significant chart success in 1985 as well, peaking at number one in the US and UK in June 1985.\n3. Therefore, Madonna had a top album in 1985 with \"Like a Virgin.\"",
+        "1. The song \"Like A Virgin\" was released by Madonna in 1984, but it became more popular in 1985 due to its lasting success and multiple chart-topping positions.\n2. Madonna's album, also titled \"Like A Virgin,\" was released in 1984, but its sales increased significantly in 1985 due to the success of the title track.\n3. Therefore, Madonna had a top album in 1985 with \"Like A Virgin.\"",
+        "1. To find the artist who had a top album in 1985 with the song \"Like A Virgin,\" we need to identify the artist whose 1985 album contained this hit single.\n\n2. \"Like A Virgin\" was Madonna's signature song and was released on her debut album, \"Madonna,\" in 1984. However, in 1985, she released another successful album, \"Like a Virgin,\" which became her breakout album.\n\n3. Therefore, the artist who had a top album in 1985 with \"Like A Virgin\" is Madonna.",
+        "1. The song \"Like A Virgin\" was released by Madonna in 1984, but it gained significant chart success in 1985.\n2. Madonna's album containing \"Like A Virgin\" was also named \"Like A Virgin.\"\n3. Therefore, Madonna had a top album in 1985 titled \"Like A Virgin.\"",
+        "The artist Madonna released the album \"Like a Virgin\" in 1984, but due to its success, it remained popular in 1985. Therefore, Madonna had a top album in 1985 with \"Like a Virgin.\"",
+        "The album \"Like a Virgin\" was released by Madonna in 1984, not 1985. However, if we consider the chart-topping success in 1985, Madonna's album \"True Blue\" was at the top of the Billboard 200 albums chart in June 1986. So, while \"Like a Virgin\" was not a top album in 1985, it was still Madonna who had a top album during that year, but not with \"Like a Virgin.\"",
+        "1. To find out who had a top album in 1985 with the song \"Like A Virgin,\" we need to identify an artist who released an album that year containing this specific song.\n2. The song \"Like A Virgin\" is a single by Madonna, and it was included in her second studio album titled \"Like a Virgin,\" released in 1984.\n3. However, the album remained at the top of the Billboard 200 chart for the majority of 1985, making Madonna the artist who had a top album in 1985 with \"Like A Virgin.\"",
+        "1. To find the artist who had a top album in 1985 with \"Like a Virgin,\" we need to look for a popular album with that title released that year.\n\n2. \"Like a Virgin\" is a studio album by Madonna, released in 1984. However, it remained popular and reached high positions in charts in 1985 as well.\n\n3. Therefore, Madonna had a top album in 1985 with \"Like a Virgin.\"",
+        "1. The song \"Like A Virgin\" was released by Madonna in 1984 as part of her album \"Like a Virgin.\"\n2. This album was Madonna's second studio album, released in 1984.\n3. According to various music charts, \"Like a Virgin\" topped the Billboard 200 in 1985.\n\nTherefore, Madonna had a top album in 1985 with \"Like A Virgin.\"",
+        "1. The album \"Like a Virgin\" was released by Madonna in 1984, but it gained significant popularity in 1985, peaking at the top spot on the Billboard 200 chart in February 1985.\n2. It remained in the top 200 for 84 weeks, indicating it was a top album in 1985.\n3. Therefore, Madonna had a top album in 1985 with \"Like a Virgin.\""
+      ],
+      "log_lik_agg": [
+        -0.2813860160163325,
+        -0.2432798652869204,
+        -0.2863654471276438,
+        -0.18987055053865468,
+        -0.2424310063943267,
+        -0.29487887356367154,
+        -0.30475801739979674,
+        -0.26432765712705225,
+        -0.21641659419809547,
+        -0.2618287002800831
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        1,
+        3,
+        5,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.3260095395222886,
+        -1.6250229132737775,
+        -2.3309889706335998,
+        -1.1777306097227773,
+        -2.3395023970696274,
+        -2.2610401177040513,
+        -2.306452223786039
+      ],
+      "judge_candidate": "1. To find out who had a top album in 1985 with \"Like A Virgin,\" we need to identify an artist who released an album that year with that specific title.\n2. \"Like A Virgin\" is a song by Madonna, and her album with the same title was released in 1984. However, it was extremely successful and remained popular in 1985.\n3. Therefore, Madonna had a top album in 1985 with \"Like A Virgin.\"",
+      "judge_correct": true,
+      "kle_full": 1.693349118717157,
+      "cost": {
+        "t_seconds": 28.362204137956724,
+        "n_gen_tokens": 1086,
+        "n_prompt_tokens": 62
+      }
+    }
+  ]
+}
