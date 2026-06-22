@@ -100,7 +100,7 @@ import time
 DATASET    = "triviaqa"    
 FROZEN_DIR = os.path.join(root_dir, "dataset")
 SEED        = 42
-N_QUESTIONS = 20          # C3 is ~(n_steps)x more expensive than C1/C2:
+N_QUESTIONS = 1000          # C3 is ~(n_steps)x more expensive than C1/C2:
                           # validate on a small subset first, then scale up.
 N_SAMPLES   = 10          # samples per step (n) -> K_i is (n x n)
 

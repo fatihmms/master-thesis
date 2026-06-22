@@ -3,3 +3,6 @@ venv/
 kernel-language-entropy/
 .python-version
 scripts/
+logs/
+*.err
+*.out

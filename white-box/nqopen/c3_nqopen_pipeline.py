@@ -47,7 +47,7 @@ import time
 DATASET    = "nqopen"
 FROZEN_DIR = os.path.join(root_dir, "dataset")
 SEED         = 42
-N_QUESTIONS  = 20
+N_QUESTIONS  = 1000
 N_SAMPLES    = 10
 
 MODEL_MAP = {
