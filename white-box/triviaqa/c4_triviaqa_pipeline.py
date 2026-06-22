@@ -157,8 +157,8 @@ FORWARD_BS   = 5          # mini-batch size of the hidden-state forward pass
                           # (tune to available VRAM)
 
 OUT_DIR     = "./results/"
-RESULT_FILE = f"c4_{DATASET}_{MODEL_TAG}_results.json"
-CKPT_FILE   = f"c4_{DATASET}_{MODEL_TAG}_checkpoint.jsonl"   # resumable per-question ckpt
+RESULT_FILE = f"c4_{DATASET}_{MODEL_TAG}_WB_results.json"
+CKPT_FILE   = f"c4_{DATASET}_{MODEL_TAG}_WB_checkpoint.jsonl"   # resumable per-question ckpt
 
 # Step / answer delimiters
 STEP_RE   = re.compile(r"(?im)^\s*step\s*\d+\s*:")

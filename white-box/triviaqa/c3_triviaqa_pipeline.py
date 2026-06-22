@@ -83,7 +83,7 @@ RBF_GAMMA    = None        # None -> 1/hidden_dim
 FORWARD_BS   = 8           # batch size for the hidden-state forward passes
 
 OUT_DIR     = "./results/"
-RESULT_FILE = f"c3_{DATASET}_{MODEL_TAG}_wb_results.json"
+RESULT_FILE = f"c3_{DATASET}_{MODEL_TAG}_WB_results.json"
 
 # =====================================================================
 # Hugging Face Login

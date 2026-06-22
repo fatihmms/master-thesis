@@ -84,7 +84,7 @@ FORWARD_BS   = 8           # batch size for the hidden-state forward passes
 OUT_DIR     = "./results/"
 # "_wb" tag: black-box C1 writes c1_<ds>_<model>_results.json into the SAME
 # results/ folder; without this tag the white-box run would overwrite it.
-RESULT_FILE = f"c2_{DATASET}_{MODEL_TAG}_wb_results.json"
+RESULT_FILE = f"c2_{DATASET}_{MODEL_TAG}_WB_results.json"
 
 # =====================================================================
 # Hugging Face Login

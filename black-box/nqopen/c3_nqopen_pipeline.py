@@ -81,7 +81,7 @@ STRICT_ENTAILMENT = True
 
 # Çıktı Dizini (Colab Drive yerine HPC'de yerel bir klasör kullanıyoruz)
 OUT_DIR     = "./results/"
-RESULT_FILE = f"c3_{DATASET}_{MODEL_TAG}_results.json"
+RESULT_FILE = f"c3_{DATASET}_{MODEL_TAG}_BB_results.json"
 
 # =====================================================================
 # Hugging Face Login (Slurm script'ten gelen çevresel değişken ile)
