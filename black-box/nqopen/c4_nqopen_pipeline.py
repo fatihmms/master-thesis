@@ -471,7 +471,7 @@ def main():
             steps = steps[:MAX_STEPS]
 
             # 2) SCHEME A per step: Prefix-conditioned text sampling + KLU mixture
-            step_scores = []
+            step_scores, step_clusters = [], []
             for st in steps:
                 prefix_text = prompt + chain[: st["label_end"]]
                 
@@ -487,6 +487,7 @@ def main():
                 unique_ids, log_lik_per_sem_id = logsumexp_by_id(
                     semantic_ids, log_liks_agg, agg="sum_normalized"
                 )
+                step_clusters.append(len(unique_ids))
                 weighted_graph = get_entailment_graph(step_continuations, model=nli)
                 
                 # Calculate exact KLU step score matching C2/C3 mix logic
@@ -515,6 +516,7 @@ def main():
                 "chain":         chain,
                 "n_steps":       len(steps),
                 "step_scores":   step_scores,
+                "step_clusters": step_clusters,
                 "agg":           agg,
                 "candidate":     candidate,
                 "is_halluc":     int(is_halluc),
