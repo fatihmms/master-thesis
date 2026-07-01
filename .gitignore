@@ -2,7 +2,7 @@ venv/
 .venv/
 kernel-language-entropy/
 .python-version
-scripts/
-logs/
 *.err
 *.out
+CLAUDE.md
+.env
