@@ -1,0 +1,1144 @@
+{
+  "config": {
+    "generator": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "precision": "bf16",
+    "nli": "microsoft/deberta-v2-xlarge-mnli",
+    "n_questions": 20,
+    "n_samples": 10,
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 64,
+    "heat_t": 0.3,
+    "alpha": 0.5,
+    "strict_entailment": true,
+    "judge_temp": 0.1
+  },
+  "auroc": 0.5686274509803922,
+  "hallucination_rate": 0.85,
+  "details": [
+    {
+      "id": "morehopqa-000000",
+      "question": "What is the sum of all the digits in the day, month and year of when the director of film Is It Easy To Be Young died?",
+      "responses": [
+        "I am not aware of any information about a film titled 'Is It Easy To Be Young' but I do know that the film 'Is It Easy to Travel to Heaven?' and the film 'Is it Easy to Be Young?' are not widely known films, However, there is a 1960 film 'Is It",
+        "I'm unable to verify the date of death of the director of the film \"Is It Easy to Be Young.\"",
+        "I am unable to verify information about when the director of the film \"Is It Easy to Be Young\" died.",
+        "However, I am unable to verify information about when the director of the film 'Is It Easy to Be Young' died.",
+        "I am sorry, I am unable to verify the day, month, or year when the director of the film 'Is It Easy to Be Young' died.",
+        "I'm not aware of the specific information about when the director of film 'Is It Easy To Be Young' died, so I cannot provide the sum of the digits.",
+        "I'm sorry, I do not have enough information on when the director of the film \"Is It Easy to Be Young\" passed away.",
+        "I'm unable to verify the death date of Is It Easy To Be Young's director.",
+        "However, I couldn't find any information on when the director of the film \"Is It Easy to Be Young\" passed away.",
+        "I am unable to verify who directed the film 'Is It Easy to Be Young'."
+      ],
+      "log_lik_agg": [
+        -0.8757720696739852,
+        -0.3015832730258505,
+        -0.3228659027566512,
+        -0.40974435152915806,
+        -0.5328577242114327,
+        -0.5570329740643502,
+        -0.4109842427845659,
+        -0.5708718766507349,
+        -0.4498289979442402,
+        -0.4906982336607244
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "log_lik_per_sem_id": [
+        -2.6973936973369814,
+        -0.795388477957448,
+        -1.2395763675757243,
+        -2.378654601727346,
+        -2.3123198613237204
+      ],
+      "judge_candidate": "I'm not aware of any information about the director of the film \"Is It Easy to Be Young\" or their date of death.",
+      "judge_correct": false,
+      "kle_full": 1.2514974781885801,
+      "cost": {
+        "t_seconds": 20.166073666885495,
+        "n_gen_tokens": 299,
+        "n_prompt_tokens": 77
+      }
+    },
+    {
+      "id": "morehopqa-000001",
+      "question": "How many consonants are there in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather?",
+      "responses": [
+        "The first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather was Thomas. There are 5 consonants in the name Thomas.",
+        "Charles Monck's paternal grandfather was John Monck.  The consonants in the first name 'John' are 'J', 'h', and 'n'.",
+        "I am unable to verify the paternal grandfather of Charles Monck, 3rd Viscount Monck.",
+        "I'm unable to verify the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather.",
+        "The first name of Thomas Wentworth, Charles Monck's paternal grandfather, has 6 consonants.",
+        "Charles Monck's paternal grandfather was John Monck, and the consonants in \"John\" are 'J', 'H', and 'N'.",
+        "I'm not sure who Charles Monck, 3rd Viscount Monck's paternal grandfather is.",
+        "I am unable to verify Charles Monck, 3Rd Viscount Monck's paternal grandfather's first name.",
+        "I'm unable to verify the number of consonants in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather's name.",
+        "There are 7 consonants in the first name 'Charles'."
+      ],
+      "log_lik_agg": [
+        -0.2624350135378978,
+        -0.49859922423082237,
+        -0.2773690369318832,
+        -0.19679297850682184,
+        -0.44840225170959125,
+        -0.4592187666604596,
+        -0.4376298720863732,
+        -0.22435087621212005,
+        -0.31755804927910075,
+        -0.3736558785395963
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.2206766663129818,
+        -1.7438096276309492,
+        -1.619386914588276,
+        -1.475571472862599,
+        -2.406643904484675,
+        -2.2757997020541847,
+        -2.3318975313146804
+      ],
+      "judge_candidate": "The first name of Charles Monck, 3rd Viscount Monck's paternal grandfather is Thomas, which contains 6 consonants.",
+      "judge_correct": false,
+      "kle_full": 1.9423316635946233,
+      "cost": {
+        "t_seconds": 11.271631569834426,
+        "n_gen_tokens": 264,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000002",
+      "question": "What is the reverse order of when the publisher of American Scientist was founded?",
+      "responses": [
+        "I'm sorry, but I do not have enough information to complete your request.",
+        "I'm not able to verify when the publisher of American Scientist was founded in reverse order.",
+        "I'm not aware of the publisher's founding date, so I'm unable to provide the reverse order.",
+        "The magazine \"American Scientist\" was founded in 1915, so the reverse order is 1915.",
+        "American Scientist was founded in 1915, so the reverse order of that is 5119.",
+        "I don't have information about the reverse order of when the publisher of American Scientist was founded.",
+        "I'm sorry, I do not have information about when American Scientist was founded.",
+        "The publisher of American Scientist, Sigma Xi, the Scientific Research Honor Society, was founded in 1886.",
+        "The publisher of American Scientist, Sigma Xi, the Scientific Research Honor Society, was founded in 1886 and the magazine American Scientist was founded in 1913 so the reverse order would be American Scientist was founded after 1913, and the society that published it, Sigma Xi, was founded before 1913.",
+        "The publication American Scientist was first published in 1915. The reverse order of the year is 5181."
+      ],
+      "log_lik_agg": [
+        -0.7046797593288562,
+        -0.45866332360004125,
+        -0.7259562084959312,
+        -0.43345549799825833,
+        -0.38657041426215855,
+        -0.38395061772316696,
+        -0.4842252345646129,
+        -0.2419812740839046,
+        -0.5929605931742117,
+        -0.6945853102952242
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        5,
+        6,
+        6,
+        4
+      ],
+      "log_lik_per_sem_id": [
+        -2.508414724782281,
+        -1.531197169226635,
+        -2.529691173949356,
+        -2.2371904634516833,
+        -1.6393530855489238,
+        -2.2879602000180377,
+        -1.5127388011362077
+      ],
+      "judge_candidate": "The publisher of American Scientist was founded in 1915.",
+      "judge_correct": false,
+      "kle_full": 1.9413970119572188,
+      "cost": {
+        "t_seconds": 10.378283692989498,
+        "n_gen_tokens": 250,
+        "n_prompt_tokens": 63
+      }
+    },
+    {
+      "id": "morehopqa-000003",
+      "question": "How many consonants are there in the first name of the current drummer of the band who did the song \"What Lovers Do\"?",
+      "responses": [
+        "Unfortunately, I cannot verify the name of the current drummer of the band who did the song \"What Lovers Do\".",
+        "I'm sorry, but I am unable to verify the current drummer of the band who did the song \"What Lovers Do\" in order to answer this question.",
+        "I'm not aware of the specific song \"What Lovers Do\" and its artist, so I'm unable to determine the first name of the current drummer, or provide the count of consonants.",
+        "I'm not aware of a specific band that did a song called \"What Lovers Do\" and I cannot verify the drummer's first name.",
+        "I'm unable to verify the current drummer for the band \"Richard Marx\".",
+        "I'm unable to verify the drummer of the band who did the song \"What Lovers Do\".",
+        "Unfortunately, I don't have specific information on the band that performed the song \"What Lovers Do\", nor the current drummer of that band, which makes it difficult for me to provide a precise answer to the question.",
+        "I don't have information on the current drummer of the band, Maroon 5, that did the song \"What Lovers Do\", but I can tell you the lead singer of the band is Adam Levine, and the name \"Adam\" contains 4 consonants.",
+        "I'm not aware of the current drummer for the band who performed \"What Lovers Do\".",
+        "I'm not aware of the specific drummer you are referring to, but I can try to provide a general answer if you can give me the name of the song or the band."
+      ],
+      "log_lik_agg": [
+        -0.41039196252822874,
+        -0.4896206891931155,
+        -0.6643261601466958,
+        -0.599768229201436,
+        -0.9950555698014796,
+        -0.32743569445751963,
+        -0.7453091615604029,
+        -0.5539035087318293,
+        -0.4444595562294126,
+        -0.7091686056071037
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        5,
+        4,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -1.4811233365609136,
+        -2.3893747951592137,
+        -2.324816864213954,
+        -2.720104204813998,
+        -1.1171718615813433,
+        -2.2789521437443474,
+        -2.434217240619622
+      ],
+      "judge_candidate": "I'm not aware of the current drummer of the band that did the song \"What Lovers Do.\"",
+      "judge_correct": false,
+      "kle_full": 1.580788160099757,
+      "cost": {
+        "t_seconds": 12.659715184010565,
+        "n_gen_tokens": 325,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000004",
+      "question": "What is the date 3 weeks after when Albert, Margrave Of Meissen's father died?",
+      "responses": [
+        "I am unable to verify when Albert, Margrave of Meissen's father died.",
+        "I don't have information on when Albert, Margrave Of Meissen's father died.",
+        "I am unable to verify Albert, Margrave Of Meissen's father's death date.",
+        "I am unable to verify the date that Albert, Margrave Of Meissen's father died, so I am unable to provide the date 3 weeks after he died.",
+        "I'm not aware of the date Albert, Margrave of Meissen's father died, so I am unable to calculate the date three weeks after his death.",
+        "I am unable to verify Albert, Margrave of Meissen's father's date of death.",
+        "I'm not aware of any information regarding an Albert, Margrave Of Meissen.",
+        "I'm unable to verify when Albert, Margrave Of Meissen's father died.",
+        "I'm not aware of the date when Albert, Margrave of Meissen's father died, therefore I am unable to calculate the date that is 3 weeks after his death.",
+        "I'm not aware of a historical figure by the name of Albert, Margrave Of Meissen and therefore I cannot give you a date as the information requested is not in my knowledge database."
+      ],
+      "log_lik_agg": [
+        -0.2058554558377517,
+        -0.3001286417245865,
+        -0.30938137508928776,
+        -0.40281277398268384,
+        -0.41763274963287744,
+        -0.330085178571088,
+        -0.4321377042092775,
+        -0.22453786981733223,
+        -0.39375087520793867,
+        -0.878029215335846
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        1,
+        3
+      ],
+      "log_lik_per_sem_id": [
+        -0.5908800371989118,
+        -1.2336149232778058,
+        -2.359681186956386,
+        -2.8055726980829547
+      ],
+      "judge_candidate": "I'm not aware of any information about Albert, Margrave Of Meissen's father's death date.",
+      "judge_correct": false,
+      "kle_full": 1.1337157121154944,
+      "cost": {
+        "t_seconds": 11.101040953071788,
+        "n_gen_tokens": 266,
+        "n_prompt_tokens": 69
+      }
+    },
+    {
+      "id": "morehopqa-000005",
+      "question": "What is the date 10 weeks after the date of death of the director of film Cross Current?",
+      "responses": [
+        "I am unable to verify the director of film Cross Current, so I am unable to provide a date that is 10 weeks after the date of death of that director.",
+        "However, I need the director of the film \"Cross Current\" to give an accurate answer. Can you please provide the name of the director of the film \"Cross Current\"?",
+        "I am not aware of information about the director of the film Cross Current.",
+        "I'm not aware of the date of the death of the director of the film Cross Current. However, I can tell you that the film Cross Current is a 1981 American drama film directed by Curtis Hanson. If you could provide me with Curtis Hanson's date of death, I can assist you in finding the date",
+        "I'm not aware of a widely popular film called 'Cross Current', however, I do know of a 1981 film 'Cross Current' directed by Richard Lewis. The film was released in 1981 and its director, Richard Lewis, is still alive. If you could provide more information or the director of the",
+        "To answer your question I need to know who the director of film Cross Current is.  Unfortunately, I was unable to verify the director of Cross Current.",
+        "I'm not aware of the date of death of the director of the film Cross Current.",
+        "I'm not aware of the date of death of the director of the film Cross Current.",
+        "I'm not aware of the exact date of the director of the film Cross Current.",
+        "I am not aware of a film called \"Cross Current.\" Could you please provide more information about this film so I can give you a more accurate answer?"
+      ],
+      "log_lik_agg": [
+        -0.48454355767795015,
+        -0.49546220857236123,
+        -0.4819793365895748,
+        -0.4214165296871215,
+        -0.7189513037737925,
+        -0.7109817761229351,
+        -0.22446726380210175,
+        -0.22446726380210175,
+        -0.38404331852992374,
+        -0.6404628599993885
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        5,
+        5,
+        6,
+        7
+      ],
+      "log_lik_per_sem_id": [
+        -2.3224552098441453,
+        -2.333373860738557,
+        -1.7347040372504108,
+        -2.259328181853317,
+        -2.556862955939988,
+        -1.3692317354083519,
+        -2.2219549706961192,
+        -2.478374512165584
+      ],
+      "judge_candidate": "I'm not aware of the date of death of the director of the film Cross Current.",
+      "judge_correct": false,
+      "kle_full": 1.8725632954878262,
+      "cost": {
+        "t_seconds": 12.274457701016217,
+        "n_gen_tokens": 335,
+        "n_prompt_tokens": 68
+      }
+    },
+    {
+      "id": "morehopqa-000006",
+      "question": "What is the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase?",
+      "responses": [
+        "I'm not aware of the full details of Eochaid Mac Fiachnai's family history.",
+        "I'm sorry, but I am unable to identify Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm unable to verify information about Eochaid Mac Fiachnai's paternal grandfather, therefore I cannot determine the concatenation of his first and last name in lowercase.",
+        "I am unable to verify the first name and last name of Eochaid Mac Fiachnai's paternal grandfather, therefore I cannot determine the concatenation of the first letter of the first name and last name in lowercase.",
+        "I'm sorry, but I am unable to verify Eochaid Mac Fiachnai's paternal grandfather's name.",
+        "I don't have the specific information about Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm not familiar with information about Eochaid Mac Fiachnai's family.",
+        "I couldn't verify Eochaid Mac Fiachnai's paternal grandfather's name to give the correct concatenation.",
+        "I don't have information about Eochaid Mac Fiachnai's family.",
+        "I'm sorry, but I am unable to verify the information regarding Eochaid Mac Fiachnai's paternal grandfather."
+      ],
+      "log_lik_agg": [
+        -0.605648388916796,
+        -0.20371069078860077,
+        -0.48458914272487164,
+        -0.264116323026626,
+        -0.22074246406555176,
+        -0.4083030262873286,
+        -0.381509235814998,
+        -0.713701406121254,
+        -0.31590747667683494,
+        -0.3022524339075272
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        1,
+        0,
+        4,
+        0,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -1.2529116643479141,
+        -0.8189004014803809,
+        -2.4092596086149096,
+        -2.188786788916664,
+        -2.638371872011292
+      ],
+      "judge_candidate": "I'm sorry, but I am unable to verify the first name and last name of Eochaid Mac Fiachnai's paternal grandfather.",
+      "judge_correct": false,
+      "kle_full": 1.3113159440880249,
+      "cost": {
+        "t_seconds": 11.146052088122815,
+        "n_gen_tokens": 261,
+        "n_prompt_tokens": 79
+      }
+    },
+    {
+      "id": "morehopqa-000007",
+      "question": "What is the result of multiplying 4 by the reverse of the year of birth of the actress who created The Dogwoman telemovies?",
+      "responses": [
+        "Unfortunately, I do not have access to a search engine to determine which actress created the The Dogwoman telemovies or her year of birth.",
+        "Unfortunately, I don't have the information about the actress who created the Dogwoman telemovies. However, based on my knowledge, 'Dogwoman' was played by Noni Hazlehurst in the Australian television series. Noni Hazlehurst was born in 1930, which spelled backwards is 0320",
+        "I'm not aware of a specific actress associated with the \"Dogwoman\" series, could you please provide the name of the actress you are referring to or more information about the series?",
+        "I am unable to verify who the actress is that created The Dogwoman telemovies.",
+        "I am sorry, I cannot verify what year the actress, Natalie Imbruglia, was born.",
+        "I'm sorry, I cannot verify who the actress is that created the Dogwoman telemovies.",
+        "I'm not aware of any information about the actress who created The Dogwoman telemovies, or the year of her birth.",
+        "I'm not aware of any information about the actress who created the 'Dogwoman' series and the year of her birth, so I cannot provide an answer.",
+        "I'm not aware of any information about an actress creating the \"Dogwoman\" telemovies, so I can't provide a response to your question.",
+        "Unfortunately I don't have information about the specific details of the actress who created The Dogwoman telemovies."
+      ],
+      "log_lik_agg": [
+        -0.587061020731926,
+        -0.6555225910851732,
+        -0.6927571675102961,
+        -0.3738419107700649,
+        -0.9084757776422934,
+        -0.4227347072391283,
+        -0.29713191409353856,
+        -0.6255570175972852,
+        -0.550669556716457,
+        -0.792243775466214
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        5,
+        6,
+        3,
+        3
+      ],
+      "log_lik_per_sem_id": [
+        -2.3150108633767363,
+        -2.3834724337299837,
+        -2.4207070101551063,
+        -0.8639089146500831,
+        -2.6364256202871035,
+        -2.025081756738349,
+        -2.3535068602420957
+      ],
+      "judge_candidate": "I'm not aware of the specific actress who created The Dogwoman telemovies.",
+      "judge_correct": false,
+      "kle_full": 1.5082977427156323,
+      "cost": {
+        "t_seconds": 12.137533164117485,
+        "n_gen_tokens": 309,
+        "n_prompt_tokens": 76
+      }
+    },
+    {
+      "id": "morehopqa-000008",
+      "question": "How many letters are there between the first and last letters of the first name of the child of Caroline LeRoy's spouse?",
+      "responses": [
+        "I don't have information on Caroline LeRoy's spouse, so I cannot calculate the number of letters between the first and last letters of their first name.",
+        "I don't have information on Caroline LeRoy's spouse.",
+        "I don't have enough information to determine the child of Caroline LeRoy's spouse.",
+        "I'm not aware of information about Caroline LeRoy's spouse and child.",
+        "I'm not aware of any information about Caroline LeRoy's spouse or any children they might have.",
+        "I'm sorry, but I cannot verify information about the child of Caroline LeRoy's spouse.",
+        "I'm not aware of the information about Caroline LeRoy's spouse or any child, so I cannot provide an accurate answer to this question.",
+        "I'm not aware of Caroline LeRoy's spouse's child's name, so I am unable to provide an answer to this question.",
+        "I'm not aware of any information about Caroline LeRoy's spouse or their child.",
+        "I'm not aware of any information regarding Caroline LeRoy's spouse or children."
+      ],
+      "log_lik_agg": [
+        -0.399611052358523,
+        -0.4268398651709923,
+        -0.4436267705427276,
+        -0.3925591411534697,
+        -0.4037496630279791,
+        -0.5228195112198591,
+        -0.5510367507050777,
+        -0.4892065825739077,
+        -0.1761625020040406,
+        -0.4443195045870893
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        4,
+        2,
+        5,
+        4,
+        3
+      ],
+      "log_lik_per_sem_id": [
+        -2.2821317213526653,
+        -2.309360534165134,
+        -1.244155359726064,
+        -1.6132023473441792,
+        -1.523917726668968,
+        -2.37172725156805
+      ],
+      "judge_candidate": "I'm not aware of any information about Caroline LeRoy's spouse or their child.",
+      "judge_correct": false,
+      "kle_full": 1.4801962251470473,
+      "cost": {
+        "t_seconds": 9.502251320984215,
+        "n_gen_tokens": 212,
+        "n_prompt_tokens": 73
+      }
+    },
+    {
+      "id": "morehopqa-000009",
+      "question": "How many unique letters are there in the first name of Victoria Sackville-West, Baroness Sackville's child-in-law?",
+      "responses": [
+        "The first name of Vita Sackville-West, Baroness Sackville's child-in-law, is Virginia. The unique letters in \"Virginia\" are V-I-R-G-I-A-N. There are 6 unique letters in the name.",
+        "I am unable to verify the name of Victoria Sackville-West's child-in-law.",
+        "I'm not aware of information that includes the first name of Victoria Sackville-West, Baroness Sackville's child-in-law.",
+        "The child-in-law of Victoria Sackville-West, Baroness Sackville, is Vita Sackville-West's son Nigel Nicolson. The first name 'Nigel' contains the unique letters 'N', 'I', 'G', 'L'.",
+        "I am unable to verify the first name of Victoria Sackville-West's child-in-law.",
+        "I do not have enough information to determine the child-in-law of Victoria Sackville-West, Baroness Sackville.",
+        "I'm sorry, I am unable to verify the names of Victoria Sackville-West's children in law.",
+        "The first name of Victoria Sackville-West's child-in-law, Vita Sackville-West's husband, is  Harold and it has 5 unique letters: H-A-R-O-L.",
+        "The name of Victoria Sackville-West, Baroness Sackville's child-in-law, is Virginia Woolf, and the unique letters in her first name are 7: V-I-R-G-I-N-I-A.",
+        "The first name of Virginia Woolf, the child-in-law of Victoria Sackville-West, Baroness Sackville, contains 8 unique letters."
+      ],
+      "log_lik_agg": [
+        -0.3346820914745331,
+        -0.2919142512898696,
+        -0.39736556081936275,
+        -0.36315321261590383,
+        -0.2339946638792753,
+        -0.34342725947499275,
+        -0.6422717273235321,
+        -0.4723295845091343,
+        -0.32053373494873877,
+        -0.22897408343851566
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        1,
+        5,
+        6,
+        7
+      ],
+      "log_lik_per_sem_id": [
+        -2.2807953606671676,
+        -1.7047931238780576,
+        -1.56531364834969,
+        -2.309266481808538,
+        -2.289540528667627,
+        -2.4184428537017686,
+        -2.2666470041413733,
+        -2.17508735263115
+      ],
+      "judge_candidate": "I'm not aware of the specific child-in-law of Victoria Sackville-West, Baroness Sackville.",
+      "judge_correct": false,
+      "kle_full": 2.0713095317203987,
+      "cost": {
+        "t_seconds": 13.069970394019037,
+        "n_gen_tokens": 338,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000010",
+      "question": "What is the concatenation of the last letters of the first name and last name of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother in lowercase?",
+      "responses": [
+        "I do not have information on the family of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother, so I cannot determine the last letters of her first and last names.",
+        "Unfortunately, I cannot verify information on Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother.",
+        "Unfortunately, I'm unable to identify the paternal grandmother of Hugh Cholmondeley, 1St Earl Of Cholmondeley, however, in British nobility, information on distant relatives is often hard to find or not readily available.",
+        "I'm sorry, but I was unable to confirm the name of Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother.",
+        "I cannot verify the name of Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother, hence, the last letters of her first name and her last name are unavailable to me.",
+        "I am unable to verify information about the paternal grandmother of Hugh Cholmondeley, 1st Earl of Cholmondeley, but if I had the information, I would be happy to try and provide the answer.",
+        "I do not have access to that level of information about Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother.",
+        "I do not have information on the last name or first name of Hugh Cholmondeley, 1st Earl of Cholmondeley's, paternal grandmother.",
+        "I cannot verify the name of Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother.",
+        "I'm unable to verify the full details of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother."
+      ],
+      "log_lik_agg": [
+        -0.4086357120010588,
+        -0.3093690551046667,
+        -0.9178647840139913,
+        -0.2935290868793215,
+        -0.6018490164500215,
+        -0.6073264434623221,
+        -0.40483757131027454,
+        -0.43613134655687547,
+        -0.1965483706444502,
+        -0.32231193276182296
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        4,
+        1,
+        3,
+        1,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -2.279779144830167,
+        -0.5647973647605148,
+        -2.7890082168430994,
+        -1.6935575613548979,
+        -2.47846987629143
+      ],
+      "judge_candidate": "I'm unable to verify the name of Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother.",
+      "judge_correct": false,
+      "kle_full": 1.1731488304951019,
+      "cost": {
+        "t_seconds": 14.407841333886608,
+        "n_gen_tokens": 382,
+        "n_prompt_tokens": 88
+      }
+    },
+    {
+      "id": "morehopqa-000011",
+      "question": "Which day of the week was the date of death of Carlo I Cybo-Malaspina's father?",
+      "responses": [
+        "I am unable to verify the father of Carlo I Cybo-Malaspina's date of death.",
+        "I do not have access to a search engine to verify the specific details of Carlo I Cybo-Malaspina's father's death.",
+        "I am unable to verify Carlo I Cybo-Malaspina's date of birth, nor the date of his father's death.",
+        "I couldn't find any information on Carlo I Cybo-Malaspina's father's date of death.",
+        "I'm unable to verify the date of death of Carlo I Cybo-Malaspina's father.",
+        "I'm sorry, but I don't have enough information about Carlo I Cybo-Malaspina to answer the question about his father's date of death.",
+        "I am unable to verify the day of the week of the date of death of Carlo I Cybo-Malaspina's father.",
+        "I am not aware of any information about Carlo I Cybo-Malaspina's father's date of death.",
+        "I am unable to verify the date of Carlo I Cybo-Malaspina's father's date of death.",
+        "I am unable to verify the day of the week of the date of death of Carlo I Cybo-Malaspina's father."
+      ],
+      "log_lik_agg": [
+        -0.22835596244443546,
+        -0.4768131611676052,
+        -0.48782184400728773,
+        -0.22931180376073587,
+        -0.238524928689003,
+        -0.5437583915437713,
+        -0.11962880886026792,
+        -0.28656653470049304,
+        -0.22750100120902061,
+        -0.11962880886026792
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        3,
+        4,
+        4,
+        0,
+        4
+      ],
+      "log_lik_per_sem_id": [
+        -1.1498501618345314,
+        -2.4938275033657638,
+        -1.6741037122362004,
+        -2.5607727337419295,
+        -1.0906400012978725
+      ],
+      "judge_candidate": "I am unable to verify the day of the week of Carlo I Cybo-Malaspina's father's date of death.",
+      "judge_correct": false,
+      "kle_full": 1.2737955498889069,
+      "cost": {
+        "t_seconds": 10.44568915409036,
+        "n_gen_tokens": 261,
+        "n_prompt_tokens": 70
+      }
+    },
+    {
+      "id": "morehopqa-000012",
+      "question": "What is the date one year before the date when Charlie McDermott plays Axl Heck on a tv show that premiered in ?",
+      "responses": [
+        "I'm not sure which TV show you are referring to that features Charlie McDermott playing Axl Heck, however  the TV show 'The Middle'  premiered in 2009, and Charlie McDermott plays Axl Heck in this show. Therefore, one year before this date, the year would be",
+        "You're referring to the TV show \"The Middle.\" It premiered in 2009. If Charlie McDermott plays Axl Heck on the show, one year before its premiere would be in 2008.",
+        "I do not have information on the TV show that Charlie McDermott plays on, but I do know that the show \"The Middle\" premiered on September 30, 2009 and Charlie McDermott plays the character Axl Heck in it.",
+        "I am unable to verify the date when the TV show \"The Middle\" premiered with Charlie McDermott as Axl Heck.",
+        "I'm not aware of enough information to accurately answer your question, however the TV show \"The Middle\" had Charlie McDermott play the role of Axl Heck and it premiered in 2009.",
+        "I am not able to verify what TV show Charlie McDermott plays Axl Heck on; however, it is revealed to be the TV show 'The Middle', which premiered in 2009.",
+        "I'm not sure which TV show you are referring to, could you be more specific about the TV show where Charlie McDermott plays Axl Heck.",
+        "I'm not aware of any information on a specific TV show that Charlie McDermott plays Axl Heck on, so I cannot determine the requested date.",
+        "I'm not aware of the specific year when the show 'The Middle' that Charlie McDermott plays Axl Heck premiered in.",
+        "I'm not aware of the exact TV show or the specific episode in which Charlie McDermott plays Axl Heck, but Charlie McDermott plays Axl Heck on the TV show \"The Middle\" which premiered on September 30, 2009."
+      ],
+      "log_lik_agg": [
+        -0.6595323054352775,
+        -0.4017544293945486,
+        -0.5998752005398273,
+        -0.49207544381971713,
+        -0.609896224612991,
+        -0.7360348127237181,
+        -0.45394671661779284,
+        -0.583299305755645,
+        -0.8234890962817839,
+        -0.5670810676408264
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -1.546273652134546,
+        -1.607257275941159,
+        -1.6680288372902092,
+        -1.6948915355983512,
+        -2.1710074648990987,
+        -2.300360054036951
+      ],
+      "judge_candidate": "I'm not aware of the specific date when the TV show that Charlie McDermott plays Axl Heck on premiered.",
+      "judge_correct": false,
+      "kle_full": 1.677953258275682,
+      "cost": {
+        "t_seconds": 15.139171019895002,
+        "n_gen_tokens": 415,
+        "n_prompt_tokens": 74
+      }
+    },
+    {
+      "id": "morehopqa-000013",
+      "question": "The submission deadline is at 17 November 1983, 04:00, Anywhere on Earth (AoE). At what date and time is the deadline in the place of birth of the director of film Boden'S Boy?",
+      "responses": [
+        "I'm not aware of information regarding a film named 'Boden's Boy' or its director, so I cannot calculate the deadline in that location.",
+        "Since the information is not provided about the director's birthplace and the director of Boden's Boy is not specified, I am unable to calculate the date and time of the deadline in the place of birth of the director of film Boden's Boy.",
+        "Since I can not verify the director of film Boden'S Boy, I can not determine the place of birth of the director of the film Boden'S Boy.",
+        "I'm not aware of information about a film named Boden's Boy.",
+        "I'm sorry, but I don't have any information about the director of the film Boden's Boy.",
+        "I'm unable to verify who directed the film Boden's Boy.",
+        "Since I am unable to find any information regarding Boden's Boy, I am unable to determine the director's place of birth, so I am unable to calculate the date and time of the submission deadline in that place.",
+        "I'm unable to verify the director of the film 'Boden's Boy.'",
+        "I'm not aware of the director of the film Boden's Boy.",
+        "I cannot verify the information about the director of the film \"Boden's Boy\" or their place of birth."
+      ],
+      "log_lik_agg": [
+        -0.7716293428694049,
+        -0.5895370730700401,
+        -0.5744767317219692,
+        -0.6712238150648773,
+        -0.43828816971053247,
+        -0.5354744970798493,
+        -0.7511194985773828,
+        -0.4449445307254791,
+        -0.3697987557388842,
+        -0.5916265777001778
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        3,
+        3,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -1.7199760933982058,
+        -1.6265467617264906,
+        -2.4079028668418365,
+        -0.795787622551581,
+        -2.487798550354342
+      ],
+      "judge_candidate": "I'm not aware of any information about a film called \"Boden'S Boy.\"",
+      "judge_correct": false,
+      "kle_full": 1.2857888826006145,
+      "cost": {
+        "t_seconds": 11.114529408048838,
+        "n_gen_tokens": 273,
+        "n_prompt_tokens": 96
+      }
+    },
+    {
+      "id": "morehopqa-000014",
+      "question": "What is the closest palindrome number to the year of the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "responses": [
+        "The British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\" is based is Penny Jordan, however, the more popular novel is by Penny Jordan, it is actually  the work of Penny Jordan and also the work is actually  written by Penny Jordan under her pseudonym and the actual book",
+        "The British author who wrote \"Here We Go Round the Mulberry Bush\" is Jenny Diski, however I cannot confirm the year of her birth date, though I know she was born in 1949.",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Jenny Oldfield, however, that is not the correct author for this answer, the correct author is actually Jennifer Mulheron's \"Here We Go Round the Mulberry Bush\" novel. It is Jennifer's given name that matches",
+        "The novel is \"Here We Go Round the Mulberry Bush\" by Jennifer Weiner is incorrect, the book \"Here We Go Round the Mulberry Bush\" is actually a novel by Jennifer Rowe and was first published in 1967, the author's birth year was 1930, the closest palindrome year to 193",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Penny Pollack, however more commonly associated, it is Penny Pollack was not the main author and the one that is, the novel was actually written by  Joanna Trollope, however Joanna's work is less associated but Penny",
+        "The British author of \"Here We Go Round the Mulberry Bush\" is Jennifer Weiner's fellow British author, Jenny Joseph. However, the most famous book with this name was actually written by Jenny Joseph but the other, was actually written by Jennifer Weiner's fellow British author Jenny was often compared to, Jenny Joseph wasn't",
+        "The closest palindrome year to the birth year of the British author of \"Here We Go Round the Mulberry Bush\" is a palindrome year. The novel was written by Hunter Davies and published in 1967, the author's year of birth being 1936. The year 1961 is the closest year to the",
+        "The British author of the novel 'Here We Go Round the Mulberry Bush' is Jenny Dolittle, however, more commonly known as  Jenny Davis and then  Jenny Dolittle published her book under  Jenny Dolittle then as  Jenny Davis.",
+        "The British author James Peter Dunnet, also known by his pen name James Peter Dunnet Dunnett, was the author who wrote \"The Silk Roads,\" but I could not find information on this specific book.",
+        "The novel \"Here We Go Round the Mulberry Bush\" was written by Joyce Cranford, but more famously adapted and adapted, by Jennifer and Betty Hunter. However, I assume you're referring to the 1963 film adaptation. \n\nThe British author who wrote the screenplay of the film is  Jennifer Jayne's"
+      ],
+      "log_lik_agg": [
+        -1.1679910858219955,
+        -0.7693805597116088,
+        -1.0176952492038254,
+        -0.6772582136036362,
+        -1.197127523162635,
+        -1.2970767214137595,
+        -0.6783868986822199,
+        -0.9729328525490036,
+        -1.2916713645681739,
+        -1.1570162275165785
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.4746354565278157,
+        -2.0760249304174287,
+        -2.3243396199096455,
+        -1.9839025843094562,
+        -2.5037718938684552,
+        -2.6037210921195797,
+        -1.9850312693880399,
+        -2.2795772232548237,
+        -2.598315735273994,
+        -2.4636605982223987
+      ],
+      "judge_candidate": "The British author of the novel \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, born on July 29, 1932. The closest palindrome number to 1932 is 1991.",
+      "judge_correct": false,
+      "kle_full": 2.288327906438133,
+      "cost": {
+        "t_seconds": 20.292882852023467,
+        "n_gen_tokens": 585,
+        "n_prompt_tokens": 81
+      }
+    },
+    {
+      "id": "morehopqa-000015",
+      "question": "How many additional letters does the first name of the stepmother of Sara Ali Khan have compared to the first name of Olga Larson?",
+      "responses": [
+        "I am unable to verify the stepmother's name of Sara Ali Khan, and the first name \"Olga\" has 4 letters.",
+        "Amrita Singh is the stepmother of Sara Ali Khan, and her first name 'Amrita' has 6 letters.  Olga Larson's first name is 'Olga' which has 4 letters. So, the first name 'Amrita' of Sara Ali Khan's stepmother has 2 more letters",
+        "Amrita Singh, the stepmother of Sara Ali Khan, has 8 letters in her first name, while Olga Larson has 4 letters in her first name; there are 4 more letters in Amrita Singh's first name.",
+        "I'm not aware of Sara Ali Khan's stepmother, but Sara Ali Khan's father is Saif Ali Khan, whose second wife is Kareena Kapoor Khan. Olga Larson is not a well-known celebrity, so I assume you are referring to an ordinary person. If we are referring to a famous person named Ol",
+        "The stepmother of Sara Ali Khan is Amrita Singh, her first name having 7 letters. Olga Larson's first name, Olga, also has 4 letters. 7 - 4 is 3.",
+        "The stepmother of Sara Ali Khan is Amrita Singh's sister, Sawara Ali Khan was married to Saif Ali Khan and then he married Kareena Kapoor but not Amrita Singh's sister, I was mistaken. Saif Ali Khan was married to Amrita Singh and then married Kareena Kapoor.",
+        "I am not aware of information about Sara Ali Khan's stepmother.",
+        "Amrita Singh is the stepmother of Sara Ali Khan, and her first name 'Amrita' has 6 letters. Olga Larson's first name 'Olga' has 4 letters. Therefore, 'Amrita' has 2 more letters than 'Olga'.",
+        "The first name of Sara Ali Khan's stepmother is Amrita, and Olga Larson's first name is Olga, with Amrita having 6 letters and Olga having 4 letters, so Amrita has 2 more letters.",
+        "I don't have access to Sara Ali Khan's stepmother's name."
+      ],
+      "log_lik_agg": [
+        -0.4882285579525191,
+        -0.3052244442515075,
+        -0.29217797669829154,
+        -0.8025652686483227,
+        -0.46843382165483805,
+        -0.881111919639572,
+        -0.4665588011344274,
+        -0.1743986916385199,
+        -0.3078720811009407,
+        -0.6091553480364382
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        1,
+        1,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.3338014026569556,
+        -1.0074905048643819,
+        -2.137750821402728,
+        -2.648138113352759,
+        -2.3140066663592744,
+        -2.726684764344008,
+        -1.6877431673667593
+      ],
+      "judge_candidate": "I'm not aware of the stepmother of Sara Ali Khan, and I couldn't find any information about her.",
+      "judge_correct": true,
+      "kle_full": 1.9688619510259748,
+      "cost": {
+        "t_seconds": 16.11747880396433,
+        "n_gen_tokens": 452,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000016",
+      "question": "What is the date one day before when Ebba Busch Thor's husband was born?",
+      "responses": [
+        "I cannot verify Ebba Busch Thor's husband's birthdate.",
+        "I'm not aware of information about Ebba Busch Thor's husband's birthdate.",
+        "I'm sorry, I do not have information about Ebba Busch Thor's husband's birthdate.",
+        "I'm unable to verify Ebba Busch Thor's husband's birthdate.",
+        "I am not familiar with information on Ebba Busch Thor's husband's birthdate.",
+        "I am unable to verify Ebba Busch Thor's husband's birthdate.",
+        "I am unable to verify the date of Ebba Busch Thor's husband's birth.",
+        "I'm not familiar with Ebba Busch Thor's husband's birthdate.",
+        "I'm not aware of information on Ebba Busch Thor's husband's birthdate, therefore, I cannot determine the date one day before his birth.",
+        "I am not aware of information on the date of birth of Ebba Busch Thor's husband."
+      ],
+      "log_lik_agg": [
+        -0.28547848463058473,
+        -0.2518269435355538,
+        -0.32238148034296255,
+        -0.22721637916915557,
+        -0.40377738287574366,
+        -0.16060912740581176,
+        -0.2883621213075362,
+        -0.33501798045985837,
+        -0.47121198778040707,
+        -0.5825121399192583
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.09046576469203783,
+        -2.4476756938672333
+      ],
+      "judge_candidate": "I'm not aware of any information about Ebba Busch Thor's husband's birthdate.",
+      "judge_correct": false,
+      "kle_full": 0.33680043818273964,
+      "cost": {
+        "t_seconds": 9.15558962803334,
+        "n_gen_tokens": 198,
+        "n_prompt_tokens": 66
+      }
+    },
+    {
+      "id": "morehopqa-000017",
+      "question": "How many repeated letters are there in the last name of Eva Chamberlain's maternal grandmother?",
+      "responses": [
+        "I'm not aware of any information about Eva Chamberlain's maternal grandmother.",
+        "I'm unable to verify information about Eva Chamberlain's maternal grandmother's name.",
+        "I do not have information on the details of Eva Chamberlain's family, and therefore I am unable to calculate the number of repeated letters in her maternal grandmother's last name.",
+        "I am unable to verify the name of Eva Chamberlain's maternal grandmother.",
+        "I'm not aware of information regarding Eva Chamberlain's maternal grandmother, so I cannot provide an answer to this question.",
+        "I cannot verify the name of Eva Chamberlain's maternal grandmother.",
+        "I do not have access to information about Eva Chamberlain's maternal grandmother.",
+        "I'm not aware of information on Eva Chamberlain's maternal grandmother's name.",
+        "I'm sorry, I am not familiar with information regarding the name of Eva Chamberlain's maternal grandmother.",
+        "Unfortunately, I am unable to verify the name of Eva Chamberlain's maternal grandmother to answer this question."
+      ],
+      "log_lik_agg": [
+        -0.24949719477444887,
+        -0.5195119183729676,
+        -0.5497104577306244,
+        -0.2504407004453242,
+        -0.4408773958683014,
+        -0.38123235053249765,
+        -0.4061190513893962,
+        -0.44060255718581814,
+        -0.6030956676060503,
+        -0.5357524156570435
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "log_lik_per_sem_id": [
+        -1.5031371411084746,
+        -0.3728650366723344,
+        -2.4212498281123613
+      ],
+      "judge_candidate": "I'm not aware of any information about Eva Chamberlain's maternal grandmother, so I cannot determine the number of repeated letters in her last name.",
+      "judge_correct": true,
+      "kle_full": 0.751160946516546,
+      "cost": {
+        "t_seconds": 9.563440622063354,
+        "n_gen_tokens": 201,
+        "n_prompt_tokens": 66
+      }
+    },
+    {
+      "id": "morehopqa-000018",
+      "question": "How many additional letters does the first name of Brendan Becker have compared to the first name of the paternal grandfather of Diya Al-Dawla?",
+      "responses": [
+        "I'm unable to verify information about the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I'm not aware of information regarding the names of Diya Al-Dawla's paternal grandfather.",
+        "I'm not aware of specific information regarding the first name of the paternal grandfather of Diya Al-Dawla. However, the first name of Brendan Becker has 8 letters and \"Diya Al-Dawla\" is not a typical Western name, and I couldn't find any notable historical or modern public figure with",
+        "I am unable to verify the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I'm not aware of information about the first name of Diya Al-Dawla's paternal grandfather, so I am unable to calculate the number of letters in his name.",
+        "I don't have enough information about the paternal grandfather of Diya Al-Dawla to determine the number of letters in his first name, so I cannot compare it to Brendan.",
+        "I am unable to verify the information about Diya Al-Dawla's paternal grandfather's name.",
+        "I'm unable to verify the number of letters in the first name of the paternal grandfather of Diya Al-Dawla, Brendan Becker.",
+        "I cannot verify the name of the paternal grandfather of Diya Al-Dawla.",
+        "I'm unable to verify the first name of the paternal grandfather of Diya Al-Dawla."
+      ],
+      "log_lik_agg": [
+        -0.24316376091345496,
+        -0.5004344263247081,
+        -0.6841971987741999,
+        -0.17166525143243017,
+        -0.4874123258309232,
+        -0.4970187883119325,
+        -0.4750054778442496,
+        -0.26771798395905,
+        -0.3640315971440739,
+        -0.164809650963261
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        4,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.8048550237737041,
+        -2.6142176690533923,
+        -2.4174327961101154,
+        -2.4270392585911247,
+        -1.6548532162085094,
+        -2.1977384542382423
+      ],
+      "judge_candidate": "I'm unable to verify the first name of the paternal grandfather of Diya Al-Dawla.",
+      "judge_correct": true,
+      "kle_full": 1.3127996040772347,
+      "cost": {
+        "t_seconds": 11.735509390942752,
+        "n_gen_tokens": 291,
+        "n_prompt_tokens": 77
+      }
+    },
+    {
+      "id": "morehopqa-000019",
+      "question": "What is the date one month after the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "responses": [
+        "I'm not aware of any information that links the author of a novel called \"Here We Go Round the Mulberry Bush\" to a specific British author. However, a popular novel of that name is 'Here We Go Round the Mulberry Bush' by Jenny Diski, published in 1977.",
+        "I'm not aware of the specific British author who wrote the novel that inspired the song \"Here We Go Round the Mulberry Bush\".",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Penny Jordan, however I couldn't confirm if Penny Jordan is associated with a birthdate that is 1 month after an actual birth date of someone associated with another novel of a similar name, that could be attributed to a character or",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Penny Jordan, and Penny Jordan was born on April 1, 1947, so one month after her birth date would be May 1, 1947.",
+        "The British author you're referring to is Raymond Briggs, but it's more likely that you're thinking of A.A. Milne, and the novel you're thinking of is \"The House at Pooh Corner\", however, the musical \"Here We Go Round the Mulberry Bush\" is actually based on the novel by",
+        "The British author you are referring to is Alison Uttley, who wrote the novel \"Here We Go Round the Mulberry Bush\" in 1938. \n\nTo calculate the date one month after the novel's release, I will need her birth date. Alison Uttley was born on November 28, 1884",
+        "There is no clear indication of which British author specifically wrote the novel \"Here We Go Round the Mulberry Bush.\" However, the 1967 novel \"Here We Go Round the Mulberry Bush\" was written by Jenny Joseph.",
+        "The British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\" is Mary Wesley, and she was born on June 9, 1924, so one month after her birth date would be July 9, 1924.",
+        "The British author who wrote the novel on which the musical 'Here We Go Round the Mulberry Bush' is based is Hunter Davies, and he was born on July 15, 1936. \n\nOne month after this date would be August 15, 1936.",
+        "I'm not aware of a British author who wrote the novel \"Here We Go Round the Mulberry Bush.\" However, the title appears in the novel by Rachel Billington, but there's a more famous book \"Here We Go Round the Mulberry Bush\" which is a children's novel written by Rachel Billington's"
+      ],
+      "log_lik_agg": [
+        -0.6339534699556327,
+        -0.46418342207159313,
+        -1.3269289130112156,
+        -0.3012418141061405,
+        -0.5672127442958299,
+        -0.5562045478727669,
+        -0.580770288693144,
+        -0.2680664682001979,
+        -0.36139405884763653,
+        -0.8129808680387214
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.3865173703311537,
+        -2.216747322447114,
+        -3.0794928133867367,
+        -2.0538057144816615,
+        -2.319776644671351,
+        -2.308768448248288,
+        -2.333334189068665,
+        -2.020630368575719,
+        -2.113957959223158,
+        -2.5655447684142425
+      ],
+      "judge_candidate": "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, and she was born on June 29, 1932. One month after her birth date would be July 29, 1932.",
+      "judge_correct": false,
+      "kle_full": 2.2718933606726313,
+      "cost": {
+        "t_seconds": 19.727671436034143,
+        "n_gen_tokens": 557,
+        "n_prompt_tokens": 78
+      }
+    }
+  ]
+}

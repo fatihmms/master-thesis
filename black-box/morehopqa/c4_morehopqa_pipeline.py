@@ -48,7 +48,7 @@ from dataset.frozen_utils import load_frozen
 DATASET    = "morehopqa"
 FROZEN_DIR = os.path.join(root_dir, "dataset")
 SEED         = 42
-N_QUESTIONS  = 1000          
+N_QUESTIONS  = 20          
 N_SAMPLES    = 10          # samples per step (n)
 
 MODEL_MAP = {

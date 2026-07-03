@@ -1,0 +1,520 @@
+{
+  "config": {
+    "generator": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "precision": "bf16",
+    "n_questions": 20,
+    "n_samples": 10,
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 64,
+    "hidden_layer": 16,
+    "pool": "mean",
+    "kernel": "cosine",
+    "judge_temp": 0.1
+  },
+  "auroc": 0.5733333333333334,
+  "hallucination_rate": 0.75,
+  "details": [
+    {
+      "id": "morehopqa-000000",
+      "question": "What is the sum of all the digits in the day, month and year of when the director of film Is It Easy To Be Young died?",
+      "responses": [
+        "I'm sorry, I am not able to verify the date of when the director of the 1959 film \"Is It Easy to Love?\" (the US title for the film Is It Easy to Love) Jean Negulesco died.",
+        "I do not have information about the director of the film \"Is It Easy to Be Young\".",
+        "I'm unable to verify who the director of the film \"Is It Easy to Be Young\" is, therefore I can't find when they died and calculate the sum of the day, month and year.",
+        "I am unable to verify when director Michael Campus, of the film \"Is It Easy to Be Young,\" died.",
+        "I am unable to verify who the director of the film \"Is It Easy to Be Young?\" is, and as such cannot provide the date of their death.",
+        "I'm sorry, I am not familiar with a film called Is It Easy To Be Young and information on a director of this title could not be found.",
+        "I'm not aware of information about the specific director of the film \"Is It Easy to Be Young,\" as there may be multiple films with this title.",
+        "I'm sorry, I am unable to verify when the director of film \"Is It Easy to Be Young?\" died.",
+        "I'm sorry, I don't have information on when the director of film \"Is It Easy to Be Young\" died, so I cannot calculate the sum of the digits of the day, month, and year.",
+        "I'm not aware of the director's death date; however, the film 'Is It Easy to Be Young' (also known as 'L'inquietitudine') is an Italian drama film directed by Luigi Comencini and released in 1964."
+      ],
+      "vne": 0.6208141542237667,
+      "judge_candidate": "I'm sorry, I am unable to verify the director of the film \"Is It Easy to Be Young\" or the date of their death.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 5.461906570009887,
+        "n_gen_tokens": 344,
+        "n_fwd_tokens": 1104,
+        "n_prompt_tokens": 77
+      }
+    },
+    {
+      "id": "morehopqa-000001",
+      "question": "How many consonants are there in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather?",
+      "responses": [
+        "There are 7 consonants in the first name \"Charles\".",
+        "I am unable to verify the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather.",
+        "There are 6 consonants in the first name \"Charles\".",
+        "The first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather is Thomas and it contains 6 consonants.",
+        "The first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather was Percy, which contains 5 consonants.",
+        "I am unable to verify the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather.",
+        "Charles II of England's father's first name is James, not Charles Monck's. Charles Monck's paternal grandfather was John Monck. The first name John has 4 consonants: J-H-N-N.",
+        "Charles Monck's 3rd Viscount Monck's paternal grandfather was Thomas Wentworth and he had the first name Thomas.  There are 5 consonants in the first name 'Thomas'.",
+        "Charles Monck, 3Rd Viscount Monck's paternal grandfather's first name is Thomas and it has 6 consonants (Th-o-m-a-s).",
+        "I am unable to verify the number of consonants in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather."
+      ],
+      "vne": 0.6263689315609937,
+      "judge_candidate": "I'm unable to verify the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.195233781123534,
+        "n_gen_tokens": 283,
+        "n_fwd_tokens": 1023,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000002",
+      "question": "What is the reverse order of when the publisher of American Scientist was founded?",
+      "responses": [
+        "I'm not sure what you're asking for, but I can provide you with the information that American Scientist was founded in 1915.",
+        "The American Scientist was first published in 1915. The reverse order would be 2015, 1915.",
+        "I'm sorry, but I do not have the information on the founding date of the publisher of American Scientist.",
+        "I'm not aware of any specific information on what you are referring to, could you provide more context.",
+        "I'm not aware of any information about the reverse order of when American Scientist was founded. However, American Scientist was founded in 1915 and is still in publication today, so the reverse order of its founding date is 2015, 1995, 1985, and so on.",
+        "The magazine American Scientist was founded in 1915, therefore, the reverse order would be 2015, 1915.",
+        "American Scientist was founded in 1915.",
+        "American Scientist was founded in 1915. Therefore, the reverse order is 5119.",
+        "The publication American Scientist was first published in 1915, so the reverse order would be 2015 and beyond, 2014, 2013, and down to 1915.",
+        "I'm not aware of the information about the publisher of American Scientist."
+      ],
+      "vne": 0.8977223633945789,
+      "judge_candidate": "The American Scientist magazine was founded in 1915, so the reverse order would be 2015, 1915.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.621818550862372,
+        "n_gen_tokens": 262,
+        "n_fwd_tokens": 882,
+        "n_prompt_tokens": 63
+      }
+    },
+    {
+      "id": "morehopqa-000003",
+      "question": "How many consonants are there in the first name of the current drummer of the band who did the song \"What Lovers Do\"?",
+      "responses": [
+        "I'm sorry, but I am unable to identify the drummer who performed on the song 'What Lovers Do' or any other details.",
+        "I'm not aware of the current drummer of the band who performed the song \"What Lovers Do\".",
+        "I'm not aware of the current drummer of the band that did the song \"What Lovers Do\", so I am unable to give a precise answer.",
+        "I'm not aware of the specific information about the band that did the song \"What Lovers Do.\" However, considering the song is by Maroon 5, the drummer for the band Adam Levine is Matt Flynn but more current is Matt  is not the drummer it's the drummer for maroon 5 is Matt",
+        "I'm unable to verify the drummer of the band who sang \"What Lovers Do\" by Maroon 5.",
+        "I am unable to verify the current drummer of the band who did the song \"What Lovers Do.\"",
+        "I'm not aware of information about the current drummer of the band that performed the song \"What Lovers Do,\" but a band by that name is Maroon 5, the drummer Adam Levine's band that performed the song. Assuming this is correct, the first name Adam has 4 consonants (d, m",
+        "I'm sorry, but I am unable to verify the name of the current drummer of the band who did the song \"What Lovers Do.\"",
+        "I'm not sure about the current drummer for Maroon 5, the band who did the song \"What Lovers Do\", but based on my available information, I found that Maroon 5's drummer Adam Levine does sing and Adam has three consonants in his first name.",
+        "I'm not aware of a band or song \"What Lovers Do\" or who the drummer for it is."
+      ],
+      "vne": 0.5184165003655723,
+      "judge_candidate": "I'm not aware of the current drummer of the band that did the song \"What Lovers Do.\"",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.6357328521553427,
+        "n_gen_tokens": 362,
+        "n_fwd_tokens": 1102,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000004",
+      "question": "What is the date 3 weeks after when Albert, Margrave Of Meissen's father died?",
+      "responses": [
+        "I'm not aware of information about Albert, Margrave Of Meissen's father's death date.",
+        "I'm not aware of any information on an Albert, Margrave of Meissen, so I'm unable to determine when he died or three weeks after that date.",
+        "I'm sorry, but I don't have enough information to determine the exact date of when Albert, Margrave Of Meissen's father died, so I am unable to give you the date 3 weeks after that.",
+        "I am not familiar with the date when Albert, Margrave Of Meissen's father died, could you provide the date?",
+        "I am unable to verify when Albert, Margrave Of Meissen's father died.",
+        "I'm not aware of information on an individual named Albert, Margrave Of Meissen's, or the date of their father's passing.",
+        "I am not aware of the exact date when Albert, Margrave of Meissen's father died.",
+        "I'm not aware of any information regarding the specific date Albert, Margrave of Meissen's father died. Could you provide more information about him?",
+        "I am unable to verify when Albert, Margrave Of Meissen's father died.",
+        "I am unable to verify Albert, Margrave of Meissen's father's date of death."
+      ],
+      "vne": 0.41189345517468795,
+      "judge_candidate": "I'm not aware of any information about Albert, Margrave Of Meissen's father's death date.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.1454489631578326,
+        "n_gen_tokens": 263,
+        "n_fwd_tokens": 943,
+        "n_prompt_tokens": 69
+      }
+    },
+    {
+      "id": "morehopqa-000005",
+      "question": "What is the date 10 weeks after the date of death of the director of film Cross Current?",
+      "responses": [
+        "I am not aware of which film \"Cross Current\" was directed by; if you provide that information, I can calculate the correct date.",
+        "However, I need more information to answer this question as I am not aware of a well-known film called \"Cross Current.\"",
+        "I'm not aware of a director by this name associated with the film Cross Current.",
+        "I'm not aware of the specific director for the film Cross Current. Can you please provide more context or information about the film so I can help you accurately find the director's date of death and then the 10 weeks after that date?",
+        "I am unable to verify the date of death of the director of film Cross Current.",
+        "I'm not aware of the exact date of death of the director of film Cross Current.",
+        "I'm not aware of the information regarding the director of the film \"Cross Current.\"",
+        "I am not aware of the date of death of the director of the film Cross Current, as you have not provided the name of the director.",
+        "I'm not aware of a specific film titled \"Cross Current.\" However, there have been multiple films with that title. To provide an accurate answer, I would need more context or information about the specific film you're referring to.",
+        "I'm not aware of the information regarding the director of the film \"Cross Current\" and the date of their death, so I am unable to provide the date 10 weeks after."
+      ],
+      "vne": 0.5896756743549132,
+      "judge_candidate": "I'm not aware of the date of death of the director of the film Cross Current.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.122756010154262,
+        "n_gen_tokens": 282,
+        "n_fwd_tokens": 952,
+        "n_prompt_tokens": 68
+      }
+    },
+    {
+      "id": "morehopqa-000006",
+      "question": "What is the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase?",
+      "responses": [
+        "I'm sorry, but I couldn't verify who Eochaid Mac Fiachnai's paternal grandfather is.",
+        "I'm not familiar with Eochaid Mac Fiachnai's ancestry.",
+        "I don't have information about Eochaid Mac Fiachnai's family.",
+        "I'm sorry, but I couldn't find information about Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm sorry, but I cannot verify the first name and last name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "I couldn't verify the first name and last name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "I do not have information about Eochaid Mac Fiachnai's family.",
+        "I don't have information on Eochaid Mac Fiachnai's paternal grandfather's name.",
+        "I am unable to verify Eochaid Mac Fiachnai's paternal grandfather's name.",
+        "I couldn't find any information about Eochaid Mac Fiachnai's family."
+      ],
+      "vne": 0.29713331632430284,
+      "judge_candidate": "I'm sorry, but I am unable to verify the first name and last name of Eochaid Mac Fiachnai's paternal grandfather.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 1.8340232979971915,
+        "n_gen_tokens": 203,
+        "n_fwd_tokens": 983,
+        "n_prompt_tokens": 79
+      }
+    },
+    {
+      "id": "morehopqa-000007",
+      "question": "What is the result of multiplying 4 by the reverse of the year of birth of the actress who created The Dogwoman telemovies?",
+      "responses": [
+        "I'm not aware of the specific information regarding the actress who created The Dogwoman telemovies, so I'm unable to calculate the answer.",
+        "I'm unable to verify information on the actress who created The Dogwoman telemovies, and thus I cannot provide the result of the calculation.",
+        "I'm not aware of any information about the actress who created The Dogwoman telemovies.",
+        "Unfortunately, I do not have enough information about the actress who created the The Dogwoman telemovies or her year of birth.",
+        "I'm not aware of the actress who created The Dogwoman telemovies, can you please provide the name of the actress so I can calculate the result.",
+        "I am sorry, but I do not have information on which actress created The Dogwoman telemovies.",
+        "I'm not aware of the specific details of the actress who created The Dogwoman telemovies.",
+        "I'm not aware of any information about an actress creating The Dogwoman telemovies, so I can't provide a complete response.",
+        "I'm not aware of the information on the actress who created The Dogwoman telemovies.",
+        "I'm unable to verify the year of birth of the actress who created The Dogwoman telemovies, but if we assume she was actress Noni Hazlehurst, who played the title character, her birth year is 1945, and the reverse of that is 5431."
+      ],
+      "vne": 0.4237523559231631,
+      "judge_candidate": "I'm not aware of the specific information about the actress who created The Dogwoman telemovies, so I cannot calculate the result of the given operation.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.7329302800353616,
+        "n_gen_tokens": 280,
+        "n_fwd_tokens": 1030,
+        "n_prompt_tokens": 76
+      }
+    },
+    {
+      "id": "morehopqa-000008",
+      "question": "How many letters are there between the first and last letters of the first name of the child of Caroline LeRoy's spouse?",
+      "responses": [
+        "I'm not aware of any publicly available information about the spouse of Caroline LeRoy, so I cannot provide a correct answer.",
+        "I'm not aware of any information about the spouse of Caroline LeRoy.",
+        "I'm not aware of any public information about Caroline LeRoy's spouse and their child, so I am unable to provide a specific answer.",
+        "I'm not sure who Caroline LeRoy's spouse is.",
+        "I'm not aware of any information about Caroline LeRoy having a child or a spouse.",
+        "I'm not aware of any information that includes the name of the child of Caroline LeRoy's spouse.",
+        "I'm not aware of any information about Caroline LeRoy's spouse or children, so I cannot complete this request.",
+        "I'm not aware of information about Caroline LeRoy's spouse or any of her children.",
+        "I'm not aware of any public information that mentions Caroline LeRoy's spouse or any child.",
+        "I'm not aware of any information about Caroline LeRoy's spouse or child."
+      ],
+      "vne": 0.34251355355444685,
+      "judge_candidate": "I'm not aware of any information about Caroline LeRoy's spouse or their child, so I cannot provide an answer.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 1.7109066299162805,
+        "n_gen_tokens": 195,
+        "n_fwd_tokens": 915,
+        "n_prompt_tokens": 73
+      }
+    },
+    {
+      "id": "morehopqa-000009",
+      "question": "How many unique letters are there in the first name of Victoria Sackville-West, Baroness Sackville's child-in-law?",
+      "responses": [
+        "There are 9 unique letters in the first name of  Vita Sackville-West, who was the child-in-law of Victoria Sackville-West, Baroness Sackville, her daughter.",
+        "There are 12 unique letters in the first name of Victoria Sackville-West's child-in-law, Vita, being Sackville-West's child-in-law being Julian Stephen Bell, (also known as Julian Bell, but better known as Vita Sackville-West's child-in-law,  Julian's brother) but",
+        "The first name of Nancy Mitford is the child-in-law of Victoria Sackville-West, Baroness Sackville. \n\nThere are 6 unique letters in the first name 'Nancy'.",
+        "I'm unable to verify the first name of Victoria Sackville-West's child-in-law.",
+        "I do not have enough information about the child-in-law of Victoria Sackville-West, Baroness Sackville.",
+        "The first name of Vita Sackville-West's husband, Victoria's child-in-law, is \"Harold\" which contains 6 unique letters: H-A-R-O-L-D.",
+        "I'm unable to verify information about the child-in-law of Victoria Sackville-West, Baroness Sackville, with the information available.",
+        "The first name of Virginia Woolf, Victoria Sackville-West's child-in-law, contains 7 unique letters.",
+        "I'm unable to verify information on the child-in-law of Victoria Sackville-West, Baroness Sackville.",
+        "I'm sorry, I do not have information on Victoria Sackville-West's child-in-law."
+      ],
+      "vne": 0.7120015159283943,
+      "judge_candidate": "I'm not aware of information about Victoria Sackville-West's child-in-law, but I do know that her child-in-law is Vita Sackville-West's son, and his name is Nigel Nicolson. The first name \"Nigel\" contains 5 unique letters.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 3.5144212250597775,
+        "n_gen_tokens": 321,
+        "n_fwd_tokens": 1061,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000010",
+      "question": "What is the concatenation of the last letters of the first name and last name of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother in lowercase?",
+      "responses": [
+        "I'm unable to verify the details about Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother's name, so I'm unable to provide an answer.",
+        "I'm unable to verify who Hugh Cholmondeley, 1st Earl Of Cholmondeley's paternal grandmother was, so I can't provide an answer to your question.",
+        "Unfortunately, I am unable to verify the name of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother, so I cannot answer your question.",
+        "I don't have information on Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother.",
+        "I'm unable to verify the last name of Hugh Cholmondeley, 1st Earl of Cholmondeley's, paternal grandmother and the required information is not found, so the answer cannot be determined.",
+        "I'm sorry, but I do not have information about the paternal grandmother of Hugh Cholmondeley, 1st Earl of Cholmondeley.",
+        "I'm unable to verify Hugh Cholmondeley, 1st Earl Of Cholmondeley's paternal grandmother.",
+        "I'm unable to verify Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother.",
+        "I am unable to verify the name of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother.",
+        "Unfortunately, I do not have enough information about Hugh Cholmondeley, 1st Earl of Cholmondeley's paternal grandmother's first name or last name."
+      ],
+      "vne": 0.30231172619349067,
+      "judge_candidate": "I'm unable to verify the paternal grandmother of Hugh Cholmondeley, 1st Earl of Cholmondeley.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.294498907867819,
+        "n_gen_tokens": 339,
+        "n_fwd_tokens": 1209,
+        "n_prompt_tokens": 88
+      }
+    },
+    {
+      "id": "morehopqa-000011",
+      "question": "Which day of the week was the date of death of Carlo I Cybo-Malaspina's father?",
+      "responses": [
+        "I do not have the specific information about the day of the week of Carlo I Cybo-Malaspina's father's death.",
+        "I don't have enough information about Carlo I Cybo-Malaspina's father to provide the day of the week of their date of death.",
+        "I am unable to verify the day of the week that Carlo I Cybo-Malaspina's father passed.",
+        "I am unable to verify the day of the week the date of death of Carlo I Cybo-Malaspina's father.",
+        "I am unable to verify Carlo I Cybo-Malaspina's father date of death.",
+        "I do not have information on the date of death of Carlo I Cybo-Malaspina's father.",
+        "I'm sorry, but I don't know the date of death of the father of Carlo I Cybo-Malaspina.",
+        "I am unable to verify the date of death of Carlo I Cybo-Malaspina's father.",
+        "I do not have the information on Carlo I Cybo-Malaspina's father's date of death.",
+        "I am unable to verify the date of the father of Carlo I Cybo-Malaspina."
+      ],
+      "vne": 0.3251872083328435,
+      "judge_candidate": "I am unable to verify the date of death of Carlo I Cybo-Malaspina's father.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 1.6887134201824665,
+        "n_gen_tokens": 236,
+        "n_fwd_tokens": 926,
+        "n_prompt_tokens": 70
+      }
+    },
+    {
+      "id": "morehopqa-000012",
+      "question": "What is the date one year before the date when Charlie McDermott plays Axl Heck on a tv show that premiered in ?",
+      "responses": [
+        "I'm not sure which TV show you're referring to, but since Charlie McDermott played Axl Heck on the TV show \"The Middle\", if you tell me the year the show premiered, I can give you the date one year before.",
+        "I'm not able to verify the date the show premiered, and I'm unable to verify what year Charlie McDermott played Axl Heck, but I do know that Charlie McDermott played the role of Axl Heck on the TV show \"The Middle\"",
+        "The TV show you are referring to is 'The Middle'. Charlie McDermott played the role of Axl Heck on this show, which premiered on September 30, 2009. One year before that would be September 30, 2008.",
+        "You're referring to the TV show \"The Middle.\" Charlie McDermott played Axl Heck. The show premiered on September 30, 2009. One year before the premiere date would be September 30, 2008.",
+        "I cannot verify the tv show in which Charlie McDermott plays Axl Heck.",
+        "I'm not sure which TV show Charlie McDermott played Axl Heck on; however, Charlie McDermott plays Axl Heck on the TV show 'The Middle' which premiered in 2009, so the date one year before is 2008.",
+        "I'm sorry, but I cannot verify the information that a TV show premiered that Charlie McDermott played a character named Axl Heck in.",
+        "I am unable to verify what TV show Charlie McDermott plays Axl Heck on.",
+        "I'm not sure what TV show Charlie McDermott plays Axl Heck on, but I believe he plays this role on the show \"The Middle.\" If \"The Middle\" premiered in 2009, one year before the premiere date would be 2008.",
+        "I'm not sure what TV show Charlie McDermott plays Axl Heck in, however, I can try to help. Charlie McDermott played Axl Heck on the TV show 'The Middle', which premiered on September 30, 2009. If that is the show you are referring to, then one"
+      ],
+      "vne": 0.5389876351782177,
+      "judge_candidate": "I'm not aware of the specific date the TV show premiered, but I can tell you that Charlie McDermott played Axl Heck on the TV show \"The Middle,\" which premiered on September 30, 2009.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 3.2730574409943074,
+        "n_gen_tokens": 438,
+        "n_fwd_tokens": 1168,
+        "n_prompt_tokens": 74
+      }
+    },
+    {
+      "id": "morehopqa-000013",
+      "question": "The submission deadline is at 17 November 1983, 04:00, Anywhere on Earth (AoE). At what date and time is the deadline in the place of birth of the director of film Boden'S Boy?",
+      "responses": [
+        "I don't have information about the submission deadline being at 17 November 1983, and a film called Boden'S Boy.",
+        "I'm sorry, but I am unable to locate any information regarding the director of the film \"Boden's Boy\"",
+        "I'm sorry, but I cannot verify the place of birth of the director of film Boden's boy.",
+        "I can't verify the director of the film 'Boden's Boy'.",
+        "However, you haven't mentioned the director of the film \"Boden's Boy\" or the place of their birth, so I can't provide an accurate answer. If you provide this information, I can tell you the date and time of the deadline in the director's place of birth.",
+        "I cannot verify the director of the film Boden's Boy.",
+        "I am sorry, but I cannot verify the director of the film Boden's Boy.",
+        "I don't have enough information about the director of the film Boden'S Boy to determine their place of birth.",
+        "However, I'm unable to verify the birthdate and location of the director of the film Boden's Boy.",
+        "However, I am not aware of information about the director of the film \"Boden's Boy.\""
+      ],
+      "vne": 0.5235313593704332,
+      "judge_candidate": "I'm not aware of the director of the film \"Boden's Boy.\"",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 2.398542215116322,
+        "n_gen_tokens": 243,
+        "n_fwd_tokens": 1193,
+        "n_prompt_tokens": 96
+      }
+    },
+    {
+      "id": "morehopqa-000014",
+      "question": "What is the closest palindrome number to the year of the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "responses": [
+        "The novel is 'Here We Go Round the Mulberry Bush' by Hunter Davies, published in 1967;  a year which is not a palindrome. However, the year 1961 is the closest to 1967 and it is a palindrome.",
+        "The British author of the novel \"Here We Go Round the Mulberry Bush\" is Jennifer Weiner's work not be confused with the author of this novel, the author I am referring to is also Jennifer, but of the children's book is by Jenny Joseph. Jenny Joseph, the author of the children's book \"Here",
+        "The British author of the novel \"Here We Go Round the Mulberry Bush\" is Jennie Linden and also Jan Mark is another author of the same novel, however the most popular adaptation was written by Jennie Linden.",
+        "I'm assuming you're referring to the novel \"Here We Go Round the Mulberry Bush\" by Penny Pollack, whose actual surname I don't know but was actually a British author.",
+        "The British author who wrote \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, and she was born on July 26, 1932; the closest palindrome year to 1932 is 2022.",
+        "The novel \"Here We Go Round the Mulberry Bush\" is by Beatrice Chase, and she was born in 1874;  the closest palindrome year to 1874 is 1881, however, a palindrome year actually closer to 1874 is 1881,  but  not the closest one",
+        "The novel \"Here We Go Round the Mulberry Bush\" was written by Jenny Diski, a British author born on July 8, 1947, and the closest palindrome year is 6969.",
+        "The British author A.L. Kennedy, who wrote the novel 'Here We Go Round the Mulberry Bush,' was born in 1965, and the year closest palindrome to 1965 is 1966 and 1961.",
+        "The novel by Hunter Davies is actually \"The Odd Couple\", but another popular British author who wrote a book called \"Here We Go Round the Mulberry Bush\" is Hunter Davies, and he was born in 1935, so the year 1935 is not the correct birth year.",
+        "The British author's name is Pam Ayres, but the novel \"Here We Go Round the Mulberry Bush\" is by Penny Pollard, however, the book it is based on the novel was written by Penny Pollard and Jenny Joseph's contemporary, who wrote the poem was also named Jenny Joseph and the author of"
+      ],
+      "vne": 0.6210294918213625,
+      "judge_candidate": "The British author of the novel \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, born on July 29, 1932. The closest palindrome number to 1932 is 1991.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 3.1970143681392074,
+        "n_gen_tokens": 518,
+        "n_fwd_tokens": 1318,
+        "n_prompt_tokens": 81
+      }
+    },
+    {
+      "id": "morehopqa-000015",
+      "question": "How many additional letters does the first name of the stepmother of Sara Ali Khan have compared to the first name of Olga Larson?",
+      "responses": [
+        "Amrita Singh, the stepmother of Sara Ali Khan, has a first name with 7 letters, and Olga Larson has a first name with 4 letters, so there are 3 additional letters in the first name of Amrita Singh.",
+        "I do not have enough information to provide an accurate answer.",
+        "I am unable to verify the first name of the stepmother of Sara Ali Khan.",
+        "Amrita Singh is the stepmother of Sara Ali Khan, and her first name 'Amrita' has 6 letters, while Olga Larson's first name 'Olga' has 4 letters, so there are 2 additional letters in the first name 'Amrita'.",
+        "I am unable to verify the number of letters in the first name of Sara Ali Khan's stepmother, but I can verify that the first name of Olga Larson has 4 letters.",
+        "I am unable to verify the first name of the stepmother of Sara Ali Khan as I don't have any information on her stepmother.",
+        "I'm not aware of information about Sara Ali Khan's stepmother's name. However, I can tell you that Sara Ali Khan's stepmother's name is Amrita Singh. The first name \"Amrita\" has 6 letters and the first name \"Olga\" has 4 letters, so Amrita has",
+        "I am not aware of the name of the stepmother of Sara Ali Khan, so I can't provide the information requested about the first name.",
+        "Amrita Singh, the stepmother of Sara Ali Khan, has 8 letters in her first name, and Olga Larson has 4 letters in her first name, so there are 4 additional letters in the first name of Amrita Singh.",
+        "I'm not aware of Sara Ali Khan's stepmother's name."
+      ],
+      "vne": 0.7967623482919588,
+      "judge_candidate": "I'm not aware of the stepmother of Sara Ali Khan, and I couldn't find any information about her.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 2.682142028119415,
+        "n_gen_tokens": 358,
+        "n_fwd_tokens": 1098,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000016",
+      "question": "What is the date one day before when Ebba Busch Thor's husband was born?",
+      "responses": [
+        "I am unable to verify Ebba Busch Thor's husband's birthdate.",
+        "I cannot verify Ebba Busch Thor's husband's birthdate, as I do not have information on her husband's name or birthdate.",
+        "I'm not aware of Ebba Busch Thor's husband's birthdate, so I cannot calculate the day before it.",
+        "I'm not familiar with information about Ebba Busch Thor's husband, could you provide more context or information?",
+        "I'm not aware of the information that you are asking for.",
+        "I don't have information on Ebba Busch Thor's husband's birthdate.",
+        "I am not familiar with Ebba Busch Thor, can you provide more context or information about Ebba Busch Thor's husband so I can assist you better.",
+        "I am unable to verify the birthdate of Ebba Busch Thor's husband.",
+        "I am not aware of any information about Ebba Busch Thor, so I cannot give a date one day before her husband's birth.",
+        "I am not able to verify the exact date of Ebba Busch Thor's husband birth."
+      ],
+      "vne": 0.555810288572117,
+      "judge_candidate": "I'm not aware of any information about Ebba Busch Thor's husband's birthdate.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 1.7458670458290726,
+        "n_gen_tokens": 220,
+        "n_fwd_tokens": 870,
+        "n_prompt_tokens": 66
+      }
+    },
+    {
+      "id": "morehopqa-000017",
+      "question": "How many repeated letters are there in the last name of Eva Chamberlain's maternal grandmother?",
+      "responses": [
+        "I'm not aware of information regarding the last name of Eva Chamberlain's maternal grandmother.",
+        "I do not have information on Eva Chamberlain's maternal grandmother's name.",
+        "I'm not aware of information about Eva Chamberlain's maternal grandmother, so I am unable to determine if there were any repeated letters in her last name.",
+        "I am unable to verify the information about Eva Chamberlain's maternal grandmother's last name.",
+        "I am unable to verify the name of Eva Chamberlain's maternal grandmother.",
+        "I'm not aware of any specific information about Eva Chamberlain's maternal grandmother.",
+        "I'm not aware of information on Eva Chamberlain's maternal grandmother's name.",
+        "I'm unable to verify the specifics of Eva Chamberlain's maternal grandmother, and therefore cannot give you the correct information about the repeated letters in her last name.",
+        "I am not able to verify the last name of Eva Chamberlain's maternal grandmother.",
+        "I'm not aware of the maternal grandmother of Eva Chamberlain."
+      ],
+      "vne": 0.3759954899251593,
+      "judge_candidate": "I'm not aware of any information about Eva Chamberlain's maternal grandmother, so I cannot determine the number of repeated letters in her last name.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 1.985538560897112,
+        "n_gen_tokens": 191,
+        "n_fwd_tokens": 841,
+        "n_prompt_tokens": 66
+      }
+    },
+    {
+      "id": "morehopqa-000018",
+      "question": "How many additional letters does the first name of Brendan Becker have compared to the first name of the paternal grandfather of Diya Al-Dawla?",
+      "responses": [
+        "I'm not aware of information regarding the paternal grandfather of Diya Al-Dawla. However, I can tell you that the first name \"Brendan\" has 7 letters.",
+        "I'm unable to verify how many letters are in the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I cannot verify the paternal grandfather of Diya Al-Dawla, so I am unable to verify how many additional letters are in Brendan Becker's first name compared to the first name of Diya Al-Dawla's paternal grandfather.",
+        "I don't have information about the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I'm not familiar with the first name of the paternal grandfather of Diya Al-Dawla, so I'm unable to determine the comparison to Brendan Becker's first name.",
+        "I'm not familiar with information on the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I cannot verify the number of letters in the first name of the paternal grandfather of Diya Al-Dawla.",
+        "I couldn't find information about the first name of the paternal grandfather of Diya Al-Dawla or any details about a person named Brendan Becker, so I cannot compare their first names.",
+        "I'm sorry, but I am unable to find any information about the first name of the paternal grandfather of Diya Al-Dawla, therefore I cannot calculate the difference in letters between his first name and Brendan Becker.",
+        "I am unable to verify the first name of the paternal grandfather of Diya Al-Dawla, so I am unable to answer the question."
+      ],
+      "vne": 0.4633614969682753,
+      "judge_candidate": "I'm unable to verify the first name of the paternal grandfather of Diya Al-Dawla.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 2.169805198907852,
+        "n_gen_tokens": 322,
+        "n_fwd_tokens": 1082,
+        "n_prompt_tokens": 77
+      }
+    },
+    {
+      "id": "morehopqa-000019",
+      "question": "What is the date one month after the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "responses": [
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Pam Ayres, but I think you might be referring to the song. The song \"Here We Go Round the Mulberry Bush\" was written by Keith Dewhurst and Jim Parker, for the film of the same name.",
+        "I'm not aware of which British author wrote the novel \"Here We Go Round the Mulberry Bush.\"",
+        "The British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\" is Penny Jordan, and her birth date was 1946; however, I was unable to determine the date of her birth, so I'm unable to determine the date that is one month after the birth date.",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Penny Jordan, but more commonly it is associated with the novel by Jennifer Weiner however, the most famous version is likely to be the novel by Penny Jordan and then a film \"Here We Go Round the Mulberry Bush\" released in",
+        "The British author of the novel on which \"Here We Go Round the Mulberry Bush\" is based, Penny Jordan (although not the author of that specific title, but a novel with a similar name by another), is Jenny Colgan, no  but rather  the original novel is actually by Penny Jordan, though it",
+        "I'm not sure which specific British author you are referring to, but there were several authors with the same name. However, 'Here We Go Round the Mulberry Bush' was written by Pam Ayres, the English poet, songwriter, and comedian, but the more well-known novel of this title, 'Here We",
+        "The British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, and she was born on April 18, 1919, so one month after her birth date would be May 18, 1919.",
+        "I'm not sure which British author you are referring to, but if you are talking about Kevin Crossley-Holland, who wrote the novel 'The Machine Gunners' and possibly another novel on which 'Here We Go Round the Mulberry Bush' is based.",
+        "I'm assuming you are referring to the British author A.A. Milne, who wrote the book \"Here We Go Round the Mulberry Bush\" was actually written by by Eric Segal, however the book was based on an earlier children's book  of the same name written by A.A. Milne as well",
+        "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Jennifer Weiner was not the author, the correct one is Pam Ayres but I believe you are likely referring to Pam Ayres's colleague;  the British author who wrote the novel \"Here We Go Round the Mulberry Bush\""
+      ],
+      "vne": 0.6528625714684322,
+      "judge_candidate": "The British author who wrote the novel \"Here We Go Round the Mulberry Bush\" is Jenny Joseph, and she was born on June 29, 1932. One month after her birth date would be July 29, 1932.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 3.4026856031268835,
+        "n_gen_tokens": 572,
+        "n_fwd_tokens": 1342,
+        "n_prompt_tokens": 78
+      }
+    }
+  ]
+}
