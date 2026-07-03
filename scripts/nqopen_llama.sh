@@ -2,7 +2,7 @@
 #SBATCH --job-name=kle_nqopen_llama
 #SBATCH --output=logs/nqopen_llama_%A_%a.out    # %A = array job id, %a = task id (0-7)
 #SBATCH --error=logs/nqopen_llama_%A_%a.err
-#SBATCH --time=24:00:00                          # <= 48h so it stays valid on gpu_a100_il too (h100 max 72h)
+#SBATCH --time=12:00:00                          # <= 48h so it stays valid on gpu_a100_il too (h100 max 72h)
 #SBATCH --partition=gpu_h100                     # ACCOUNT A lane. Override at submit: sbatch --partition=gpu_a100_il ...
 #SBATCH --gres=gpu:1                             # 1 GPU per array task (8B bf16 + DeBERTa fits everywhere)
 #SBATCH --cpus-per-task=8
