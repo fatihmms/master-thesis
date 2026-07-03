@@ -369,6 +369,7 @@ def generate_reference(tokenizer, model, question):
     inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False).to(model.device)
     out = model.generate(
         **inputs, do_sample=True, temperature=REF_TEMP,
+        no_repeat_ngram_size=6,  # MoreHopQA: breaks low-temp repetition loops on unknown facts
         top_p=1.0, top_k=0, max_new_tokens=MAX_REF_TOKENS,
         pad_token_id=tokenizer.eos_token_id,
     )
@@ -575,6 +576,7 @@ def main():
             "n_samples":         N_SAMPLES,
             "temperature":       TEMPERATURE, "top_p": TOP_P, "top_k": TOP_K,
             "ref_temp":          REF_TEMP,
+            "no_repeat_ngram_low_temp": 6,   # applied to low-temp decode only
             "max_step_tokens":   MAX_STEP_TOKENS,
             "max_steps":         MAX_STEPS,
             "heat_t":            HEAT_T,

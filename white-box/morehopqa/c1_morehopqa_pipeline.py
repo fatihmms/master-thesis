@@ -238,6 +238,7 @@ def low_temp_sample(tokenizer, model, question):
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     out = model.generate(
         **inputs, do_sample=True, temperature=JUDGE_TEMP,
+        no_repeat_ngram_size=6,  # MoreHopQA: breaks low-temp repetition loops on unknown facts
         top_p=1.0, top_k=0,
         max_new_tokens=MAX_NEW_TOKENS,
         pad_token_id=tokenizer.eos_token_id,
@@ -338,6 +339,7 @@ def main():
             "pool":           POOL,
             "kernel":         KERNEL,
             "judge_temp":     JUDGE_TEMP,
+            "no_repeat_ngram_low_temp": 6,   # applied to low-temp decode only
         },
         "auroc":              auroc,
         "hallucination_rate": rate,
