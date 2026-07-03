@@ -42,7 +42,7 @@ from dataset.frozen_utils import (
 
 SEED      = 42
 N_TARGET  = 1000
-FROZEN_DIR = "data/frozen"
+FROZEN_DIR = "dataset"   # pipelines read from here (load_frozen(frozen_dir=<root>/dataset))
 
 # ===========================================================================
 # Adapters
@@ -113,7 +113,10 @@ REGISTRY = {
     "morehopqa": {
         "hf_id":   "alabnii/morehopqa",
         "config":  None,
-        "split":   None,        # auto-resolve; verify with --inspect
+        "split":   None,
+        # HF repo is script-based (unsupported since datasets>=4); load the
+        # authors' canonical human-verified JSON directly instead.
+        "loader":  lambda: _load_morehopqa_json(),
         "adapter": adapt_morehopqa,
         "dedupe":  True,
     },
@@ -130,6 +133,21 @@ REGISTRY = {
 # ===========================================================================
 # HF loading (only part that needs the `datasets` library / network)
 # ===========================================================================
+def _load_morehopqa_json():
+    """MoreHopQA, human-verified set (1118 rows), straight from the repo file.
+
+    `data/with_human_verification.json` is the canonical file (incl. `_id`);
+    the `verified/` parquet holds the same 1118 questions but drops fields.
+    """
+    from huggingface_hub import hf_hub_download
+    path = hf_hub_download(
+        "alabnii/morehopqa", "data/with_human_verification.json",
+        repo_type="dataset",
+    )
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 def _resolve_split(dsdict_or_ds, requested):
     import datasets as hfds
     # Single Dataset already (split was given to load_dataset)
@@ -149,8 +167,10 @@ def _resolve_split(dsdict_or_ds, requested):
 
 
 def load_raw(name: str):
-    import datasets as hfds
     spec = REGISTRY[name]
+    if spec.get("loader"):
+        return spec["loader"]()
+    import datasets as hfds
     kwargs = {}
     if spec["config"]:
         kwargs["name"] = spec["config"]
@@ -175,7 +195,8 @@ def inspect(name: str, k: int = 3):
           f"split={spec['split']}) ===")
     ds = load_raw(name)
     print(f"rows in split : {len(ds)}")
-    print(f"raw columns   : {ds.column_names}")
+    cols = ds.column_names if hasattr(ds, "column_names") else list(ds[0].keys())
+    print(f"raw columns   : {cols}")
     for i in range(min(k, len(ds))):
         ex = ds[i]
         q, golds, meta = spec["adapter"](ex)
