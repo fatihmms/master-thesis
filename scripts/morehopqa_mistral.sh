@@ -2,8 +2,8 @@
 #SBATCH --job-name=fatih_kle_morehopqa_mistral
 #SBATCH --output=logs/morehopqa_mistral_%A_%a.out  # %A = array job id, %a = task id (0-7)
 #SBATCH --error=logs/morehopqa_mistral_%A_%a.err
-#SBATCH --time=12:00:00                          # C4 runs 5 steps here (vs 3) and CoT chains are 350 tokens (vs 200); still <48h for gpu_a100_il
-#SBATCH --partition=gpu_a100_il                  # ACCOUNT B lane. Override at submit: sbatch --partition=gpu_h100 ...
+#SBATCH --time=24:00:00                          # C4 runs 5 steps here (vs 3) and CoT chains are 350 tokens (vs 200); still <48h for gpu_a100_il
+#SBATCH --partition=gpu_h100                 # ACCOUNT B lane. Override at submit: sbatch --partition=gpu_h100 ...
 #SBATCH --gres=gpu:1                             # 1 GPU per array task (7B bf16 + DeBERTa fits everywhere)
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
