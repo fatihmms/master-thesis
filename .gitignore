@@ -1,6 +1,9 @@
 venv/
 .venv/
+__pycache__/
+*.py[cod]
 kernel-language-entropy/
+LLM_Check_Hallucination_Detection/
 .python-version
 *.err
 *.out
