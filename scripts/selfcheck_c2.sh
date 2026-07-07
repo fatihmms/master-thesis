@@ -2,8 +2,8 @@
 #SBATCH --job-name=fatih_selfcheck_c2
 #SBATCH --output=logs/selfcheck_c2_%A_%a.out     # %A = array job id, %a = task id (0-5)
 #SBATCH --error=logs/selfcheck_c2_%A_%a.err
-#SBATCH --time=01:00:00                          # 10 NLI pairs/question, batched -> 1000 q in minutes
-#SBATCH --partition=gpu_h100                     # Override at submit: sbatch --partition=gpu_h100_short ... (smoke)
+#SBATCH --time=00:30:00                          # 10 NLI pairs/question, batched -> 1000 q in minutes
+#SBATCH --partition=gpu_a100_short                     # Override at submit: sbatch --partition=gpu_h100_short ... (smoke)
 #SBATCH --gres=gpu:1                             # DeBERTa-v2-xlarge fp16 only; no generator loaded
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G

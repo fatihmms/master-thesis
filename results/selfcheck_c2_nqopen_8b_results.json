@@ -1,0 +1,1169 @@
+{
+  "config": {
+    "condition": "selfcheckgpt_nli_c2_baseline",
+    "nli": "microsoft/deberta-v2-xlarge-mnli",
+    "precision": "fp16",
+    "dataset": "nqopen",
+    "generator_tag": "8b",
+    "source_file": "./results/black-box/nqopen/c2_nqopen_8b_BB_results.json",
+    "n_questions": 50,
+    "granularity": "response_level",
+    "reference": "judge_candidate (low-temp C2 chain)",
+    "score": "mean over samples of P(contra) among {entail, contra}",
+    "max_length": 512
+  },
+  "auroc": 0.7105263157894738,
+  "hallucination_rate": 0.24,
+  "details": [
+    {
+      "id": "nq_open-000000",
+      "question": "who sold out jesus for 30 pieces of silver",
+      "score": 0.02461272677173838,
+      "p_contra_per_sample": [
+        0.063092,
+        0.001765,
+        0.044984,
+        0.014282,
+        0.026255,
+        0.007461,
+        0.042742,
+        0.014743,
+        0.003531,
+        0.027273
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 4.020941540133208,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000001",
+      "question": "who does the voice of cruz on cars 3",
+      "score": 0.003544057355611585,
+      "p_contra_per_sample": [
+        0.003707,
+        0.005036,
+        0.005507,
+        0.000451,
+        0.001727,
+        0.003383,
+        0.004046,
+        0.002031,
+        0.004632,
+        0.00492
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 1.6875359169207513,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000002",
+      "question": "who won the academy award for best original musical score",
+      "score": 0.26632122779265044,
+      "p_contra_per_sample": [
+        0.159544,
+        0.09312,
+        0.151169,
+        0.023848,
+        0.410993,
+        0.983785,
+        0.177882,
+        0.653272,
+        0.002124,
+        0.007475
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.16295677702873945,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000003",
+      "question": "when did avatar the last airbender first air",
+      "score": 0.022435206110822038,
+      "p_contra_per_sample": [
+        0.075568,
+        0.000653,
+        0.000623,
+        0.10316,
+        0.001193,
+        0.000858,
+        0.002561,
+        0.005105,
+        0.000569,
+        0.034064
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.32695197919383645,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000004",
+      "question": "who is hosting e live from the red carpet",
+      "score": 0.0708170169731602,
+      "p_contra_per_sample": [
+        0.192995,
+        0.017823,
+        0.002157,
+        0.047255,
+        0.391406,
+        0.003629,
+        0.005598,
+        0.003483,
+        0.00424,
+        0.039583
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08871190715581179,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000005",
+      "question": "what does g stand for in ncis los angeles",
+      "score": 0.2208057931624353,
+      "p_contra_per_sample": [
+        0.184768,
+        0.335895,
+        0.006526,
+        0.145923,
+        0.042107,
+        0.745422,
+        0.08593,
+        0.270336,
+        0.035881,
+        0.355271
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08708527032285929,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000006",
+      "question": "who sings too much time on my hands lyrics",
+      "score": 0.33984763502376153,
+      "p_contra_per_sample": [
+        0.020715,
+        0.022414,
+        0.002497,
+        0.001362,
+        0.020081,
+        0.966726,
+        0.535584,
+        0.960175,
+        0.005459,
+        0.863464
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06830045068636537,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000007",
+      "question": "what type of reaction occurs to form a dipeptide",
+      "score": 0.07971777855418623,
+      "p_contra_per_sample": [
+        0.006086,
+        0.082438,
+        0.058804,
+        0.003664,
+        0.241489,
+        0.012171,
+        0.359926,
+        0.004468,
+        0.013402,
+        0.014729
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06617582403123379,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000008",
+      "question": "when did the first marvel vs capcom come out",
+      "score": 0.20147117995948066,
+      "p_contra_per_sample": [
+        0.058078,
+        0.004774,
+        0.663015,
+        0.03834,
+        0.15084,
+        0.70912,
+        0.263505,
+        0.087564,
+        0.000245,
+        0.039232
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07029904425144196,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000009",
+      "question": "what is the big gold dome in jerusalem",
+      "score": 0.0016706379741663114,
+      "p_contra_per_sample": [
+        0.000929,
+        0.004556,
+        0.000579,
+        0.002346,
+        0.001014,
+        0.001968,
+        0.000888,
+        0.002507,
+        0.000435,
+        0.001484
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08075340697541833,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000010",
+      "question": "all the motor neurons that control the skeletal muscles are",
+      "score": 0.23978609164769296,
+      "p_contra_per_sample": [
+        0.889816,
+        0.018752,
+        0.125909,
+        0.506225,
+        0.378344,
+        0.000403,
+        0.087252,
+        0.027063,
+        0.169269,
+        0.194827
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05280797416344285,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000011",
+      "question": "the region that stretches between the black and caspian seas",
+      "score": 0.10992184693459421,
+      "p_contra_per_sample": [
+        0.019207,
+        0.002468,
+        0.006596,
+        0.009917,
+        0.004741,
+        0.994157,
+        0.010913,
+        0.006958,
+        0.025059,
+        0.019202
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06210055900737643,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000012",
+      "question": "what does the m number mean on a pint glass",
+      "score": 0.15329682901501657,
+      "p_contra_per_sample": [
+        0.08569,
+        0.022265,
+        0.114666,
+        0.073132,
+        0.119794,
+        0.175715,
+        0.197725,
+        0.054702,
+        0.196788,
+        0.492493
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.09082690672948956,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000013",
+      "question": "when did the dallas cowboys win their last playoff game",
+      "score": 0.46415845872834327,
+      "p_contra_per_sample": [
+        0.000543,
+        0.393152,
+        0.998339,
+        0.097369,
+        0.993042,
+        0.308906,
+        0.018396,
+        0.979842,
+        0.737725,
+        0.11427
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05374937178567052,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000014",
+      "question": "who sang the theme song for laverne and shirley",
+      "score": 0.5370621742506045,
+      "p_contra_per_sample": [
+        0.995417,
+        0.613121,
+        0.944587,
+        0.004664,
+        0.540439,
+        0.013591,
+        0.000432,
+        0.932021,
+        0.91228,
+        0.414069
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05922402208670974,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000015",
+      "question": "who plays the judge in drop dead diva",
+      "score": 0.897027063369751,
+      "p_contra_per_sample": [
+        0.991748,
+        0.996733,
+        0.974893,
+        0.630002,
+        0.988635,
+        0.908719,
+        0.979551,
+        0.993985,
+        0.881481,
+        0.624523
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08474125526845455,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000016",
+      "question": "the art and science of making objects from clay is called",
+      "score": 0.0228114019962959,
+      "p_contra_per_sample": [
+        0.002606,
+        0.006351,
+        0.002239,
+        0.000471,
+        0.092401,
+        0.016045,
+        0.102529,
+        0.002514,
+        0.001694,
+        0.001264
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.04795932397246361,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000017",
+      "question": "what was the united states foreign policy after ww1 started",
+      "score": 0.04185991231352091,
+      "p_contra_per_sample": [
+        0.073863,
+        0.013637,
+        0.004673,
+        0.005448,
+        0.035779,
+        0.085156,
+        0.034456,
+        0.043896,
+        0.004877,
+        0.116814
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.10757622495293617,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000018",
+      "question": "what is the largest magnitude earthquake that has occurred in the pacific northwest",
+      "score": 0.02847328260540962,
+      "p_contra_per_sample": [
+        0.028553,
+        0.020922,
+        0.013915,
+        0.051225,
+        0.009629,
+        0.050019,
+        0.048316,
+        0.024411,
+        0.018168,
+        0.019573
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.10184566909447312,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000019",
+      "question": "where was 2017 beauty and the beast filmed",
+      "score": 0.07099112116266042,
+      "p_contra_per_sample": [
+        0.009559,
+        0.029368,
+        0.008324,
+        0.511473,
+        0.04666,
+        0.017695,
+        0.001492,
+        0.011676,
+        0.051013,
+        0.022651
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07493160106241703,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000020",
+      "question": "who is the actor that plays ducky on ncis",
+      "score": 0.04859989201650024,
+      "p_contra_per_sample": [
+        0.029739,
+        0.040022,
+        0.017342,
+        0.005496,
+        0.034598,
+        0.01119,
+        0.015233,
+        0.318273,
+        0.006098,
+        0.008008
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05366131104528904,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000021",
+      "question": "when was catch me if you can made",
+      "score": 0.029217669309582563,
+      "p_contra_per_sample": [
+        0.005741,
+        0.016122,
+        0.003911,
+        0.025012,
+        0.000874,
+        0.001269,
+        0.000822,
+        0.010871,
+        0.226329,
+        0.001226
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07009833212941885,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000022",
+      "question": "who played the female lead in the 1942 film casablanca",
+      "score": 0.0064450705074705185,
+      "p_contra_per_sample": [
+        0.01751,
+        0.001209,
+        0.005437,
+        0.006395,
+        0.007261,
+        0.007212,
+        0.002975,
+        0.003622,
+        0.007756,
+        0.005075
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05244040582329035,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000023",
+      "question": "when did i ain't mad at cha come out",
+      "score": 0.18046463676728308,
+      "p_contra_per_sample": [
+        0.021865,
+        0.0009,
+        0.430985,
+        0.21465,
+        0.003052,
+        0.012159,
+        0.365372,
+        0.018055,
+        0.522629,
+        0.21498
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06783202104270458,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000024",
+      "question": "who becomes chief resident on grey's anatomy season 7",
+      "score": 0.4337472894228995,
+      "p_contra_per_sample": [
+        0.077448,
+        0.988039,
+        0.712232,
+        0.05257,
+        0.009161,
+        0.042762,
+        0.73149,
+        0.042127,
+        0.699203,
+        0.98244
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08957699500024319,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000025",
+      "question": "when did the usa join world war one",
+      "score": 0.03298346180235967,
+      "p_contra_per_sample": [
+        0.048903,
+        0.032559,
+        0.015952,
+        0.012336,
+        0.001897,
+        0.058885,
+        0.015891,
+        0.012171,
+        0.032729,
+        0.098512
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.09020800376310945,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000026",
+      "question": "who has the most big ten championships in football",
+      "score": 0.16631281450390817,
+      "p_contra_per_sample": [
+        0.589362,
+        0.011841,
+        0.028081,
+        0.004512,
+        0.278649,
+        0.083255,
+        0.604165,
+        0.022781,
+        0.013532,
+        0.026951
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.09424035483971238,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000027",
+      "question": "when was the design period known as art deco",
+      "score": 0.07520828892593272,
+      "p_contra_per_sample": [
+        0.025785,
+        0.007417,
+        0.004007,
+        0.022651,
+        0.001934,
+        0.07221,
+        0.613294,
+        0.00313,
+        0.000741,
+        0.000913
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07191342720761895,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000028",
+      "question": "when were the first general elections held in independent india",
+      "score": 0.14441457799402996,
+      "p_contra_per_sample": [
+        0.08318,
+        0.005686,
+        0.003892,
+        0.003004,
+        0.001016,
+        0.004102,
+        0.002689,
+        0.088269,
+        0.816406,
+        0.435902
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06102223973721266,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000029",
+      "question": "one piece episode 534 english dubbed release date",
+      "score": 0.29557791207917034,
+      "p_contra_per_sample": [
+        0.011137,
+        0.046899,
+        0.853303,
+        0.032837,
+        0.004215,
+        0.026007,
+        0.996062,
+        0.393036,
+        0.205057,
+        0.387227
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06977000599727035,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000030",
+      "question": "a request to the supreme court that it review a case that was already decided is made via a(n)",
+      "score": 0.012784532830119133,
+      "p_contra_per_sample": [
+        0.019681,
+        0.020924,
+        0.008364,
+        0.008561,
+        0.004939,
+        0.007726,
+        0.008421,
+        0.038793,
+        0.005764,
+        0.004673
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07531293109059334,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000031",
+      "question": "when did the first ice age come out",
+      "score": 0.005292853410355747,
+      "p_contra_per_sample": [
+        0.000491,
+        0.000331,
+        0.001775,
+        0.045037,
+        0.003022,
+        0.000516,
+        0.000288,
+        0.000233,
+        0.000559,
+        0.000676
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.04992113495245576,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000032",
+      "question": "when did the golden state warriors win the finals",
+      "score": 0.19427675316110254,
+      "p_contra_per_sample": [
+        0.012135,
+        0.104112,
+        0.014878,
+        0.004755,
+        0.007915,
+        0.789071,
+        0.113383,
+        0.351422,
+        0.049245,
+        0.49585
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06749810371547937,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000033",
+      "question": "how many episodes are in season 7 of pretty little liars",
+      "score": 0.21622154742944985,
+      "p_contra_per_sample": [
+        0.013571,
+        0.064639,
+        0.025663,
+        0.044349,
+        0.011687,
+        0.040692,
+        0.011343,
+        0.965771,
+        0.002401,
+        0.9821
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07565391669049859,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000034",
+      "question": "who plays dr. sloan on kevin saves the world",
+      "score": 0.6909341350197792,
+      "p_contra_per_sample": [
+        0.414662,
+        0.810404,
+        0.598488,
+        0.973993,
+        0.352592,
+        0.828037,
+        0.873539,
+        0.130451,
+        0.992184,
+        0.934991
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08457689406350255,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000035",
+      "question": "what is the 180 degree line of longitude called",
+      "score": 0.19766473919153213,
+      "p_contra_per_sample": [
+        0.13966,
+        0.899254,
+        0.169612,
+        0.104134,
+        0.095983,
+        0.062046,
+        0.099777,
+        0.195978,
+        0.155238,
+        0.054964
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.06704487325623631,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000036",
+      "question": "who wrote the music phantom of the opera",
+      "score": 0.016448932979255915,
+      "p_contra_per_sample": [
+        0.016037,
+        0.004417,
+        0.00491,
+        0.019852,
+        0.005369,
+        0.015087,
+        0.014131,
+        0.066448,
+        0.004215,
+        0.014023
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05142429983243346,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000037",
+      "question": "what is the name of the skin between your nostrils",
+      "score": 0.28677910370752213,
+      "p_contra_per_sample": [
+        0.014118,
+        0.055209,
+        0.007439,
+        0.012054,
+        0.887651,
+        0.019814,
+        0.025957,
+        0.060391,
+        0.943919,
+        0.84124
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.052858459297567606,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000038",
+      "question": "which site of an enzyme is called allosteric site",
+      "score": 0.0025380732957273723,
+      "p_contra_per_sample": [
+        0.004619,
+        0.001134,
+        0.003483,
+        0.00186,
+        0.005406,
+        0.00111,
+        0.001589,
+        0.001051,
+        0.00162,
+        0.003511
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.08333237981423736,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000039",
+      "question": "batman and robin episode only fools and horses",
+      "score": 0.29888491947203877,
+      "p_contra_per_sample": [
+        0.969613,
+        0.369429,
+        0.235196,
+        0.293202,
+        0.099208,
+        0.081355,
+        0.052014,
+        0.025444,
+        0.104855,
+        0.758533
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.10059839207679033,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000040",
+      "question": "where do kidneys for kidney transplant come from",
+      "score": 0.10587128242477775,
+      "p_contra_per_sample": [
+        0.03198,
+        0.058912,
+        0.005469,
+        0.196049,
+        0.377293,
+        0.078395,
+        0.142433,
+        0.076822,
+        0.017763,
+        0.073596
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.1207194859161973,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000041",
+      "question": "when did the movie peter pan come out",
+      "score": 0.3385856877313927,
+      "p_contra_per_sample": [
+        0.80525,
+        0.95253,
+        0.028544,
+        0.355551,
+        0.00223,
+        0.449634,
+        0.071429,
+        0.125601,
+        0.048592,
+        0.546496
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.0807602540589869,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000042",
+      "question": "when was the last time michigan basketball won the championship",
+      "score": 0.38998289704322814,
+      "p_contra_per_sample": [
+        0.021145,
+        0.102934,
+        0.135861,
+        0.617585,
+        0.726577,
+        0.06885,
+        0.877161,
+        0.993549,
+        0.179423,
+        0.176743
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07027831673622131,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000043",
+      "question": "if there is a line that lies parallel to the horizon it is said to be",
+      "score": 0.03571466263383627,
+      "p_contra_per_sample": [
+        0.067855,
+        0.032837,
+        0.013969,
+        0.092298,
+        0.020469,
+        0.008078,
+        0.013969,
+        0.072571,
+        0.01292,
+        0.02218
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.05150406202301383,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000044",
+      "question": "who sang the american anthem at the super bowl",
+      "score": 0.4189147799042985,
+      "p_contra_per_sample": [
+        0.979453,
+        0.30767,
+        0.472927,
+        0.19962,
+        0.002083,
+        0.995744,
+        0.35488,
+        0.712432,
+        0.016231,
+        0.148109
+      ],
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.0821844320744276,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000045",
+      "question": "what has been the origin of most classical dances of india",
+      "score": 0.12722461633384227,
+      "p_contra_per_sample": [
+        0.105631,
+        0.129871,
+        0.142504,
+        0.107907,
+        0.296094,
+        0.135175,
+        0.05902,
+        0.036288,
+        0.20141,
+        0.058346
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.10910003073513508,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000046",
+      "question": "who sings i can't take my eyes off of you",
+      "score": 0.21721751573495568,
+      "p_contra_per_sample": [
+        0.014574,
+        0.003453,
+        0.014518,
+        0.493164,
+        0.96075,
+        0.037468,
+        0.512571,
+        0.004512,
+        0.005385,
+        0.125782
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07121518021449447,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000047",
+      "question": "who was the first to say i'm going to disney world",
+      "score": 0.7213393813930452,
+      "p_contra_per_sample": [
+        0.99867,
+        0.9803,
+        0.011699,
+        0.868872,
+        0.999127,
+        0.983518,
+        0.990422,
+        0.983565,
+        0.384681,
+        0.01254
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.07934887893497944,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000048",
+      "question": "where is the new football stadium in atlanta",
+      "score": 0.12954714300576597,
+      "p_contra_per_sample": [
+        0.16975,
+        0.00235,
+        0.959762,
+        0.016537,
+        0.009869,
+        0.004977,
+        0.005323,
+        0.082231,
+        0.03634,
+        0.008332
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.060827478766441345,
+        "n_pairs": 10
+      }
+    },
+    {
+      "id": "nq_open-000049",
+      "question": "georgia out of angus thongs and perfect snogging",
+      "score": 0.15503306589089333,
+      "p_contra_per_sample": [
+        0.354992,
+        0.018507,
+        0.015532,
+        0.046443,
+        0.157712,
+        0.808644,
+        0.005292,
+        0.026766,
+        0.071843,
+        0.0446
+      ],
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.044349801260977983,
+        "n_pairs": 10
+      }
+    }
+  ]
+}
