@@ -1,0 +1,880 @@
+{
+  "config": {
+    "condition": "llmcheck_c2_baseline",
+    "generator": "mistralai/Mistral-7B-Instruct-v0.3",
+    "precision": "bf16",
+    "dataset": "morehopqa",
+    "source_file": "./results/white-box/morehopqa/c2_morehopqa_mistral_WB_results.json",
+    "n_questions": 50,
+    "layer": 16,
+    "detectors": [
+      "hidden",
+      "attn",
+      "ppl",
+      "logit_entropy",
+      "window_entropy"
+    ],
+    "span": "response_only (use_toklens)",
+    "reference": "judge_candidate (low-temp C2 chain)"
+  },
+  "auroc": {
+    "hidden": 0.51,
+    "attn": 0.5183333333333333,
+    "ppl": 0.33,
+    "logit_entropy": 0.6116666666666667,
+    "window_entropy": 0.4566666666666666
+  },
+  "hallucination_rate": 0.6,
+  "details": [
+    {
+      "id": "morehopqa-000000",
+      "question": "What is the sum of all the digits in the day, month and year of when the director of film Is It Easy To Be Young died?",
+      "scores": {
+        "hidden": 2.187751293182373,
+        "attn": -128.23350524902344,
+        "ppl": 1.6674387454986572,
+        "logit_entropy": 0.0062804268673062325,
+        "window_entropy": 0.0001160245665232651
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 2.661910982998961,
+        "n_fwd_tokens": 197
+      }
+    },
+    {
+      "id": "morehopqa-000001",
+      "question": "How many consonants are there in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather?",
+      "scores": {
+        "hidden": 2.1839067935943604,
+        "attn": -129.39060974121094,
+        "ppl": 1.666524887084961,
+        "logit_entropy": 0.0107798520475626,
+        "window_entropy": 7.818412268534303e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.41952188900177134,
+        "n_fwd_tokens": 242
+      }
+    },
+    {
+      "id": "morehopqa-000002",
+      "question": "What is the reverse order of when the publisher of American Scientist was founded?",
+      "scores": {
+        "hidden": 1.9844008684158325,
+        "attn": -135.12344360351562,
+        "ppl": 1.525528073310852,
+        "logit_entropy": 0.005844120867550373,
+        "window_entropy": 6.607996328966692e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.416181886997947,
+        "n_fwd_tokens": 267
+      }
+    },
+    {
+      "id": "morehopqa-000003",
+      "question": "How many consonants are there in the first name of the current drummer of the band who did the song \"What Lovers Do\"?",
+      "scores": {
+        "hidden": 2.3576881885528564,
+        "attn": -127.7899169921875,
+        "ppl": 1.5829564332962036,
+        "logit_entropy": 0.010095732286572456,
+        "window_entropy": 0.00014555122470483184
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.22477874399919529,
+        "n_fwd_tokens": 154
+      }
+    },
+    {
+      "id": "morehopqa-000004",
+      "question": "What is the date 3 weeks after when Albert, Margrave Of Meissen's father died?",
+      "scores": {
+        "hidden": 2.1593923568725586,
+        "attn": -130.44015502929688,
+        "ppl": 1.8544193506240845,
+        "logit_entropy": 0.010580393485724926,
+        "window_entropy": 8.452078327536583e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3917160399942077,
+        "n_fwd_tokens": 272
+      }
+    },
+    {
+      "id": "morehopqa-000005",
+      "question": "What is the date 10 weeks after the date of death of the director of film Cross Current?",
+      "scores": {
+        "hidden": 2.2085301876068115,
+        "attn": -128.96463012695312,
+        "ppl": 1.439680814743042,
+        "logit_entropy": 0.010004738345742226,
+        "window_entropy": 7.429522520396858e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.31378137200226774,
+        "n_fwd_tokens": 217
+      }
+    },
+    {
+      "id": "morehopqa-000006",
+      "question": "What is the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase?",
+      "scores": {
+        "hidden": 2.251563310623169,
+        "attn": -132.45758056640625,
+        "ppl": 2.327885866165161,
+        "logit_entropy": 0.008914846926927567,
+        "window_entropy": 8.965474989963695e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2824070089991437,
+        "n_fwd_tokens": 213
+      }
+    },
+    {
+      "id": "morehopqa-000007",
+      "question": "What is the result of multiplying 4 by the reverse of the year of birth of the actress who created The Dogwoman telemovies?",
+      "scores": {
+        "hidden": 2.214540719985962,
+        "attn": -126.0126953125,
+        "ppl": 1.6743801832199097,
+        "logit_entropy": 0.0069954595528542995,
+        "window_entropy": 9.564115316607058e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2606799929999397,
+        "n_fwd_tokens": 193
+      }
+    },
+    {
+      "id": "morehopqa-000008",
+      "question": "How many letters are there between the first and last letters of the first name of the child of Caroline LeRoy's spouse?",
+      "scores": {
+        "hidden": 2.168272018432617,
+        "attn": -131.88441467285156,
+        "ppl": 1.7432903051376343,
+        "logit_entropy": 0.009217347018420696,
+        "window_entropy": 7.757906860206276e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.30349470600049244,
+        "n_fwd_tokens": 216
+      }
+    },
+    {
+      "id": "morehopqa-000009",
+      "question": "How many unique letters are there in the first name of Victoria Sackville-West, Baroness Sackville's child-in-law?",
+      "scores": {
+        "hidden": 2.213371753692627,
+        "attn": -131.29476928710938,
+        "ppl": 1.6838854551315308,
+        "logit_entropy": 0.00945654883980751,
+        "window_entropy": 8.764331141719595e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.28383708300680155,
+        "n_fwd_tokens": 207
+      }
+    },
+    {
+      "id": "morehopqa-000010",
+      "question": "What is the concatenation of the last letters of the first name and last name of Hugh Cholmondeley, 1St Earl Of Cholmondeley's paternal grandmother in lowercase?",
+      "scores": {
+        "hidden": 2.2207181453704834,
+        "attn": -130.17698669433594,
+        "ppl": 2.052154541015625,
+        "logit_entropy": 0.007772586774080992,
+        "window_entropy": 7.439155888278037e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.370900782996614,
+        "n_fwd_tokens": 253
+      }
+    },
+    {
+      "id": "morehopqa-000011",
+      "question": "Which day of the week was the date of death of Carlo I Cybo-Malaspina's father?",
+      "scores": {
+        "hidden": 2.1397757530212402,
+        "attn": -137.02955627441406,
+        "ppl": 2.2239716053009033,
+        "logit_entropy": 0.009854218922555447,
+        "window_entropy": 9.272969327867031e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.39451255700259935,
+        "n_fwd_tokens": 257
+      }
+    },
+    {
+      "id": "morehopqa-000012",
+      "question": "What is the date one year before the date when Charlie McDermott plays Axl Heck on a tv show that premiered in ?",
+      "scores": {
+        "hidden": 2.1563661098480225,
+        "attn": -133.07562255859375,
+        "ppl": 1.3903098106384277,
+        "logit_entropy": 0.007799150887876749,
+        "window_entropy": 6.689254223601893e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.38524930299900007,
+        "n_fwd_tokens": 277
+      }
+    },
+    {
+      "id": "morehopqa-000013",
+      "question": "The submission deadline is at 17 November 1983, 04:00, Anywhere on Earth (AoE). At what date and time is the deadline in the place of birth of the director of film Boden'S Boy?",
+      "scores": {
+        "hidden": 2.0251989364624023,
+        "attn": -135.06593322753906,
+        "ppl": 1.9021694660186768,
+        "logit_entropy": 0.008784824050962925,
+        "window_entropy": 0.00010600107634672895
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.5525939319995814,
+        "n_fwd_tokens": 378
+      }
+    },
+    {
+      "id": "morehopqa-000014",
+      "question": "What is the closest palindrome number to the year of the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "scores": {
+        "hidden": 2.1247074604034424,
+        "attn": -133.326171875,
+        "ppl": 1.7224829196929932,
+        "logit_entropy": 0.009374519810080528,
+        "window_entropy": 0.00011896855721715838
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.34348245299770497,
+        "n_fwd_tokens": 271
+      }
+    },
+    {
+      "id": "morehopqa-000015",
+      "question": "How many additional letters does the first name of the stepmother of Sara Ali Khan have compared to the first name of Olga Larson?",
+      "scores": {
+        "hidden": 2.31648325920105,
+        "attn": -128.09033203125,
+        "ppl": 1.6451120376586914,
+        "logit_entropy": 0.004990343004465103,
+        "window_entropy": 6.146003579488024e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2640678379975725,
+        "n_fwd_tokens": 199
+      }
+    },
+    {
+      "id": "morehopqa-000016",
+      "question": "What is the date one day before when Ebba Busch Thor's husband was born?",
+      "scores": {
+        "hidden": 2.1635544300079346,
+        "attn": -130.4551239013672,
+        "ppl": 2.1280272006988525,
+        "logit_entropy": 0.01173730380833149,
+        "window_entropy": 0.00013059849152341485
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.30987199900118867,
+        "n_fwd_tokens": 229
+      }
+    },
+    {
+      "id": "morehopqa-000017",
+      "question": "How many repeated letters are there in the last name of Eva Chamberlain's maternal grandmother?",
+      "scores": {
+        "hidden": 2.248811960220337,
+        "attn": -130.88238525390625,
+        "ppl": 1.494818925857544,
+        "logit_entropy": 0.008833264000713825,
+        "window_entropy": 6.190317799337208e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.28471404700394487,
+        "n_fwd_tokens": 205
+      }
+    },
+    {
+      "id": "morehopqa-000018",
+      "question": "How many additional letters does the first name of Brendan Becker have compared to the first name of the paternal grandfather of Diya Al-Dawla?",
+      "scores": {
+        "hidden": 2.1561315059661865,
+        "attn": -133.1504364013672,
+        "ppl": 1.7870516777038574,
+        "logit_entropy": 0.006668939255177975,
+        "window_entropy": 8.369269198738039e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3638080910022836,
+        "n_fwd_tokens": 312
+      }
+    },
+    {
+      "id": "morehopqa-000019",
+      "question": "What is the date one month after the birth date of the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\"?",
+      "scores": {
+        "hidden": 2.15221905708313,
+        "attn": -134.2651824951172,
+        "ppl": 1.9172579050064087,
+        "logit_entropy": 0.011433715000748634,
+        "window_entropy": 0.00015279526996891946
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.34142186799726915,
+        "n_fwd_tokens": 290
+      }
+    },
+    {
+      "id": "morehopqa-000020",
+      "question": "What is the date one week before Philip II, Margrave Of Baden-Baden's mother's birthday?",
+      "scores": {
+        "hidden": 2.081974744796753,
+        "attn": -133.61614990234375,
+        "ppl": 1.8860445022583008,
+        "logit_entropy": 0.009060214273631573,
+        "window_entropy": 8.6065279901959e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3618290619997424,
+        "n_fwd_tokens": 311
+      }
+    },
+    {
+      "id": "morehopqa-000021",
+      "question": "What is the date 4 years before the date when Charlie McDermott plays Axl Heck on a tv show that premiered in ?",
+      "scores": {
+        "hidden": 2.1554067134857178,
+        "attn": -134.83836364746094,
+        "ppl": 1.6607933044433594,
+        "logit_entropy": 0.009389135986566544,
+        "window_entropy": 8.559730486012995e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.31535760200495133,
+        "n_fwd_tokens": 284
+      }
+    },
+    {
+      "id": "morehopqa-000022",
+      "question": "What is the last vowel in the name of the university attended by the author of Elizabeth and After?",
+      "scores": {
+        "hidden": 2.383528709411621,
+        "attn": -123.76471710205078,
+        "ppl": 1.8454288244247437,
+        "logit_entropy": 0.008862997405230999,
+        "window_entropy": 9.910643711918965e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.17718344899913063,
+        "n_fwd_tokens": 131
+      }
+    },
+    {
+      "id": "morehopqa-000023",
+      "question": "What is the result of substracting 4 from the reverse of the death of the serial killer in The 2015 Austrian thriller film Jack?",
+      "scores": {
+        "hidden": 2.1077935695648193,
+        "attn": -130.77313232421875,
+        "ppl": 1.518580436706543,
+        "logit_entropy": 0.009414260275661945,
+        "window_entropy": 9.861972648650408e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3719828290049918,
+        "n_fwd_tokens": 330
+      }
+    },
+    {
+      "id": "morehopqa-000024",
+      "question": "How many days lay between the date of death of the director of film Break The News and 01 Sep 2025?",
+      "scores": {
+        "hidden": 2.144409656524658,
+        "attn": -132.46144104003906,
+        "ppl": 1.8669837713241577,
+        "logit_entropy": 0.009992863051593304,
+        "window_entropy": 9.911286178976297e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3710008900015964,
+        "n_fwd_tokens": 328
+      }
+    },
+    {
+      "id": "morehopqa-000025",
+      "question": "What is the date 8 months after the birthdate of the father of Princess Mafalda of Savoy?",
+      "scores": {
+        "hidden": 1.9729441404342651,
+        "attn": -132.95103454589844,
+        "ppl": 1.8290220499038696,
+        "logit_entropy": 0.008066745474934578,
+        "window_entropy": 0.00010840385948540643
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.5023698949953541,
+        "n_fwd_tokens": 377
+      }
+    },
+    {
+      "id": "morehopqa-000026",
+      "question": "What is the first name of Edward Wingfield, 2Nd Viscount Powerscourt's paternal grandmother?",
+      "scores": {
+        "hidden": 2.11786150932312,
+        "attn": -136.58770751953125,
+        "ppl": 1.88277268409729,
+        "logit_entropy": 0.009387780912220478,
+        "window_entropy": 0.0001313874963670969
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.30356800300069153,
+        "n_fwd_tokens": 276
+      }
+    },
+    {
+      "id": "morehopqa-000027",
+      "question": "What is the reverse order of the year of death of the Danish plant ecologist who assisted a Danish chemist, famous for the introduction of the concept of pH die?",
+      "scores": {
+        "hidden": 2.114248275756836,
+        "attn": -133.1119384765625,
+        "ppl": 1.663004755973816,
+        "logit_entropy": 0.010248851031064987,
+        "window_entropy": 0.00014007302524987608
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3113753279976663,
+        "n_fwd_tokens": 290
+      }
+    },
+    {
+      "id": "morehopqa-000028",
+      "question": "What is the last consonant in the name of the place where the painter of The Mud Bath studied?",
+      "scores": {
+        "hidden": 2.375781297683716,
+        "attn": -125.12832641601562,
+        "ppl": 1.6156224012374878,
+        "logit_entropy": 0.00484507204964757,
+        "window_entropy": 6.974632560741156e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.18293553200055612,
+        "n_fwd_tokens": 141
+      }
+    },
+    {
+      "id": "morehopqa-000029",
+      "question": "What is the total number of letters in the first name of the screenwriter with credits for \"Evolution\" co-wrote a film starring Nicolas Cage and Téa Leoni?",
+      "scores": {
+        "hidden": 2.1955456733703613,
+        "attn": -130.04969787597656,
+        "ppl": 1.5346647500991821,
+        "logit_entropy": 0.006203189957886934,
+        "window_entropy": 0.0001178147504106164
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2578569800025434,
+        "n_fwd_tokens": 216
+      }
+    },
+    {
+      "id": "morehopqa-000030",
+      "question": "What is the product of the digits of the year when the publisher of The Miscellany News was founded?",
+      "scores": {
+        "hidden": 2.463142156600952,
+        "attn": -121.81453704833984,
+        "ppl": 1.4988666772842407,
+        "logit_entropy": 0.006619032472372055,
+        "window_entropy": 7.064053352223709e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.18565650299569825,
+        "n_fwd_tokens": 126
+      }
+    },
+    {
+      "id": "morehopqa-000031",
+      "question": "What is the last letter of the last name of the father of the director of film My 20Th Century?",
+      "scores": {
+        "hidden": 2.2081165313720703,
+        "attn": -128.74545288085938,
+        "ppl": 1.57948637008667,
+        "logit_entropy": 0.009919518604874611,
+        "window_entropy": 0.00011400174116715789
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2613832760034711,
+        "n_fwd_tokens": 212
+      }
+    },
+    {
+      "id": "morehopqa-000032",
+      "question": "What is the reverse order of the letters in the first name of the person who Billy Howle will be seen opposite in the upcoming British drama film directed by Dominic Cooke?",
+      "scores": {
+        "hidden": 2.2616147994995117,
+        "attn": -126.8740463256836,
+        "ppl": 1.7209887504577637,
+        "logit_entropy": 0.010229560546576977,
+        "window_entropy": 8.007072028703988e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2535483249957906,
+        "n_fwd_tokens": 205
+      }
+    },
+    {
+      "id": "morehopqa-000033",
+      "question": "What is the first letter of the last name of Abu Mansur Fulad Sutun's paternal grandfather in lowercase?",
+      "scores": {
+        "hidden": 2.372495174407959,
+        "attn": -131.0835418701172,
+        "ppl": 1.884333610534668,
+        "logit_entropy": 0.006731853354722261,
+        "window_entropy": 6.862000009277835e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.21610840499488404,
+        "n_fwd_tokens": 166
+      }
+    },
+    {
+      "id": "morehopqa-000034",
+      "question": "What is the day of when Richard De Clare, 6Th Earl Of Gloucester's mother died?",
+      "scores": {
+        "hidden": 2.075105905532837,
+        "attn": -136.90670776367188,
+        "ppl": 1.5894601345062256,
+        "logit_entropy": 0.00997309572994709,
+        "window_entropy": 8.767921826802194e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.32169193000299856,
+        "n_fwd_tokens": 281
+      }
+    },
+    {
+      "id": "morehopqa-000035",
+      "question": "What is the ASCII code of the first letter of the last name of the paternal grandfather of Baha Al-Dawla in lowercase?",
+      "scores": {
+        "hidden": 2.1341552734375,
+        "attn": -132.5957489013672,
+        "ppl": 1.744140386581421,
+        "logit_entropy": 0.007763863541185856,
+        "window_entropy": 6.999493052717298e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3283346409953083,
+        "n_fwd_tokens": 262
+      }
+    },
+    {
+      "id": "morehopqa-000036",
+      "question": "How many repeated letters are there in the last name of the paternal grandfather of Ollom Fotla?",
+      "scores": {
+        "hidden": 2.2545344829559326,
+        "attn": -129.4042205810547,
+        "ppl": 1.7965160608291626,
+        "logit_entropy": 0.012999520637094975,
+        "window_entropy": 8.918336970964447e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.301697602000786,
+        "n_fwd_tokens": 268
+      }
+    },
+    {
+      "id": "morehopqa-000037",
+      "question": "How many additional letters does the first name of the paternal grandfather of Ferdinand Maximilian, Hereditary Prince Of Baden-Baden have compared to the first name of Rosa Yang?",
+      "scores": {
+        "hidden": 2.2123053073883057,
+        "attn": -127.94139099121094,
+        "ppl": 1.5167232751846313,
+        "logit_entropy": 0.007065382786095142,
+        "window_entropy": 9.486082126386464e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3236286240062327,
+        "n_fwd_tokens": 263
+      }
+    },
+    {
+      "id": "morehopqa-000038",
+      "question": "What is the year of Margarete Weißkirchner's husband's birthday?",
+      "scores": {
+        "hidden": 2.176360845565796,
+        "attn": -134.31948852539062,
+        "ppl": 1.7488540410995483,
+        "logit_entropy": 0.011704333126544952,
+        "window_entropy": 0.00012715179764200002
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3027301649999572,
+        "n_fwd_tokens": 240
+      }
+    },
+    {
+      "id": "morehopqa-000039",
+      "question": "How many unique letters are there in the first name of the author of the play that was adapted into a film and featured the orchestral arrangement Suite from Henry V?",
+      "scores": {
+        "hidden": 2.1811304092407227,
+        "attn": -129.55612182617188,
+        "ppl": 1.6019726991653442,
+        "logit_entropy": 0.00831201858818531,
+        "window_entropy": 7.161570829339325e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.24515038300160086,
+        "n_fwd_tokens": 194
+      }
+    },
+    {
+      "id": "morehopqa-000040",
+      "question": "How many hours are there between the winter time zone of the county where Erik Hort was born and UTC?",
+      "scores": {
+        "hidden": 2.3018553256988525,
+        "attn": -131.44772338867188,
+        "ppl": 1.441380262374878,
+        "logit_entropy": 0.007006512954831123,
+        "window_entropy": 9.47531225392595e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.26816909199988004,
+        "n_fwd_tokens": 206
+      }
+    },
+    {
+      "id": "morehopqa-000041",
+      "question": "What is the total number of letters in the last name of the producer of the 1994 American animated epic musical film which Mel Shaw animated?",
+      "scores": {
+        "hidden": 2.271939277648926,
+        "attn": -128.870849609375,
+        "ppl": 1.882165789604187,
+        "logit_entropy": 0.0074580879881978035,
+        "window_entropy": 8.239322778536007e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.23018285999569343,
+        "n_fwd_tokens": 185
+      }
+    },
+    {
+      "id": "morehopqa-000042",
+      "question": "What is the concatenation of the last letter of the first name and the first letter of the last name of Eva Chamberlain's maternal grandmother in lowercase?",
+      "scores": {
+        "hidden": 2.26373553276062,
+        "attn": -129.7862548828125,
+        "ppl": 1.59775710105896,
+        "logit_entropy": 0.009347238577902317,
+        "window_entropy": 6.498793663922697e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.24884992800070904,
+        "n_fwd_tokens": 202
+      }
+    },
+    {
+      "id": "morehopqa-000043",
+      "question": "What is the year following the year when the American healthy lifestyle magazine, in which Georgia Rickard contributed, was started?",
+      "scores": {
+        "hidden": 2.2909274101257324,
+        "attn": -131.25228881835938,
+        "ppl": 1.8394520282745361,
+        "logit_entropy": 0.010260311886668205,
+        "window_entropy": 7.831239054212347e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.24287570799788227,
+        "n_fwd_tokens": 190
+      }
+    },
+    {
+      "id": "morehopqa-000044",
+      "question": "How many consonants are there in the last name of Harriet Hemings's maternal grandfather?",
+      "scores": {
+        "hidden": 2.1778109073638916,
+        "attn": -128.07464599609375,
+        "ppl": 1.639428973197937,
+        "logit_entropy": 0.0072119878605008125,
+        "window_entropy": 7.910045678727329e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.29032958300376777,
+        "n_fwd_tokens": 224
+      }
+    },
+    {
+      "id": "morehopqa-000045",
+      "question": "How many hours are there between the winter time zone of where Tala Mi Thiri's father died and UTC?",
+      "scores": {
+        "hidden": 2.1604201793670654,
+        "attn": -134.70579528808594,
+        "ppl": 1.7240334749221802,
+        "logit_entropy": 0.010322151705622673,
+        "window_entropy": 7.941738294903189e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3447061510014464,
+        "n_fwd_tokens": 302
+      }
+    },
+    {
+      "id": "morehopqa-000046",
+      "question": "What is the alphabetical order of the letters in the first name of the father of the director of film A No-Hit No-Run Summer?",
+      "scores": {
+        "hidden": 2.1709423065185547,
+        "attn": -125.45665740966797,
+        "ppl": 2.0981643199920654,
+        "logit_entropy": 0.007785899098962545,
+        "window_entropy": 8.512988279107958e-05
+      },
+      "is_halluc": 0,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.2738343730015913,
+        "n_fwd_tokens": 213
+      }
+    },
+    {
+      "id": "morehopqa-000047",
+      "question": "What the concatenation of the second and third digits of the year of the invasion that Francisco Jose Hernandez was a participant in?",
+      "scores": {
+        "hidden": 2.428340196609497,
+        "attn": -125.86474609375,
+        "ppl": 1.7483093738555908,
+        "logit_entropy": 0.008175062946975231,
+        "window_entropy": 6.895174738019705e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.19810542999766767,
+        "n_fwd_tokens": 147
+      }
+    },
+    {
+      "id": "morehopqa-000048",
+      "question": "How many distinct two-letter combinations exist in the first name of the maternal grandmother of Dakota Johnson?",
+      "scores": {
+        "hidden": 2.1196351051330566,
+        "attn": -129.96438598632812,
+        "ppl": 1.3971755504608154,
+        "logit_entropy": 0.007830731570720673,
+        "window_entropy": 8.231061656260863e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.3221237600009772,
+        "n_fwd_tokens": 227
+      }
+    },
+    {
+      "id": "morehopqa-000049",
+      "question": "What is the sum of all the digits in the day, month and year of when Princess Feodora Of Denmark's father was born?",
+      "scores": {
+        "hidden": 2.1255271434783936,
+        "attn": -131.34214782714844,
+        "ppl": 1.5755025148391724,
+        "logit_entropy": 0.0060208342038095,
+        "window_entropy": 7.714163803029805e-05
+      },
+      "is_halluc": 1,
+      "error": null,
+      "cost": {
+        "t_seconds": 0.31741312299709534,
+        "n_fwd_tokens": 272
+      }
+    }
+  ]
+}
