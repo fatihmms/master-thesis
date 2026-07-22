@@ -9,4 +9,5 @@ LLM_Check_Hallucination_Detection/
 *.out
 CLAUDE.md
 .env
+*.pyc
 .DS_Store

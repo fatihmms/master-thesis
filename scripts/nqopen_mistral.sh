@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=kle_nqopen_mistral
+#SBATCH --job-name=fatih-kle_nqopen_mistral
 #SBATCH --output=logs/nqopen_mistral_%A_%a.out  # %A = array job id, %a = task id (0-7)
 #SBATCH --error=logs/nqopen_mistral_%A_%a.err
 #SBATCH --time=12:00:00                          # <= 48h so it stays valid on gpu_a100_il (h100 max 72h)
