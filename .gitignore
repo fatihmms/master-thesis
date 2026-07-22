@@ -9,3 +9,4 @@ LLM_Check_Hallucination_Detection/
 *.out
 CLAUDE.md
 .env
+.DS_Store
