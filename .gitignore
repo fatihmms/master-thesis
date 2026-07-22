@@ -6,3 +6,4 @@ kernel-language-entropy/
 *.out
 CLAUDE.md
 .env
+*.pyc
