@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH --job-name=kle_nqopen_llama
-#SBATCH --output=logs/nqopen_llama_%A_%a.out    # %A = array job id, %a = task id (0-7)
-#SBATCH --error=logs/nqopen_llama_%A_%a.err
-#SBATCH --time=12:00:00                          # <= 48h so it stays valid on gpu_a100_il too (h100 max 72h)
+#SBATCH --job-name=fatih_kle_morehopqa_llama
+#SBATCH --output=logs/morehopqa_llama_%A_%a.out  # %A = array job id, %a = task id (0-7)
+#SBATCH --error=logs/morehopqa_llama_%A_%a.err
+#SBATCH --time=24:00:00                          # C4 runs 5 steps here (vs 3) and CoT chains are 350 tokens (vs 200); still <48h for gpu_a100_il
 #SBATCH --partition=gpu_h100                     # ACCOUNT A lane. Override at submit: sbatch --partition=gpu_a100_il ...
 #SBATCH --gres=gpu:1                             # 1 GPU per array task (8B bf16 + DeBERTa fits everywhere)
 #SBATCH --cpus-per-task=8
@@ -10,11 +10,11 @@
 #SBATCH --array=0-7                              # 0-3 -> black-box c1-c4, 4-7 -> white-box c1-c4
 
 # =====================================================================
-# NQ-Open  x  Llama-3.1-8B-Instruct   (--model 8b)
-# Submit FROM the repo root:  cd <repo> && sbatch scripts/nqopen_llama.sh
+# MoreHopQA  x  Llama-3.1-8B-Instruct   (--model 8b)
+# Submit FROM the repo root:  cd <repo> && sbatch scripts/morehopqa_llama.sh
 # =====================================================================
 
-DATASET="nqopen"
+DATASET="morehopqa"
 MODEL_ARG="8b"
 
 BOX_TYPES=(black-box white-box)
@@ -30,7 +30,7 @@ COND="${CONDITIONS[$COND_IDX]}"
 module load compiler/gnu
 module load devel/cuda
 
-# --- Locate repo root robustly (fixes the earlier hard-coded-path bug) ---
+# --- Locate repo root robustly ---
 # .env lives at the repo root and defines PROJECT_ROOT + HF_TOKEN.
 # It is found via SLURM_SUBMIT_DIR (the dir you ran `sbatch` from).
 ENV_FILE="${SLURM_SUBMIT_DIR:-$PWD}/.env"

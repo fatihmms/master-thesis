@@ -1,21 +1,21 @@
 #!/bin/bash
-#SBATCH --job-name=kle_nqopen_llama
-#SBATCH --output=logs/nqopen_llama_%A_%a.out    # %A = array job id, %a = task id (0-7)
-#SBATCH --error=logs/nqopen_llama_%A_%a.err
-#SBATCH --time=12:00:00                          # <= 48h so it stays valid on gpu_a100_il too (h100 max 72h)
-#SBATCH --partition=gpu_h100                     # ACCOUNT A lane. Override at submit: sbatch --partition=gpu_a100_il ...
-#SBATCH --gres=gpu:1                             # 1 GPU per array task (8B bf16 + DeBERTa fits everywhere)
+#SBATCH --job-name=fatih_kle_morehopqa_mistral
+#SBATCH --output=logs/morehopqa_mistral_%A_%a.out  # %A = array job id, %a = task id (0-7)
+#SBATCH --error=logs/morehopqa_mistral_%A_%a.err
+#SBATCH --time=24:00:00                          # C4 runs 5 steps here (vs 3) and CoT chains are 350 tokens (vs 200); still <48h for gpu_a100_il
+#SBATCH --partition=gpu_h100                 # ACCOUNT B lane. Override at submit: sbatch --partition=gpu_h100 ...
+#SBATCH --gres=gpu:1                             # 1 GPU per array task (7B bf16 + DeBERTa fits everywhere)
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --array=0-7                              # 0-3 -> black-box c1-c4, 4-7 -> white-box c1-c4
 
 # =====================================================================
-# NQ-Open  x  Llama-3.1-8B-Instruct   (--model 8b)
-# Submit FROM the repo root:  cd <repo> && sbatch scripts/nqopen_llama.sh
+# MoreHopQA  x  Mistral-7B-Instruct-v0.3   (--model mistral, gated)
+# Submit FROM the repo root:  cd <repo> && sbatch scripts/morehopqa_mistral.sh
 # =====================================================================
 
-DATASET="nqopen"
-MODEL_ARG="8b"
+DATASET="morehopqa"
+MODEL_ARG="mistral"
 
 BOX_TYPES=(black-box white-box)
 CONDITIONS=(c1 c2 c3 c4)
@@ -30,7 +30,7 @@ COND="${CONDITIONS[$COND_IDX]}"
 module load compiler/gnu
 module load devel/cuda
 
-# --- Locate repo root robustly (fixes the earlier hard-coded-path bug) ---
+# --- Locate repo root robustly ---
 # .env lives at the repo root and defines PROJECT_ROOT + HF_TOKEN.
 # It is found via SLURM_SUBMIT_DIR (the dir you ran `sbatch` from).
 ENV_FILE="${SLURM_SUBMIT_DIR:-$PWD}/.env"
@@ -44,7 +44,7 @@ PROJECT_ROOT="${PROJECT_ROOT:-${SLURM_SUBMIT_DIR:-$PWD}}"
 cd "$PROJECT_ROOT" || { echo "ERROR: cannot cd to PROJECT_ROOT=$PROJECT_ROOT"; exit 1; }
 source venv/bin/activate
 
-# --- Pre-flight: gated models need HF_TOKEN ---
+# --- Pre-flight: Mistral is gated -> HF_TOKEN is mandatory ---
 if [[ -z "${HF_TOKEN:-}" ]]; then
     echo "ERROR: HF_TOKEN is empty. Set it in $ENV_FILE (export HF_TOKEN=...)."
     exit 1
