@@ -2,8 +2,8 @@
 #SBATCH --job-name=fatih_kle_rejudge
 #SBATCH --output=logs/rejudge_%j.out
 #SBATCH --error=logs/rejudge_%j.err
-#SBATCH --time=04:00:00                          # ~24k greedy judge calls (8 tokens each); typically well under 2h
-#SBATCH --partition=gpu_h100                     # short job: sbatch --partition=gpu_h100_short scripts/rejudge.sh also works
+#SBATCH --time=01:30:00                          # ~24k greedy judge calls (8 tokens each); typically well under 2h
+#SBATCH --partition=gpu_a100_il                     # short job: sbatch --partition=gpu_h100_short scripts/rejudge.sh also works
 #SBATCH --gres=gpu:1                             # Llama-3.1-8B bf16 only, no generator and no NLI model
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
