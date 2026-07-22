@@ -21,7 +21,15 @@ This script NEVER touches pipeline outputs; it only reads them.
 Needs a GPU (judge model). Typical cost: ~15-25 short judge calls per
 question. Resumable via its own JSONL checkpoint keyed on qid.
 
+Input is either a C4 checkpoint JSONL or a C4 results JSON; both carry the
+same per-question fields. Prefer --results: after rejudge.py the results
+JSON is the only source holding fixed-judge labels, while the checkpoint
+still holds the stale self-judge ones.
+
 Usage (from repo root):
+    python analysis/c4_error_localization.py --model 8b \
+        --results results/black-box/morehopqa/c4_morehopqa_8b_BB_results.json
+
     python analysis/c4_error_localization.py \
         --ckpt results/c4_morehopqa_8b_BB_checkpoint.jsonl --model 8b
 """
@@ -32,6 +40,7 @@ import sys
 import json
 import time
 import argparse
+import collections
 
 import numpy as np
 import torch
@@ -57,11 +66,15 @@ MODEL_MAP = {
 }
 _ap = argparse.ArgumentParser()
 _ap.add_argument("--model", default="8b", help="judge model alias (8b/70b/mistral) or full HF id")
-_ap.add_argument("--ckpt",  required=True, help="path to a c4_morehopqa_*_checkpoint.jsonl")
-_args, _ = _ap.parse_known_args()
+_ap.add_argument("--ckpt",    help="path to a c4_morehopqa_*_checkpoint.jsonl")
+_ap.add_argument("--results", help="path to a c4_morehopqa_*_results.json (preferred: "
+                                   "holds the fixed-judge labels after rejudge.py)")
+_args = _ap.parse_args()
+if bool(_args.ckpt) == bool(_args.results):
+    _ap.error("give exactly one of --ckpt / --results")
 JUDGE_MODEL_NAME = str(MODEL_MAP.get(_args.model, _args.model))
 JUDGE_TAG        = _args.model if _args.model in MODEL_MAP else "custom"
-CKPT_IN          = _args.ckpt
+SRC_IN           = _args.ckpt or _args.results
 
 PRECISION = "bf16"
 
@@ -70,8 +83,8 @@ STEP_RE   = re.compile(r"(?im)^\s*step\s*\d+\s*:")
 ANSWER_RE = re.compile(r"(?im)^\s*(final\s+answer|answer)\s*:")
 MAX_STEPS = 5
 
-_base    = os.path.basename(CKPT_IN).replace("_checkpoint.jsonl", "")
-OUT_DIR  = os.path.dirname(os.path.abspath(CKPT_IN))
+_base    = re.sub(r"_(checkpoint\.jsonl|results\.json)$", "", os.path.basename(SRC_IN))
+OUT_DIR  = os.path.dirname(os.path.abspath(SRC_IN))
 LOC_CKPT = os.path.join(OUT_DIR, f"{_base}_loc{JUDGE_TAG}_checkpoint.jsonl")
 LOC_OUT  = os.path.join(OUT_DIR, f"{_base}_loc{JUDGE_TAG}_results.json")
 
@@ -191,6 +204,23 @@ def localize(tokenizer, model, steps, answer_text, hops):
 
 
 # =====================================================================
+# Input: checkpoint JSONL and results JSON carry the same record fields
+# =====================================================================
+def load_c4_records(path):
+    if path.endswith(".jsonl"):
+        with open(path, encoding="utf-8") as f:
+            recs = [json.loads(l) for l in f if l.strip()]
+        src = "checkpoint"
+    else:
+        with open(path, encoding="utf-8") as f:
+            d = json.load(f)
+        recs = d.get("details") or []
+        judge = (d.get("config") or {}).get("judge_mode", "self")
+        src = f"results (judge_mode={judge})"
+    return [r for r in recs if r.get("error") is None and r.get("chain")], src
+
+
+# =====================================================================
 # Checkpoint IO (same pattern as the C4 pipelines, keyed on qid)
 # =====================================================================
 def load_loc_checkpoint(path):
@@ -219,10 +249,8 @@ def main():
 
     frozen = {ex["id"]: ex for ex in load_frozen(DATASET, frozen_dir=FROZEN_DIR)}
 
-    with open(CKPT_IN, encoding="utf-8") as f:
-        c4 = [json.loads(l) for l in f if l.strip()]
-    c4 = [r for r in c4 if r.get("error") is None and r.get("chain")]
-    print(f"C4 records to localize: {len(c4)}  (from {CKPT_IN})")
+    c4, src = load_c4_records(SRC_IN)
+    print(f"C4 records to localize: {len(c4)}  (from {SRC_IN}, {src})")
 
     print(f"Loading judge: {JUDGE_MODEL_NAME} ({PRECISION})")
     tok, model = load_judge()
@@ -230,6 +258,14 @@ def main():
     done = load_loc_checkpoint(LOC_CKPT)
     if done:
         print(f"Resuming: {len(done)} questions already localized.")
+        # Labels can change between runs (rejudge.py rewrites is_halluc in the
+        # results files). The expensive part -- hop localization -- is
+        # label-independent, so resumed records are kept, but their label is
+        # refreshed from the CURRENT input before any summary uses it.
+        labels_now = {r["qid"]: r.get("is_halluc") for r in c4}
+        for qid, rec in done.items():
+            if qid in labels_now:
+                rec["is_halluc"] = labels_now[qid]
 
     for i, rec in enumerate(c4):
         qid = rec["qid"]
@@ -262,6 +298,10 @@ def main():
             "n_gold_hops":       len(hops),
             "n_steps":           len(steps),
             "seg_mismatch":      seg_mismatch,
+            # the model never emitted the step scaffold: one segment for a
+            # multi-hop question. Step-wise analysis is meaningless on these,
+            # so they are reported as their own category, not localized.
+            "format_failure":    len(steps) <= 1 and len(hops) > 1,
             "hop_resolved_step": resolved,
             "first_error_hop":   err_hop,
             "first_error_step":  err_step,
@@ -279,7 +319,11 @@ def main():
                   f"halluc={out['is_halluc']}")
 
     # ---- Summary ---------------------------------------------------------
-    recs = list(done.values())
+    # Format failures are excluded from the step-wise numbers and reported
+    # separately; they carry no step structure to localize an error in.
+    all_recs = list(done.values())
+    fmt_fail = [r for r in all_recs if r.get("format_failure")]
+    recs = [r for r in all_recs if not r.get("format_failure")]
     halluc = [r for r in recs if r["is_halluc"] == 1]
     located = [r for r in halluc if r["first_error_step"] is not None]
     clean = [r for r in recs if r["is_halluc"] == 0]
@@ -290,6 +334,32 @@ def main():
                 and abs(r["argmax_step"] - r["first_error_step"]) <= tol]
         return len(hits) / len(rs) if rs else float("nan")
 
+    def chance(rs, tol):
+        """Agreement a uniformly random step pick would reach on this cohort.
+
+        Without it the raw agreement is unreadable: chains are capped at 5
+        steps, so top-1 alone is already 20% by luck and +/-1 around 50%.
+        """
+        ps = []
+        for r in rs:
+            n = len(r["step_scores"] or [])
+            if n:
+                e = r["first_error_step"]
+                ps.append(sum(1 for k in range(n) if abs(k - e) <= tol) / n)
+        return float(np.mean(ps)) if ps else float("nan")
+
+    # The headline answer: WHERE do hallucinations start?  Distributions over
+    # hallucinated chains ("none" = every gold hop was supported somewhere in
+    # the chain, i.e. the final answer failed without a localizable hop error).
+    hop_dist = collections.Counter(
+        "none" if r["first_error_hop"] is None else r["first_error_hop"]
+        for r in halluc)
+    step_dist = collections.Counter(r["first_error_step"] + 1 for r in located)
+    # 5-step cap => raw step indices confound "late error" with "long chain";
+    # the normalized position (step / n_steps) is the cap-safe view.
+    norm_pos = [(r["first_error_step"] + 1) / r["n_steps"]
+                for r in located if r["n_steps"]]
+
     err_vs_other = []
     for r in located:
         ss = r["step_scores"]
@@ -299,15 +369,24 @@ def main():
             err_vs_other.append(ss[e] - float(np.mean(others)))
 
     summary = {
-        "ckpt":                    CKPT_IN,
+        "source":                  SRC_IN,
         "judge":                   JUDGE_MODEL_NAME,
+        "n_total":                 len(all_recs),
+        "n_format_failure":        len(fmt_fail),
+        "format_failure_halluc_rate": (sum(r["is_halluc"] for r in fmt_fail) / len(fmt_fail))
+                                      if fmt_fail else float("nan"),
         "n":                       len(recs),
         "n_halluc":                len(halluc),
         "n_halluc_error_located":  len(located),
         "loc_rate_in_halluc":      (len(located) / len(halluc)) if halluc else float("nan"),
         "n_clean_flagged":         len(clean_flagged),   # judge found a broken hop despite correct final answer
+        "first_error_hop_dist":    {str(k): v for k, v in sorted(hop_dist.items(), key=lambda kv: str(kv[0]))},
+        "first_error_step_dist":   {str(k): v for k, v in sorted(step_dist.items())},
+        "mean_norm_error_position": float(np.mean(norm_pos)) if norm_pos else float("nan"),
         "argmax_top1_agreement":   agree(located, 0),
+        "argmax_top1_chance":      chance(located, 0),
         "argmax_pm1_agreement":    agree(located, 1),
+        "argmax_pm1_chance":       chance(located, 1),
         "mean_entropy_gap_at_error": float(np.mean(err_vs_other)) if err_vs_other else float("nan"),
         "n_seg_mismatch":          sum(r["seg_mismatch"] for r in recs),
     }
@@ -316,7 +395,7 @@ def main():
         print(f"  {k:26s}: {v}")
 
     with open(LOC_OUT, "w", encoding="utf-8") as f:
-        json.dump({"summary": summary, "details": recs}, f, indent=2, ensure_ascii=False)
+        json.dump({"summary": summary, "details": all_recs}, f, indent=2, ensure_ascii=False)
     print(f"Saved -> {LOC_OUT}")
 
 
