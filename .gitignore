@@ -11,3 +11,5 @@ CLAUDE.md
 .env
 *.pyc
 .DS_Store
+results/rejudge_checkpoints/
+*.json.tmp
