@@ -1,0 +1,42 @@
+==================================================
+[Thu Jul 23 05:40:11 AM CEST 2026] STARTED: white-box/morehopqa/c3_morehopqa_70b_pipeline.py
+  Dataset      : morehopqa
+  Model        : Meta-Llama-3.1-70B-Instruct (hardcoded)
+  N questions  : 10
+  Box          : white-box
+  Condition    : c3
+  Array Task   : 6  (Job 5989771)
+  Partition    : gpu_h100
+  Node         : uc3n079.localdomain
+  Repo root    : /home/ka/ka_ksri/ka_cx3082/git-code/master-thesis
+NVIDIA H100, 95830 MiB
+NVIDIA H100, 95830 MiB
+NVIDIA H100, 95830 MiB
+NVIDIA H100, 95830 MiB
+==================================================
+Loading frozen dataset: morehopqa
+Loading generator: meta-llama/Meta-Llama-3.1-70B-Instruct  (bf16)
+  [ 10/10]  VNE=0.781  correct=False
+
+AUROC               : 0.5714
+Hallucination rate  : 70.00%
+Saved -> ./results/c3_morehopqa_70b_WB_results.json
+==================================================
+[Thu Jul 23 05:48:21 AM CEST 2026] FINISHED: white-box/morehopqa/c3_morehopqa_70b_pipeline.py
+==================================================
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc3n079
+Job ID: 5994575
+Array Job ID: 5989771_6
+Cluster: uc3
+User/Group: ka_cx3082/ka_ksri
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 00:07:48
+CPU Efficiency: 2.86% of 04:33:04 core-walltime
+Job Wall-clock time: 00:08:32
+Memory Utilized: 5.31 GB
+Memory Efficiency: 2.08% of 256.00 GB (256.00 GB/node)
