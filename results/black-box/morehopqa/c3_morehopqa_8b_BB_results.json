@@ -15,7 +15,9 @@
     "alpha": 0.5,
     "strict_entailment": true,
     "judge_temp": 0.1,
-    "no_repeat_ngram_low_temp": 6
+    "no_repeat_ngram_low_temp": 6,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": 0.6814005038446107,
   "hallucination_rate": 0.813,

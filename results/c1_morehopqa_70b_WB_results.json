@@ -1,0 +1,271 @@
+{
+  "config": {
+    "generator": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "precision": "bf16",
+    "n_questions": 10,
+    "n_samples": 10,
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 64,
+    "hidden_layer": 40,
+    "pool": "mean",
+    "kernel": "cosine",
+    "judge_temp": 0.1,
+    "no_repeat_ngram_low_temp": 6
+  },
+  "auroc": 1.0,
+  "hallucination_rate": 0.9,
+  "details": [
+    {
+      "id": "morehopqa-000000",
+      "question": "What is the sum of all the digits in the day, month and year of when the director of film Is It Easy To Be Young died?",
+      "responses": [
+        "I'm not aware of any film titled 'Is It Easy To Be Young'.",
+        "I am not able to verify the name of the film \"Is It Easy To Be Young\".",
+        "The director of film \"Is It Easy to Be Young?\", Juris Podnieks, died on June 23, 1992. To find the sum, add 2 + 3 + 6 + 1 + 9 + 9 + 2 = 32.",
+        "I am unable to verify the date of death of the director of the film Is It Easy To Be Young?",
+        "I do not know the director of film \"Is It Easy to Be Young?\" so I am unable to answer your question.",
+        "I am unable to verify when Jānis Streičs died.",
+        "I am not able to verify the date of the director's death.",
+        "The director of the film 'Is It Easy To Be Young?' was Jānis Streičs who was born on September 26, 1936, and died on November 1, 2016; the sum of all digits in the date of his death is 1 + 1 + 2 +",
+        "The director of the film \"Is It Easy To Be Young?\" is Jānis Streičs, a Latvian film director, and he is actually still alive (born in 1936).",
+        "I am unable to verify when the film \"Is It Easy To Be Young?\" director died."
+      ],
+      "vne": 0.9537024618062417,
+      "judge_candidate": "I am unable to verify the date of death of the director of the film \"Is It Easy To Be Young?\"",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 10.02493522799341,
+        "n_gen_tokens": 292,
+        "n_fwd_tokens": 1052,
+        "n_prompt_tokens": 77
+      }
+    },
+    {
+      "id": "morehopqa-000001",
+      "question": "How many consonants are there in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather?",
+      "responses": [
+        "I don't have information about Charles Monck, 3rd Viscount Monck's paternal grandfather's name to answer that question.",
+        "The first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather is Henry; there are 4 consonants in \"Henry\"",
+        "The first name of Charles Monck, 3rd Viscount Monck's paternal grandfather, was \"Charles\"'s paternal grandfather was \"Thomas\" - and \"Thomas\" contains 4 consonants: \"T\", \"H\", \"M\", and \"S\".",
+        "The first name is \"Charles\" with 6 consonants",
+        "The first name of Charles Monck, 3rd Viscount Monck's paternal grandfather, 'Charles', contains 4 consonants, (C-H-R-L-S)  however his actual paternal grandfather was actually 'Charles'  so we don't need to search for his actual grandfather's name, but Charles",
+        "Charles Monck, 3rd Viscount Monck's paternal grandfather's first name is \"William\" and there are 4 consonants, W-L-L-M, and sometimes Y can be a vowel or consonant but in this instance, the 'Y' here makes a vowel sound.",
+        "I do not know the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather.",
+        "Charles Monck's paternal grandfather was the 1st Viscount Monck, Charles Monck's father being the 2nd Viscount; Charles Monck's paternal grandfather's first name is 'Henry', which contains the consonants 'H', 'N', 'R' and 'Y', but some consider the",
+        "Charles Monck, 3rd Viscount Monck's paternal grandfather's first name is William, and there are 3 consonants in it (W, L, and M)",
+        "Charles Monck's paternal grandfather was William Monck's father, and since Charles Monck is the 1st Viscount Monck's son, the first name is \"William\" and there are 3 consonants, \"w\", \"l\" and \"m\", in \"William\"."
+      ],
+      "vne": 0.7376309598712592,
+      "judge_candidate": "Charles Monck, 3rd Viscount Monck's, paternal grandfather's first name is Charles, which contains 3 consonants",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 8.42126129398821,
+        "n_gen_tokens": 431,
+        "n_fwd_tokens": 1171,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000002",
+      "question": "What is the reverse order of when the publisher of American Scientist was founded?",
+      "responses": [
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, so the reverse order would be 6881.",
+        "Sigma Xi, the publisher of American Scientist, was founded in 1886 in the United States, so the reverse order is 6881.",
+        "Sigma Xi, The Scientific Research Honor Society, founded the publisher of American Scientist in 1913 and then in 1948, then in 1914 Sigma Xi acquired and merged with Society of the Sigma Xi but the original date still is the 1886 founding of the parent honor society of the society that published American",
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, so its reverse order is 6881.",
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, and the reverse order of that would be 6881.",
+        "Sigma Xi, The Scientific Research Society, which publishes American Scientist, was founded in 1886 by a group of students at Cornell University; thus, the reverse order would be University Cornell of at students group a of by founded was Society Research Scientific The Xi Sigma.",
+        "The publisher of American Scientist, Sigma Xi, The Scientific Research Honor Society, was founded in 1886, so its founding in reverse order is 6881.",
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, so the reverse order would be 6881.",
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, so the reverse order would be 6881.",
+        "The publisher of American Scientist, Sigma Xi, was founded in 1886, and the reverse order of that date is 6881, but in terms of the year, it is 6881; to write it out in the reverse order of the year it was founded would be 6881."
+      ],
+      "vne": 0.4565372506932675,
+      "judge_candidate": "The publisher of American Scientist, Sigma Xi, was founded in 1886, so the reverse order is 6881.",
+      "judge_correct": true,
+      "cost": {
+        "t_seconds": 8.174147636978887,
+        "n_gen_tokens": 371,
+        "n_fwd_tokens": 991,
+        "n_prompt_tokens": 63
+      }
+    },
+    {
+      "id": "morehopqa-000003",
+      "question": "How many consonants are there in the first name of the current drummer of the band who did the song \"What Lovers Do\"?",
+      "responses": [
+        "The first name of the drummer for the band Maroon 5, who performed the song \"What Lovers Do,\" is Matt, which contains 3 consonants",
+        "I'm not aware of any information that specifically names the drummer for the song \"What Lovers Do\".",
+        "The current drummer for Maroon 5, who did the song \"What Lovers Do\", is Matt Flynn, and there are 4 consonants in his first name.",
+        "There are 6 consonants in the first name of Matt Flynn, who is the current drummer of the band Maroon 5, which did the song \"What Lovers Do\".",
+        "The current drummer of the band Maroon 5, who did the song \"What Lovers Do,\" is Matt Flynn, and his first name \"Matt\" has 3 consonants: M, T, and T",
+        "The current drummer of the band Maroon 5 is Matt Flynn and his first name \"Matt\" has 3 consonants.",
+        "The current drummer of the band Maroon 5 is Matt Flynn, and there are 3 consonants and 2 vowels (sometimes 'y' can be a vowel) in the first name \"Matt\"",
+        "The current drummer of the band Maroon 5 is Matt Flynn, and there are 4 consonants in his first name \"Matt\".",
+        "The current drummer of the band Maroon 5 is Matt Flynn, and there are 3 consonants and 2 vowels in \"Matt\" but if you want the first name of the original drummer of the song \"What Lovers Do\" (it was recorded in 2017, at that time the drummer was",
+        "The current drummer of the band Maroon 5 is Matt Flynn, and his first name \"Matt\" contains 3 consonants and then later adding another one from 't' in Flynn makes 4 in total."
+      ],
+      "vne": 0.6499681048034065,
+      "judge_candidate": "The current drummer of the band Maroon 5, who did the song \"Maps\" and also \"What Lovers Do\", is Matt Flynn, and there are 4 consonants in the first name \"Matt\".",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 9.729047616012394,
+        "n_gen_tokens": 374,
+        "n_fwd_tokens": 1114,
+        "n_prompt_tokens": 75
+      }
+    },
+    {
+      "id": "morehopqa-000004",
+      "question": "What is the date 3 weeks after when Albert, Margrave Of Meissen's father died?",
+      "responses": [
+        "I am unable to verify the date 3 weeks after Albert, Margrave Of Meissen's father died.",
+        "I am unable to provide an answer as I do not have access to a search engine to find when Albert, Margrave Of Meissen's father died.",
+        "I do not have information on Albert, Margrave Of Meissen's father, to determine what the date 3 weeks after his death would be.",
+        "I do not have access to information regarding Albert, Margrave of Meissen's father's date of death so I am unable to calculate it for you",
+        "I do not have access to a search engine to provide information on that topic.",
+        "I am unable to verify the date 3 weeks after Albert, Margrave Of Meissen's father died.",
+        "I do not have access to a search engine to look up the date of death of Albert II, Margrave of Meissen's father, so I cannot answer the question.",
+        "I do not have information about Albert, Margrave Of Meissen's father or his date of death, or how long he lived after that.",
+        "I am unable to verify the date 3 weeks after the death of Albert II, Margrave Of Meissen's father.",
+        "I am unable to verify when Albert, Margrave of Meissen's, father died."
+      ],
+      "vne": 0.5670335611966518,
+      "judge_candidate": "I do not have information on Albert, Margrave of Meissen's father's death date, so I am unable to calculate the date 3 weeks later.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 6.589747291000094,
+        "n_gen_tokens": 267,
+        "n_fwd_tokens": 947,
+        "n_prompt_tokens": 69
+      }
+    },
+    {
+      "id": "morehopqa-000005",
+      "question": "What is the date 10 weeks after the date of death of the director of film Cross Current?",
+      "responses": [
+        "I am unable to verify the date of death of the director of the film Cross Current or provide the date 10 weeks after.",
+        "I am unable to verify the date of death of the director of the film 'Cross Current'.",
+        "I’m not able to provide information on the date 10 weeks after the date of death of the director of film Cross Current, as I do not have information on the death of the director.",
+        "I am unable to verify the date of death for director Isao Takahata.",
+        "I am unable to verify the director of the film Cross Current, or their date of death.",
+        "I am unable to verify the date of death of the director of the film \"Cross Current\" to provide the requested date.",
+        "I do not know the date of death of the director of the film Cross Current.",
+        "I apologize, but I am unable to verify the date of death of the director of film Cross Current and therefore cannot determine what date would be 10 weeks after.",
+        "I apologize, but I am unable to verify the date of death of the director of film Cross Current.",
+        "I am unable to verify the director of the film 'Cross Current', and so I'm unable to provide the date 10 weeks after the date of death of that film's director."
+      ],
+      "vne": 0.4788033476878251,
+      "judge_candidate": "I am unable to verify the date of death of director of film Cross Current.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 5.420443837007042,
+        "n_gen_tokens": 253,
+        "n_fwd_tokens": 923,
+        "n_prompt_tokens": 68
+      }
+    },
+    {
+      "id": "morehopqa-000006",
+      "question": "What is the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase?",
+      "responses": [
+        "I'm not familiar with the name Eochaid Mac Fiachnai's paternal grandfather.",
+        "I am unable to verify Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm not able to verify the name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "Unfortunately, I cannot provide the answer as I could not verify the name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm not aware of the name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "I'm not aware of Eochaid Mac Fiachnai or his paternal grandfather, but I can try to help if you provide more context.",
+        "I'm not aware of information on Eochaid Mac Fiachnai's paternal grandfather.",
+        "I couldn't verify the name of Eochaid Mac Fiachnai's paternal grandfather.",
+        "The information provided is not enough to answer this question with certainty, however I can attempt to answer. The paternal grandfather of Eochaid Mac Fiachnai would be Fiachnae mac Báetáin's father Báetán mac Cairill, Báetán is the first name and Cair",
+        "I am unable to verify the requested information on Eochaid Mac Fiachnai's paternal grandfather."
+      ],
+      "vne": 0.5300244162741655,
+      "judge_candidate": "I am unable to verify the first name of Eochaid's paternal grandfather.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 7.4548599839909,
+        "n_gen_tokens": 257,
+        "n_fwd_tokens": 1037,
+        "n_prompt_tokens": 79
+      }
+    },
+    {
+      "id": "morehopqa-000007",
+      "question": "What is the result of multiplying 4 by the reverse of the year of birth of the actress who created The Dogwoman telemovies?",
+      "responses": [
+        "To answer your question, I'd need to know the actress's year of birth, however I was unable to verify which actress created 'The Dogwoman' telemovies.",
+        "I'm not aware of information about an actress who created The Dogwoman telemovies.",
+        "I don't have enough information about The Dogwoman telemovies actress to answer this question.",
+        "I'm not aware of the information required to answer this question, could you provide more details about the actress who created The Dogwoman telemovies.",
+        "To answer your question I would need to know who created the Dogwoman telemovies and their date of birth",
+        "The Dogwoman telemovies were created by Marg Downey, born in 1961, and 1961 spelled backwards is 1681; multiplying 4 by 1681 results in 6724.",
+        "I don't have the information required to answer this question.",
+        "To answer this question I'll need to break it into parts. \nThe Dogwoman telemovies were created by Marg Downey. \nMarg Downey was born in 1961. \nThe reverse of 1961 is 1681. \nMultiplying 4 by 1681 is 6724",
+        "I'm not aware of an actress who created The Dogwoman telemovies.",
+        "Marg Downey was the actress who created The Dogwoman telemovies and she was born in 1961, so the reverse of her birth year is 0161, and multiplying that by 4 equals 6464."
+      ],
+      "vne": 0.8927202499656679,
+      "judge_candidate": "I'm not aware of information about an actress who created The Dog Woman telemovies, could you provide more context or details?",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 8.305988653970417,
+        "n_gen_tokens": 304,
+        "n_fwd_tokens": 1054,
+        "n_prompt_tokens": 76
+      }
+    },
+    {
+      "id": "morehopqa-000008",
+      "question": "How many letters are there between the first and last letters of the first name of the child of Caroline LeRoy's spouse?",
+      "responses": [
+        "I'm not aware of Caroline LeRoy's spouse or their child, could you provide more context or information so I can better answer your question?",
+        "To answer this, we need information about Caroline LeRoy's spouse and their child. Caroline LeRoy was the spouse of Henry Livingston Jr. and one of their children was Edwin Livingston. The first name 'Edwin' has 5 letters, with 'E' as the first letter and 'N' as the last",
+        "I'm not sure about Caroline LeRoy's spouse or their child, could you provide more information or context about them?",
+        "I'm unable to verify the child of Caroline LeRoy's spouse or the child's name.",
+        "I'm not aware of information on Caroline LeRoy's spouse or children, can you provide more context?",
+        "To answer your question, I would need more information about Caroline LeRoy's spouse and their child.",
+        "I don't have the specific information needed to answer that question as I would need to know Caroline LeRoy's spouse's name and the name of their child.",
+        "I'm unable to verify how many letters are between the first and last letters of the first name of the child of Caroline LeRoy's spouse.",
+        "To answer this question, I would need more information about Caroline LeRoy's spouse and their child.",
+        "I'm not aware of Caroline LeRoy's spouse or the name of their child to calculate this information."
+      ],
+      "vne": 0.7535655921587169,
+      "judge_candidate": "I'm not aware of Caroline LeRoy's personal life information, however I can tell you that Caroline LeRoy was married to  Edwin Booth, and they had a daughter named Edwina Booth Grossman. The first name of the child is Edwina, and there are 5 letters between the first and last",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 11.285563451994676,
+        "n_gen_tokens": 279,
+        "n_fwd_tokens": 999,
+        "n_prompt_tokens": 73
+      }
+    },
+    {
+      "id": "morehopqa-000009",
+      "question": "How many unique letters are there in the first name of Victoria Sackville-West, Baroness Sackville's child-in-law?",
+      "responses": [
+        "I'm not aware of the specific child-in-law you are referring to, however, the most well-known child-in-law of Victoria Sackville-West, Baroness Sackville, is likely Vita Sackville-West's daughter-in-law's first husband's sister's name is not readily available, however, a prominent",
+        "Victoria Sackville-West, Baroness Sackville's child-in-law is Vita's husband's, Harold Nicolson's, sibling's spouse, however, a well known child in law of hers is Vita Sackville-West's spouse is not a child in law, but her spouse's sibling is.",
+        "The first name of Victoria Sackville-West, Baroness Sackville's child-in-law, Vita, contains 4 unique letters: V-I-T-A.",
+        "I do not have access to a search engine to find the first name of  Victoria Sackville-West, Baroness Sackville's child-in-law.",
+        "The first name of Victoria Sackville-West, Baroness Sackville's child-in-law, is Vita and there are 4 unique letters in it: V, I, T, A.",
+        "I'm not aware of the information on Victoria Sackville-West's child-in-law's first name.",
+        "The first name of Victoria Sackville-West, Baroness Sackville's child-in-law, is  Nigel Nicolson's wife 'Evelyn Sharp' or  Victoria's child-in-law 'Nico's' wife 'Denise,' or Victoria's child-in-law 'Ben's' wife 'Nancy",
+        "The first name of Victoria Sackville-West, Baroness Sackville's child-in-law, is Nigel, and it contains 5 unique letters: N, I, G, E, and L.",
+        "The first name is \"Victoria\" so there are 8 letters \"i,c,t,o,r,a,e,s\", which is 7 when counting each unique letter once.",
+        "I do not have access to a search engine to look up the first name of Victoria Sackville-West, Baroness Sackville's child-in-law."
+      ],
+      "vne": 0.8753219524733505,
+      "judge_candidate": "The first name of Victoria Sackett's child-in-law, Vita, contains 4 unique letters.",
+      "judge_correct": false,
+      "cost": {
+        "t_seconds": 7.907558639009949,
+        "n_gen_tokens": 424,
+        "n_fwd_tokens": 1164,
+        "n_prompt_tokens": 75
+      }
+    }
+  ]
+}

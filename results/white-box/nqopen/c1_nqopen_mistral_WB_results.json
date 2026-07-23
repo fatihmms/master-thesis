@@ -11,10 +11,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.7016661666166617,
-  "hallucination_rate": 0.495,
+  "auroc": 0.6912478661452596,
+  "hallucination_rate": 0.453,
   "details": [
     {
       "id": "nq_open-000000",
@@ -83,7 +85,7 @@
       ],
       "vne": 0.6904378024586768,
       "judge_candidate": "The Academy Award for Best Original Musical Score in 2020 was won by Hildur Guðnadóttir for the film \"Joker\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.5906895771622658,
         "n_gen_tokens": 416,
@@ -158,7 +160,7 @@
       ],
       "vne": 0.7193842294472139,
       "judge_candidate": "In NCIS: Los Angeles, \"G\" stands for Grisha, the call sign of Agent Grisha Aleksandr Orlov.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.371423749718815,
         "n_gen_tokens": 411,
@@ -183,7 +185,7 @@
       ],
       "vne": 0.07355200326817835,
       "judge_candidate": "The lyrics \"Too Much Time on My Hands\" are sung by Styx.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1250721057876945,
         "n_gen_tokens": 181,
@@ -283,7 +285,7 @@
       ],
       "vne": 0.2676555552347656,
       "judge_candidate": "Motor neurons that control skeletal muscles are called alpha motor neurons.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.299977459013462,
         "n_gen_tokens": 220,
@@ -533,7 +535,7 @@
       ],
       "vne": 0.07965551220498238,
       "judge_candidate": "Mark Harmon plays the character Leroy Jethro Gibbs, not Ducky, on NCIS. Ducky is played by David McCallum.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.012918478343636,
         "n_gen_tokens": 385,
@@ -708,7 +710,7 @@
       ],
       "vne": 0.25321180221678175,
       "judge_candidate": "Art Deco was primarily popular from the 1920s to the 1930s, with some influences extending into the 1940s and 1950s.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.1340943570248783,
         "n_gen_tokens": 283,
@@ -833,7 +835,7 @@
       ],
       "vne": 0.1522262322375499,
       "judge_candidate": "The Golden State Warriors won the NBA Finals in 2015, 2017, 2018, and 2019.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.5392722710967064,
         "n_gen_tokens": 399,
@@ -858,7 +860,7 @@
       ],
       "vne": 0.13887831538595738,
       "judge_candidate": "Season 7 of Pretty Little Liars consists of 22 episodes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 0.9844535952433944,
         "n_gen_tokens": 151,
@@ -1133,7 +1135,7 @@
       ],
       "vne": 0.5869247338957165,
       "judge_candidate": "Christina Aguilera, alongside the U.S. Navy Band, sang the American anthem at the Super Bowl in 2011.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.350833382923156,
         "n_gen_tokens": 308,
@@ -1483,7 +1485,7 @@
       ],
       "vne": 0.5475302198872412,
       "judge_candidate": "\"AUV\" in cars typically stands for \"All-Wheel Drive Utility Vehicle\" or \"All-Terrain Utility Vehicle,\" indicating a vehicle with four-wheel drive capability for off-road use.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.7827948899939656,
         "n_gen_tokens": 486,
@@ -1758,7 +1760,7 @@
       ],
       "vne": 0.3691807150779847,
       "judge_candidate": "The movie \"I Can Only Imagine\" was produced by the Erwin Brothers and Jon and T.J. Erwin.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6341593321412802,
         "n_gen_tokens": 252,
@@ -1883,7 +1885,7 @@
       ],
       "vne": 0.2648993448244334,
       "judge_candidate": "The legal age for marriage in Australia is 18 years old, but there are exceptions for 16 and 17-year-olds under certain conditions.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.91410526400432,
         "n_gen_tokens": 332,
@@ -1983,7 +1985,7 @@
       ],
       "vne": 0.37227926684272733,
       "judge_candidate": "The theme song for \"Living Single\" is sung by Yolanda Adams and Queen Latifah.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.537830965127796,
         "n_gen_tokens": 224,
@@ -2183,7 +2185,7 @@
       ],
       "vne": 0.031560405401576334,
       "judge_candidate": "The four major layers of the Earth, from outermost to innermost, are the Crust, Mantle, Outer Core, and Inner Core.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.7184478300623596,
         "n_gen_tokens": 342,
@@ -2458,7 +2460,7 @@
       ],
       "vne": 0.22707177579062648,
       "judge_candidate": "Bart Bass does not die in Gossip Girl. He is a recurring character throughout the series.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.118189997971058,
         "n_gen_tokens": 168,
@@ -2533,7 +2535,7 @@
       ],
       "vne": 0.24647203596258924,
       "judge_candidate": "The first political society started under British rule in India was the Bombay Association, established in 1825.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.9188729119487107,
         "n_gen_tokens": 281,
@@ -3183,7 +3185,7 @@
       ],
       "vne": 0.5737010922604158,
       "judge_candidate": "\"Bob's your uncle\" is an idiomatic expression in British English, originating from a joke in a political cartoon by British satirist John Camden Hotten in the 1880s. The cartoon humorously suggested that a complex problem could be solved by adding a simple",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.146215997170657,
         "n_gen_tokens": 630,
@@ -3383,7 +3385,7 @@
       ],
       "vne": 0.2409094259480942,
       "judge_candidate": "The tradition of self-government began in America with the signing of the Declaration of Independence in 1776.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.203158413991332,
         "n_gen_tokens": 331,
@@ -3583,7 +3585,7 @@
       ],
       "vne": 0.32034508207660267,
       "judge_candidate": "The majority of phosphorus in the environment is stored in sedimentary rocks.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.628822117112577,
         "n_gen_tokens": 253,
@@ -3858,7 +3860,7 @@
       ],
       "vne": 0.4105243228162835,
       "judge_candidate": "As of my last update, there isn't specific data available on the exact number of Jimmy John's locations in the U.S. However, as of 2021, Jimmy John's has over 2,800 locations across the country.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.9743656618520617,
         "n_gen_tokens": 512,
@@ -4033,7 +4035,7 @@
       ],
       "vne": 0.3770096439261171,
       "judge_candidate": "The 2018 Oscar nominations were announced on January 23, 2018. (This question is about the past, so the answer is a fact, not a prediction.)",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.7231649607419968,
         "n_gen_tokens": 311,
@@ -4458,7 +4460,7 @@
       ],
       "vne": 0.3445322123267355,
       "judge_candidate": "The last time America (specifically, the United States) hosted the Summer Olympics was in 2002, in the city of Salt Lake City, Utah.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.5485132727771997,
         "n_gen_tokens": 471,
@@ -5033,7 +5035,7 @@
       ],
       "vne": 0.2858443942246155,
       "judge_candidate": "\"Percy Jackson and the Olympians\" was filmed in various locations in the United States, including Vancouver, British Columbia, and Los Angeles, California.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.8321429090574384,
         "n_gen_tokens": 249,
@@ -5158,7 +5160,7 @@
       ],
       "vne": 0.29246247076222787,
       "judge_candidate": "Christmas was first celebrated as a holiday on December 25 in the 4th century AD.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.1098181060515344,
         "n_gen_tokens": 320,
@@ -5183,7 +5185,7 @@
       ],
       "vne": 0.28496564171360045,
       "judge_candidate": "In the book \"Where the Red Fern Grows,\" Billy's last name is never explicitly stated.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.377223830204457,
         "n_gen_tokens": 209,
@@ -5333,7 +5335,7 @@
       ],
       "vne": 0.05869118950880329,
       "judge_candidate": "Mount Ruapehu last erupted in 2007.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.9381893598474562,
         "n_gen_tokens": 154,
@@ -5458,7 +5460,7 @@
       ],
       "vne": 0.23213022025581406,
       "judge_candidate": "A female lion in The Lion King is called a lioness.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.8290834752842784,
         "n_gen_tokens": 119,
@@ -5558,7 +5560,7 @@
       ],
       "vne": 0.2647645267139165,
       "judge_candidate": "The right to property, according to the Constitution of India, is a fundamental right, but it was made a legal right in Article 300A, not a fundamental right.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.4802864682860672,
         "n_gen_tokens": 456,
@@ -5583,7 +5585,7 @@
       ],
       "vne": 0.23465653684049118,
       "judge_candidate": "The song \"Humble and Kind\" was written by Lori McKenna, with additional writing credits to Nashville Songwriters Hall of Fame member, John Ozier, and Toby Keith.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.6738048451952636,
         "n_gen_tokens": 337,
@@ -5733,7 +5735,7 @@
       ],
       "vne": 0.36919335898206934,
       "judge_candidate": "Convergent boundaries can be found on Earth where tectonic plates collide, such as at the Himalayas, the Andes, or the San Andreas Fault (where the Pacific and North American plates converge).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.817292765714228,
         "n_gen_tokens": 423,
@@ -6158,7 +6160,7 @@
       ],
       "vne": 0.40591945715540134,
       "judge_candidate": "They stopped putting lead in paint in the United States in 1978.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.8124149511568248,
         "n_gen_tokens": 329,
@@ -6533,7 +6535,7 @@
       ],
       "vne": 0.35419405971719226,
       "judge_candidate": "The character of the \"Walking Boss\" in the movie \"Cool Hand Luke\" is portrayed by actor Strother Martin.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.7471860782243311,
         "n_gen_tokens": 264,
@@ -6708,7 +6710,7 @@
       ],
       "vne": 0.180003574335261,
       "judge_candidate": "The song \"If I Were a Boy\" was written by Toby Gad and Billy Mann.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.3707909970544279,
         "n_gen_tokens": 218,
@@ -6783,7 +6785,7 @@
       ],
       "vne": 0.07103705347800424,
       "judge_candidate": "The tallest building in Las Vegas is Stratosphere Tower, standing at approximately 1,149 feet tall.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5575386141426861,
         "n_gen_tokens": 285,
@@ -7533,7 +7535,7 @@
       ],
       "vne": 0.08385994209821658,
       "judge_candidate": "\"Come Fly with Me\" was released in 1958.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.9536454328335822,
         "n_gen_tokens": 164,
@@ -7633,7 +7635,7 @@
       ],
       "vne": 0.17806645144363706,
       "judge_candidate": "The Virginia Plan was proposed by James Madison and George Mason at the Constitutional Convention.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1043496988713741,
         "n_gen_tokens": 147,
@@ -7783,7 +7785,7 @@
       ],
       "vne": 0.20909150001084287,
       "judge_candidate": "Michael Jackson holds the record for the most platinum albums, with 13.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.3378167641349137,
         "n_gen_tokens": 183,
@@ -8033,7 +8035,7 @@
       ],
       "vne": 0.32030240110734504,
       "judge_candidate": "The voice of the gorilla in the movie \"Rise of the Planet of the Apes\" (2011) is provided by Andy Serkis, who also performed the motion-capture for the character Caesar.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.7147564319893718,
         "n_gen_tokens": 446,
@@ -8108,7 +8110,7 @@
       ],
       "vne": 0.2840913482390109,
       "judge_candidate": "Fingerprinting was first used by the police in the late 19th century, around 1892, by Sir Edward Henry in India.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.1895032371394336,
         "n_gen_tokens": 376,
@@ -8433,7 +8435,7 @@
       ],
       "vne": 0.38019937702044243,
       "judge_candidate": "The character \"Pink\" in Pink Floyd's album \"The Wall\" is not a real person, but the alter ego of the band's vocalist, songwriter, and bassist, Roger Waters. However, in the 1982 film adaptation, Bob Geldof portrayed",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.043395046144724,
         "n_gen_tokens": 572,
@@ -9258,7 +9260,7 @@
       ],
       "vne": 0.15496698230190262,
       "judge_candidate": "The Taj Mahal was built and completed in 1653.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.2207988849841058,
         "n_gen_tokens": 203,
@@ -9358,7 +9360,7 @@
       ],
       "vne": 0.18446209316951626,
       "judge_candidate": "The Los Angeles Dodgers have won 7 World Series titles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.0899733202531934,
         "n_gen_tokens": 166,
@@ -9708,7 +9710,7 @@
       ],
       "vne": 0.1711467356858235,
       "judge_candidate": "Elvis Presley sang \"I Knew the Bride (When She Used to Rock and Roll\").",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4147380543872714,
         "n_gen_tokens": 227,
@@ -9833,7 +9835,7 @@
       ],
       "vne": 0.2745408322569303,
       "judge_candidate": "The University of Kentucky men's basketball team has the most NCAA Division I Men's Basketball Championship titles with 8.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6478610271587968,
         "n_gen_tokens": 293,
@@ -9858,7 +9860,7 @@
       ],
       "vne": 0.09915664492574681,
       "judge_candidate": "The cardiac center is found in the medulla oblongata, and the vasomotor center is located in the pons and medulla oblongata of the brainstem.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.1498958840966225,
         "n_gen_tokens": 376,
@@ -9883,7 +9885,7 @@
       ],
       "vne": 0.11979881893448964,
       "judge_candidate": "Jack Nicklaus has played in the most Masters Tournaments, with 63 appearances.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.2665452603250742,
         "n_gen_tokens": 209,
@@ -10283,7 +10285,7 @@
       ],
       "vne": 0.29826042498525307,
       "judge_candidate": "The actor who played young Clark Kent in the 1978 Superman movie was Marc McClure.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.25424447003752,
         "n_gen_tokens": 267,
@@ -10633,7 +10635,7 @@
       ],
       "vne": 0.3682464723477689,
       "judge_candidate": "Fulda is a city in Germany, located in the state of Hesse. It is significant as it is the birthplace of Saint Boniface, a missionary who played a crucial role in Christianizing Germany in the 8th century.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.6482802289538085,
         "n_gen_tokens": 441,
@@ -10758,7 +10760,7 @@
       ],
       "vne": 0.08722324393209581,
       "judge_candidate": "The Champions League Round of 16 typically starts in February.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.949235977139324,
         "n_gen_tokens": 148,
@@ -10858,7 +10860,7 @@
       ],
       "vne": 0.19144315024683922,
       "judge_candidate": "Toll roads in Mexico are commonly known as \"cuotas\" or \"autopistas cuota.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.3996470728889108,
         "n_gen_tokens": 232,
@@ -10883,7 +10885,7 @@
       ],
       "vne": 0.22595931084353524,
       "judge_candidate": "\"Gerry and the Pacemakers did not write \"How Do You Do It.\" The song was written by Mitch Murray and Peter Sullivan.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.9816284882836044,
         "n_gen_tokens": 326,
@@ -10908,7 +10910,7 @@
       ],
       "vne": 0.17139664917965028,
       "judge_candidate": "John Quincy Adams received the most electoral votes in 1824, but not a majority, leading to the election being decided by the House of Representatives.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.0761142200790346,
         "n_gen_tokens": 370,
@@ -11033,7 +11035,7 @@
       ],
       "vne": 0.3407867949324584,
       "judge_candidate": "In the \"Dragon Ball Z\" series, Goku gives up against Cell in the Cell Games Saga, specifically in the episode titled \"The Ultimate Battle Begins.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.4318792233243585,
         "n_gen_tokens": 341,
@@ -11058,7 +11060,7 @@
       ],
       "vne": 0.31353402420603477,
       "judge_candidate": "The band AC/DC sang on the \"Back in Black\" album.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.1174672348424792,
         "n_gen_tokens": 185,
@@ -11258,7 +11260,7 @@
       ],
       "vne": 0.21645063684615168,
       "judge_candidate": "\"Some Like It Hot\" takes place in Florida and Chicago during the 1920s.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.3177266819402575,
         "n_gen_tokens": 216,
@@ -11508,7 +11510,7 @@
       ],
       "vne": 0.2580717526578662,
       "judge_candidate": "The small business tax rate in Canada is a lower tax rate applied to the first $500,000 of active business income. As of 2021, the small business tax rate is 9% for federal tax purposes. Provincial tax rates may vary.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.0451530311256647,
         "n_gen_tokens": 485,
@@ -11808,7 +11810,7 @@
       ],
       "vne": 0.5349295311451769,
       "judge_candidate": "Into the Woods features singing by various characters, including Meryl Streep, Johnny Depp, Emily Blunt, and James Corden, among others.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.4714832711033523,
         "n_gen_tokens": 410,
@@ -12258,7 +12260,7 @@
       ],
       "vne": 0.20364642787170384,
       "judge_candidate": "Satyajit Ray, an Indian filmmaker, was the first to receive an Honorary Oscar for Lifetime Achievement in 1992.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.4956925944425166,
         "n_gen_tokens": 358,
@@ -12483,7 +12485,7 @@
       ],
       "vne": 0.3541335281156231,
       "judge_candidate": "Mikel did not score any goals for Chelsea. He was primarily a midfielder during his time at the club.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.482098150998354,
         "n_gen_tokens": 203,
@@ -12533,7 +12535,7 @@
       ],
       "vne": 0.4826766053584451,
       "judge_candidate": "Uma Thurman's character, Mia Wallace, sang \"You'll Be a Woman Soon\" in the movie Pulp Fiction, but it was actually performed by Nancy Sinatra.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.7195709836669266,
         "n_gen_tokens": 440,
@@ -12658,7 +12660,7 @@
       ],
       "vne": 0.3066674817056785,
       "judge_candidate": "The Appalachian Mountains of Pennsylvania are formed in a continental collision tectonic setting, while the Himalayas are formed in a continental collision and subduction tectonic setting.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.5846780790016055,
         "n_gen_tokens": 477,
@@ -12958,7 +12960,7 @@
       ],
       "vne": 0.35602402603397854,
       "judge_candidate": "Arijit Singh sings \"So come and dance with me (Jai Ho)\" in the remix version of the song. The original version is sung by Sukhwinder Singh, Tanvi Shah, and Mahalakshmi Iyer.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.736284539103508,
         "n_gen_tokens": 371,
@@ -12983,7 +12985,7 @@
       ],
       "vne": 0.2983264585592922,
       "judge_candidate": "The ductus arteriosus typically closes within the first few days after birth, usually by the first week, due to the increase in oxygen levels and the production of prostaglandins.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.5875299256294966,
         "n_gen_tokens": 474,
@@ -13008,7 +13010,7 @@
       ],
       "vne": 0.15463575630380272,
       "judge_candidate": "The Lincoln Highway begins in Times Square, New York City, and ends in Lincoln Park, San Francisco.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5641717137768865,
         "n_gen_tokens": 241,
@@ -13033,7 +13035,7 @@
       ],
       "vne": 0.40746746656434374,
       "judge_candidate": "\"Rick and Morty\" airs on Adult Swim, and the exact schedule varies, so it's best to check the Adult Swim website or your local listings for the most accurate information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.552542435005307,
         "n_gen_tokens": 422,
@@ -13058,7 +13060,7 @@
       ],
       "vne": 0.4220232953556227,
       "judge_candidate": "The phrase \"train of thought\" originates from the metaphorical comparison of the mind's sequence of ideas to a train moving along a track.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.4904496227391064,
         "n_gen_tokens": 437,
@@ -13308,7 +13310,7 @@
       ],
       "vne": 0.2086282476978017,
       "judge_candidate": "Secretory cells of endocrine glands secrete their products directly into the interstitial fluid, which then circulates throughout the body.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.024935889057815,
         "n_gen_tokens": 274,
@@ -13408,7 +13410,7 @@
       ],
       "vne": 0.46074483215154255,
       "judge_candidate": "Many areas of Africa were colonized during the Scramble for Africa in the late 19th and early 20th centuries, including North Africa (Algeria, Egypt, Libya, Morocco, Sudan, Tunisia), West Africa (Benin, Burkina Fas",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.208341577090323,
         "n_gen_tokens": 447,
@@ -13508,7 +13510,7 @@
       ],
       "vne": 0.551926973651824,
       "judge_candidate": "Don Henley, a member of the Eagles, sings \"Love Will Keep Us Alive.\" However, it's important to note that this song is not to be confused with the same title by the band The Eurythmics.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.870004028081894,
         "n_gen_tokens": 502,
@@ -13908,7 +13910,7 @@
       ],
       "vne": 0.1577978812662061,
       "judge_candidate": "Tiger Woods won the PGA Championship by the most shots in 2000, with a 15-shot margin.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.5101908138021827,
         "n_gen_tokens": 264,
@@ -14033,7 +14035,7 @@
       ],
       "vne": 0.25716460916190576,
       "judge_candidate": "World War II officially started on September 1, 1939, and ended on September 2, 1945.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.416495067998767,
         "n_gen_tokens": 482,
@@ -14108,7 +14110,7 @@
       ],
       "vne": 0.42329538683156015,
       "judge_candidate": "The bands in Pitch Perfect 3 are The Bellas, Evermoist, Saddle Up, and Calamity 3.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6723926938138902,
         "n_gen_tokens": 252,
@@ -14158,7 +14160,7 @@
       ],
       "vne": 0.30127192196533575,
       "judge_candidate": "The song \"Hit Me Baby One More Time\" was written by Max Martin and Rami Yacoub.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5155354589223862,
         "n_gen_tokens": 220,
@@ -14333,7 +14335,7 @@
       ],
       "vne": 0.59283047671763,
       "judge_candidate": "Kevin couldn't wait for his wife to leave the show because he wanted to focus on his own career and personal growth.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.213393204379827,
         "n_gen_tokens": 341,
@@ -14408,7 +14410,7 @@
       ],
       "vne": 0.5742231464204814,
       "judge_candidate": "Mexican Train Dominoes typically requires 91 dominoes (2-12 double-6 domino sets). However, some variations may require more or less.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.43009465187788,
         "n_gen_tokens": 457,
@@ -14683,7 +14685,7 @@
       ],
       "vne": 0.2448630104370956,
       "judge_candidate": "Henry David Thoreau, a prominent American philosopher and author, advocated the idea of returning to nature in his work \"Walden\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.8647125898860395,
         "n_gen_tokens": 249,
@@ -14983,7 +14985,7 @@
       ],
       "vne": 0.01562615633747751,
       "judge_candidate": "More than half your bones are located in your arms and legs.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 0.9091932750307024,
         "n_gen_tokens": 133,
@@ -15108,7 +15110,7 @@
       ],
       "vne": 0.26865747203696955,
       "judge_candidate": "The Major League Baseball (MLB) season typically starts in late March or early April and finishes in October, with the World Series, the championship series, taking place in late October or early November.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.504182542208582,
         "n_gen_tokens": 421,
@@ -15533,7 +15535,7 @@
       ],
       "vne": 0.40237900686088024,
       "judge_candidate": "The term is \"tissue regeneration.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.934165527112782,
         "n_gen_tokens": 158,
@@ -16358,7 +16360,7 @@
       ],
       "vne": 0.1262624325264449,
       "judge_candidate": "Vera Farmiga plays the scary nun in The Conjuring 2.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.2429012549109757,
         "n_gen_tokens": 174,
@@ -17133,7 +17135,7 @@
       ],
       "vne": 0.3179728115208687,
       "judge_candidate": "There are three seasons of \"From Dusk Till Dawn,\" with each season consisting of 10 episodes.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.4931815923191607,
         "n_gen_tokens": 207,
@@ -17183,7 +17185,7 @@
       ],
       "vne": 0.19092170637773268,
       "judge_candidate": "Product-market fit means having a product that meets the needs and solves the problems of a specific market.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4153492450714111,
         "n_gen_tokens": 218,
@@ -17333,7 +17335,7 @@
       ],
       "vne": 0.22705321780551854,
       "judge_candidate": "The Romanticism period started approximately in the late 18th century and ended in the mid-19th century.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.176380241755396,
         "n_gen_tokens": 352,
@@ -17483,7 +17485,7 @@
       ],
       "vne": 0.4230091094644362,
       "judge_candidate": "A City & Guilds qualification can range from Entry Level to Level 8, depending on the specific course and the complexity of the skills being assessed.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.1646735901013017,
         "n_gen_tokens": 384,
@@ -17533,7 +17535,7 @@
       ],
       "vne": 0.3847801175453614,
       "judge_candidate": "Term limits for the U.S. House of Representatives and Senate do not exist at the federal level, but some states have imposed limits on their terms.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.1211829129606485,
         "n_gen_tokens": 363,
@@ -17783,7 +17785,7 @@
       ],
       "vne": 0.24396402298800982,
       "judge_candidate": "As of 2020, approximately 11.4% of the U.S. population lives below the poverty line.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.997501618694514,
         "n_gen_tokens": 356,
@@ -17883,7 +17885,7 @@
       ],
       "vne": 0.40933516846055673,
       "judge_candidate": "Zippo lighters are filled with a flammable liquid, typically a fuel blend of denatured alcohol and lighter fluid.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6394095942378044,
         "n_gen_tokens": 262,
@@ -18183,7 +18185,7 @@
       ],
       "vne": 0.20690686841022843,
       "judge_candidate": "Madoka Kaname becomes a magical girl in Puella Magi Madoka Magica after making a contract with Kyubey.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.4871380371041596,
         "n_gen_tokens": 273,
@@ -18208,7 +18210,7 @@
       ],
       "vne": 0.4392257122328248,
       "judge_candidate": "Mandy Moore sings \"Love Me Tender\" in The Princess Diaries 2: Royal Engagement.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.3138036229647696,
         "n_gen_tokens": 393,
@@ -18783,7 +18785,7 @@
       ],
       "vne": 0.11149022164754446,
       "judge_candidate": "Today, Gestalt psychology ideas are part of the field of Perception in Psychology.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.2279147701337934,
         "n_gen_tokens": 175,
@@ -18858,7 +18860,7 @@
       ],
       "vne": 0.10905171515520568,
       "judge_candidate": "Harry Potter has been translated into over 70 languages.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1730220620520413,
         "n_gen_tokens": 150,
@@ -18958,7 +18960,7 @@
       ],
       "vne": 0.380500806756478,
       "judge_candidate": "Cognitive Neuropsychology focuses on the body, particularly the brain and nervous system, to understand mental processes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6477807448245585,
         "n_gen_tokens": 229,
@@ -19008,7 +19010,7 @@
       ],
       "vne": 0.32407223092554405,
       "judge_candidate": "The music for Shimmer and Shine is composed by Steve Hampton and Michael \"Mike\" Himelstein.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.4229139648377895,
         "n_gen_tokens": 231,
@@ -19258,7 +19260,7 @@
       ],
       "vne": 0.4130052933297641,
       "judge_candidate": "The Cash Cab guy reads the questions from a teleprompter mounted on the partition between the driver's compartment and the passenger's seat.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6720298337750137,
         "n_gen_tokens": 233,
@@ -19383,7 +19385,7 @@
       ],
       "vne": 0.13382934263641041,
       "judge_candidate": "The University of Michigan School of Public Health is consistently ranked among the top public health schools globally.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.300206946209073,
         "n_gen_tokens": 220,
@@ -19908,7 +19910,7 @@
       ],
       "vne": 0.01477276193886556,
       "judge_candidate": "The Electronic Funds Transfer Act was signed into law on October 15, 1978.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.3751562773250043,
         "n_gen_tokens": 227,
@@ -19933,7 +19935,7 @@
       ],
       "vne": 0.5288334263492467,
       "judge_candidate": "Iowa State University's football coach, Matt Campbell, is from Ohio. He was born and raised in Canton, Ohio.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6163292960263789,
         "n_gen_tokens": 264,
@@ -19958,7 +19960,7 @@
       ],
       "vne": 0.3930693366077683,
       "judge_candidate": "Silver, like gold, is a precious metal, has a high luster, is malleable, and is a good conductor of electricity.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.3448429983109236,
         "n_gen_tokens": 414,
@@ -20008,7 +20010,7 @@
       ],
       "vne": 0.22387204723977577,
       "judge_candidate": "The Battle of Bonhomme Richard took place in the West Indies, specifically off the coast of Flamborough Head, England, in 1779 during the American Revolutionary War.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.4610105478204787,
         "n_gen_tokens": 306,
@@ -20158,7 +20160,7 @@
       ],
       "vne": 0.6632249205259316,
       "judge_candidate": "The anthropologist Louis Dumont is known for stating that caste is a closed system, meaning that it is difficult for individuals to move between castes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.524676322005689,
         "n_gen_tokens": 473,
@@ -20458,7 +20460,7 @@
       ],
       "vne": 0.050506764754418065,
       "judge_candidate": "The Curious Case of Benjamin Button won three Academy Awards: Best Achievement in Visual Effects, Best Performance by an Actor in a Supporting Role (Jared Leto), and Best Achievement in Makeup.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.588117935694754,
         "n_gen_tokens": 499,
@@ -20483,7 +20485,7 @@
       ],
       "vne": 0.08829358180968401,
       "judge_candidate": "Thomas Rhett's new album, \"Country Again: Side A,\" is scheduled to be released on April 30, 2021.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6460394952446222,
         "n_gen_tokens": 297,
@@ -20533,7 +20535,7 @@
       ],
       "vne": 0.24993749244574742,
       "judge_candidate": "Most star formation in the Milky Way occurs in the spiral arms, particularly in regions of high gas and dust concentration.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.793900690972805,
         "n_gen_tokens": 264,
@@ -20658,7 +20660,7 @@
       ],
       "vne": 0.45343850234553296,
       "judge_candidate": "Doug and Julie are characters on the soap opera \"Days of Our Lives.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.173680078238249,
         "n_gen_tokens": 289,
@@ -21183,7 +21185,7 @@
       ],
       "vne": 0.22568352633471103,
       "judge_candidate": "Money, as a medium of exchange, is a widely accepted medium used to buy and sell goods and services, facilitating trade and commerce.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.5601671929471195,
         "n_gen_tokens": 259,
@@ -21383,7 +21385,7 @@
       ],
       "vne": 0.5250964876728197,
       "judge_candidate": "Western Rome, after its fall, was succeeded by the Byzantine Empire, while the Western territories transitioned into various Germanic kingdoms.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.1734670312143862,
         "n_gen_tokens": 367,
@@ -21533,7 +21535,7 @@
       ],
       "vne": 0.3570431301577096,
       "judge_candidate": "Daya in Taarak Mehta Ka Ooltah Chashmah is named Dayaben, not Daya.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.1573486397974193,
         "n_gen_tokens": 334,
@@ -21758,7 +21760,7 @@
       ],
       "vne": 0.24434264143902615,
       "judge_candidate": "Chymotrypsin cleaves the peptide bond at the carboxyl side of aromatic amino acids (such as phenylalanine, tryptophan, and tyrosine) and at the amino side of large, non-polar side chains.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.908613277133554,
         "n_gen_tokens": 451,
@@ -22033,7 +22035,7 @@
       ],
       "vne": 0.10576520861296058,
       "judge_candidate": "The Soviet Union started in 1922 and ended in 1991.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.3023290778510273,
         "n_gen_tokens": 223,
@@ -22058,7 +22060,7 @@
       ],
       "vne": 0.3970737156239301,
       "judge_candidate": "The last known wolf pack to be killed in Yellowstone National Park was the Absaroka-Beartooth pack in 1926. However, reintroduction efforts began in 1995.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.643427753355354,
         "n_gen_tokens": 438,
@@ -22183,7 +22185,7 @@
       ],
       "vne": 0.3534292594802927,
       "judge_candidate": "Fungi do not typically participate in a traditional food web as they obtain nutrients by decomposing organic matter or forming symbiotic relationships with plants and other organisms, rather than consuming other organisms as food.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.708472813013941,
         "n_gen_tokens": 462,
@@ -22208,7 +22210,7 @@
       ],
       "vne": 0.033390629376036866,
       "judge_candidate": "The director of Taarak Mehta Ka Ooltah Chashmah is Asit Kumar Modi.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5154726561158895,
         "n_gen_tokens": 265,
@@ -22383,7 +22385,7 @@
       ],
       "vne": 0.49874719370514153,
       "judge_candidate": "The Academy Award for Best Picture for \"The Deer Hunter\" was won by Michael Cimino in 1979. However, it's important to note that the director is typically not the one who wins the award, but the film itself. In this case, the award for Best Director went to",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.159197939094156,
         "n_gen_tokens": 510,
@@ -22933,7 +22935,7 @@
       ],
       "vne": 0.13376855470509194,
       "judge_candidate": "The NFL game in London is played at Tottenham Hotspur Stadium.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1878122366033494,
         "n_gen_tokens": 165,
@@ -22983,7 +22985,7 @@
       ],
       "vne": 0.44171036402599945,
       "judge_candidate": "The AFC has more Super Bowl wins than the NFC. The AFC has won 28 Super Bowls, while the NFC has won 27 as of Super Bowl LV (55).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.7371691670268774,
         "n_gen_tokens": 358,
@@ -23433,7 +23435,7 @@
       ],
       "vne": 0.45007397860221565,
       "judge_candidate": "The main character in Layer Cake is unnamed, as he is referred to only by his occupation, \"XXX.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6084567629732192,
         "n_gen_tokens": 210,
@@ -23533,7 +23535,7 @@
       ],
       "vne": 0.35474299320321306,
       "judge_candidate": "Steve Winwood sings \"Gimme Some Lovin'\" in the movie \"Days of Thunder.\" However, it's important to note that the song was originally performed by The Spencer Davis Group, not Steve Winwood in the movie. The misconception arises because Winwood's version is",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.1531741213984787,
         "n_gen_tokens": 475,
@@ -23708,7 +23710,7 @@
       ],
       "vne": 0.14960356257289298,
       "judge_candidate": "The latest series of \"Keeping Up with the Kardashians\" is its final season, which aired in 2021.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6982780736871064,
         "n_gen_tokens": 318,
@@ -23958,7 +23960,7 @@
       ],
       "vne": 0.02465796938780707,
       "judge_candidate": "The next two Winter Olympics will be held in Beijing, China (2022) and Milan-Cortina d'Ampezzo, Italy (2026).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.9685956900939345,
         "n_gen_tokens": 371,
@@ -24183,7 +24185,7 @@
       ],
       "vne": 0.3002577779903378,
       "judge_candidate": "The Hunger Games is a series of three books written by Suzanne Collins: \"The Hunger Games,\" \"Catching Fire,\" and \"Mockingjay.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.5356567790731788,
         "n_gen_tokens": 431,
@@ -24233,7 +24235,7 @@
       ],
       "vne": 0.07712430396109916,
       "judge_candidate": "\"It's Gonna Take a Lot of Love\" was written by Mac Davis.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1592349000275135,
         "n_gen_tokens": 196,
@@ -24633,7 +24635,7 @@
       ],
       "vne": 0.29076727568812605,
       "judge_candidate": "The United States primarily uses the U.S. Customary System (also known as the Imperial System), but it also uses the Metric System in some scientific, medical, and technological contexts.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.5822011018171906,
         "n_gen_tokens": 393,

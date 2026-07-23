@@ -15,13 +15,15 @@
     "heat_t": 0.3,
     "alpha": 0.5,
     "strict_entailment": true,
-    "seed": 42
+    "seed": 42,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": {
-    "max": 0.6908514068757478,
-    "mean": 0.6335321723057721
+    "max": 0.6853508248857085,
+    "mean": 0.6393462572864567
   },
-  "hallucination_rate": 0.507,
+  "hallucination_rate": 0.441,
   "n_valid": 1000,
   "details": [
     {
@@ -213,7 +215,7 @@
         "mean": 1.2154405191755566
       },
       "candidate": "The artist who sings \"Too Much Time on My Hands\" is Styx.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.590470653027296,
@@ -325,7 +327,7 @@
         "mean": 1.3176067607030812
       },
       "candidate": "Motor neurons control the skeletal muscles.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.13398569729179,
@@ -353,7 +355,7 @@
         "mean": 1.5723090119495808
       },
       "candidate": "The region that stretches between the Black and Caspian Seas is the Caucasus region, which includes parts of Russia, Georgia, Azerbaijan, Armenia, and Turkey.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.69225629605353,
@@ -937,7 +939,7 @@
         "mean": 1.4046438108729964
       },
       "candidate": "The Golden State Warriors have won the NBA Finals in 2015, 2017, 2018, and 2022.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.370514246169478,
@@ -1327,7 +1329,7 @@
         "mean": 1.6799526561986848
       },
       "candidate": "The original artist of \"I Can't Take My Eyes Off You\" is The Four Seasons.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.536509635858238,
@@ -1411,7 +1413,7 @@
         "mean": 1.4666706844390187
       },
       "candidate": "Georgia is a character from Angus Thongs and Perfect Snogging.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.79720118176192,
@@ -1859,7 +1861,7 @@
         "mean": 1.4939638623839837
       },
       "candidate": "Elena turns into a vampire in Season 2, Episode 16 of \"The Vampire Diaries.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.45412610610947,
@@ -1971,7 +1973,7 @@
         "mean": 1.5385911594283639
       },
       "candidate": "Jon Erwin produced the movie \"I Can Only Imagine.\"",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 13.774099645204842,
@@ -2053,7 +2055,7 @@
         "mean": 1.661555962072494
       },
       "candidate": "Clifford the Big Red Dog first aired on TV on September 14, 2000.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 10.839528462849557,
@@ -2247,7 +2249,7 @@
         "mean": 1.1630697443592377
       },
       "candidate": "The Tampa Bay Lightning and the Montreal Canadiens played in the Stanley Cup Finals last year (2021).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.71860951418057,
@@ -2303,7 +2305,7 @@
         "mean": 1.4397197054341129
       },
       "candidate": "August 24, 2004 (First official competitive game for Barcelona)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.105902300216258,
@@ -2443,7 +2445,7 @@
         "mean": 1.8459265788082444
       },
       "candidate": "Crust, Mantle, Outer Core, Inner Core.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.776274187024683,
@@ -2583,7 +2585,7 @@
         "mean": 0.9819995481717432
       },
       "candidate": "Wake Forest is located in Wake County, which is part of the Piedmont Triad region, in the state of North Carolina.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.855070895049721,
@@ -2831,7 +2833,7 @@
         "mean": 1.4114298072550815
       },
       "candidate": "The first political society under British rule in India was the Bombay Association, established in 1825.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.242256221361458,
@@ -2857,7 +2859,7 @@
         "mean": 1.4110346226466561
       },
       "candidate": "The last time anyone was on the moon was in 1972.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 11.668674104847014,
@@ -2997,7 +2999,7 @@
         "mean": 1.8144475729405514
       },
       "candidate": "Iodine is found in the periodic table in Group 17, with atomic number 53.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.30734441196546,
@@ -3745,7 +3747,7 @@
         "mean": 1.2102363075770182
       },
       "candidate": "The most common form of megalithic architecture in Europe is the dolmen.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.727249467279762,
@@ -3969,7 +3971,7 @@
         "mean": 1.4914301585101797
       },
       "candidate": "Lilo & Stitch Season 1, Episode 1.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.058618179988116,
@@ -4499,7 +4501,7 @@
         "mean": 1.3185654497446764
       },
       "candidate": "The 2018 Oscar nominations were announced on January 23, 2018.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.351579137146473,
@@ -4527,7 +4529,7 @@
         "mean": 1.9272464035167032
       },
       "candidate": "The Flash Season 4 has already been released on October 9, 2017.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.088767343666404,
@@ -4835,7 +4837,7 @@
         "mean": 1.3014612107821577
       },
       "candidate": "Gina Tognoni is 49 years old.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.106399019248784,
@@ -5003,7 +5005,7 @@
         "mean": 1.9081762497747237
       },
       "candidate": "The Chaplet of Divine Mercy can be prayed at any time of the day, but it is particularly recommended at 3 o'clock in the afternoon, and it is traditionally prayed before receiving the Eucharist, during the Stations of the Cross, and at the end of Mass.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.379550476092845,
@@ -5451,7 +5453,7 @@
         "mean": 1.7867549033575187
       },
       "candidate": "The Indian Myna bird is native to India, but it has been introduced to many other countries due to human activities.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.72312181070447,
@@ -5619,7 +5621,7 @@
         "mean": 1.52293391960286
       },
       "candidate": "\"Percy Jackson & the Olympians\" was filmed in Vancouver, British Columbia, Canada, and Los Angeles, California.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.991436318028718,
@@ -6035,7 +6037,7 @@
         "mean": 1.8484091491723122
       },
       "candidate": "Richie Allen hit the first home run in the Houston Astrodome.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.532985150814056,
@@ -6119,7 +6121,7 @@
         "mean": 1.4247571826126928
       },
       "candidate": "Victor Williams plays Carrie's boss on King of Queens.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.05934480484575,
@@ -6147,7 +6149,7 @@
         "mean": 1.794816078775149
       },
       "candidate": "The minimum wage in France per hour is €10.15.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.69771554786712,
@@ -6735,7 +6737,7 @@
         "mean": 1.6689249940167208
       },
       "candidate": "Patti LuPone sang \"I Dreamed a Dream\" in Les Misérables.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.553921456448734,
@@ -6791,7 +6793,7 @@
         "mean": 1.7807841857022375
       },
       "candidate": "The real name of Saudi Arabia before 1932 was the Kingdom of Hejaz and Nejd.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.442857053596526,
@@ -6875,7 +6877,7 @@
         "mean": 1.617360003627298
       },
       "candidate": "The Consumer Product Safety Commission (CPSC) banned the sale of residential paint containing more than 0.06% lead in 1978 in the United States. However, lead was phased out of paint production in the 1950s, so it effectively stopped being used in paint around that time.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.462637330871075,
@@ -6931,7 +6933,7 @@
         "mean": 1.1326266931755082
       },
       "candidate": "MSC Cruises stands for Mediterranean Shipping Company Cruises.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.222885249182582,
@@ -7295,7 +7297,7 @@
         "mean": 1.3119988121065227
       },
       "candidate": "Strother Martin plays the walking boss in Cool Hand Luke.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.98336505331099,
@@ -7351,7 +7353,7 @@
         "mean": 1.7706426842137946
       },
       "candidate": "The player with the most votes for the All-Star game is the one who has the highest number of votes in the analyzed data.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.924666619859636,
@@ -7575,7 +7577,7 @@
         "mean": 0.8982153171832644
       },
       "candidate": "The Stratosphere Tower in Las Vegas is approximately 1,149 feet (350 meters) tall.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.91755802091211,
@@ -8023,7 +8025,7 @@
         "mean": 1.5831136835980029
       },
       "candidate": "The number of seasons of \"Prison Break\" available on Netflix can vary depending on the region. It originally had five seasons.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.972863586153835,
@@ -8051,7 +8053,7 @@
         "mean": 1.8652269047749328
       },
       "candidate": "The term \"pop music\" comes from the United States in the 1950s, as a shortened form of \"popular music,\" referring to music that was widely liked and enjoyed by people, especially young people, and was a departure from traditional genres like jazz and classical music.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.3914964501746,
@@ -8163,7 +8165,7 @@
         "mean": 1.4312818453877414
       },
       "candidate": "Various artists (from the \"Schoolhouse Rock!\" soundtrack) sang \"One Bad Apple.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.443879880011082,
@@ -8807,7 +8809,7 @@
         "mean": 1.6494466946880506
       },
       "candidate": "Anakin Skywalker, Obi-Wan Kenobi, Padmé Amidala, Count Dooku, Jango Fett, Yoda, Mace Windu, Palpatine, Jedi Knights, clone troopers, and bounty hunters.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.542507458943874,
@@ -8835,7 +8837,7 @@
         "mean": 1.2532504390073398
       },
       "candidate": "John Steinbeck wrote \"Of Mice and Men\" in 1936.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.974901305045933,
@@ -8891,7 +8893,7 @@
         "mean": 1.4629965258728985
       },
       "candidate": "As of now, the One Piece series consists of 98 volumes (tankōbon) in Japan, and 89 volumes in the U.S. (trade paperbacks). The series is still ongoing, so the number may increase in the future.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.95039559295401,
@@ -9059,7 +9061,7 @@
         "mean": 2.041726239038424
       },
       "candidate": "Fingerprinting was first used by the police in 1892.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.09621682530269,
@@ -9283,7 +9285,7 @@
         "mean": 1.2514995815226786
       },
       "candidate": "Luke Combs won the Entertainer of the Year award at the Country Music Awards.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.84997724601999,
@@ -9869,7 +9871,7 @@
         "mean": 1.1691302437925677
       },
       "candidate": "An elevated heart rate of 131 bpm may indicate stress or physical activity, but if it occurs without these factors, it could be a sign of an underlying health condition and should be evaluated by a healthcare professional.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.795717439148575,
@@ -9981,7 +9983,7 @@
         "mean": 1.9220064411858324
       },
       "candidate": "The Democratic Republic of Congo trades with China, India, South Africa, Belgium, the United Arab Emirates, Switzerland, and Japan.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.178349440917373,
@@ -10455,7 +10457,7 @@
         "mean": 1.3236363371916084
       },
       "candidate": "The Dodgers have won the World Series 7 times.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 8.863684913143516,
@@ -10651,7 +10653,7 @@
         "mean": 1.346352160435538
       },
       "candidate": "Pentatonix sings the Christmas song \"Mary Did You Know.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.5285097588785,
@@ -10679,7 +10681,7 @@
         "mean": 1.0577636748767143
       },
       "candidate": "Dromedary or Arabian camel",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.409480849746615,
@@ -10901,7 +10903,7 @@
         "mean": 1.1858658269187778
       },
       "candidate": "The Citrus Bowl is held in Orlando, Florida, this year.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 13.891174878925085,
@@ -11461,7 +11463,7 @@
         "mean": 1.3752865780732784
       },
       "candidate": "The sign is warning about a potential hazard or special condition ahead, and the speed limit for that section of road is 35 mph.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.316828980110586,
@@ -12239,7 +12241,7 @@
         "mean": 1.7049605397386256
       },
       "candidate": "331 players in the Pro Football Hall of Fame.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 10.621345844119787,
@@ -12575,7 +12577,7 @@
         "mean": 1.396164497371717
       },
       "candidate": "Florida and Chicago in the 1920s.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 13.858130014967173,
@@ -12769,7 +12771,7 @@
         "mean": 2.085215899741552
       },
       "candidate": "The SAT became out of 1600 in the year 2015.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.28404843294993,
@@ -12991,7 +12993,7 @@
         "mean": 1.6316240585528627
       },
       "candidate": "The primary legislation for data protection in the UK is the Data Protection Act 2018 (DPA), which incorporates the rules of the General Data Protection Regulation (GDPR). The Information Commissioner's Office (ICO) is the UK's independent regulator for data protection and privacy, enforcing the DPA 2018 and GDPR, and providing guidance to organizations on how to comply with these regulations.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.433900346048176,
@@ -13129,7 +13131,7 @@
         "mean": 1.4868914154165704
       },
       "candidate": "The basic steps of rational decision making are:\n1. Define Goals\n2. Gather Information\n3. Evaluate Options",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.491690901573747,
@@ -13575,7 +13577,7 @@
         "mean": 0.7367776664052075
       },
       "candidate": "Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, and Connecticut are the states in the Northeast region.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 10.892986449878663,
@@ -13743,7 +13745,7 @@
         "mean": 1.4673961326875358
       },
       "candidate": "Mobile numbers in the UK start with either '07' or '08'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.9453956768848,
@@ -14215,7 +14217,7 @@
         "mean": 1.3627647356261787
       },
       "candidate": "The Teenage Mutant Ninja Turtles first appeared in comic books in 1984, the animated TV series debuted in 1987, and the first TMNT movie was released in 1990.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.383439732715487,
@@ -14605,7 +14607,7 @@
         "mean": 1.192246639460733
       },
       "candidate": "Kacey Musgraves sings \"Every Light in the House is On.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.11676661670208,
@@ -14661,7 +14663,7 @@
         "mean": 1.7850866723518213
       },
       "candidate": "The Isle of Wight became an island around 7000 BCE.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.422407677397132,
@@ -15081,7 +15083,7 @@
         "mean": 1.4838069073238003
       },
       "candidate": "Don Henley sings \"Love Will Keep Us Alive\" by The Eagles.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.74501643003896,
@@ -15277,7 +15279,7 @@
         "mean": 1.5749036917316779
       },
       "candidate": "The dog's name in \"The Wizard of Oz\" is not explicitly stated, but it is known as Dorothy's pet Toto.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.10935883456841,
@@ -15665,7 +15667,7 @@
         "mean": 1.800055268859443
       },
       "candidate": "World War II started on September 1, 1939, and ended on September 2, 1945.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.685980605892837,
@@ -15721,7 +15723,7 @@
         "mean": 1.8031589195352649
       },
       "candidate": "Diet pills",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.626090836245567,
@@ -15749,7 +15751,7 @@
         "mean": 1.691924257448189
       },
       "candidate": "The bands in Pitch Perfect 3 are the Barden Bellas and Evermoist, with guest appearances by Ruby Rose Turner, DJ Khaled, and Snoop Dogg.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.83008626336232,
@@ -15973,7 +15975,7 @@
         "mean": 1.4741703216765814
       },
       "candidate": "The first season of Slasher was filmed in Port Hope, Ontario, Canada.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.76782283000648,
@@ -16057,7 +16059,7 @@
         "mean": 1.8182435234151317
       },
       "candidate": "Morse code was used by the Allied forces, including the United States, United Kingdom, and Canada, during World War II.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.662746774032712,
@@ -16393,7 +16395,7 @@
         "mean": 1.1418709644920033
       },
       "candidate": "Henry David Thoreau advocated the idea of returning to nature.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.150408257730305,
@@ -16925,7 +16927,7 @@
         "mean": 1.7509747504085251
       },
       "candidate": "Studia Liberalia (Latin for a liberal arts education)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.936344566754997,
@@ -17259,7 +17261,7 @@
         "mean": 1.1632049029416305
       },
       "candidate": "The list of Chief Ministers of Tamil Nadu mentioned on Wikipedia includes (but is not limited to):\n- C. Rajagopalachari (1952–1954)\n- K. Kamaraj (1954–1963)\n- M. Bhaktavatsalam (1963–1967)\n- M. Karunanidhi (1969–1976, 1989–1991, 2006–2011)\n- M.G. Ramachandran (1977–1987)\n- J. Jayalalithaa (1991–1996, 2001–2006, 2011–2016)\n- O. Panneerselvam (2016)\n- Edappadi K. Palaniswami (2016–present)",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.815615219064057,
@@ -18573,7 +18575,7 @@
         "mean": 0.9584764656289816
       },
       "candidate": "Leslie Bricusse and Anthony Newley",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.716536005027592,
@@ -18713,7 +18715,7 @@
         "mean": 1.8022391622415928
       },
       "candidate": "KFC in South Africa sources its chicken primarily from local suppliers such as Tiger Brands.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.94802739005536,
@@ -18741,7 +18743,7 @@
         "mean": 2.0016223691233748
       },
       "candidate": "Jack the Ripper is a character in \"Gotham by Gaslight\".",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.16025062184781,
@@ -18853,7 +18855,7 @@
         "mean": 1.2346078992438005
       },
       "candidate": "The player with the most consecutive games with 20 or more points in NBA history.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.962155913934112,
@@ -18965,7 +18967,7 @@
         "mean": 0.949724064569467
       },
       "candidate": "Brant Daugherty plays Wes Reynolds in \"Pretty Little Liars.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.33784533990547,
@@ -19635,7 +19637,7 @@
         "mean": 1.3818283618022391
       },
       "candidate": "[The year will be provided after researching the pageant results.]",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.561468101106584,
@@ -19915,7 +19917,7 @@
         "mean": 1.8626486715485573
       },
       "candidate": "Approximately 3.3 million people (1% of the U.S. population) control around 39% of the country's total wealth.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.726426030043513,
@@ -19971,7 +19973,7 @@
         "mean": 1.3342269431972114
       },
       "candidate": "Zippo brand lighter fluid.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.440321223810315,
@@ -20277,7 +20279,7 @@
         "mean": 1.3016281982079014
       },
       "candidate": "Merle Haggard sings \"Whiskey Ain't Workin' Anymore.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 10.552147218957543,
@@ -20305,7 +20307,7 @@
         "mean": 2.0621769161499124
       },
       "candidate": "Madoka becomes a magical girl in Episode 3 of Puella Magi Madoka Magica.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.205895100254565,
@@ -21057,7 +21059,7 @@
         "mean": 1.8314260357320962
       },
       "candidate": "73 languages",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.121527617797256,
@@ -21449,7 +21451,7 @@
         "mean": 1.8210089921543997
       },
       "candidate": "Reba McEntire recorded \"Back to God\" in 1993.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.328156847972423,
@@ -21505,7 +21507,7 @@
         "mean": 1.8738910247310372
       },
       "candidate": "The Cash Cab guy reads the questions from a teleprompter mounted in the cab, and speaks them aloud using a microphone.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.296141830738634,
@@ -21923,7 +21925,7 @@
         "mean": 2.1021439791413994
       },
       "candidate": "The elves go on the boat named \"The Galadriel\" and travel to the Undying Lands.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.10979052213952,
@@ -21979,7 +21981,7 @@
         "mean": 1.6403635803995613
       },
       "candidate": "John Coffey (also known as Toot-Toot) is the character from \"The Green Mile.\"",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.8467732463032,
@@ -22147,7 +22149,7 @@
         "mean": 1.241450498370501
       },
       "candidate": "Paul Stanley sings \"I Wanna Rock 'n' Roll All Night.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.280619568191469,
@@ -22231,7 +22233,7 @@
         "mean": 1.670552830458351
       },
       "candidate": "The Electronic Funds Transfer Act was signed into law on October 28, 1978.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.714716965798289,
@@ -22651,7 +22653,7 @@
         "mean": 1.2054136574678964
       },
       "candidate": "The song \"All Night Long\" by Lionel Richie was released in 1983, and the album it is most commonly associated with, \"Can't Slow Down,\" was released on November 8, 1983.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.84861594904214,
@@ -22735,7 +22737,7 @@
         "mean": 1.6823795036814644
       },
       "candidate": "The United Kingdom uses a common law system, which is based on court decisions and statutory law. It also incorporates some EU law, but this is changing due to Brexit.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.769872230943292,
@@ -22791,7 +22793,7 @@
         "mean": 1.828414725624401
       },
       "candidate": "The length of time a Prime Minister stays in office in Canada can vary, but they typically serve for 4 or 5 years.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.18770936690271,
@@ -22847,7 +22849,7 @@
         "mean": 1.4853626180630908
       },
       "candidate": "The Curious Case of Benjamin Button won three awards: Best Achievement in Visual Effects, Best Performance by an Actor in a Supporting Role, and Best Achievement in Makeup.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.098138131201267,
@@ -22875,7 +22877,7 @@
         "mean": 1.2097167752873703
       },
       "candidate": "[insert the date here] (This answer will be updated as soon as the release date is confirmed.)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.269882387947291,
@@ -22931,7 +22933,7 @@
         "mean": 1.8124474407462152
       },
       "candidate": "The most active star-forming regions in the Milky Way today are found in the spiral arms, particularly the Perseus Arm and the Scutum-Centaurus Arm. These regions are rich in molecular clouds and are currently experiencing high rates of star formation.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.324991279281676,
@@ -22959,7 +22961,7 @@
         "mean": 1.3214922421842072
       },
       "candidate": "Scott Benjamin plays Gabba, Rosanna Pansino plays Foofa, Christian Jacobs plays Muno, Dante Basco plays Brobee, and Eryk Casemiro plays Toodee.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.163873764686286,
@@ -23155,7 +23157,7 @@
         "mean": 1.2872076057468216
       },
       "candidate": "The most important new religious figure of the New Kingdom of Ancient Egypt was Akhenaten.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.618100228719413,
@@ -23183,7 +23185,7 @@
         "mean": 2.006101525515327
       },
       "candidate": "Season 4, episode 17 of \"The Flash\" likely aired between March and April 2018.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.15197526058182,
@@ -23239,7 +23241,7 @@
         "mean": 1.1855898704241428
       },
       "candidate": "A system of fortifications along France's border could refer to structures like the Maginot Line or the Atlantic Wall, which were built for defense purposes.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.336009429767728,
@@ -23323,7 +23325,7 @@
         "mean": 1.5559335372842735
       },
       "candidate": "The largest amount of federal tax revenue comes from individual income taxes.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.484066799283028,
@@ -23573,7 +23575,7 @@
         "mean": 0.8890868740005008
       },
       "candidate": "Carey Mulligan, Matthias Schoenaerts, Michael Sheen, and Julianne Moore.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.52634010463953,
@@ -23657,7 +23659,7 @@
         "mean": 1.4051774744092624
       },
       "candidate": "Money as a medium of exchange is a widely accepted, durable, divisible, and portable item used to buy goods and services from other people or businesses.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.201934929937124,
@@ -23769,7 +23771,7 @@
         "mean": 1.2658922678438536
       },
       "candidate": "Theodore Roosevelt was the president when the majority of the Panama Canal was built. William Howard Taft was the president when the final link was completed.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.051309471949935,
@@ -23825,7 +23827,7 @@
         "mean": 2.172824991699869
       },
       "candidate": "Liam and Annie get together in the last episode of Season 3, \"Those Lazy-Hazy-Crazy Days of Summer.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.47627400793135,
@@ -24021,7 +24023,7 @@
         "mean": 1.4136955430442768
       },
       "candidate": "The best good that can be used in place of another good is the substitute good that performs the same function as effectively and efficiently as the original good, considering factors like cost, availability, and performance.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.411755634006113,
@@ -24049,7 +24051,7 @@
         "mean": 1.4725088904316843
       },
       "candidate": "Daya Jethalal Gada is the real name of the character Dayaben in Taarak Mehta Ka Ooltah Chashmah.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.641180673148483,
@@ -24301,7 +24303,7 @@
         "mean": 1.4657665235448472
       },
       "candidate": "The cleavage of the peptide bond by chymotrypsin occurs on the carboxyl side of large, non-polar amino acids such as phenylalanine, tryptophan, tyrosine, and leucine.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.19304361194372,
@@ -24357,7 +24359,7 @@
         "mean": 1.051727432400248
       },
       "candidate": "Krypton",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.428998864721507,
@@ -24607,7 +24609,7 @@
         "mean": 1.5837099697102697
       },
       "candidate": "The Soviet Union started on December 30, 1922, and ended on December 26, 1991.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 12.103544207289815,
@@ -24775,7 +24777,7 @@
         "mean": 1.7812764720946186
       },
       "candidate": "Fungi are not part of a traditional food web but are essential components of the decomposer community in an ecosystem.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.077715549152344,
@@ -25083,7 +25085,7 @@
         "mean": 0.690817412238998
       },
       "candidate": "March 30, 1909.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.607948155142367,
@@ -25699,7 +25701,7 @@
         "mean": 1.9944467840124152
       },
       "candidate": "William Strauss and Neil Howe coined the term \"baby boomer\".",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.138540800195187,
@@ -25895,7 +25897,7 @@
         "mean": 1.8071543532315675
       },
       "candidate": "The members of the Legislative Assembly (MLAs) of a state vote to elect a member of the Rajya Sabha.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.802238119300455,
@@ -26007,7 +26009,7 @@
         "mean": 1.5318151425269628
       },
       "candidate": "Moss hangs from the trees in the bayou.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.890805199742317,
@@ -26287,7 +26289,7 @@
         "mean": 1.6070591189238161
       },
       "candidate": "No character in the movie \"Days of Thunder\" sings \"Gimme Some Lovin'.\" The song is by The Spencer Davis Group.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.590111353900284,
@@ -26593,7 +26595,7 @@
         "mean": 1.4742243505030928
       },
       "candidate": "The resting stage of the cell cycle is G1 phase.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.497114065103233,
@@ -26705,7 +26707,7 @@
         "mean": 1.3072838555982045
       },
       "candidate": "The \"Red Badge of Courage\" takes place during the Battle of Chancellorsville, which occurred in Virginia, United States.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.379727774299681,
@@ -26761,7 +26763,7 @@
         "mean": 0.867163603555208
       },
       "candidate": "The next two Winter Olympics will be held in Beijing, China in 2022 and Milan-Cortina d'Ampezzo, Italy in 2026.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.240661303978413,
@@ -26985,7 +26987,7 @@
         "mean": 1.7884200122347504
       },
       "candidate": "In \"It's a Wonderful Life\", Young George Bailey is portrayed by actor James Stewart.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.49258678779006,
@@ -27067,7 +27069,7 @@
         "mean": 1.2011207040570298
       },
       "candidate": "Marvin Gaye wrote \"It's Gonna Take a Lot of Love.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.04586962191388,
@@ -27235,7 +27237,7 @@
         "mean": 1.203789529075451
       },
       "candidate": "Hamilcar Barca was the leader of Carthage in the First Punic War.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.335479261819273,
@@ -27319,7 +27321,7 @@
         "mean": 1.5357785612111539
       },
       "candidate": "[The premiere date of Season 8 of Hawaii Five-0, once found, will be presented here.]",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.028698321897537,
@@ -27347,7 +27349,7 @@
         "mean": 1.4123305542676394
       },
       "candidate": "The part of the brain responsible for complex thinking is the prefrontal cortex, with the anterior cingulate cortex (ACC) and the dorsolateral prefrontal cortex (DLPFC) playing significant roles.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.9939086381346,
@@ -27515,7 +27517,7 @@
         "mean": 1.5600033408253333
       },
       "candidate": "The United States does not use the Metric System. Instead, it uses the U.S. Customary System (Imperial System).",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.74675414385274,
@@ -27681,7 +27683,7 @@
         "mean": 1.3087471792025835
       },
       "candidate": "Iron ore in Australia primarily comes from the Pilbara region in Western Australia and the Iron Range in South Australia.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.41694667097181,
@@ -27737,7 +27739,7 @@
         "mean": 1.589786464754994
       },
       "candidate": "Jim proposes to Pam in Season 6, Episode 20.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.516574574634433,
@@ -27877,7 +27879,7 @@
         "mean": 1.2147927600135318
       },
       "candidate": "Ganglion cells",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.858398676849902,

@@ -16,13 +16,15 @@
     "heat_t": 0.3,
     "alpha": 0.5,
     "strict_entailment": true,
-    "seed": 42
+    "seed": 42,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": {
-    "max": 0.5775150979525703,
-    "mean": 0.6126730740904404
+    "max": 0.5799568046634188,
+    "mean": 0.5793137672903663
   },
-  "hallucination_rate": 0.876,
+  "hallucination_rate": 0.827,
   "n_valid": 1000,
   "details": [
     {
@@ -1706,7 +1708,7 @@
         "mean": 1.6976906619536034
       },
       "candidate": "We cannot determine the number of extra letters.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.03168723732233,
@@ -2082,7 +2084,7 @@
         "mean": 1.6039926205289856
       },
       "candidate": "The last vowel is 'a'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.67842495488003,
@@ -2604,7 +2606,7 @@
         "mean": 1.154823178179495
       },
       "candidate": "The last consonant in Antwerp is 'r'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.517087704036385,
@@ -3662,7 +3664,7 @@
         "mean": 1.569274250007361
       },
       "candidate": "The time difference is +1 hour between the winter time zone where Erik Hert was born (CET) and Coordinated Universal Time ( UTC).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.971604579128325,
@@ -3850,7 +3852,7 @@
         "mean": 1.594042142972017
       },
       "candidate": "Cannot be determined due to missing information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.137014572042972,
@@ -5204,7 +5206,7 @@
         "mean": 1.3714174578157519
       },
       "candidate": "Cannot be determined without the name of the director and their spouse.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.033982413820922,
@@ -5618,7 +5620,7 @@
         "mean": 1.8570515342155438
       },
       "candidate": "The letter \"s\" does NOT appear in the name of a university attended by the author of Elizabeth & After.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.899596631992608,
@@ -6356,7 +6358,7 @@
         "mean": 1.68334143714252
       },
       "candidate": "Step 1: Identify the sitcom and its end year.\nThe sitcom \"Dog With a Blog\" starring Genevieve Hannelius ended in 2015.\n\nStep 2: Find palindrome numbers close to 2015 and within the range of possible years.\nPalindrome numbers are those that read the same forwards and backwards. The closest palindrome numbers to 2014 and 2016 are 12021 (closest to 2016) and 20020 (closest to 1995, but still closer to 2017 than 2014). However, 2015 is already a three-digit number, so we don't need to find a palindrome for it.\n\nStep 3: Compare the absolute differences between the palindrome numbers and the end year of the sitcom.\nThe absolute difference between 12022 (the nearest palindrome to 2012) and 2015 (the end year of the sitCom) is 8133. The absolute difference between 20021 (the nearest palindromic number to 2018) and 2025 (the nearest palindomized year to 2019) is 1334.\n\nStep 4: Determine the palindrome number with the smallest absolute difference.\nThe smallest absolute difference is 8132 (between 12023 and 2013). However, since we are looking for a palindrome number, the closest palindrome to the end year of the show is 12121.\n\nStep 5: Final answer.\nThe closest palindrome number (within the range of possible years) to the year the sitcom ended is 12112. However, this is not a palindrome, but the closest palindrome (12121) has an absolute difference of 8133, which is larger than the closest palindrome for the year 2015 itself (0). So, the closest palindromic year to the end year of \"Dog With a blog\" is the year itself, 2013.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 24.240889200940728,
@@ -6624,7 +6626,7 @@
         "mean": 1.396551003027267
       },
       "candidate": "The first letter of the first names of the father of the film composer Durval Discos in lowecase is 'd'.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.257524746004492,
@@ -6972,7 +6974,7 @@
         "mean": 1.3877704618854814
       },
       "candidate": "There is a 1-hour difference between the winter time zone where Șтеfan I Nenițescue's father was born (EET) and UTC.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.36291720625013,
@@ -7348,7 +7350,7 @@
         "mean": 1.7892418010794908
       },
       "candidate": "We cannot determine the number of additional letters in the last name of Rick Noroton compared to the last name Albert Simms's Father-in-law.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 22.59465459594503,
@@ -9064,7 +9066,7 @@
         "mean": 1.3862756486339718
       },
       "candidate": "We cannot determine the number of additional letters in the last name of K. Malone compared to the first name (if known) of VYacheslaw Yaroslavitch's maternal grandfather due to lack of information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.205127683002502,
@@ -9628,7 +9630,7 @@
         "mean": 1.8500001204870575
       },
       "candidate": "We cannot determine the total number without specific information about the last names.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 22.38801623787731,
@@ -10352,7 +10354,7 @@
         "mean": 1.957746987713491
       },
       "candidate": "The number of vowels in the name of the CFL sponsoring company cannot be determined without knowing the name of the company.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 22.499255335424095,
@@ -10822,7 +10824,7 @@
         "mean": 1.8959636408446099
       },
       "candidate": "We cannot determine the number ofconsonants in the firstname of the father of thedirector of the film \"Snake In TheEagle’s Shadow.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.659054170828313,
@@ -10982,7 +10984,7 @@
         "mean": 0.9332762721535833
       },
       "candidate": "The first letter of the name (Trinity College, Dublin) of the university attended by Elizabeth Bowen is 'T'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 9.079543182160705,
@@ -11772,7 +11774,7 @@
         "mean": 1.6675986035823729
       },
       "candidate": "We cannot determine the number of times the letter \"r\" appears in the place where theauthor of Hannibal andScipio was educated.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.158520417287946,
@@ -11866,7 +11868,7 @@
         "mean": 1.303725198164714
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.055200370028615,
@@ -12054,7 +12056,7 @@
         "mean": 1.8361806554293207
       },
       "candidate": "There is no single word in either university name that is longer in length than the other.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.369413136970252,
@@ -12712,7 +12714,7 @@
         "mean": 1.2785671712397102
       },
       "candidate": "The binary code of the first letters of the last name of Aubrey Posen (Anna Camp's character in Pitch Perfect) is 1110, 1010,1111, 010, 001, 110.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.346006507985294,
@@ -13088,7 +13090,7 @@
         "mean": 1.4483745284287195
       },
       "candidate": "Step 1: Identify the given name. The given name is Eochaid Mac Fiachenai. Here, Eochaid is the first name and Mac Fiachnai is the last name.\n\nStep 2: Determine the length of each name. The length of the first name Eochaid is 6 letters, and the length of the last name Mac Fiachnai (excluding the \"i\" at the end, which is a possessive suffix) is 9 letters.\n\nStep 3: Calculate the combined length. To find the combined length, add the length of the first name to the length of the lastname. So, 6 (length of first name) + 9 (length of last name) = 15 letters.\n\nStep4: Consider the possessive suffix \"i\". Since the last name ends with a possessive suffix \"i\", it should be included in the total length. So, add 1 for the suffix.\n\nStep 5: Final answer. The combined length of the first and last name of Eohaid Mac Fiachna's paternal grandfathers is 16 letters (15 + 1).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.86648685997352,
@@ -13652,7 +13654,7 @@
         "mean": 1.7629943473721497
       },
       "candidate": "Step 1: Identify the name. The given name is \"Viacheslav I Of Kyiv.\" We are asked to find the reverse order of the maternal grandfather's name. Since the question does not provide the name, we will assume that the name is known as \"Olga.\"\n\nStep 2: Write down the name \"Olga.\" The name \"Olga\" consists of the letters: O, l, g, a.\n\nStep 3: Reverse the order of the letters. To reverse the order, we will write the letters in the opposite direction. So, the reversed order is: a, g, l, O.\n\nStep 4: Write the reversed letters in a name-like format. To make it look like a name, we will capitalize the first letter and lowercase the rest. So, the reversal of the name \"Olга\" (in Cyrillic) is: Aglo.\n\nStep 5: Final answer. The reverse order of the letters of Viacheslav's maternal grandfather's first name (assuming it is Olga) is Aglo.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.162770602852106,
@@ -14160,7 +14162,7 @@
         "mean": 1.6518126456239006
       },
       "candidate": "Without specific names, it is impossible to determine the difference in the count of vowels and Consonants.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.852727101184428,
@@ -18100,7 +18102,7 @@
         "mean": 1.9358239449759673
       },
       "candidate": "There are 6 letters between the first and last letter of the first name of Jessica Hausner's father.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.246894345618784,
@@ -18288,7 +18290,7 @@
         "mean": 1.7549762435023528
       },
       "candidate": "Step 1: Identify the known year. The year 2023 is known because we are comparing it with 2024.\n\nStep 2: Find the formation year of Angelspit. Angelspit was formed in 2003. This information can be found on their official website or various music history websites.\n\nStep 3: Calculate the difference between the known year and the formation year of Angelpsit. Subtract the formation year from the known year.\n\nStep 4: Perform the calculation. 2023 (known year) - 2003 (formation year) = 20 years.\n\nStep 5: State the final answer. The difference between the year when Angelspit was formed and the year (2024) is 20 years. So, Answer: 20 years.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.941968929953873,
@@ -19684,7 +19686,7 @@
         "mean": 1.812882437436815
       },
       "candidate": "11 unique letters",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.008829633705318,
@@ -20662,7 +20664,7 @@
         "mean": 1.731555693309619
       },
       "candidate": "[Year of Gustav Von Leonhand's Father's Death]",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.582709138747305,
@@ -21010,7 +21012,7 @@
         "mean": 1.5754743002299996
       },
       "candidate": "The longest word is \" University\".",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.027081687934697,
@@ -21090,7 +21092,7 @@
         "mean": 1.8758420534572864
       },
       "candidate": "We cannot determine the alphabetically ordered letters in Alfonso Jordan’s maternal grandmother's last name without knowing the exact letters in the last name.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.438989254646003,
@@ -22082,7 +22084,7 @@
         "mean": 1.5585550218009594
       },
       "candidate": "We cannot determine the number of times the letter \"f\" appears in the first name of Caroline LeRoy’s spouse’s child.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.260752603411674,
@@ -23940,7 +23942,7 @@
         "mean": 1.943295928683662
       },
       "candidate": "Step 1: Find the year the National Contest Journal (NCJ) was founded.\nThe NCJ was first published in 1941.\n\nStep 2: Determine the closest palindrome numbers to 1941 that are less than and equal to it.\nThe palindrome numbers less than or equal to 1940 are 1111, 1221, 12321, 1331, 1441, 1551, 1661, 1771, 1881, and 1991. Among these, the closest to 1942 (which is greater than 1941) is 1991, but since we are looking for a number less than or equal to the year of foundation, the closest palindrome is 1941 itself.\n\nStep 3: Determine the closestpalindrome numbers greater than 1950.\nThe palindromes greater than 1991 are 2002, 121212, 212121, 313131, 414141, 515151, 616161, 717171, 818181, 919191, 1001001, 111111, and so on. The closest palindrome greater than 1960 is 1961.\n\nStep4: Compare the distances between the found palindromes and the year of foundation.\nThe distance between 1941 and the year of foundation (1941) itself is 0. On the other hand, the distance between 1961 and the year of publication (1941), which is 1960-1941 = 25, is greater than 0.\n\nStep 5: Choose the closest palindrome.\nSince the distance between the year of foundation and the palindrome 1941 is 0, and the distance between the year and any other palindrome is greater than 0, the closest palindrometo the year the",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 25.232406912837178,
@@ -24194,7 +24196,7 @@
         "mean": 1.4863904194005653
       },
       "candidate": "The difference in the number of fewer letters is 0 (assuming Brenda Brave' mom's last name has 5 letters).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 21.859424946829677,
@@ -24382,7 +24384,7 @@
         "mean": 1.8686509275101577
       },
       "candidate": "There is no last letter in Dobrynya, Viacheslav I’s maternal grandfather's first name.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.06282908609137,
@@ -24664,7 +24666,7 @@
         "mean": 1.92931702606426
       },
       "candidate": "Step 1: Determine the year Eye To The Telescopes (Magazine) was first published.\nThe publisher of Eye To The telescope was founded in 1995.\n\nStep 2: Find the palindromic numbers within a reasonable range of the given year.\nPalindromic numbers are those that read the same forwards and backwards. The closest palindromic numbers to 1995 are 1111, 1221, 12321, 1331, 1441, 1551, 1661, 1771, 1881, 1991, 1981, 1871, 1761, 1651, 1541, 1431, 1321,  and 1211.\n\nStep 3: Compare the absolute differences between the palindromic number and the given year (1995).\nThe absolute differences are:\n- 1111: |1111 - 1995| = 8044\n- 1221: |1221 - 1985| = 763\n- 123221: |21231 - 1975| = 1376\n- 1331: |1331 - 1864| = 4675\n- 1441: |1441 - 1854| = 4113\n- 1551: |1551 - 1844| = 2993\n- 1661: |1661 - 1834| = 2713\n- .... (The rest of the differences are greater than the smallest found so far)\n\nStep 4: Find the smallest absolute difference between the palindromes and the given year.\nThe smallest absolute difference is found with 1221 and 1985, which is 763.\n\nStep 5: Determine the closest palindrome to the given year.\nSince the",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 25.870809412095696,
@@ -25040,7 +25042,7 @@
         "mean": 1.2708773756711234
       },
       "candidate": "We cannot determine the combined length of the actual father's first name, and last name of the director of film \"Little Joe\".",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.24621937610209,
@@ -25510,7 +25512,7 @@
         "mean": 1.5755882090219466
       },
       "candidate": "We cannot determine the length of the longest consecutive alphabetical substring in the spouse's surname because we don't have enough information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.488022992387414,
@@ -26168,7 +26170,7 @@
         "mean": 1.721105623786783
       },
       "candidate": "We cannot determine the number of times the letter \"s\" occurs in the mother's actual last name without more information.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.64855145709589,
@@ -26328,7 +26330,7 @@
         "mean": 1.6501550730362908
       },
       "candidate": "We cannot determine the number of occurrences of the letter \"n\" in the first name of Jackie Chan's father.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 12.370202447287738,
@@ -26422,7 +26424,7 @@
         "mean": 1.8481433954421154
       },
       "candidate": "Step 1: Identify the name of the spouse of Fire-Eater's director. The name is not provided, so we cannot directly reverse the letters of a name without knowing it.\n\nStep 2: Find out the name of the director of Fire-Eater. The director of Fire-Eaters is John Waters.\n\nStep 3: Find the name of his spouse. John Waters was married to Edie Sedgwick, but they were not legally married, so she is not his wife in the traditional sense. However, for the sake of this question, let's assume we are looking for the name of his partner or significant other. John Waters' long-term partner is Domino Harrington.\n\nStep 4: Reverse the letters in Domino Harrington's first name. The reverse of \"Domino\" is \"onimod\".\n\nStep 5: Write the final answer. Answer: The reverse order of the letters of Domino (the long-term partner of John Waters, the director of Fire-eater) is \"onimod.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.858414586167783,
@@ -26502,7 +26504,7 @@
         "mean": 1.0896949940436043
       },
       "candidate": "The concatenation of the seconds and third digits of Paul Reubens' year of birth is 25 (when written as two digits). However, since we are looking for the concatenation of just the second and third digitals, the final answer is 52.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.3870456693694,
@@ -26596,7 +26598,7 @@
         "mean": 1.313501169298362
       },
       "candidate": "The month (in number) could not be determined without specific research into the plaintiff'sbirthdate from the 1884 Barbed Wire Patent trial.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.414522250182927,
@@ -26822,7 +26824,7 @@
         "mean": 1.635396446267957
       },
       "candidate": "It is not possible to add 6 to the reverse and get a valid year for when the publisher of Africa renewal was founded.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.980484166182578,
@@ -27372,7 +27374,7 @@
         "mean": 1.4797694875609448
       },
       "candidate": "There are 9 letters (u, n, i, v, e, r, s, i, t, y) in the longest word of Newnham College, University Of Cambridge.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.400360336061567,
@@ -28228,7 +28230,7 @@
         "mean": 1.516922096486966
       },
       "candidate": "2-3 additional letter(s)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.42261848365888,
@@ -28496,7 +28498,7 @@
         "mean": 1.4744189221402637
       },
       "candidate": "The concatenation of the seconds and third digits of 1988 is 8.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.863919010851532,
@@ -29126,7 +29128,7 @@
         "mean": 1.7310160296180779
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.4554090378806,
@@ -29874,7 +29876,7 @@
         "mean": 1.3056380762150535
       },
       "candidate": "The difference between the year the publisher of \"The Rip Off Review Of western Culture\" was founded and 2024 cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.052994830999523,
@@ -30424,7 +30426,7 @@
         "mean": 1.5383554018753398
       },
       "candidate": "We cannot determine the combined length because Harry Morgan did not play Kentucky Jones.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.466044766828418,
@@ -31764,7 +31766,7 @@
         "mean": 1.6751742161464385
       },
       "candidate": "[The verified and valid date]",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.170473120175302,
@@ -31802,7 +31804,7 @@
         "mean": 2.132823524907993
       },
       "candidate": "The closest palindромic number to the year 1934, the year of Princess Bèatrice's father' death, is 1939 (reads the same when reversed). However, since we are seeking a palindrome that differs from the target year, the nearest palindrome is 3919, which is not a valid year. Therefore, the closest valid palindromic number is 1931 (reads the same reversed).",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.485809530131519,
@@ -32982,7 +32984,7 @@
         "mean": 1.686298609008493
       },
       "candidate": "The date 2 weeks before the 3rd Baron's birthday is [the date 2 weeks before his birthday, after proper calculation and verification].",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.073879316914827,
@@ -34350,7 +34352,7 @@
         "mean": 1.903457486151955
       },
       "candidate": "July (07)",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.98796487506479,
@@ -34402,7 +34404,7 @@
         "mean": 0.9817867156346854
       },
       "candidate": "The ASCII code of 'z' is 97 (in decimal). However, since ASCII codes for lowercase letters are 32 units higher than their uppercase counterparts, we need to add 32 to the ASCII code we found. So, the final ASCII code for lowercase 'z' is 35 + 97 = 132.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 10.563165422994643,
@@ -35136,7 +35138,7 @@
         "mean": 1.6328565440509997
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.49370722891763,
@@ -36420,7 +36422,7 @@
         "mean": 1.461905737245846
       },
       "candidate": "The first name of Janice has 4 fewer letters.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.608401748817414,
@@ -36608,7 +36610,7 @@
         "mean": 1.4430954510403484
       },
       "candidate": "Step 1: Identify the name of the character Nim in Return toNim's Island. The character Nim is played by Bindi Irwin, but we are asked for the mother's name. So, the mother of Bindi Irwin is Terri Irwin.\n\nStep 2: Write out Terri Irwin's first name. The first letter is 'T' and the last letter is 'i'.\n\nStep 3: Count the number of letters between the first and last letter of Terri's first name. There are 4 letters between 'T' and 'i' (T-e-r-r).\n\nStep 4: Since there are 4 letters between the first and the last letter, there are no additional letters outside of these.\n\nStep 5: Answer: There are 4 letters in between the first and last letters of Terri's (the mother of Nim) first name.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.36402238626033,
@@ -36890,7 +36892,7 @@
         "mean": 1.5124403703222797
       },
       "candidate": "Step 1: Identify the known year. The King who made the 2025 Birthday Honors is not specified, but we know the honors were made in 1925.\n\nStep 2: Determine the number of years to subtract. We are asked to find the year 3 years prior to the King's birth year.\n\nStep 3: Calculate the year. Subtract 3 from 1925 to get the year of the King's birth. So, 1925 - 3 = 1922.\n\nStep 4: Find the year 3 years earlier than the King's birthyear. Since we are looking for the year before the King's birth, we subtract 1 from 1922 to get 1921.\n\nStep 5: Provide the final answer. The year 3 years before King's birth year (who made the 1953 Birthday Honors) is 1921 (Answer: 1921).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.405028427019715,
@@ -37812,7 +37814,7 @@
         "mean": 1.608788159556632
       },
       "candidate": "'ew'",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.515768804587424,
@@ -38362,7 +38364,7 @@
         "mean": 1.5183964622979673
       },
       "candidate": "Unable to determine the last letter of any name.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.645324660930783,
@@ -39636,7 +39638,7 @@
         "mean": 1.3138073410860271
       },
       "candidate": "There are 4 repeated letters in the first name of Taschereau.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.42738050594926,
@@ -41056,7 +41058,7 @@
         "mean": 1.782338108335366
       },
       "candidate": "We cannot determine the last name of Eva Chamberslain's materal grandmother with the provided information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.90365292597562,
@@ -41150,7 +41152,7 @@
         "mean": 1.8242915623697133
       },
       "candidate": "There are 5 vowels in the full name Ivan Raimi. However, since we are asked for the number of vowels in the screenwriter's first name, the answer is 0.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.147918872069567,
@@ -41780,7 +41782,7 @@
         "mean": 1.6714623548733072
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.798944828100502,
@@ -42208,7 +42210,7 @@
         "mean": 1.6068248794116382
       },
       "candidate": "August 14,1981.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.364063175860792,
@@ -47070,7 +47072,7 @@
         "mean": 1.9009400976684365
       },
       "candidate": "The number of letters between the given positions cannot be determined without knowing the first letter and the total number of letters in the maternal grandmother' last name.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.793228473048657,
@@ -49204,7 +49206,7 @@
         "mean": 1.6135177593440033
       },
       "candidate": "1961",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 20.639031257946044,
@@ -49552,7 +49554,7 @@
         "mean": 1.6778742261318942
       },
       "candidate": "Step 1: Identify the name. The paternal grandfather ofDiya Al-Dawlais not explicitly mentioned, but we can assume that the name is Diya's father's father. So, we need to find the alphabetical order in the name of Diya's paternal great-grandfather.\n\nStep 2: Break down the name. Diya Al-Dawa lends itself to three parts: Diya (personal name), Al- (a common Arabic prefix), and Dawla (surname or title). We are only concerned with the personal name, Diya, for this problem.\n\nStep 3: Arrange the letters. The letters in Diya are D, I, and Y. To arrange them alphabetically, we compare them in ascending order: D (3rd letter), I (9th letter), and Y (25th letter).\n\nStep 4: Combine the letters. Now that we have the letters in alphabetical order, we can rearrange them to form the name: I, D, Y.\n\nStep 5: Final answer. The alphabetical order of letters in the first name (personal name) of Diya Al- Dawla's paternal grandfather is I, D, Y (Idy, if we use standard English naming conventions).",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.610585837159306,
@@ -51630,7 +51632,7 @@
         "mean": 1.5727187862365337
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.727363973855972,
@@ -52810,7 +52812,7 @@
         "mean": 1.266691746814622
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.15244064386934,
@@ -53572,7 +53574,7 @@
         "mean": 1.0549103276092364
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.834646991919726,
@@ -54310,7 +54312,7 @@
         "mean": 1.8242302589230985
       },
       "candidate": "We cannot determine the number of unique letters in the spouse's last Name as the name of the director is not provided in the given question.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.503938952926546,
@@ -54404,7 +54406,7 @@
         "mean": 1.8014907683486172
       },
       "candidate": "Step 1: Identify the organization that published Big Picure (Magazine).\nThe organization that published Big Picture is The Atlantic.\n\nStep 2: Identify the founder of The Atlantic.\nThe Atlantic was founded by Moses Taylor.\n\nStep 3: Identify the first and last letters in Moses Taylor's first name.\nThe first letter is 'M' and the last letter is 'S'.\n\nStep 4: Count the number of letters between 'M' and 'S' in Moses Taylor's name.\nMoses Taylor has 5 letters between 'M' (the first letter) and 'S' (the last letter).\n\nStep 5: Determine the number of letters between the first and last letter of the founder's first name. (Answer)\nThere are 5 letters between the first and the last letters of the founder's (Moses Taylor's) first name.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.179437319282442,
@@ -54498,7 +54500,7 @@
         "mean": 1.883414590984104
       },
       "candidate": "There is no separate binary representation for lowercase anduppercase letters. The binary representation of the letter 'A' is 01010 in binary, but it is not the binary representation of the letter'a' in lowercase.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.635809262283146,
@@ -55142,7 +55144,7 @@
         "mean": 1.8869133560866516
       },
       "candidate": "If we assume the name is \"AlicE,\" then the reverse order is \"ecile.\" If we assume the name could be a variant like \"Elice,\" the reverse order would be 'ecilE.' However, without more specific information, it's hard to determine the exact reverse order of the name of the spouse of The Invisible Menace's director.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 22.14611026784405,
@@ -55424,7 +55426,7 @@
         "mean": 1.1890427284202236
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.519019425846636,
@@ -55664,7 +55666,7 @@
         "mean": 1.214822883434313
       },
       "candidate": "1 additional letter, 'c'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.30702641699463,
@@ -56064,7 +56066,7 @@
         "mean": 1.5156005184977346
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.747875711414963,
@@ -56534,7 +56536,7 @@
         "mean": 1.2991874134017727
       },
       "candidate": "The ASCII code of 'e' is 97 (in decimal). However, ASCII codes are usually represented in decimal, octal, or hexadecimal. Since the question asks for the ASCII code, the answer is 101 (in decimal).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.20457507809624,
@@ -58556,7 +58558,7 @@
         "mean": 1.3545774883885913
       },
       "candidate": "Step 1: Identify the actor from Terminator. The actor who played a significant role in the Terminator series is Arnold Schwarzenegger.\n\nStep 2: Find the spouse's name. Arnold SchwarzenegGER's spouse is Maria Shriver.\n\nStep 3: Identify the last letters of the spouse's first and last name. The last letter of Maria is 'A' and the last letter of Shriver is 'V'.\n\nStep 4: Concatenate the last letters. To concatenate means to join or combine. So, we join 'A' and 'V' together to get 'AV'.\n\nStep 5: Final answer. The concatenation of the spouse's last name initial and first name last letter is 'AV'.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.359692253172398,
@@ -59280,7 +59282,7 @@
         "mean": 1.329054537771045
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.09841651795432,
@@ -59562,7 +59564,7 @@
         "mean": 1.1517560109495861
       },
       "candidate": "There are fewer vowels than consoants in Don Hertsfeld's last name. However, the question contains an error as it asks for the number of more vowels than consonants, which is not possible in this case.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.451518612913787,
@@ -62120,7 +62122,7 @@
         "mean": 1.9943809839715696
       },
       "candidate": "Cannot be determined with the provided information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 4.898157588671893,
@@ -62186,7 +62188,7 @@
         "mean": 1.648690629831633
       },
       "candidate": "The concatenation of the seconds and third digits of the year The Miscellany News started publishing is '29'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.78064256021753,
@@ -63056,7 +63058,7 @@
         "mean": 0.9643502296060182
       },
       "candidate": "Shears",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 8.845416160300374,
@@ -64744,7 +64746,7 @@
         "mean": 1.4323889761644903
       },
       "candidate": "September 1,  (assuming the year) 1837 (known year of birth)",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.737424151971936,
@@ -65520,7 +65522,7 @@
         "mean": 1.5018961190332982
       },
       "candidate": "The number of syllables cannot be determined without a specific name.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.878993026912212,
@@ -66526,7 +66528,7 @@
         "mean": 1.449771502203034
       },
       "candidate": "Step 1: Identify the band members. The Irish girl band consists of Maxi, Dick, and Twink.\n\nStep 2: Find the daughter's name. To find the daughter's name, we need to look for a member who has a daughter. In this case, Twink (Christine Keeler) has a daughter named Tanya.\n\nStep 3: Get the first letters of the daughter's first and last names. The first letter of Tanya's first name is 'T' and the first letter of her last name is 'K'.\n\nStep 4: Concatenate the first letters. To concatenate means to join together. In this case, we join 'T' and 'K' together to get 'TK'.\n\nStep final: Answer: The concatenation of the initial letters of Tanya Keeler (Twink's daughter) is 'TK'.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.792936765123159,
@@ -66808,7 +66810,7 @@
         "mean": 1.1295173815746775
       },
       "candidate": "There are 2 repeated letters in the last name of 4Th Baron Aampthill's pateral grandfather.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.013588783796877,
@@ -66888,7 +66890,7 @@
         "mean": 1.6079296225960678
       },
       "candidate": "There are no repeated letters in Li, the last name of theFather of Empress Wang'husband.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.929829847067595,
@@ -67250,7 +67252,7 @@
         "mean": 1.3916879334978218
       },
       "candidate": "The first name of Sun Lvyu's paterinal grandfather has 1 syllable.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.311567150987685,
@@ -67626,7 +67628,7 @@
         "mean": 1.6711035185895757
       },
       "candidate": "The number of syllables cannot be definitively determined without knowing the actual last name of Director's spouse.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.22360474197194,
@@ -68576,7 +68578,7 @@
         "mean": 1.2415455818762142
       },
       "candidate": "The concatenation of the seconds and third digits of King George V's year of birth is 1865 -> 65.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.82644084841013,
@@ -72050,7 +72052,7 @@
         "mean": 1.6750312823575932
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.845933083910495,
@@ -72304,7 +72306,7 @@
         "mean": 1.031566755602006
       },
       "candidate": "Cannot be determined.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.174639821983874,
@@ -73348,7 +73350,7 @@
         "mean": 1.4108816671691704
       },
       "candidate": "The concatenation of thefirst and last digits ofthe form year of the Britishrock band which released the song\"Lost!\" is 62 (when read as a twodigit number). However, since the question asks for the concatenation, the correct answer is 26.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.342036757152528,
@@ -74100,7 +74102,7 @@
         "mean": 1.7972134613161377
       },
       "candidate": "The number of \"f\"'s cannot be determined without knowing the father's name first.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.985304148867726,
@@ -74246,7 +74248,7 @@
         "mean": 1.5329081652639993
       },
       "candidate": "The alphabetical order of Margaret Beaufort's first name is B, E,G, M, R,T, A.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 8.530056097079068,
@@ -74340,7 +74342,7 @@
         "mean": 1.777527797793437
       },
       "candidate": "If the spouse's lastname has 5 letters, there would be 1 fewer letters in the last name compared to Merle Beile's last name.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 21.77287091081962,
@@ -76606,7 +76608,7 @@
         "mean": 1.800432372467865
       },
       "candidate": "Cannot be determined due to missing information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.543410061858594,
@@ -77420,7 +77422,7 @@
         "mean": 1.6691721164619688
       },
       "candidate": "It is impossible to determine the last name of the Mother of the director BrendaBrave with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 8.692782004363835,
@@ -77500,7 +77502,7 @@
         "mean": 1.3863534993237283
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.92720146710053,
@@ -77688,7 +77690,7 @@
         "mean": 1.362519583139079
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.078933769837022,
@@ -77956,7 +77958,7 @@
         "mean": 1.6959444453014316
       },
       "candidate": "The closest palindrome number is 1822 or 1823 (read as 1823 from left to right and 1212 when read from right to left). Since 1823 was the year just after his actual birth year, the closest palindrome to the year of Richard Horbsby's birth is actually 1823 when read from left to right.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.747893725987524,
@@ -78586,7 +78588,7 @@
         "mean": 1.509316165978755
       },
       "candidate": "Cannot be determined without the last name of Alice Clere.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.59166482416913,
@@ -80288,7 +80290,7 @@
         "mean": 0.9668883628963231
       },
       "candidate": "The concatenation of thefirst and last digits of Olivia de Havillland's birth year is 16.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.869338504038751,
@@ -80382,7 +80384,7 @@
         "mean": 1.613935461627722
       },
       "candidate": "The ASCII code of 't' is 84 (decimal) or 0x54 (hexadecimal). However, since the question asks for the last letter of the paternal grandfathers' last name, it should be 't' and not its ASCII code. So, the ASCII representation of 't' is '0x74' (hexadecimal) or '116' (decimal).",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.586939714848995,
@@ -81012,7 +81014,7 @@
         "mean": 1.2389690685388406
       },
       "candidate": "There is 1 more vowel than consonants in the last name of Brenda Brave's mother.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.328057765960693,
@@ -81750,7 +81752,7 @@
         "mean": 1.5711330278542333
       },
       "candidate": "Cannot be determined without the last name of Viachslav I of Kiev's materal grandfather.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.974064362235367,
@@ -82794,7 +82796,7 @@
         "mean": 1.8040838711718927
       },
       "candidate": "The first letter of the lastname of Dui Finn' paternal grandfather cannot be definitively determined with the information provided in the show.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.7955281320028,
@@ -83448,7 +83450,7 @@
         "mean": 1.486521249170527
       },
       "candidate": "Step 1: First, we need to know the birthdate of the director of Les Tuche 2. Unfortunately, I don't have that information. Let's assume we know it's on January 1, 2000.\n\nStep 2: To find the date one year after their birthday, we add one year to the year component of the date. So, the year becomes 2001.\n\nStep 3: Since the month and day remain the same (January 1), we now have the date as January 1, 12001. However, this is not a valid date as the year should be four digits.\n\nStep 4: To correct this, we add the century. Since the original year was 2000, we add 20 to the year we calculated in step 2, which gives us 2021.\n\nStep5: So, the date one year after Les Tuche 2's director's birthday would be January 1,  2021, if their birthday was on January 1,2000.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.648319012019783,
@@ -84064,7 +84066,7 @@
         "mean": 1.5065482559731662
       },
       "candidate": "Cannot be determined without knowing the first name of James Tuchet's paternal grandma.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.51031630812213,
@@ -84732,7 +84734,7 @@
         "mean": 1.6081916179164288
       },
       "candidate": "There are 10 unique Letters in the name of the University attended by the author of \"Elizabeth and After.\"",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.40483941277489,
@@ -84798,7 +84800,7 @@
         "mean": 1.6020474637938553
       },
       "candidate": "We cannot determine the number of times the letter \"s\" appears in the first name of Capabilty Brown.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 11.890219756402075,
@@ -85146,7 +85148,7 @@
         "mean": 1.7939672489847716
       },
       "candidate": "We cannot determine the number of letters between first and last letters without knowing the director's first names.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.774391444399953,
@@ -85696,7 +85698,7 @@
         "mean": 1.7625629310877478
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.55485164374113,
@@ -86854,7 +86856,7 @@
         "mean": 1.9093996384553777
       },
       "candidate": "Cannot be determined without knowing the last name of the movie's director.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.603042056318372,
@@ -87028,7 +87030,7 @@
         "mean": 1.4311625423438774
       },
       "candidate": "Step 1: Identify the digits of the year when The Rip Off Review of Western Culture was founded.\nThe year is 1969, so the digits are 1, 9, and 6.\n\nStep 2: Calculate the sum of the digITS.\nSum of digits = 1 + 9 + 6 = 16\n\nStep 3: Square the sum of the digITs.\nSquare of sum = 16 * 16 = 256\n\nStep 4: Since we are asked for the square of the sum OF THE DIGITS of the year, not the year itself, the answer is 256.\n\nStep final: Answer: The square of the sum of digits of the year 1969 is 256 when the publisher of TheRip Off Review Of WesternCulture was founded.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.586285347118974,
@@ -87310,7 +87312,7 @@
         "mean": 1.4187816732894931
       },
       "candidate": "2 more vowel than consonants in the given name.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 19.677894273772836,
@@ -87710,7 +87712,7 @@
         "mean": 1.5776676882791416
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.426071571186185,
@@ -87898,7 +87900,7 @@
         "mean": 1.5937546176445845
       },
       "candidate": "We cannot determine the count.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 20.694599526934326,
@@ -87964,7 +87966,7 @@
         "mean": 1.017060990944321
       },
       "candidate": "We cannot determine the number of repeating letters in the sibling's first name.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 10.987448809668422,
@@ -88058,7 +88060,7 @@
         "mean": 1.6214314509736045
       },
       "candidate": "Cannot be determined with the given information.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 19.498199471272528,
@@ -88152,7 +88154,7 @@
         "mean": 1.4565689988426758
       },
       "candidate": "The reverse order of Wallace Stegner's year of birth is 1901.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 18.802558350842446,
@@ -88326,7 +88328,7 @@
         "mean": 1.6339291057080811
       },
       "candidate": "The concatenation of thelast letters of Abaqa Khan’s paternal grandmother'sin lowercase is 'an'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.67737767007202,
@@ -88754,7 +88756,7 @@
         "mean": 1.3537217037476075
       },
       "candidate": "The final answer will be the sum of all the individual digts in the day, month , and year of the release of the video game. However, without the release date, I cannot provide the exact sum.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 21.621245206799358,

@@ -1,0 +1,582 @@
+{
+  "config": {
+    "condition": "C3_cot_extraction",
+    "generator": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "precision": "bf16",
+    "nli": "microsoft/deberta-v2-xlarge-mnli",
+    "n_questions": 10,
+    "n_samples": 10,
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 350,
+    "cot_trigger": "Let's think step by step.",
+    "heat_t": 0.3,
+    "alpha": 0.5,
+    "strict_entailment": true,
+    "judge_temp": 0.1,
+    "no_repeat_ngram_low_temp": 6
+  },
+  "auroc": 0.9047619047619048,
+  "hallucination_rate": 0.7,
+  "details": [
+    {
+      "id": "morehopqa-000000",
+      "question": "What is the sum of all the digits in the day, month and year of when the director of film Is It Easy To Be Young died?",
+      "responses": [
+        "To find the sum of all the digits in the day, month, and year of when the director of the film \"Is It Easy To Be Young\" (also known as \"Youth\") died, we need to know the director's name and the date of death. The director of the film is Rolands Kalniņš. Now, let's look for his date of death. Rolands Kalniņš was born in 1922 and died on May 11, 2022. The digits in this date are 1, 1, and 2, 0, 2, 2. \nNow, let's sum these digits. \n1 + 1 + 2 + 0 + 2 + 2 = 8\n\nFinal Answer: 8",
+        "To find the answer, we first need to identify the director of the film \"Is It Easy To Be Young.\" The director is Jānis Streičs. \nJānis Streičs was born in 1936 and died in 2010, so we are looking for the date of his death in 2010.\nThe exact date of his death was June 1, 2010. \nWe will sum the digits of the day, month, and year: day (1), month (6), year (2 + 0 + 1 + 0 = 3). \nNow, we sum these numbers together: 1 + 6 + 3 = 10.\nFinal Answer: 10",
+        "To find the sum of the digits in the day, month, and year of the director of film \"Is It Easy To Be Young\"'s death, we need to first identify the director and the date of their death. The director of \"Is It Easy To Be Young\" is Jevgeni Krylatov, but I couldn't find information about him, however another director named Jānis Streičs directed the film in 1987. Let's try and see if he directed it. Jānis Streičs did direct the film \"Is It Easy To Be Young?\". He died on December 3, 2016. \n\nTo calculate the sum of the digits in the date of death, we break down the date into its components: day (3), month (12), and year (2016). Then we sum the digits of each component and add them together: 3 + (1 + 2) + (2 + 0 + 1 + 6). Calculating this gives us 3 + 3 + 9.\n\nFinal Answer: 15",
+        "To solve this, we need to identify the director of the film \"Is It Easy To Be Young?\" and the date of their death. \nThe film \"Is It Easy To Be Young?\" is also known as \"Youth\" in some countries, and it was directed by Jānis Streičs.\nJānis Streičs was a Latvian film director, and he passed away on November 21, 2016.\nNow, we can find the sum of all digits in 21 (day) and 11 (month) and 2016 (year): \nThe sum is 2+1+1+1+2+0+1+6 = 14.\nFinal Answer: 14",
+        "First, we need to find the director of the film \"Is It Easy To Be Young.\" The film \"Is It Easy to Be Young?\" was directed by Rolands Kalniņš. Now, we need to find when Rolands Kalniņš died. After checking, it was found that Rolands Kalniņš died on 11 May 2022. Now, we will calculate the sum of all the digits in the day, month, and year. The sum is 1 + 1 + 5 + 2 + 0 + 2 + 2. Now, we need to calculate the total sum. The sum is 13. \n\nFinal Answer: 13",
+        "First, we need to identify the director of the film \"Is It Easy To Be Young\" (also known as \"Youth\" or \"Molodost\", depending on translation). The film's director is Rolan Bykov. \n\nNext, let's find out when Rolan Bykov died. Rolan Bykov died on October 6, 1998.\n\nNow, we need to sum up the digits of the day, month, and year. The digits for the day are 0 and 6. The digits for the month are 1 and 0. The digits for the year are 1, 9, 9, and 8. \n\nWe now sum these digits: 0 + 6 + 1 + 0 + 1 + 9 + 9 + 8 = 34.\n\nFinal Answer: 34",
+        "First, we need to identify the director of the film \"Is It Easy To Be Young\". After researching, I found that the film \"Is It Easy to Be Young?\" is a 1986 Latvian documentary film directed by Juris Podnieks. \n\nNext, we need to find the date of death of Juris Podnieks. Juris Podnieks died on June 23, 1992.\n\nNow, let's calculate the sum of all the digits in the day, month, and year of death. Day: 2 + 3 = 5, Month: 6, Year: 1 + 9 + 9 + 2 = 21.\n\nAdd the sums of the day, month, and year: 5 + 6 + 21 = 32.\n\nFinal Answer: 32",
+        "To find the sum of the digits, we first need to know the birth and death dates of the film's director. \nThe director of the film 'Is It Easy To Be Young?' is Jānis Streičs. \nHe was born on September 26, 1936, and died on November 21, 2010.\nThe date of death is what we are looking for, which is 21-11-2010.\nNow, we will sum the digits in the day, month, and year of death. \nThe sum is 2 + 1 + 1 + 1 + 2 + 0 + 1 + 0 = 8.\nFinal Answer: 8",
+        "To find the sum of the digits, we need to identify the birth and death dates of the director of the film 'Is It Easy To Be Young'. The film 'Is It Easy To Be Young?' is a 1988 Soviet film directed by Rolandas Tičininas and Juris Podnieks. \n\nAfter verifying the information about Juris Podnieks, he died on June 23, 1992. \n\nTo find the sum of the digits in the day, month, and year of his death: \n- Day: 23, so 2+3 = 5\n- Month: 6\n- Year: 1992, so 1+9+9+2 = 21\n\nNow, add all the digits together: 5 + 6 + 21 = 32.\n\nFinal Answer: 32",
+        "To find the answer, let's break down the problem. First, we need to identify the director of the film \"Is It Easy To Be Young\" (1988). The director of that film was Jevgeni Jefimovitsj Jevtušenko and Juris Podnieks. Jevgeni Jefimovitsj Jevtušenko was a Soviet writer but didn't die on the date the director of this film died, so the director I am referring to is Juris Podnieks, who died in a helicopter crash. Juris Podnieks was a Latvian documentary film director. Juris Podnieks died on June 23, 1992. The digits in the day are 2 and 3. The digits in the month are 6. The digits in the year are 1, 9, 9, and 2. \n\nFinal Answer: 2 + 3 + 6 + 1 + 9 + 9 + 2 = 32"
+      ],
+      "log_lik_agg": [
+        -0.2853800695502397,
+        -0.4212917579125438,
+        -0.5045019486049811,
+        -0.316486165690042,
+        -0.4221519451996643,
+        -0.3127963997970867,
+        -0.22260030380815093,
+        -0.3770257325919524,
+        -0.36286389819114884,
+        -0.506633554593982
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        5,
+        0,
+        5,
+        5
+      ],
+      "log_lik_per_sem_id": [
+        -1.570266182935299,
+        -1.605686175233223,
+        -2.4377619097728473,
+        -2.249746126857908,
+        -2.3554119063675305,
+        -1.1919721856972088
+      ],
+      "judge_candidate": "To find the sum of the digits in the day and month of the director's death, we first need to know the director's name and the date of death. The director of the film \"Is It Easy To Be Young?\" is Jānis Streičs. Jānis Streič died on 21 April 2016. The digits in the day are 2 and 1, the month is 4, and the year is 2+0+1+6 = 9. Now, we can add the digits together: 2 + 1 + 4 + 9 = 16.\n\nFinal Answer: 16",
+      "judge_correct": false,
+      "kle_full": 1.8267965315471544,
+      "cost": {
+        "t_seconds": 155.97832061100053,
+        "n_gen_tokens": 1715,
+        "n_prompt_tokens": 113
+      }
+    },
+    {
+      "id": "morehopqa-000001",
+      "question": "How many consonants are there in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather?",
+      "responses": [
+        "To find the answer, we first need to identify Charles Monck, 3Rd Viscount Monck's paternal grandfather. Charles Monck's paternal grandfather was Henry Power, 1st Baronet,  however Charles Monck's father is Thomas Monck and so Charles' grandfather was actually Henry Monck. \nSince the question asks for the first name of the paternal grandfather of Charles Monck, the name we are looking for is 'Henry'. \nNow, we need to find the consonants in 'Henry'. \nThe consonants in 'Henry' are 'H', 'N', 'R', and 'Y'. \nAlthough 'Y' can be both a vowel and a consonant, it is acting as a consonant in this case. \n\nFinal Answer: 4",
+        "To solve this problem, we need to identify the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather. Charles Monck's father was Henry Monck, and Henry's father was Charles Monck's paternal grandfather, but it does not give his name. However, further research indicates his paternal grandfather's name is Charles Stanley Monck, 1st Viscount Monck. \n\nNow we identify the first name, which is 'Charles'. The consonants in 'Charles' are 'C', 'H', 'R', 'L', and 'S'. \n\nFinal Answer: 5",
+        "Charles Monck's paternal grandfather was Charles Stanley Monck, 1st Viscount Monck. However, that's not the question - we want his father's father, not his father's title predecessor. His father was Henry Monck, so we're looking for Henry's father. His father was Charles Stanley's father-in-law, not his father -  Charles Stanley married into the family. Charles Stanley's wife's father was Charles Monck (died 1735 or 1753)'s, no. Charles Stanley's wife was  Charles Stanley Monck's wife: Elinor Elizabeth Crichton. Her father was Viscount Doneraile Henry Boyle's, no, Viscount Monck was Henry Boyle's, no.  Her father was Henry Boyle's, no... Viscount Doneraile was not, Henry Boyle, 1st Earl of Shannon's son - Viscount Doneraile was St. Leger Boyle's, no: but 1st Baron Doneraile's - Henry Boyle's no... but,  Viscount Monck was not: Elinor Elizabeth Crichton was Charles Stanley's wife; however her father was a different  Charles' wife's, Henry Boyle's, wife's family relative... Elinor Elizabeth Crichton's was: \n1st Viscountess Doneraile, no, Viscountess Doneraile's first name was,  Henry Boyle's, first wife. Henry Boyle married... He married Elizabeth, no... He married... no Elizabeth. Viscount Doneraile, Henry Boyle's first wife was first name,  St. Leger's, brother's wife's. St Leger Boyle,  Viscount Doneraile",
+        "To solve this problem, let's break it down step by step.\n\n1. First, we need to identify Charles Monck, 3rd Viscount Monck's paternal grandfather.\n2. After research, it's found that Charles Monck's father was Henry Monck, and his father was likely Henry Monck's father.\n3. Henry Monck's father was William Monck's son but another Henry Monck's son and Charles Monck's paternal grandfather, being of significance here is 'Henry Monck'.\n4. Now, let's find the consonants in the first name 'Henry'.\n5. The consonants in 'Henry' are H, N, R, and Y, note that Y can sometimes be a vowel, however here we treat it as a consonant.\n6. However in some cases Y is treated as a vowel. Given the ambiguity around Y, two different answers may be suitable.\n\nFinal Answer: 4",
+        "To determine the number of consonants in the first name of Charles Monck, 3Rd Viscount Monck's paternal grandfather, we first need to identify the paternal grandfather's name. \nCharles Monck, 3Rd Viscount Monck's father is Charles Stanley Monck, 3rd Viscount's father is  Charles Stanley Monck's father is Thomas Monck, Thomas's father is Charles Monck's grandfather's name is Thomas's father's name. However Charles Monck's father's father is Charles Stanley Monck's father, Charles Monck's father is Thomas Monck's, father of Thomas is Charles Stanley Monck 3Rd Viscount Monck's paternal grandfather was Charles Stanley, and the name of his father, was Charles Stanley Monck's father's, Thomas Monck's father's name is Charles Stanley Monck's paternal grandfather. The name is Charles Stanley, so Charles Stanley Monck 3Rd Viscount Monck's paternal grandfather was, Charles Stanley. \nThe first name is Charles. Now let's break it down into individual letters and count the consonants: C-H-A-R-L-E-S. The consonants are C, H, R, L, and S. \nFinal Answer: 5.",
+        "Charles Monck's paternal grandfather was Charles Monck's father's father. Charles Monck's father was Henry Monck. Henry Monck's father would be Charles Monck's paternal grandfather. \n\nHenry Monck's father was Charles Monck (1675-1758)'s father, which is Charles' father in turn was Henry's father which was  Charles Monck (1st Viscount Monck)'s and his wife Elizabeth's child 'Henry', so his (Charles (1st Viscount Monck)) father is 'Thomas' no that can't be correct.\n\n Charles Monck, 1st Viscount Monck, (1678-1758) was the son of Thomas Monck. So Henry Monck is the child of Thomas' child. His first name is Thomas.\n\nThe consonants in Thomas are T, H, M, S. \n\nFinal Answer: 4",
+        "To solve this problem, we first need to find the name of Charles Monck's paternal grandfather. Charles Monck, 3rd Viscount Monck, was the son of Thomas Monck, 1st Viscount Monck. Thomas Monck's father was Henry Monck. Now, we need to count the consonants in 'Henry'. The consonants in 'Henry' are 'H', 'N', 'R', and 'Y'. \n\nFinal Answer: 4",
+        "To answer this, we first need to identify Charles Monck's paternal grandfather. \nCharles Monck's father was Charles Stanley Monck, 1st Viscount Monck. \nThe paternal grandfather of Charles Monck would then be his father's father, Thomas Monck. \nNow we need to find the consonants in 'Thomas'. The consonants in 'Thomas' are 't', 'h','m','s'. \nThere are 4 consonants in the name 'Thomas'. \n\nFinal Answer: 4",
+        "To find the number of consonants in the first name of Charles Monck's paternal grandfather, we first need to determine his grandfather's first name. Charles Monck's father was Charles Stanley Monck, and his father's father was Henry Monck. Therefore, Charles Monck's paternal grandfather was Henry Monck. Now, we count the consonants in 'Henry'. The consonants are 'H', 'n', 'r', and 'y'. However, in this case, 'y' is sometimes considered a vowel, but here we consider 'y' as a consonant for simplicity. Therefore, the total number of consonants is 4.\n\nFinal Answer: 4",
+        "To determine the number of consonants in the first name of Charles Monck, 3rd Viscount Monck's paternal grandfather, we first need to identify the name. Charles Monck, 3rd Viscount Monck's paternal grandfather was Charles Stanley Monck, 1st Viscount Monck's father, but I couldn't verify that name, however Charles Stanley Monck, 1st Viscount Monck's father was Charles Monck, 1st Baronet's son. \nHis name is  Thomas Monck, but that's not verifiable. Charles Stanley Monck, 1st Viscount Monck's father was actually Thomas Monck's brother so his father was Charles Monck, Thomas Monck's brother isn't listed but Thomas Monck's father is listed as  Thomas's father's name is Thomas Monck and his father's name is Thomas's father which is Thomas's grandfather is actually Charles Stanley Monck, 1st Viscount Monck's paternal grandfather so the name is actually Thomas but his father was Thomas Monck's grandfather so his first name was 'Charles Stanley Monck, 1st Viscount Monck's paternal grandfather' paternal grandfather's name was actually Thomas's father and his first name is actually Thomas so Charles Stanley Monck, 1st Viscount Monck's paternal grandfather's paternal grandfather is Thomas Monck and his father's name is actually 'Thomas Monck' and his father's name was 'Thomas's father so Charles Stanley Monck, 1st Viscount Monck's paternal grandfather's name was actually Thomas but that's not verifiable however Thomas Monck's father was actually Thomas's father so I couldn't verify that Thomas Monck's"
+      ],
+      "log_lik_agg": [
+        -0.5864377717331329,
+        -0.45163368908908424,
+        -1.2819161631486247,
+        -0.8588632140502644,
+        -0.7066041607839557,
+        -0.898951972996735,
+        -0.2558192162200658,
+        -0.2970488161668865,
+        -0.41214791007286355,
+        -0.7794676551435675
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "log_lik_per_sem_id": [
+        -0.42082935335775934,
+        -1.5702705089651698,
+        -2.9743192534081757,
+        -2.471870745403119
+      ],
+      "judge_candidate": "To find the answer, we need to identify Charles Monck's paternal grandfather. Charles Monck's father was Henry Monck, 1st Viscount Monck. Henry Monck's father was Thomas Monck. Now, we need to find the consonants in the first name 'Thomas'. The consonants in 'Thomas' are 'T', 'H', 'M', 'S'. Counting these consonants, we get 4 consonants in the first 'Thomas'. \n\nFinal Answer: 4",
+      "judge_correct": true,
+      "kle_full": 1.1958629838947517,
+      "cost": {
+        "t_seconds": 170.31155771500198,
+        "n_gen_tokens": 1971,
+        "n_prompt_tokens": 111
+      }
+    },
+    {
+      "id": "morehopqa-000002",
+      "question": "What is the reverse order of when the publisher of American Scientist was founded?",
+      "responses": [
+        "To find the reverse order of when the publisher of American Scientist was founded, we first need to know the founding date. Sigma Xi, The Scientific Research Honor Society, is the publisher of American Scientist, and it was founded in 1886. We then reverse the order of the founding year, which is the original order being 1-8-8-6. Reversing that order gives us 6-8-8-1. \n\nFinal Answer: 6881",
+        "To determine the reverse order of when the publisher of American Scientist was founded, we need to find out the year it was founded first. \nAmerican Scientist is published by Sigma Xi, The Scientific Research Honor Society.\nSigma Xi was founded in 1886. \nThe reverse order of the year 1886 would be the year spelled backwards, so we reverse the digits. \nSo the year 1886 spelled backwards is 6881.\nFinal Answer: 6881",
+        "To find the reverse order of when the publisher of American Scientist was founded, we first need to determine the founding date of its publisher, Sigma Xi. \nSigma Xi was founded in 1886 as an honorary society and then established the magazine 'American Scientist'. \nTo reverse this, we need to separate the year into individual digits: 1886 becomes 1, 8, 8, 6. \nNow, we'll reverse the order of these digits: 6, 8, 8, 1.\nFinal Answer: 6881",
+        "To determine the reverse order of when the publisher of American Scientist was founded, we first need to identify the publisher and the founding year. \nAmerican Scientist is published by Sigma Xi, The Scientific Research Society. \nSigma Xi was founded in 1886. \nTo determine the reverse order, we can reverse the year. \nHowever, the reverse of the year 1886 is not typically how the question is answered. \nWe instead usually list the year in the reverse order of its founding, in this case, the year American Scientist was first published under Sigma Xi.",
+        "To find the reverse order, we need to know when the publisher of American Scientist was founded. American Scientist is published by Sigma Xi, The Scientific Research Honor Society. Sigma Xi was founded in 1886. To get the reverse order, we need to reverse the year. This can be done by spelling out the year and reversing the order of its digits: 1886 becomes 6881. \n\nFinal Answer: 6881",
+        "To find the answer, we need to know when the publisher of American Scientist was founded. American Scientist is published by Sigma Xi, The Scientific Research Honor Society. Sigma Xi was founded in 1886. Now, we need to reverse the order of the date. Reversing the order, we get 6881.",
+        "To find the reverse order of the founding year of the publisher of American Scientist, we need to know the founding year first. \nThe publisher of American Scientist is Sigma Xi, The Scientific Research Society. \nSigma Xi was founded in 1886. \nTo reverse the order of 1886, we will rearrange the digits from last to first. \nSo, the reverse order of 1886 is 6881.\n\nFinal Answer: 6881",
+        "To find the reverse order, we need to first identify the year the publisher of American Scientist was founded. The publisher is Sigma Xi, The Scientific Research Honor Society. Sigma Xi was founded in 1886. Now, we can reverse the year by splitting the number into individual digits and reversing them. The year 1886 becomes 6881. \n\nFinal Answer: 6881",
+        "To determine the reverse order of the founding year, we need to first find out when the publisher of American Scientist was founded. The publisher of American Scientist is Sigma Xi, The Scientific Research Honor Society. Sigma Xi was founded in 1886. To get the reverse order of the year, we need to reverse the digits in the year. Reversing 1886 results in 6881.",
+        "To find the reverse order of when the publisher of American Scientist was founded, we first need to know the founding year. The publisher of American Scientist is Sigma Xi. Sigma Xi was founded in 1886, but it was initially a scientific honor society, it started publishing American Scientist in 1913 but then stopped and restarted in 1921 then stopped and then started again in 1946 and continues to publish until this day. However since the publisher, Sigma Xi, has the founding year of 1886, we will reverse the digits of 1886. The reverse of 1886 is 6881. \n\nFinal Answer: 6881"
+      ],
+      "log_lik_agg": [
+        -0.37425762004390056,
+        -0.35979115225766833,
+        -0.5374621963291838,
+        -0.7602716186124345,
+        -0.28916160423647275,
+        -0.3297926468040907,
+        -0.3024973102634953,
+        -0.371804859680243,
+        -0.3224533762276908,
+        -0.6991757667042259
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        3,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.34463699621326577,
+        -2.640526877872246,
+        -2.210047906063902,
+        -2.202708635487502
+      ],
+      "judge_candidate": "To find the reverse order of when American Scientist was founded, we need to know the founding year. \nAmerican Scientist was founded in 1913 by Sigma Xi, The Scientific Research Honor Society. \nThe reverse order of the year 1913 is 3119. \nHowever, the question asks for the reverse order of when it was founded, which is likely asking for the year in reverse. \nSo, the reverse order of 1913 is indeed 3119. \nFinal Answer: 3119",
+      "judge_correct": false,
+      "kle_full": 0.8632480326489969,
+      "cost": {
+        "t_seconds": 87.97840003104648,
+        "n_gen_tokens": 961,
+        "n_prompt_tokens": 99
+      }
+    },
+    {
+      "id": "morehopqa-000003",
+      "question": "How many consonants are there in the first name of the current drummer of the band who did the song \"What Lovers Do\"?",
+      "responses": [
+        "To answer this question, we first need to identify the band that did the song \"What Lovers Do\". The song \"What Lovers Do\" is by Maroon 5. \n\nNext, we need to identify the current drummer of Maroon 5. The current drummer of Maroon 5 is Matt Flynn.\n\nNow, let's count the consonants in the first name \"Matt\". The consonants in \"Matt\" are'm', 't', 't'. \n\nThere are 3 consonants in \"Matt\". \n\nFinal Answer: 3.",
+        "To answer this question, we need to determine the current drummer of the band that did the song \"What Lovers Do\". \nThe song \"What Lovers Do\" is by Maroon 5. \nNext, we need to find the current drummer of Maroon 5. \nThe current drummer of Maroon 5 is Matt Flynn. \nNow, we need to count the consonants in \"Matt\". \nThe consonants in \"Matt\" are'm', 't', and 't'. \n\nFinal Answer: 3",
+        "To solve this problem, we need to identify the current drummer of the band that performed \"What Lovers Do\". The band that performed \"What Lovers Do\" is Maroon 5, featuring SZA. The current drummer of Maroon 5 is Matt Flynn. Now, we will count the consonants in his first name: Matt. The consonants in 'Matt' are 'M', 't', 't'. \n\nFinal Answer: 3",
+        "To find the answer, let's first identify the song \"What Lovers Do\" and its artist. \"What Lovers Do\" is a song by Maroon 5. \n\nNext, we need to find the current drummer for Maroon 5. The current drummer is Matt Flynn. \n\nNow, let's break down the name \"Matt\" into individual letters: M-A-T-T. \n\nThen, we'll count the consonants: M, T, and T are consonants, while A is a vowel.\n\nFinal Answer: 3",
+        "To solve this, we need to identify the current drummer of the band that did the song \"What Lovers Do\". The song \"What Lovers Do\" is by Maroon 5. The current drummer of Maroon 5 is Matt Flynn. \n\nNext, let's count the consonants in Matt: M-A-T-T. The consonants are M, T, and T, totaling 3 consonants. \n\nFinal Answer: 3",
+        "To find the answer, we need to determine the band that sang the song \"What Lovers Do\". The song \"What Lovers Do\" is by Maroon 5, featuring SZA. \nThe current drummer of Maroon 5 is Matt Flynn. \nThe first name is \"Matt\". \nWe can now identify the consonants in \"Matt\", which are \"M\", \"T\", \"T\". \nThere are 3 consonants in the first name \"Matt\". \n\nFinal Answer: 3",
+        "To solve this problem, we need to determine the current drummer of the band that performed \"What Lovers Do.\" The song \"What Lovers Do\" is by Maroon 5, featuring SZA. The current drummer for Maroon 5 is Matt Flynn. Now, let's count the consonants in \"Matt.\" M, T, and T are consonants, totaling 3 consonants.\n\nFinal Answer: 3",
+        "To solve this problem, we need to determine the current drummer of the band that did the song \"What Lovers Do\". \nThe song \"What Lovers Do\" is by Maroon 5, featuring SZA. \nThe current drummer of Maroon 5 is Matt Flynn. \nNow we'll count the consonants in Matt: M (1), T (2), T (3). \nThe total consonants in 'Matt' is 3. \n\nFinal Answer: 3",
+        "To solve this, we need to identify the band that did the song \"What Lovers Do\". \"What Lovers Do\" is a song by Maroon 5. \nNext, we need to find out the current drummer of Maroon 5. \nMaroon 5's drummer is Matt Flynn. \nNow, we need to count the consonants in \"Matt\". \nThere are 3 consonants in \"Matt\". \nThe band's drummer's first name is \"Matt\", however, another drummer, the one prior to Matt Flynn, was Matt Flynn joined in 2006 and prior to him it was Ryan Dusick. \nSo we have to take the original Matt in the band's lifespan, and prior to Matt Flynn, the \"Matt\" that was the band's drummer was \"Matt\" in Matt Flynn and before that was Ryan Dusick's predecessor, also named \"Matt\". So Matt Flynn was the second \"Matt\" and prior to him was the original \"Matt\" -  Matt Flynn took over drumming duties from Ryan Dusick, but prior to Ryan Dusick the band's original drummer was indeed \"Matt Flynn's predecessor, Matt's -\" No - the original  drummer was indeed Matt Flynn's predecessor, Matt Flynn took over duties from \"Ryan Dusick\" so it has to be the one prior to Ryan Dusick, - the one prior to Ryan was indeed Matt Flynn's predecessor, \"Ryan Dusick\" was  Matt Flynn's predecessor and prior to him was,  in \"Maroon 5\", Ryan Dusick was actually the \"second\" and the first was indeed the \"Matt\" prior to \"Matt\" that we know which is",
+        "To answer this question, let's first identify the song \"What Lovers Do\". This song is by Maroon 5. The current drummer of Maroon 5 is Matt Flynn. The first name of the drummer is \"Matt\". The consonants in \"Matt\" are 'M', 'T', and 'T'. \n\nFinal Answer: 3"
+      ],
+      "log_lik_agg": [
+        -0.1897933497896482,
+        -0.19597622294994918,
+        -0.30844270453808154,
+        -0.32881235697173644,
+        -0.29511543023197545,
+        -0.30799386629036496,
+        -0.2932122658768838,
+        -0.2870971197170196,
+        -1.1083601300205503,
+        -0.2453442977307594
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.046986688343006205,
+        -3.0812923004600252
+      ],
+      "judge_candidate": "To find the answer, we need to identify the band that did the song \"What I think you are referring to is 'What Lovers Do' by Maroon 5, featuring SZA. The current drummer of Maroon 5 is Matt Flynn. The first name is \"Matt\". Now, let's count the consonants in \"Matt\": M, T, T. \n\nFinal Answer: 3",
+      "judge_correct": true,
+      "kle_full": 0.3141931663707074,
+      "cost": {
+        "t_seconds": 108.93501862400444,
+        "n_gen_tokens": 1241,
+        "n_prompt_tokens": 111
+      }
+    },
+    {
+      "id": "morehopqa-000004",
+      "question": "What is the date 3 weeks after when Albert, Margrave Of Meissen's father died?",
+      "responses": [
+        "To determine the date 3 weeks after Albert, Margrave Of Meissen's father died, we need to know the date of his father's death. Albert, Margrave Of Meissen was the son of Theodoric I, Margrave of Meissen, who died on February 12, 982. \n\nThere are 7 days in a week, so 3 weeks is 3 * 7 = 21 days. \nAdding 21 days to February 12, 982 gives us March 5, 982.\n\nFinal Answer: March 5, 982",
+        "To solve this problem, we first need the date Albert, Margrave of Meissen's father died. Albert, Margrave of Meissen's father was Theodoric I, Margrave of Meissen. He died on February 18, 982. \n\nThree weeks have 21 days. Adding 21 days to February 18 gives us March 11. \n\nFinal Answer: March 11, 982.",
+        "To find the date, we need to know when Albert, Margrave of Meissen's, father died. Albert, Margrave of Meissen, is also known as Albert II, Margrave of Meissen, his father was Theodoric I, Margrave of Meissen. Theodoric I died in 982. To find the date three weeks after, we will add 21 days to 982's year, and considering 982 is a common year, the date is 21 days after February 10th (since February has 28 days). The result is March 3, 982.\n\nFinal Answer: March 3, 982",
+        "To solve this problem, we need to know the date of death of Albert, Margrave Of Meissen's father. \nThe Margrave of Meissen's father was Otto II, Margrave of Meissen. \nHe died on 1 February 1190. \nTo calculate 3 weeks after the date of death, we need to add 21 days. \n21 days after 1 February 1190 would be 22 February 1190. \n\nFinal Answer: 22 February 1190",
+        "To determine the date 3 weeks after Albert's father died, we need to know the date of his father's death. Albert, Margrave of Meissen's father, Theodoric I, Margrave of Meissen, died on February 18, 982. Three weeks after February 18 would be March 11. \n\nFinal Answer: March 11.",
+        "To determine the date 3 weeks after Albert, Margrave Of Meissen's father died, we first need to identify the death date of his father. Albert's father was Theodoric I, Margrave of Meissen, who died in 982. Since we need the date 3 weeks after his death, let's calculate that. There are 7 days in a week, so 3 weeks would be 3 * 7 = 21 days. Assuming his death date was the exact date, we can simply add 21 days to 982's date.\n\nAlbert's father died in February 982. To add 3 weeks after that exact date (let's assume mid-February for exact date) is about 7 March. \n\nFinal Answer: 7 March.",
+        "To find the date 3 weeks after Albert, Margrave Of Meissen's father's death, we need to know his father's death date. Albert, Margrave Of Meissen's father was Frederick II, Elector of Saxony. Frederick II died on September 7, 1464. \nSince there are 7 days in a week, 3 weeks is 21 days. Adding 21 days to September 7, 1464, we get September 28, 1464. \n\nFinal Answer: September 28, 1464.",
+        "To find the date 3 weeks after Albert's father died, we first need to determine when his father died. Albert, Margrave Of Meissen's father was Frederick II, Elector of Saxony, who died on September 14, 1464. Next, we calculate 3 weeks after this date. There are 7 days in a week, so 3 weeks would be 21 days. Adding 21 days to September 14, we get October 5, 1464. \n\nFinal Answer: October 5, 1464.",
+        "To find the date 3 weeks after Albert, Margrave Of Meissen's father's death, we need to know the date of his father's death. However, I don't have information about the specific date of his father's death. I know that Albert, Margrave Of Meissen's father is Theodoric I, Margrave of Meissen, but I need his death date to proceed. After researching, I found that Theodoric I, Margrave of Meissen, died around 982. Three weeks would be 21 days. \n\nFinal Answer: 982 is a year, so the death date would need to be more precise.",
+        "To find the date 3 weeks after Albert, Margrave of Meissen's father died, we first need to determine the date of his father's death. Albert, Margrave of Meissen's father was Albert II, Margrave of Meissen, who died in 1314 but more specifically on 7 September 1314 was not the date his father died. After some research it can be found he was born in 1255 so then  Albert, Margrave of Meissen's father (Albert II's father) was Henry III, Margrave of Meissen and died 1288. Albert, Margrave of Meissen's father is actually Theodoric of Landsberg. Theodoric of Landsberg died 8 February 1285. \n3 weeks after 8 February 1285 is 1 March 1285. \nFinal Answer: 1 March 1285."
+      ],
+      "log_lik_agg": [
+        -0.22145903476926146,
+        -0.3085532982865076,
+        -0.5576670456245758,
+        -0.3687087060692154,
+        -0.2309558059160526,
+        -0.6655557118356228,
+        -0.20801292864953058,
+        -0.242082206917734,
+        -0.4728287475696508,
+        -0.5932831171507899
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.150183103867112,
+        -2.2372773673843582,
+        -2.4863911147224265,
+        -2.297432775167066,
+        -2.1596798750139032,
+        -2.5942797809334732,
+        -2.136736997747381,
+        -2.1708062760155844,
+        -2.4015528166675013,
+        -2.5220071862486404
+      ],
+      "judge_candidate": "To find the date 3 weeks from when Albert, Margrabe Of Meissen's father, died, we first need to know the date of his father's death. Albert, Margrave of Meissen's father was Frederick I, Margrave of Meißen, who died on January 4, 1124. A week has 7 days, so 3 weeks would be 21 days. Adding 21 days to January 4, 1824 is not correct as the year is wrong. Frederick I died in 1124. January 4,  1124 + 21 days would be January 25, 1124. \n\nFinal Answer: January 25,  1124",
+      "judge_correct": false,
+      "kle_full": 2.28010466727296,
+      "cost": {
+        "t_seconds": 118.03512065601535,
+        "n_gen_tokens": 1258,
+        "n_prompt_tokens": 105
+      }
+    },
+    {
+      "id": "morehopqa-000005",
+      "question": "What is the date 10 weeks after the date of death of the director of film Cross Current?",
+      "responses": [
+        "To find the date 10 weeks after the date of death of the director of film Cross Current, we first need to know the director of the film Cross Current and their date of death. However, since you haven't provided that information, I can give you a general framework to solve the problem.\n\nIf you provide the date of death of the director, you can add 10 weeks to that date. There are 7 days in a week, so 10 weeks is equivalent to 70 days. You can then add 70 days to the date of death.\n\nPlease provide the director of the film Cross Current and their date of death for a more accurate answer.\n\n(I am waiting for the information to give a specific answer, once I have the information, I will provide the exact answer)",
+        "To determine the date 10 weeks after the death of the director of the film \"Cross Current\", we first need to identify the film's director and their date of death. The film \"Cross Current\" was directed by Ying Ning. However, I need more information on the exact date of death of the director. Since Ying Ning died in 2019, but the date is not certain, I will assume this as the death year for calculation purposes. \nAssuming the death year 2019 and for simplicity purposes, we can assume the death date as 1st January 2019, since I do not have the exact date of death. 10 weeks after January 1 would be around March 13. \n\nFinal Answer: March 13, 2019",
+        "To find the date 10 weeks after the death of the director of the film \"Cross Current\", we first need to know the director's name and date of death. The film \"Cross Current\" (1961) was directed by Allan Dwan. However, I do not have information on Allan Dwan's date of death in my database.",
+        "To find the date 10 weeks after the death of the director of the film \"Cross Current\", we need to know the director's name and the date of death. The director of the film \"Cross Current\" is Lew Landers. Lew Landers passed away on December 30, 1962. Since we know the date of death, we can calculate the date 10 weeks after. 10 weeks is equivalent to approximately 2.5 months (10 weeks / 4 weeks/month = 2.5 months). 2.5 months after December 30, 1962 would be approximately March 13, 1963. \n\nFinal Answer: March 13, 1963",
+        "To determine the date 10 weeks after the death of the director of the film Cross Current, we need to know who the director was and when they passed away. The film Cross Current was directed by Ford Beebe. However, I couldn't find any information about the date of death of Ford Beebe. If you could provide the date of death, I'd be happy to help. Assuming the date is provided, we can calculate 10 weeks from that date.",
+        "To find the date 10 weeks after the death of the director of the film \"Cross Current\", I need to know the name of the director and the date of his death.\n\nHowever, I do not have enough information about the film \"Cross Current\". If you could provide me with the director's name or the release year of the film, I can proceed.\n\nIf I had that information, I would find the date of death of the director, and then add 10 weeks to that date to get the final answer.",
+        "To find the date 10 weeks after the director of the film \"Cross Current\" passed away, we need to know the director's name and the date of their death. After some research, I found that the film \"Cross Current\" is a 1946 film, and its director is John Brahm. Unfortunately, I couldn't find John Brahm's date of death. However, I found that John Brahm passed away on October 12, 1982.\n\nNow, let's calculate the date 10 weeks after October 12, 1982. 10 weeks is equivalent to 70 days. Adding 70 days to October 12, 1982, we get December 21, 1982.\n\nFinal Answer: December 21, 1982.",
+        "To find the date 10 weeks after the date of death of the director of the film \"Cross Current,\" I'll start by looking up the director's name and the date of death. The film \"Cross Current\" was directed by John Ford, however, another film with the same name was directed by Ismail Merchant's brother and James Ivory's partner's friend - Guru Dutt's friend - also Guru Dutt and Yash Chopra's friend. That director is Abrar Alvi, who died on November 18, 2009. To find the date 10 weeks later, I'll add 10 weeks (or 70 days) to November 18, 2009.\n\nFinal Answer: January 27, 2010",
+        "To find the date, we need to know the date of death of the director of the film 'Cross Current'. The film 'Cross Current' was directed by Ying Liang. Ying Liang is a Chinese film director, and he is still active in the film industry, but no information is provided on his death date. However, another 'Cross Current' film is directed by Tinto Brass. I couldn't find information about a death date for either Ying Liang or Tinto Brass.",
+        "To find the answer, we first need to identify the director of the film \"Cross Current\". The director of the film \"Cross Current\" is Tadeusz Chmielewski. However, I do not have enough information to know the date of death of Tadeusz Chmielewski."
+      ],
+      "log_lik_agg": [
+        -0.5358618287835271,
+        -0.7641007488676507,
+        -0.4139837941653292,
+        -0.2962441692141803,
+        -0.47672835027700977,
+        -0.4811583272937053,
+        -0.26074574287049473,
+        -0.6542456784824792,
+        -0.7074154169857502,
+        -0.5226028349901003
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "log_lik_per_sem_id": [
+        -2.339321833413732,
+        -2.5675607534978555,
+        -2.217443798795534,
+        -2.099704173844385,
+        -2.2801883549072146,
+        -2.28461833192391,
+        -2.0642057475006994,
+        -2.457705683112684,
+        -2.510875421615955,
+        -2.326062839620305
+      ],
+      "judge_candidate": "To find the date 10 weeks from the date of death of a director of the film \"Cross Current\", we need to know the director's name and the date of death. The film \"Cross Current\" was directed by Ismail Merchant. Ismail Merchant passed away on May 25, 2005. \n\nNow, we need to calculate 10 weeks from May 25,  2005. There are 7 days in a week, so 10 weeks is 70 days. \n\nAdding 70 days to May 25,  we get August 3, 2005.\n\nFinal Answer: August 3,  2005",
+      "judge_correct": false,
+      "kle_full": 2.142644764793442,
+      "cost": {
+        "t_seconds": 111.80794064799557,
+        "n_gen_tokens": 1207,
+        "n_prompt_tokens": 104
+      }
+    },
+    {
+      "id": "morehopqa-000006",
+      "question": "What is the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase?",
+      "responses": [
+        "To find the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather in lowercase, we first need to find the name of his paternal grandfather. \nEochaid Mac Fiachnai's father was likely Fiachnai, as Mac is a Gaelic prefix for'son of.' \nHowever, to find the grandfather, we would need information about Fiachnai's father. Unfortunately, I do not have this information, but one possible answer could be Áed Dub. \nÁed is a common name for the father of Fiachnai. If Áed Dub was indeed the father, the first letter of Áed (Áed in lowercase is áed, the first letter of which is á) and Dub in lowercase (the first letter of which is d) would be concatenated as \"ád\" and \"d\" \nWe would then combine them to get 'áed's paternal grandfather's name's first letters as 'ád' and 'd', so ad (in lowercase). However, I'm uncertain whether Áed is correct.\nFinal Answer: ad",
+        "To solve this, let's find out who Eochaid Mac Fiachnai's paternal grandfather is. Eochaid Mac Fiachnai is a Dalriadic king.  The \"Mac\" means'son of,' so Eochaid Mac Fiachnai's father is Fiachnai. Fiachnai's father would then be Eochaid Mac Fiachnai's paternal grandfather, and his name is Báetán mac Nanní.\n\nSince we are looking for the concatenation of the first letter of his first name and the first letter of his last name, the letters we need are 'b' (first letter of Báetán) and'm' (first letter of Mac Nanní), however Mac in a Gaelic patronymic does not typically take a capital, and the name of the paternal grandfather is Báetán mac Nanní or Báetán, son of Nanní. Nanní's 'n' is more commonly associated with Báetán. \nFinal Answer: bn",
+        "To solve this, we need to know Eochaid Mac Fiachnai's paternal grandfather. However, I couldn't find any direct information on his paternal grandfather.",
+        "To find the concatenation of the first letters of the first name and last name of Eochaid Mac Fiachnai's paternal grandfather, we first need to determine the name of his paternal grandfather. \nEochaid Mac Fiachnai is an Irish name, with 'Mac' meaning'son of'. \nThe name can be split into Eochaid (first name) and Mac Fiachnai (paternal lineage). \n'Mac Fiachnai' translates to'son of Fiachnai'. \nTherefore, the first name is Fiachnai, but we don't know the surname (last name) or the 'Fiachnai' in the lineage might refer to his given name. \nFor Irish, given names were used for lineage. Given this, the last name of his paternal grandfather is also likely his given name.\n\nFinal Answer: fi",
+        "To find the paternal grandfather of Eochaid Mac Fiachnai, we should know his father's name. Eochaid Mac Fiachnai's father is Fiachnai mac Áedo Róin, but this is not directly stated in your prompt so I will verify the first name and last name. In the context of the name Mac Fiachnai, the prefix 'Mac' means'son of,' thus Fiachnai. Since we have Fiachnai's first name, we need to know his father's name. The father of Fiachnai mac Áedo Róin is Áedo Róin, then Áedo's father. Áedo is son of Colmán Rímid. Therefore, the first name of Eochaid Mac Fiachnai's paternal grandfather is Colmán. Colmán's last name is Rímid.\n\nFinal Answer: cr",
+        "To find the answer, we need to know the name of Eochaid Mac Fiachnai's paternal grandfather. After looking it up, we can find that Eochaid Mac Fiachnai's paternal grandfather is Báetan mac Cairill. Since the question asks for the first letters of the first name and last name in lowercase, we can proceed by taking the first letters: 'b' from 'Báetan' and'm' from'mac'. The concatenation of these letters is 'bm'. \n\nFinal Answer: bm",
+        "To find the concatenation of the first letters of Eochaid Mac Fiachnai's paternal grandfather's name, we first need to know his name. Eochaid Mac Fiachnai's father is Fiachnae mac Báetáin. Therefore, Eochaid Mac Fiachnai's paternal grandfather is Báetán mac Nanní. Now, let's find the first letter of his first and last names. The first name \"Báetán\" starts with 'b', and his last name \"mac Nanní\" (though \"mac\" is a patronymic prefix) can be considered as the first letter being 'N' since 'Nanní' is his father's name and the part that'mac' refers to. \n\nFinal Answer: bn",
+        "To find the answer, we need to determine the first name and last name of Eochaid Mac Fiachnai's paternal grandfather. \nEochaid Mac Fiachnai's father is Fiachna mac Báetáin.\nFiachna mac Báetáin's father would then be Báetán mac Nanní. \nBáetán is the first name and mac Nanní is not a surname in the modern sense, but rather a patronymic; so his first name is 'Báetán' and his father's name is 'Nanní' but the second part can be translated into Báetán's last name as 'Nanní's son' or similar.\nIn the Irish naming tradition'mac' means'son of,' so Báetán mac Nanní translates to 'Báetán son of Nanní'. \nSo we have a first name and a 'patronymic' which is the father's name; Báetán and Nanní.\n\nFinal Answer: bn",
+        "To solve this, we need to identify Eochaid Mac Fiachnai's paternal grandfather. 'Mac' is a Gaelic prefix indicating'son of,' so Eochaid's father would be Fiachnai. Therefore, Eochaid Mac Fiachnai's paternal grandfather would be Fiachnai's father.\n\nUnfortunately, information about Eochaid Mac Fiachnai's family line is limited, but I can provide some context about the name. Assuming it follows common Gaelic naming conventions, Fiachnai might be a descendant of the Dál Fiatach dynasty. \n\nHowever, since I couldn't find the exact name of Fiachnai's father, I will make a general assumption. If Fiachnai's father is unknown but he is associated with the Dál Fiatach, we could look for notable figures with the surname 'Fiachnai' or a possible father figure from the same dynasty. A possible father figure of the Dál Fiatach dynasty is Áed Dub mac Suibni, though this information is not verified.\n\nHowever, another likely candidate is Fiachnae mac Báetáin, who was a king of Dál Fiatach. His father's name is Áed Dub mac Suibni. Unfortunately, Áed is the only name I could verify from this lineage. \n\nFinal Answer: á",
+        "To find the concatenation of the first letters, we need to know the first and last name of Eochaid Mac Fiachnai's paternal grandfather. \nEochaid Mac Fiachnai is an Irish name, with 'Mac' indicating'son of'. So, 'Mac Fiachnai' means'son of Fiachnai'. \nThis means Fiachnai is Eochaid's father. \nTo find Eochaid's paternal grandfather, we need the father of Fiachnai. Unfortunately, there's no provided information about Fiachnai's father in the given context, but according to external sources, Fiachnai's father is Báetan mac Cairill. \nThe first letter of Báetan is 'B' and the first letter of Cairill is 'C'. \nIn lowercase, the concatenation of these letters is 'bc'. \n\nFinal Answer: bc"
+      ],
+      "log_lik_agg": [
+        -0.8538148424432257,
+        -0.7352093972181055,
+        -0.5774352984769003,
+        -0.7955470902238103,
+        -0.7661847379859738,
+        -0.3858121259693514,
+        -0.4905939765768238,
+        -0.6758571901438732,
+        -0.7846197510321795,
+        -0.34200394471512413
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        4,
+        1,
+        1,
+        5,
+        6
+      ],
+      "log_lik_per_sem_id": [
+        -2.5309423510222846,
+        -0.9584480244384391,
+        -2.2545628070559594,
+        -2.4433122465650325,
+        -2.0629396345484103,
+        -2.461747259611238,
+        -2.019131453294183
+      ],
+      "judge_candidate": "To find the concatenation of the letters, we need to identify Eochaid Mac Fiachenai's paternal grandfather. \nEochaid Mac Fiachna's father is Fiachnae mac Báetáin. \nFiachnae mac Bátáin's father is Báetán mac Nanní. \nBáetán mac Ninní is Eochaid Mac Fiacha's paternal grandfather. \nThe first name is Báetán, and the last name is mac Ninní. \nThe first letter of the first name is 'b' and the first letter of the last name is'm' (ignoring'mac' as it's a prefix, and taking 'Ninní' as the actual last name starts with 'N' but'mac' is a prefix, so we take the first letter of the actual last name 'Ninní' which is 'N'). \nHowever, the last name is'mac Ninní', so we take 'N' as the first letter of the name 'Ninní'. \nThe concatenation of the first letter of the first and last name is 'b' + 'N' -> 'bN'. \nHowever, we need to convert it to lowercase, so 'bN' becomes 'bn'. \n\nFinal Answer: bn",
+      "judge_correct": false,
+      "kle_full": 1.7459416588545027,
+      "cost": {
+        "t_seconds": 173.1020563180209,
+        "n_gen_tokens": 1831,
+        "n_prompt_tokens": 115
+      }
+    },
+    {
+      "id": "morehopqa-000007",
+      "question": "What is the result of multiplying 4 by the reverse of the year of birth of the actress who created The Dogwoman telemovies?",
+      "responses": [
+        "The actress who created The Dogwoman telemovies is Marg Downey. \nMarg Downey was born in 1961. \nThe reverse of 1961 is 1619. \nNow, we multiply 4 by 1619. \n4 * 1619 = 6476. \n\nFinal Answer: 6476",
+        "To solve this problem, we need to find the year of birth of the actress who created The Dogwoman telemovies. \nAfter research, we found that the actress who created The Dogwoman telemovies is Marg Downey. \nMarg Downey was born in 1961. \nThe reverse of the year is 1601. \nNow, we multiply 4 by 1601 to get 6404. \n\nFinal Answer: 6404",
+        "To solve this problem, we need to identify the actress who created The Dogwoman telemovies. The Dogwoman telemovies were created by Marg Downey. Now, we need to find her year of birth. Marg Downey was born in 1961. The reverse of 1961 is 1619. Now, we need to multiply 4 by 1619. \n\nFinal Answer: 6476",
+        "To solve this, we need to identify the actress who created The Dogwoman telemovies. After some research, I found that the actress is Marg Downey. \n\nMarg Downey was born in 1961. The reverse of 1961 is 1681.\n\nNow, multiply 4 by 1681. \n\n4 * 1681 = 6724\n\nFinal Answer: 6724",
+        "The actress who created The Dogwoman telemovies is Marg Downey. \nMarg Downey was born in 1961. \nThe reverse of 1961 is 1619. \nTo find the result of multiplying 4 by 1619, we perform the multiplication: 4 * 1619 = 6488. \nWe have now found the result.\nFinal Answer: 6488",
+        "The Dogwoman telemovies were created by Marg Downey. To determine the result, we need to find her birth year. Marg Downey was born in 1961. The reverse of 1961 is 1619. Now, we need to multiply 4 by 1619. \n\nFinal Answer: 6476",
+        "To find the answer, we need to know the actress who created The Dogwoman telemovies. \nThe Dogwoman telemovies were created by Magda Szubanski. \nMagda Szubanski was born in 1961. \nThe reverse of 1961 is 1681. \nNow we multiply 4 by 1681. \n4 * 1681 = 6724.\n\nFinal Answer: 6724",
+        "The Dogwoman telemovies were created by actress Magda Szubanski. \nThe reverse of the year of birth of Magda Szubanski needs to be determined. \nMagda Szubanski was born in 1961. \nThe reverse of 1961 is 1681. \nMultiplying 4 by 1681 equals 6724. \nFinal Answer: 6724",
+        "The Dogwoman telemovies were created by Marg Downey, an Australian comedian and actress. \nMarg Downey was born in 1961. \nThe reverse of the year 1961 is 1619. \nNow we need to multiply 4 by 1619. \nThe multiplication is 4 x 1619 = 6480 (calculation done, or 6480, being 4 times 1619) \n6480 * 1 = 6480, which is the result of multiplying 4 by 1619. \nFinal Answer: 6480",
+        "To solve this problem, we need to find the year of birth of the actress who created The Dogwoman telemovies. \nThe Dogwoman telemovies were created by Magda Szubanski, an Australian actress, but I found no evidence of her creating Dogwoman. However, I did find that  the Dogwoman telemovies star Magda Szubanski but were actually created by Vince Moran. Magda Szubanski is indeed an Australian actress known for her work in Kath and Kim. \nMagda Szubanski was born in 1961. The reverse of 1961 is 1619. \nNow, multiplying 4 by 1619, we get 6476.\n\nFinal Answer: 6476"
+      ],
+      "log_lik_agg": [
+        -0.16414957947057227,
+        -0.2652586448065778,
+        -0.16444748700704687,
+        -0.2584482970007931,
+        -0.295387823897672,
+        -0.27867131515899124,
+        -0.13512556068599224,
+        -0.3094094578395872,
+        -0.5420759557015147,
+        -0.48925248717332814
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        2,
+        2,
+        4,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -0.8994882901193219,
+        -2.2853980746798777,
+        -1.1531501301774778,
+        -2.315527253770972,
+        -2.562215385574815
+      ],
+      "judge_candidate": "To find the answer, we need to identify the actress who created TheDogwoman telemovies. The Dogwoman telemovie series was created by Marg Downey. Marg Downey was born in 1961. The reverse of 1961 is 1619. Multiplying 4 by 1619 gives 6476. \n\nFinal Answer: 6476",
+      "judge_correct": false,
+      "kle_full": 1.7272657993701268,
+      "cost": {
+        "t_seconds": 83.79866073996527,
+        "n_gen_tokens": 935,
+        "n_prompt_tokens": 112
+      }
+    },
+    {
+      "id": "morehopqa-000008",
+      "question": "How many letters are there between the first and last letters of the first name of the child of Caroline LeRoy's spouse?",
+      "responses": [
+        "First, we need to identify Caroline LeRoy's spouse. Caroline LeRoy's spouse is none other than King Leopold I of Belgium. \n\nKing Leopold I of Belgium had many children. One of his children is Leopold II. We need to identify Leopold II's child. Leopold II's children were Leopold, Stephanie, Clementine and others, and we can look at Leopold for the question.\n\nWe can focus on Leopold's first name 'Leopold'. The first letter of 'Leopold' is 'L' and the last letter is 'D'. \n\nThere are 'e', 'o', 'p', 'o', 'l' between 'L' and 'D'. \n\nThere are 5 letters between 'L' and 'D' in the name 'Leopold'. \n\nFinal Answer: 5",
+        "To solve this, we need to find the child's name. Caroline LeRoy's spouse is Albert Grimaldi, and their child is Albert II, but we also know Caroline LeRoy has children with Ernst August of Hanover. So we consider their child's name. One of Caroline LeRoy's children with Ernst August of Hanover is Princess Alexandra of Hanover, but Caroline LeRoy is also the mother of Andrea, Charlotte and Pierre with Stefano Casiraghi. Caroline LeRoy's spouse is indeed Stefano Casiraghi's widow, Caroline is now married to Ernst August of Hanover, but we will consider Caroline LeRoy's first spouse. So one of Stefano Casiraghi's child's names with Caroline is 'Andrea Casiraghi'. The first and last letters of 'Andrea' are 'A' and 'A'. Counting the letters in 'Andrea', we have 'A', 'N', 'D', 'R', 'E', 'A'. Excluding 'A', we count the letters 'N', 'D', 'R', 'E'. \n\nFinal Answer: 4.",
+        "To answer this, we need to find the spouse of Caroline LeRoy and their child's name. Caroline LeRoy was married to James Buchanan, the 15th President of the United States. However, James Buchanan remained a bachelor throughout his life, so we need to look at his close relatives. His nephew, James Buchanan Henry, and niece, Maria Buchanan, often accompanied him, with James' niece having no children. However, James Buchanan's nephew, James Buchanan Henry's, son is James Buchanan Henry's son. James Buchanan's nephew, James Buchanan Henry, was married to Harriet Lane's niece. Harriet Lane was James' niece whom he raised. But that's not the closest we can get, however, I did find the closest relative: Caroline LeRoy was married to George LeRoy but George LeRoy had only sons with Caroline and 1 of the sons was, George Henry LeRoy. George Henry LeRoy had two children, one of which is Caroline LeRoy's grandson, George LeRoy's son's son, which is George Henry LeRoy's son James LeRoy, whose first name I am now focusing on, 'James', to figure out this riddle. \n\nNow, focusing on 'James', the first and last letter of 'James' are 'J' and 'S', respectively. To find out the number of letters between the first and last letters of 'James', we need to count the letters between 'J' and 'S'. The letters in 'James' are J-A-M-E-S. 'J' and 'S' are the 1st and 5th letters. Therefore, there are 3 letters between 'J' and 'S'. \n\nFinal Answer:",
+        "To solve this problem, let's break it down step by step.\n\n1. Caroline LeRoy is the spouse of Alex Trebek's first wife, Elaine, but it is known that Alex Trebek was also married to another woman named Jean Currivan. It is also public knowledge that Alex Trebek's first wife is Elaine Callei but was married to George Alexander Trebek's friend, the man whose first name is not available to me.\n   So Alex Trebek's first wife, Elaine was actually married to another man, George's friend. Alex was married to Elaine but then married a woman named Jean. This would mean that Elaine Callei was married twice with one of those times to Alex.\n\n   Alternatively a better way would be, \n   Alex Trebek was married to two women: Elaine Callei (married name Elaine Trebek) but Elaine Callei first married to a different man. Alex Trebek was married to a woman called Jean Trebek.\n\n   I will choose the fact, that a man called George is known as Elaine Callei Trebek's first husband.\n2. George Alexander Trebek was the name of Alex Trebek's brother. Now I know the name of Alex Trebek's brother and his spouse's first husband. George and his spouse Elaine, now with surname 'LeRoy', had a child named Matthew. \n3. The first name of Matthew is the name we need to analyze.\n4. The first name \"Matthew\" starts with \"M\" and ends with \"W\".\n5. We count the letters between \"M\" and \"W\", which are \"A-T-T-E-R\".\n6. There are 6 letters between the first and last letters of \"Matthew\".\n\nFinal Answer:",
+        "To solve this, we need to identify Caroline LeRoy's spouse and their child. Caroline LeRoy was married to Charles Lindbergh. The child is Charles Augustus Lindbergh Jr. The first name of Charles Augustus Lindbergh Jr is Charles. The first letter of Charles is 'C' and the last letter is 'S'. There are 5 letters between 'C' and 'S' in Charles.\n\nFinal Answer: 5",
+        "To find the answer, we first need to know Caroline LeRoy's spouse's name. Caroline LeRoy's spouse is King Louis Philippe I. \nKing Louis Philippe I's child is François, among others. We're considering one of the children, François.\nThe first and last letters of 'François' are F and S.\nTo find the number of letters between F and S, we count the letters in between: R-A-N-C-O-I.\nThere are 6 letters between F and S in the name 'François'. \n\nFinal Answer: 6",
+        "To find the answer, we need to identify Caroline LeRoy's spouse. Caroline LeRoy's spouse is not directly provided, but we can assume it refers to Caroline LeRoy, an American actress, whose spouse is not publicly well-known. However, I will provide a general answer based on a possible scenario. Assuming her spouse is 'Jason Ritter' and their child's first name is 'Jason' and Caroline LeRoy's spouse's child is 'Jason's sibling. Jason Ritter's spouse is actually Melanie Lynskey, not Caroline LeRoy. So assuming her spouse is actually Jason Ritter's peer or similar in age, let's say, we are looking for Jason's peer's spouse child. For instance, if the peer's child is 'Jason's peer's child, let's say, Matthew's child 'Jason's peer Matthew's child, a male name that comes to mind is Matthew's son, 'Matthew' peer,  Matthew's peer is Jason's peer. A peer of Jason and Matthew could be someone like  another famous actor, such as, say, 'Matthew's peer, say, Chris, and, another name that comes to mind as Matthew's peer, Jason's peer is a 'Matthew peer' such as a similar aged actor like 'Chris' peer Jason, Matthew's peer,  like Chris Evans or Ryan Phillippe or Ryan Reynolds' peer like  a Matthew's peer Jason's peer Ryan's peer, Chris Evans' peer is like Chris Evans' peer like a Matthew's peer  Matthew's peer Jason's peer like a Jason's peer, so Matthew's peer 'Chris' peer  is like a Jason's peer  like, say, Matthew's peer Jason's peer  a",
+        "To answer this question, let's break it down. Caroline LeRoy's spouse is not specified, but based on historical information, Caroline LeRoy was married to William Henry Harrison, the 9th U.S. President. Their children's names include Carter Bassett Harrison. \n\nNow we consider Carter Bassett Harrison's name: C-A-R-T-E-R. To find the number of letters between the first and last letters of 'Carter', we count the letters 'A', 'R', and 'T' and 'E'. \n\nThere are 4 letters between 'C' and 'R'. \n\nFinal Answer: 4",
+        "To find the answer, we first need to identify Caroline LeRoy's spouse. Caroline LeRoy is married to Donald Glover, an American actor and musician. They have two sons together, but their children's names are Deni and Drake. Let's consider the name Deni, the first name of one of their children. The first and last letters of the name \"Deni\" are \"D\" and \"I.\" The letters between the first and last letters \"D\" and \"I\" are \"E\" and \"N.\" There are 2 letters between the first and last letters of the name \"Deni.\"\n\nFinal Answer: 2",
+        "To answer this question, we first need to know Caroline LeRoy's spouse. After some research, I found that Caroline LeRoy was the spouse of Benjamin Franklin. Now, one of Benjamin Franklin's children was William Franklin. The first name of the child is 'William'. The first letter of 'William' is 'W' and the last letter is 'M'. \n\nNow, we need to count the letters between 'W' and 'M'. The word 'William' has the letters W-I-L-L-I-A-M. Counting the letters between 'W' and 'M' we have I-L-L-I-A. There are 5 letters between 'W' and 'M'. \n\nFinal Answer: 5."
+      ],
+      "log_lik_agg": [
+        -0.5654347157258479,
+        -0.649688625050352,
+        -0.9313471568056515,
+        -1.1702323880685228,
+        -0.3876337412258853,
+        -0.5770371438044569,
+        -1.363359776357455,
+        -0.45209678643664647,
+        -0.4538578719578006,
+        -0.38271513188610207
+      ],
+      "semantic_ids": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        3,
+        2,
+        2,
+        2,
+        0
+      ],
+      "log_lik_per_sem_id": [
+        -1.0002214803722889,
+        -2.3067983763586613,
+        -0.8543986182086972,
+        -2.234146895112766
+      ],
+      "judge_candidate": "To find the answer, we need to identify Caroline LeRoy's spouse and their child. Caroline LeRoy was married to Robert Livingston, but I couldn't find any information about their children. However, I found that Caroline LeRoy was also married to Henry Brockholst Livingston, and they had a child named Caroline Matilda Livingston. \n\nIf we consider Caroline Matilda Livingston as the child, we need to find the number of letters between the first and last letter of her first name, 'Caroline'. The first letter is 'C' and the last letter is 'E'. \n\nThe letters between 'C' and 'E' in 'Caroline' are 'a-r-o-l-i-n'. \n\nThere are 6 letters between 'C' (the first letter) and 'E' (the last letter). \n\nFinal Answer: 6",
+      "judge_correct": true,
+      "kle_full": 1.4327809818013828,
+      "cost": {
+        "t_seconds": 185.3837263759924,
+        "n_gen_tokens": 2084,
+        "n_prompt_tokens": 109
+      }
+    },
+    {
+      "id": "morehopqa-000009",
+      "question": "How many unique letters are there in the first name of Victoria Sackville-West, Baroness Sackville's child-in-law?",
+      "responses": [
+        "To solve this problem, we first need to identify the first name of Victoria Sackville-West, Baroness Sackville's child-in-law. \n\nVictoria Sackville-West's husband was Harold Nicolson, and their son was Nigel Nicolson, whose wife was Philippa, and daughter-in-law of Victoria. The first name is Philippa.\n\nNext, we need to find the unique letters in 'Philippa'. We'll go through the letters: P-H-I-L-I-P-P-A.\n\nThe unique letters are P, H, I, L, and A. \n\nFinal Answer: 5",
+        "To find the number of unique letters, we need the first name of Victoria Sackville-West, Baroness Sackville's child-in-law. Baroness Sackville is married to Lionel Sackville-West, and their child is Vita Sackville-West. \n\nHowever, you asked about the child-in-law. Vita Sackville-West was married to Harold Nicolson. So the child-in-law would be the spouse of one of Vita's children, in this case, the spouse of Nigel Nicolson, who is Philippa. Philippa is not correct in this case as she would be the parent in-law for the younger generation. Instead it's better to consider the spouse of Nigel's sibling, Ben Nicolson. \n\nBen Nicolson married Winifred, and Philippa (Nigel's sister in-law by marriage) is also married to Nigel Nicolson. However, looking to another sibling, Vita's other child, Nigel's sibling is Benedict 'Ben' Nicolson, who married Winifred. However Nigel's sibling 'Ben' has a sibling, Nigel's sister - that is, Nigel is a brother to his sibling, and that is, Vita Sackville-West's other child is Nigel's sister. So his sibling is, and his sibling's name is, Nigel's sibling or sister or brother, that being, Ben, and another sibling, but Nigel has a sister - this being his sibling and that is that sibling being Nigel's sister. Nigel's sibling is his sister, and she would be - that is, Vita Sackville-West's child other than Nigel that being, Vita's child 'Ben', who is actually a brother, so it has to be a child of Vita that is female",
+        "Victoria Sackville-West's child-in-law would be the spouse of one of her children. Her children are Nigel Nicolson and Benedict Nicolson. Nigel is married to Philippa, and Benedict is married to Philippa's sister, Janet. However, considering a more prominent figure related to the given context, let's take Nigel Nicolson and his wife Philippa. The first name 'Philippa' has the letters 'p', 'h', 'i', 'l', 'i', 'p', 'p', and 'a'. \n\nRemoving the repeating letters 'p', 'i', we find the unique letters are 'p', 'h', 'i', 'l', 'a'.\n\nFinal Answer: 5",
+        "To solve this problem, let's first identify the child-in-law of Victoria Sackville-West, Baroness Sackville. Victoria Sackville-West's child-in-law is likely the spouse of one of her children. The most well-known child of Victoria Sackville-West is Vita Sackville-West, and her spouse was Harold Nicolson, but since the question asks for the child-in-law's first name, we will need the first name of Vita Sackville-West's spouse, which was Harold, however Vita's son was Benedict Nicolson, so his spouse's first name would be his wife's, the first name of which is Anne.\n\nThe unique letters in \"Anne\" are 'A', 'N', and 'E'. There are 3 letters in total, and all of them are unique. \n\nFinal Answer: 3",
+        "To determine the unique letters in the first name, we need to know the first name of Victoria Sackville-West, Baroness Sackville's child-in-law. Victoria Sackville-West was married to Harold Nicolson. One of their children, Nigel Nicolson, had a wife named Philippa. \n\nNow let's analyze Philippa's name: P-H-I-L-I-P-P-A. To find the unique letters, we need to eliminate any repeated letters: P, H, I, L, A.\n\nFinal Answer: 5",
+        "To find the answer, we first need to know the first name of Victoria Sackville-West, Baroness Sackville's child-in-law. \n\nAfter researching, I found that Victoria Sackville-West, Baroness Sackville, is married to Sir Edward Sackville-West, 5th Baronet. Their son is Lionel Sackville-West, 6th Baronet and his wife is Teresa Sackville-West. So, their child-in-law's first name is Teresa.\n\nNow, let's count the unique letters in the name 'Teresa'. The unique letters are T, E, R, S, A. There are 5 unique letters.\n\nFinal Answer: 5",
+        "To find the answer, we need to determine the name of Victoria Sackville-West's child-in-law. Victoria Sackville-West was married to Harold Nicolson, and their child-in-law would be their son's wife, Vita Sackville-West's son-in-law's wife is not well known but their son's wife is, but her husband is, his wife, their son, Christopher Nicholson's first wife,  first wife's name was  Barbara, but a child-in-law is more commonly known as a daughter or son-in-law which is Vita's,  however since we do not have a daughter-in-law's name readily available, let's think of a more well known in law. Vita's son-in-law is Nigel Nicolson's wife's name is Philippa. \n\nHowever to make our work easier we can use Barbara Hutton's daughter-in-law or more so commonly a daughter-in-law would be a well-known daughter-in-law of Victoria's, we are looking for first name of the child-in-law of Baroness Sackville, so let's use Barbara's or use a well-known daughter-in-law of hers, if you look at Harold Nicolson and Victoria Sackville-West's children-in-law we could use Barbara's husband is Ian Bailie's wife's, but let's look at her step daughter in law ( Barbara's husband's wife and her children are of Ian Baille's) but  a more well known is Vita's  child-in-law, and use her daughters-in-law of Victoria's but let's think of a well known child-in-law and her name is Philippa's first name not a good choice lets try and find the most well known child-in-law's first name of",
+        "To determine the answer, we need to identify the first name of Victoria Sackville-West, Baroness Sackville's child-in-law. Victoria Sackville-West, Baroness Sackville, was married to Sir Geoffrey Sackville-West, and one of their sons was Edward Sackville-West, who married Desmond Parsons. However, another son was Sackville-West's other son, Edward's brother -  Lionel, who married Antoinette 'Tony' Murat, or more likely, Victoria Sackville-West's daughter, Diana, married Desmond Keene, or Lionel's brother Edward's other brother,  Edward's brother - Edward's other brother - was -  Edward's brother, Edward's other brother was - Edward's brother -  Edward's other brother, Edward's other brother - Sackville-West's other son, Edward's other brother, was  Sackville-West's other son Edward's brother,  who was Sackville-West's other son Edward's other brother, who was Edward's brother -  Edward's brother - Edward's other brother was -  Edward's other brother -  Sackville-West's other son was Sackville-West's son, Edward's brother -  Edward's brother -  Edward's brother - Edward's brother - Edward's brother  Edward's other brother - Edward's brother - Edward's brother, who married Desmond Parsons, but one of her sons - Sackville-West, son of Victoria, was Edward, Edward's brother was Lionel. But one of her sons married Desmond Parsons but one of her other sons - Edward's brother -  Edward, Lionel's, Edward's brother's brother-in-law, other than Desmond's, is actually Edward",
+        "To find the answer, we need to identify Victoria Sackville-West, Baroness Sackville's child-in-law. Victoria Sackville-West's son was Nigel Nicolson. Nigel Nicolson was married to Philippa (née Tilden), then Joan Townsend (divorced), and then Philippa's sister's friend Joan Graham, then he married Philippa again, but then again married Joan Townsend, however he married lastly Joan, then Philippa again and his first wife was Philippa. However, one of his notable relationships (that didn't end in marriage) was with an artist (who I am unable to confirm)  but his marriage was  mostly with Philippa and Joan. Philippa (née Tilden) had a daughter called Juliet. I think we can use the name Juliet, which has 6 letters: J-U-L-I-E-T.\n\nFinal Answer: 6",
+        "To find the answer, we need to determine the first name of Victoria Sackville-West's child-in-law. Victoria Sackville-West was the mother of Nigel Nicolson. Nigel Nicolson was married to Philippa, but we do not have enough information to verify this Philippa was a direct child in law to Victoria. Victoria Sackville-West also had a son named Benedict, and he married Philippa Topley and later married Helen. Therefore the child-in-law of interest is likely Philippa Topley or Philippa of whom there is very little information.\n\nThe name Philippa has 8 letters: P-H-I-L-I-P-P-A. To find the unique letters, we remove the duplicates. There are two 'P's in the name, so we remove the duplicate 'P'. \n\nFinal Answer: 7"
+      ],
+      "log_lik_agg": [
+        -0.41958590879315333,
+        -1.1257724992185831,
+        -0.5081784382865235,
+        -0.6586194076936025,
+        -0.3651277321550223,
+        -0.4230226550277296,
+        -1.4584625849872828,
+        -0.9524887418906604,
+        -1.2267373353242874,
+        -0.7351219821063911
+      ],
+      "semantic_ids": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "log_lik_per_sem_id": [
+        -0.5012958748024708,
+        -2.235764758644899,
+        -3.0356079359385792,
+        -2.529634092841957,
+        -2.8038826862755837,
+        -2.3122673330576875
+      ],
+      "judge_candidate": "To find the answer, we need to identify the first name of Victoria's child-in-law. Victoria Sackville-West was married to Harold Nicolson, and their son Nigel Nicolson was married to Philippa. Philippa is the child-in-law. \n\nNow, let's count the unique letters in the name 'Philippa': P-H-I-L-I-P-P-A. Removing the duplicates, we get P-H-I-L-A.\n\nFinal Answer: 5",
+      "judge_correct": false,
+      "kle_full": 1.4834576117219362,
+      "cost": {
+        "t_seconds": 181.0735384489526,
+        "n_gen_tokens": 2104,
+        "n_prompt_tokens": 111
+      }
+    }
+  ]
+}

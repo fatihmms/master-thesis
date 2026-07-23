@@ -13,10 +13,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.7103573333333333,
-  "hallucination_rate": 0.25,
+  "auroc": 0.6625491382686037,
+  "hallucination_rate": 0.269,
   "details": [
     {
       "id": "triviaqa-000000",
@@ -135,7 +137,7 @@
       ],
       "vne": 0.27192943884086396,
       "judge_candidate": "1. Jean-Francois Champollion published the first correct translation of Egyptian hieroglyphs from the Rosetta Stone in 1822.\n2. The Roman Catholic Church removed Galileo Galilei's \"Dialogue\" from its list of banned books in 1835.\n3. Britain repealed the death penalty for over 100 crimes in 1965, with the Homicide Act.\n\nTherefore, 1822, 1835, and 1965 are the respective years for the events you mentioned.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.476616203319281,
         "n_gen_tokens": 1394,
@@ -210,7 +212,7 @@
       ],
       "vne": 0.5515320472758273,
       "judge_candidate": "The artist in question is Paul McCartney, a member of the iconic band The Beatles. He married actress Jane Asher in 1981, and they have a daughter named Stella McCartney and two sons named James McCartney and Alasdhair McCartney. Therefore, Paul McCartney is the artist who has a daughter and two sons with Jane Asher.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.16093251015991,
         "n_gen_tokens": 962,
@@ -235,7 +237,7 @@
       ],
       "vne": 0.5066942863415046,
       "judge_candidate": "1. To find the halfway point between Montrose and Dundee, we can calculate the midpoint of their latitude and longitude.\n2. The midpoint of their latitude is approximately 56.75 degrees north.\n3. The midpoint of their longitude is approximately -2.6833 degrees west.\n4. The town that matches these coordinates is Arbroath, a famous fishing town in east Scotland.\n\nFinal answer: Arbroath is the town you're looking for.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.612027612049133,
         "n_gen_tokens": 1154,
@@ -260,7 +262,7 @@
       ],
       "vne": 0.36956454536911687,
       "judge_candidate": "1. The first commercial jet airliner in the world was the De Havilland Comet, which made its maiden flight in 1949.\n2. The De Havilland Comet 1 made its first scheduled commercial flight on May 2, 1952, operated by British Overseas Airways Corporation (BOAC).\n3. Therefore, the De Havilland Comet 1 was the first commercial jet airliner to go into service in the UK.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.9887980511412024,
         "n_gen_tokens": 1321,
@@ -460,7 +462,7 @@
       ],
       "vne": 0.33608489784141315,
       "judge_candidate": "1. Focaccia is a type of Italian flatbread, typically seasoned with olive oil, salt, and sometimes herbs. It's often served as an appetizer or side dish.\n2. In an Italian restaurant, you would expect to find Focaccia on the menu as a bread option or as part of an antipasto platter.\n3. Therefore, if you ask for Focaccia in an Italian restaurant, you should receive a plate of fresh, olive oil-drenched, slightly raised bread.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.8624940370209515,
         "n_gen_tokens": 1110,
@@ -710,7 +712,7 @@
       ],
       "vne": 0.39059299448394014,
       "judge_candidate": "The US Presidential election is held every four years, with the most recent one in 2020. The election before that was in 2016, and the one before that was in 2012. In the 2012 election, Barack Obama was re-elected as the President of the United States. Therefore, Barack Obama was the US President elected in November 2012.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.584301980212331,
         "n_gen_tokens": 940,
@@ -910,7 +912,7 @@
       ],
       "vne": 0.22096195776947097,
       "judge_candidate": "A Rubik's cube has 6 faces, each face is a square, and each square is colored. Since each color is unique, every square represents a distinct color. Therefore, there are 6 colored squares on the surface of a Rubik's cube. (6 faces * 1 square per face = 6 colored squares)",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.381452601868659,
         "n_gen_tokens": 1004,
@@ -1110,7 +1112,7 @@
       ],
       "vne": 0.3932976633773992,
       "judge_candidate": "1. Carthage, a historical civilization, did not directly control the island in question. However, it's known that Carthage and Rome were rivals, and Rome eventually conquered Carthage, which could lead us to consider territories that were once under Carthage's influence.\n\n2. The island was part of the Kingdom of Aragon, which included Sicily, under the rule of the King of Aragon. Later, it was under the control of the Dukes of Savoy, who ruled Sicily as the Kings of Sicily.\n\n3. The island was later conquered by United Italy under Victor Emmanuel, and in 1947, it was granted autonomous government, which is the Sicily we know today.\n\nFinal answer: The island is Sicily.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.141861335840076,
         "n_gen_tokens": 1430,
@@ -1335,7 +1337,7 @@
       ],
       "vne": 0.5021215780511378,
       "judge_candidate": "1. Hawks and falcons belong to the family Falconidae, and like many bird species, they often have collective nouns to describe a group of them.\n2. For hawks, the collective noun is a \"cast\" or a \"kettle\" when they are flying together. For falcons, the collective noun is a \"band\" or a \"flight\".\n3. Therefore, the collective name for a group of hawks or falcons can be either a \"cast\", a \"kettle\", a \"band\", or a \"flight\". However, \"kettle\" is more commonly used for hawks in flight, while \"band\" and \"flight\" can be used for both hawks and falcons in a more general sense.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.453470217995346,
         "n_gen_tokens": 1158,
@@ -1360,7 +1362,7 @@
       ],
       "vne": 0.43534050992478907,
       "judge_candidate": "1. The development of synthetic fleece fabrics is a significant innovation in textile technology.\n2. One of the pioneers in this field was Malden Mills, an American company. However, a Norwegian company, Polartec, is often credited with creating the first modern fleece fabric, the Polartec pile fabric, in the 1960s.\n3. Therefore, Polartec, a Norwegian firm, supposedly produced the first fleece fabrics in the 1960s.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.145943699870259,
         "n_gen_tokens": 1493,
@@ -1735,7 +1737,7 @@
       ],
       "vne": 0.5232170107485551,
       "judge_candidate": "1. On a standard guitar, the open strings produce notes at the 5th fret when played at the same fret, but an octave higher.\n2. This is because the distance between the open string and the 5th fret is the same as the distance between the 5th fret and the 12th fret (12 frets form an octave).\n3. Therefore, the same notes as the open strings, but an octave higher, are found at the 12th fret.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.1768546788953245,
         "n_gen_tokens": 1571,
@@ -2210,7 +2212,7 @@
       ],
       "vne": 0.35792886992122175,
       "judge_candidate": "The Hungry Monk is a tea room in Alfriston, Sussex, England. It is known for its unique desserts. One of the most famous desserts associated with this tea room is the Sticky Toffee Pudding. This dessert was first created by Francis Coulson, the owner of the Hungry Monk, in the 1970s. Therefore, the Sticky Toffee Pudding was invented at the Hungry Monk in Alfriston, Sussex.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.203354803379625,
         "n_gen_tokens": 1024,
@@ -2235,7 +2237,7 @@
       ],
       "vne": 0.4019698920090117,
       "judge_candidate": "1. The rhyme \"Ring a Ring o' Roses\" is often associated with the Great Plague of London in 1665, but its origins predate that event.\n2. The rhyme's earliest known version, \"Ring a Ring o' Roses, A pocket full of posies,\" was published in 1798, long after the plague.\n3. Scholars suggest that the rhyme was actually a satire on the political instability during the reign of Charles II, as it references the Popish Plot and the Exclusion Crisis.\n\nFinal answer: \"Ring a Ring o' Roses\" was originally a satire on political instability during the reign of Charles II.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.796969499904662,
         "n_gen_tokens": 1657,
@@ -2460,7 +2462,7 @@
       ],
       "vne": 0.4575644941055137,
       "judge_candidate": "1. The British Formula 1 Grand Prix is not held in any location within Northamptonshire, as the race is held at Silverstone Circuit, which is located in South Northamptonshire, not Northamptonshire.\n2. Silverstone Circuit is a famous racing circuit in England, known for hosting the British Grand Prix since 1948.\n3. Therefore, the British Formula 1 Grand Prix is held at Silverstone Circuit, which is in South Northamptonshire, not Northamptonshire.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.978459627833217,
         "n_gen_tokens": 877,
@@ -2560,7 +2562,7 @@
       ],
       "vne": 0.5025527369689173,
       "judge_candidate": "Carly Simon's 'You're So Vain' was released in 1972. It reached the top of the US charts but only peaked at number 3 in the UK charts. The song was not originally released as a single in the UK, but it was later released in 1973 and still only reached number 3. Therefore, Carly Simon got to no. 3 in the UK charts with 'You're So Vain' in 1972 or 1973.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.129125533159822,
         "n_gen_tokens": 1207,
@@ -2635,7 +2637,7 @@
       ],
       "vne": 0.5051117706712857,
       "judge_candidate": "1. The English word 'Bullfight' is a noun that refers to a traditional Spanish spectacle involving a bull and a matador.\n2. In Spanish, the word for 'bull' is 'toro' and the word for 'fight' is 'lucha'.\n3. Therefore, the Spanish word for 'Bullfight' is 'Corrida de Toros', which translates to 'Running of the Bulls' in English, but in a bullfighting context, it specifically refers to the event where the matador faces the bull.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.762498531956226,
         "n_gen_tokens": 842,
@@ -2860,7 +2862,7 @@
       ],
       "vne": 0.6096909132897285,
       "judge_candidate": "Bar billiards, also known as carom billiards, is a game played with three balls: the cue ball, the white ball, and the red ball. The objective is to hit the cue ball to carom off the other two balls. So, in total, 3 balls are used in bar billiards.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.196454772725701,
         "n_gen_tokens": 787,
@@ -3060,7 +3062,7 @@
       ],
       "vne": 0.40519374695946414,
       "judge_candidate": "The film \"The Birds\" by Alfred Hitchcock is primarily set in two locations: Bodega Bay, California, where the main events unfold, and San Francisco, where the story begins. The rural town of Bodega Bay, with its picturesque coastline and secluded homes, serves as the central setting for the escalating bird attacks. The initial setting in San Francisco provides a stark contrast, showcasing the urban, bustling city life before the birds' mysterious behavior becomes a threat.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.181984998751432,
         "n_gen_tokens": 956,
@@ -3760,7 +3762,7 @@
       ],
       "vne": 0.4988695263492744,
       "judge_candidate": "1. Gregor Fisher is known for his role in the popular British sitcom \"Still Game.\"\n2. In \"Still Game,\" one of his characters, Victor McDade, is a fisherman who owns a boat.\n3. The name of Victor's boat is revealed to be The Vital Spark, which is the name of the boat in the novel \"Treasure Island\" by Robert Louis Stevenson, but in this context, it's the name of Fisher's character's boat on \"Still Game.\"\n\nFinal answer: Gregor Fisher's boat on TV is called The Vital Spark.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.414831720292568,
         "n_gen_tokens": 1108,
@@ -3785,7 +3787,7 @@
       ],
       "vne": 0.5213327083079204,
       "judge_candidate": "The characters in the nursery rhyme \"Hey Diddle Diddle\" are the cat and the fiddle. The line \"The cow jumped over the moon\" suggests that the cow was the one who left its place. However, the line \"The little dog laughed to see such sport\" implies that the dog was watching the action. The line \"And the dish ran away with the spoon\" is the only one that mentions a character leaving, so the answer is the dish ran away with the spoon.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.843521967995912,
         "n_gen_tokens": 1089,
@@ -3935,7 +3937,7 @@
       ],
       "vne": 0.5438720661032068,
       "judge_candidate": "Crash, rise, and hi-hat are not types of traditional musical instruments that produce sound through vibration of a body, such as strings, membranes, or columns of air. Instead, they are components of a drum kit, which is a percussion instrument. The crash and rise are types of cymbals, while the hi-hat is a combination of a cymbal and a pedal-operated stand. Therefore, crash, rise, and hi-hat are parts of a percussion instrument, specifically a drum kit.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.570445837918669,
         "n_gen_tokens": 1138,
@@ -4210,7 +4212,7 @@
       ],
       "vne": 0.4405390532274526,
       "judge_candidate": "The novel \"The Joy Luck Club\" was published in 1989, not 1993. The author of this novel is Amy Tan, a renowned American author of Chinese descent. Tan is known for her works that explore the complex relationships between Chinese and Chinese-American women. Therefore, Amy Tan is the author of \"The Joy Luck Club.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.237407656386495,
         "n_gen_tokens": 735,
@@ -4310,7 +4312,7 @@
       ],
       "vne": 0.38553080469341383,
       "judge_candidate": "1. Mohammed Ali, also known as Cassius Clay, won 21 heavyweight title fights in his career.\n2. The boxer Joe Louis, who held the heavyweight title for nearly 12 years, won 25 title fights.\n3. Therefore, Joe Louis is the only boxer to win more heavyweight title fights than Mohammed Ali.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.946109182201326,
         "n_gen_tokens": 1207,
@@ -4660,7 +4662,7 @@
       ],
       "vne": 0.4698349524652089,
       "judge_candidate": "1. The Queen does not personally own all the horses that run in races, but she does have a number of horses in her ownership.\n2. The Ascot Gold Cup is a prestigious horse race held annually in England, and the winner of the 2013 edition was a horse named Estimate, which was owned by The Queen's racing stable.\n3. Therefore, Estimate, a horse owned by The Queen, won the 2013 Ascot Gold Cup.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.547771526966244,
         "n_gen_tokens": 1388,
@@ -5485,7 +5487,7 @@
       ],
       "vne": 0.4196023333876319,
       "judge_candidate": "1. General Motors (GM) was the original manufacturer of Hummer vehicles, but due to financial difficulties, it decided to sell the brand.\n2. In 2009, GM sold Hummer to a Chinese automotive company, Sichuan Tengzhong Heavy Industrial Machinery Co.\n3. Therefore, Sichuan Tengzhong Heavy Industrial Machinery Co. is the US corporation that sold Hummer to the Chinese in 2009.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.403050860855728,
         "n_gen_tokens": 1059,
@@ -5735,7 +5737,7 @@
       ],
       "vne": 0.3538841241057234,
       "judge_candidate": "1. The final carrier of the Olympic flame is typically a prominent figure, often a Greek citizen, chosen to symbolize the spirit of the Olympics.\n2. This person is usually a surprise, kept secret until the last moment to build anticipation and maintain the tradition's mystique.\n3. Therefore, the final carrier of the Olympic flame in the Olympic Torch Relay is usually a prominent Greek citizen who is kept secret until the last moment.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.723194869235158,
         "n_gen_tokens": 1176,
@@ -6010,7 +6012,7 @@
       ],
       "vne": 0.39509348947411316,
       "judge_candidate": "The Australian Tennis Open is a Grand Slam tennis tournament held annually. It's one of four major tennis championships, the others being the French Open, Wimbledon, and the US Open. The city where it's played is Melbourne, specifically at Melbourne Park.\n\nFinal answer: The Australian Tennis Open is played in Melbourne.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.9627100890502334,
         "n_gen_tokens": 709,
@@ -6135,7 +6137,7 @@
       ],
       "vne": 0.3236675646789306,
       "judge_candidate": "1. The Watergate Scandal is a significant political scandal in U.S. history that occurred in the 1970s, involving the break-in at the Democratic National Committee headquarters.\n2. Robert Redford and Dustin Hoffman are well-known actors who often star in films based on real events.\n3. Therefore, the title of the 1976 film about the Watergate Scandal, starring Robert Redford and Dustin Hoffman, is \"All the President's Men.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.262362974695861,
         "n_gen_tokens": 1262,
@@ -6185,7 +6187,7 @@
       ],
       "vne": 0.3877883532053065,
       "judge_candidate": "1. The Academy Awards, often referred to as the Oscars, is an annual American awards ceremony honoring excellence in film.\n2. The host of the Academy Awards is typically a well-known personality who introduces presenters, performs comedy skits, and announces the winners.\n3. The 2006 Academy Awards were hosted by Jon Stewart, a comedian and television host, best known for his work on The Daily Show.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.782679884228855,
         "n_gen_tokens": 911,
@@ -6335,7 +6337,7 @@
       ],
       "vne": 0.5703302955094253,
       "judge_candidate": "Pakistan's currency is the Pakistani Rupee (PKR). It is the official currency of Pakistan, and it is abbreviated as PKR in financial transactions. The Pakistani Rupee is divided into 100 paisa.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.2619326091371477,
         "n_gen_tokens": 660,
@@ -6710,7 +6712,7 @@
       ],
       "vne": 0.34729299163040744,
       "judge_candidate": "1. In the Disney tale of Snow White, there are seven dwarfs: Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, and Dopey.\n2. Dopey is the only dwarf who exhibits characteristics that might resemble a human, such as wearing spectacles.\n3. Therefore, Dopey is the only dwarf in the Disney tale of Snow White who wears spectacles.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.270668167155236,
         "n_gen_tokens": 1089,
@@ -6735,7 +6737,7 @@
       ],
       "vne": 0.35313633396668875,
       "judge_candidate": "Protons and neutrons are both types of nucleons, which are sub-atomic particles found within the nucleus of an atom. The term \"nucleon\" comes from the Greek word 'nukleos', which means 'nut' or 'kernel', and was chosen because the nucleus of an atom is the dense central part of the atom, much like a nut's kernel. Therefore, protons and neutrons are both examples of heavy particles from the class of nucleons.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.216966746374965,
         "n_gen_tokens": 835,
@@ -6935,7 +6937,7 @@
       ],
       "vne": 0.2818758815394737,
       "judge_candidate": "1. Major League Baseball retired the number 42 in 1997 to honor a player who was a significant figure in the civil rights movement and had a remarkable career in baseball.\n2. This player, Jackie Robinson, was the first African American to play in the Major Leagues, breaking the color barrier in 1947.\n3. Jackie Robinson was born on January 31, 1919, making him the player that all Major League Baseball teams have honored by retiring the number 42.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.746036810800433,
         "n_gen_tokens": 1207,
@@ -6960,7 +6962,7 @@
       ],
       "vne": 0.6644335391364389,
       "judge_candidate": "1. David John Moore Cornwell is a British author known for writing spy novels.\n2. His pen name is often used in his works, which is a combination of three famous spy masters: Ian Fleming (James Bond creator), John le Carré, and Eric Ambler.\n3. The pen name is John le Carré, a renowned author of espionage novels.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.879262309987098,
         "n_gen_tokens": 863,
@@ -7485,7 +7487,7 @@
       ],
       "vne": 0.41463161678955757,
       "judge_candidate": "1. Barbara Walters started her career as a television journalist in the 1960s, but she became a household name in the 1970s with her work on the ABC News program \"The Today Show\" and later \"20/20.\"\n2. As a prominent figure in journalism, she would have interviewed many high-profile individuals, including U.S. presidents.\n3. The first U.S. president Barbara Walters interviewed was Richard Nixon in 1977, after he had left office. This interview was part of a series of interviews she conducted with former presidents for ABC News.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.739910816308111,
         "n_gen_tokens": 1068,
@@ -7685,7 +7687,7 @@
       ],
       "vne": 0.6514307023081017,
       "judge_candidate": "1. Yuan Yuan is an individual, so we are looking for a team associated with her drug-related offense.\n2. The context does not specify a particular sport, but the term \"Chinese team\" suggests a sports team.\n3. Therefore, it is likely that Yuan Yuan was caught carrying drugs for a Chinese sports team, but without more specific information, we cannot identify which one. Final answer: Yuan Yuan was caught carrying drugs for an unspecified Chinese sports team.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.735878159292042,
         "n_gen_tokens": 1283,
@@ -7710,7 +7712,7 @@
       ],
       "vne": 0.4162172926003408,
       "judge_candidate": "The Beaufort Scale categorizes wind speeds. A gale is a wind speed between 5 and 11 on the Beaufort Scale. The specific number for a gale is 6, which corresponds to a wind speed of 28-38 knots (52-73 km/h or 32-45 mph). Therefore, a gale on the Beaufort Scale is number 6.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.729983418248594,
         "n_gen_tokens": 1130,
@@ -7810,7 +7812,7 @@
       ],
       "vne": 0.27808557706708176,
       "judge_candidate": "1. Aled Jones is a Welsh tenor who has performed at numerous events, including the Royal Variety Performance.\n2. In 2013, during a Royal Variety Performance, he was singing \"Walking in the Air,\" a song from the animated film \"The Snowman.\"\n3. He famously forgot the words to this song, but continued by singing the melody and improvising lyrics, making it a memorable moment.\n\nFinal answer: Aled Jones forgot the words to \"Walking in the Air\" during a Royal Variety Performance.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.521711389068514,
         "n_gen_tokens": 1075,
@@ -7985,7 +7987,7 @@
       ],
       "vne": 0.38903950327026976,
       "judge_candidate": "The Royal Air Force (RAF) has its own unique rank structure, and the equivalent rank in the Royal Navy (RN) for an Air Marshal would be a Fleet Admiral. However, it's important to note that Fleet Admiral is not a permanent rank in the RN, but rather an honorary rank usually given for exceptional service. So, while there isn't a direct equivalent, the closest permanent rank would be a Vice Admiral.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.922658525872976,
         "n_gen_tokens": 978,
@@ -8010,7 +8012,7 @@
       ],
       "vne": 0.5094212859636356,
       "judge_candidate": "1. Goldie Hawn is a well-known actress, and her filmography includes a variety of roles.\n2. By cross-referencing her filmography with the year 1986, we find that she starred in the films \"Overboard\" and \"Wildcats.\"\n3. \"Wildcats\" is a sports comedy film where Goldie Hawn plays a high school football coach, making it the correct answer.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.828021278139204,
         "n_gen_tokens": 1546,
@@ -8035,7 +8037,7 @@
       ],
       "vne": 0.41663168343264556,
       "judge_candidate": "The Internet started as a project of the U.S. Department of Defense in the 1960s, known as ARPANET (Advanced Research Projects Agency Network). It was a precursor to the modern Internet and was the first network to use packet switching, a fundamental technology for data transmission over the Internet. The modern Internet, as we know it today, evolved from ARPANET in the 1990s. Therefore, the Internet started in the United States.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.5569714130833745,
         "n_gen_tokens": 912,
@@ -8160,7 +8162,7 @@
       ],
       "vne": 0.6583226845157665,
       "judge_candidate": "Picasso was born in 1881. His lifespan was approximately 91 years. Subtracting his birth year from the year of his death gives us the year of his death. Picasso died in 1973.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.7973616579547524,
         "n_gen_tokens": 775,
@@ -8210,7 +8212,7 @@
       ],
       "vne": 0.41535417992249934,
       "judge_candidate": "1. The artist in question is known for his unconventional and passionate lifestyle, which often influenced his work.\n2. He was involved in a romantic rivalry with another artist, which led to a heated argument.\n3. In a dramatic act, he cut off part of his ear and gave it to his lover, an act symbolizing his devotion and emotional intensity.\n\nFinal answer: Vincent van Gogh.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.00713946390897,
         "n_gen_tokens": 1037,
@@ -8260,7 +8262,7 @@
       ],
       "vne": 0.4639883357894232,
       "judge_candidate": "1. Shakespeare's play \"Measure for Measure\" is a part of his collection of works known as the \"Bard's English tragedies.\"\n2. Among these tragedies, the setting is typically a city or a court, and \"Measure for Measure\" follows this pattern.\n3. The city in \"Measure for Measure\" is Vienna, as stated in the play itself. Therefore, the city for this play is Vienna.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.2488846788182855,
         "n_gen_tokens": 1223,
@@ -8360,7 +8362,7 @@
       ],
       "vne": 0.6039221989730219,
       "judge_candidate": "1. The American ban in question is likely related to a specific Scottish food product that was banned due to health or safety concerns.\n2. The ban was lifted in 2010, which means it was in place for 21 years prior to that, placing the start of the ban around the 1980s.\n3. One such food product that was banned in the U.S. from the 1980s to 2010 is Scottish farmed salmon, due to concerns about sea lice and other contaminants.\n\nFinal answer: The Scottish food that had a 21-year ban lifted in 2010 is Scottish farmed salmon.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.859586886130273,
         "n_gen_tokens": 1596,
@@ -8510,7 +8512,7 @@
       ],
       "vne": 0.3913439398471958,
       "judge_candidate": "South is 180 degrees from North, and West is 270 degrees. So, South-West is the combination of these two directions. Adding 180 degrees (South) and 90 degrees (West) gives us 270 degrees. Therefore, South-West is 270 degrees.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.235907441005111,
         "n_gen_tokens": 1179,
@@ -9510,7 +9512,7 @@
       ],
       "vne": 0.6147826259156877,
       "judge_candidate": "Ananas is the French word for pineapple. This is because the pineapple's spiky exterior and sweet, juicy interior resemble a pine cone (cone pine, or pine in French is ananas), leading to its name. Therefore, the fruit known as ananas in French is a pineapple.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.654836443718523,
         "n_gen_tokens": 711,
@@ -9685,7 +9687,7 @@
       ],
       "vne": 0.5460589363488586,
       "judge_candidate": "1. The Bradford car manufacturer that built the Javelin and Jupiter models was active until 1954, which narrows down the options significantly as the automobile industry has evolved significantly since then.\n2. The Bradford car manufacturer was based in England, as the Javelin and Jupiter models were British cars.\n3. After considering the timeframe and location, the only Bradford car manufacturer that fits these criteria is the Vauxhall Motor Company, which produced the Vauxhall Javelin and Vauxhall Jupiter models during the 1930s and early 1940s.\n\nFinal answer: The Bradford car manufacturer that built the Javelin and Jupiter models was the Vauxhall Motor Company.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.230489748995751,
         "n_gen_tokens": 1247,
@@ -9985,7 +9987,7 @@
       ],
       "vne": 0.5386131126442577,
       "judge_candidate": "1. 'St. Elmo's Fire' and 'About Last Night...' are both films from the 1980s that feature the Brat Pack, a group of young actors who were popular during that time.\n2. One of the Brat Pack members, Emilio Estevez, also starred in 'Wayne's World' in 1992.\n3. Therefore, Emilio Estevez had parts in 'St. Elmo's Fire', 'About Last Night ...', and 'Wayne's World'.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.186551256105304,
         "n_gen_tokens": 1231,
@@ -10135,7 +10137,7 @@
       ],
       "vne": 0.38113031794793867,
       "judge_candidate": "1. The FBI and other law enforcement agencies use practical methods to educate their trainees, and one such method involves learning from historical examples.\n2. The Museum of Tolerance in Washington, D.C., which is run by the Simon Wiesenthal Center, focuses on human rights education, including the Holocaust and its lessons about the dangers of intolerance and the erosion of civil liberties.\n3. Therefore, CNN's report suggests that the FBI and other law enforcement agencies send their trainees to the Museum of Tolerance to learn about the consequences of not protecting civil liberties, as demonstrated by the Holocaust.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.1109944568015635,
         "n_gen_tokens": 1258,
@@ -10210,7 +10212,7 @@
       ],
       "vne": 0.6075150585182005,
       "judge_candidate": "India's currency is the Indian Rupee (INR). It's the official currency of the Republic of India, and it's abbreviated as Rs. in daily use. The Indian Rupee is subdivided into 100 paise.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.08873664913699,
         "n_gen_tokens": 719,
@@ -10335,7 +10337,7 @@
       ],
       "vne": 0.49793428143653784,
       "judge_candidate": "Bradford City FC is a football club, and they typically assign numbers to players on their shirts. As the Dalai Lama is not a player, he would not have a player number. Instead, Bradford City FC chose to honor him with the number 14, which is the number of the Dalai Lama's incarnation. Therefore, the Dalai Lama's personalized club shirt had the number 14 on the back.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.4722742098383605,
         "n_gen_tokens": 1282,
@@ -10435,7 +10437,7 @@
       ],
       "vne": 0.36923691953374826,
       "judge_candidate": "1. King Arthur's Knights of the Round Table are a group of knights in the Arthurian legend.\n2. Sir Lancelot, Sir Gawain, and Sir Percival are among the most well-known knights.\n3. However, it's Sir Bedivere who, after a battle, returns Excalibur to the Lady of the Lake and is told to return with Excalibur's scabbard when Britain needs a king again. Therefore, it's Sir Bedivere who is with Arthur at the end and throws Excalibur into the lake.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.220253942068666,
         "n_gen_tokens": 1447,
@@ -10510,7 +10512,7 @@
       ],
       "vne": 0.25141718339850333,
       "judge_candidate": "1. The CBE (Commander of the Order of the British Empire) is a British order of chivalry awarded for significant contributions to the arts and other fields.\n2. Dame Kiri Te Kanawa, a renowned New Zealand-born opera singer, has been a recipient of numerous awards, including the CBE, which she received in 2002.\n3. Therefore, Dame Kiri Te Kanawa is the opera singer who was awarded a CBE in 2002.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.584216220770031,
         "n_gen_tokens": 1154,
@@ -10685,7 +10687,7 @@
       ],
       "vne": 0.37708079220535456,
       "judge_candidate": "1. Rugby Union, a popular contact sport, had strict amateur rules in the 19th century. In 1895, a group of rugby players in northern England, dissatisfied with these rules, formed a new league that allowed professionals.\n2. This new league was named the Northern Rugby Football Union, later known as the Rugby League. This event marked the birth of a new sport, distinct from Rugby Union.\n3. Therefore, Rugby League was developed in 1895 when the Rugby Union refused to allow professionalism.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.788716095034033,
         "n_gen_tokens": 1154,
@@ -10810,7 +10812,7 @@
       ],
       "vne": 0.3453179552974077,
       "judge_candidate": "The hour hand on a clock moves 360 degrees (one full rotation) every 12 hours. Since there are 60 minutes in an hour, the hour hand moves 360/60 = 6 degrees per minute.\n\nThe second hand on a clock moves 360 degrees (one full rotation) every 60 minutes. Since the second hand moves continuously, it will move the same number of times as the number of minutes it takes for the hour hand to complete one full rotation, which is 60 minutes.\n\nSo, the second hand of a clockwork clock ticks 60 times while the hour-hand completes one full rotation.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.75751728983596,
         "n_gen_tokens": 1668,
@@ -10985,7 +10987,7 @@
       ],
       "vne": 0.549236438894995,
       "judge_candidate": "The Swiss national flag consists of three equal-sized, horizontal bands of red, white, and blue. The cross on the Swiss flag is a white, equal-armed cross that is centered on the flag and extends to the edges of the red and blue bands. Therefore, the cross on the Swiss flag is white.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.478797359857708,
         "n_gen_tokens": 788,
@@ -11010,7 +11012,7 @@
       ],
       "vne": 0.4452576668537809,
       "judge_candidate": "1. The Governor of a U.S. state is elected by the citizens of that state.\n2. In the United States, the election for Governor typically takes place every four years.\n3. George W. Bush was elected Governor of Texas in 1994, serving until 2000. Therefore, George W. Bush was the Governor of Texas in 1994.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.366992692928761,
         "n_gen_tokens": 1123,
@@ -11035,7 +11037,7 @@
       ],
       "vne": 0.46669167459693056,
       "judge_candidate": "Sir James Thornhill was married to Mary Collier, who was the sister of the renowned English portrait painter, Sir Godfrey Kneller (1646-1723). Therefore, Sir James Thornhill was related by marriage to Sir Godfrey Kneller.\n\nFinal answer: Sir James Thornhill was related by marriage to Sir Godfrey Kneller.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.668767569120973,
         "n_gen_tokens": 806,
@@ -11135,7 +11137,7 @@
       ],
       "vne": 0.42600059239936516,
       "judge_candidate": "Haggis is a traditional Scottish dish, typically made from sheep's heart, liver, and lungs, along with onions, oatmeal, spices, and suet. The mixture is traditionally encased in the sheep's stomach and boiled. Therefore, the stomach of a sheep is traditionally used for a haggis.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.3939411994069815,
         "n_gen_tokens": 890,
@@ -11160,7 +11162,7 @@
       ],
       "vne": 0.1831085220645948,
       "judge_candidate": "1. Liverpool Football Club has participated in the UEFA Champions League, the successor to the Europion Cup, multiple times since its inception.\n2. The club has won the Europion Cup (now UEFA Champions League) six times: 1977, 1978, 1981, 2005, 2006, and 2019.\n3. Therefore, Liverpool has won the Europion Cup (UEFA Champions League) six times.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.904227915219963,
         "n_gen_tokens": 1018,
@@ -11310,7 +11312,7 @@
       ],
       "vne": 0.46034133009923833,
       "judge_candidate": "1. The question \"Is our children learning?\" is a reflection on the quality and effectiveness of the education system.\n2. To answer this, we would assess factors such as student performance on standardized tests, teacher qualifications, and school resources.\n3. Based on these factors, if student performance is consistently high, teachers are well-qualified, and schools have adequate resources, we can conclude that our children are learning effectively.\n\nFinal answer: To determine if our children are learning, we would assess factors such as student performance, teacher qualifications, and school resources. If these factors are positive, we can conclude that our children are learning effectively.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.021190891042352,
         "n_gen_tokens": 1195,
@@ -11785,7 +11787,7 @@
       ],
       "vne": 0.4097534620284094,
       "judge_candidate": "'Arthur and George' is a novel by Julian Barnes, published in 2005. The novel is based on a true story and is primarily about two individuals: Arthur Conan Doyle, the famous author of the Sherlock Holmes series, and George Edalji, a solicitor who was wrongly accused of a crime. Therefore, Arthur in this context refers to Arthur Conan Doyle.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.674120296724141,
         "n_gen_tokens": 934,
@@ -11885,7 +11887,7 @@
       ],
       "vne": 0.27857154316529414,
       "judge_candidate": "1. Flemish Baroque painting is a style that originated in the Southern Netherlands, particularly in Antwerp, during the 17th century.\n2. One of the most famous painters of this period was Peter Paul Rubens, who was born and worked in Antwerp.\n3. Today, Rubens' former home in Antwerp, known as the Rubenshuis, has been converted into a museum dedicated to his life and work.\n\nFinal answer: Peter Paul Rubens' Antwerp home is now the Rubenshuis museum.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.487309908960015,
         "n_gen_tokens": 1248,
@@ -11960,7 +11962,7 @@
       ],
       "vne": 0.5346297343075084,
       "judge_candidate": "1. Ridley Scott is the director known for films like \"Gladiator\" and \"Blade Runner.\"\n2. \"Thelma and Louise\" is a film from the 1990s, and Ridley Scott did not direct it.\n3. However, Ridley Scott did direct \"Hannibal\" and \"Black Hawk Down,\" both released in the late 1990s and early 2000s.\n\nFinal answer: Ridley Scott did not direct \"Thelma and Louise,\" but he did direct \"Hannibal\" and \"Black Hawk Down.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.703904101159424,
         "n_gen_tokens": 1583,
@@ -12235,7 +12237,7 @@
       ],
       "vne": 0.5048363310101318,
       "judge_candidate": "The two tyrants who ruled Syracuse in the 2nd century BC were Hieronymus and Dionysius. Hieronymus was the son of Hiero II and ruled from 140 BC to 139 BC. After Hieronymus was overthrown, Dionysius, also known as Dionysius the Younger, took power and ruled from 146 BC to 36 BC. These tyrants were known for their oppressive rule and conflicts with Rome.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.3243945739232,
         "n_gen_tokens": 1425,
@@ -12310,7 +12312,7 @@
       ],
       "vne": 0.39353779217692064,
       "judge_candidate": "1. The television series 'Doctor Who' premiered in the UK on November 23, 1963. To find the first country to screen it outside the UK, we need to look at the international broadcasting history of the show.\n\n2. 'Doctor Who' was first sold to the Australian Broadcasting Corporation (ABC) in 1964, making Australia the first country to air the series outside the UK.\n\n3. Therefore, Australia was the first country to screen the television series 'Doctor Who' outside the UK.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.005030313972384,
         "n_gen_tokens": 1053,
@@ -12810,7 +12812,7 @@
       ],
       "vne": 0.4389843986202848,
       "judge_candidate": "1. The sketches in question are part of the British comedy series \"Harry Enfield and Chums,\" where Harry Enfield plays various characters, including Kevin the Teenager.\n2. Kathy Burke appears in these sketches, portraying a character named \"Karen.\"\n3. Therefore, the name of Kevin the Teenager's friend played by Kathy Burke is Karen.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.865082452073693,
         "n_gen_tokens": 930,
@@ -12860,7 +12862,7 @@
       ],
       "vne": 0.2022750158516013,
       "judge_candidate": "The Social Democratic Party (SDP) in the United Kingdom, often referred to as the \"Gang of Four,\" was a group of four Labour MPs who left the Labour Party to form a new party in 1981. The four members were Roy Jenkins, David Owen, Bill Rodgers, and Shirley Williams. Shirley Williams was the female member of the Gang of Four.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.609326052945107,
         "n_gen_tokens": 992,
@@ -13160,7 +13162,7 @@
       ],
       "vne": 0.3379223530944896,
       "judge_candidate": "The French word \"noir\" is a noun and an adjective. As an adjective, it means \"black\" in English. For example, \"le noir\" translates to \"the black\" in English. As a noun, it can mean \"black person\" or \"darkness.\" However, in a broader context, it can also refer to a person of any race if used as a slur. It's essential to use it respectfully and appropriately.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.191044084727764,
         "n_gen_tokens": 656,
@@ -13460,7 +13462,7 @@
       ],
       "vne": 0.3741346131159565,
       "judge_candidate": "1. Captain James Cook, a British explorer, made several voyages to the Pacific Ocean in the late 18th century.\n2. On January 18, 1778, during his third voyage, he discovered a chain of islands in the central Pacific.\n3. In honor of his sponsor, John Montagu, 4th Earl of Sandwich, he named these islands the Sandwich Islands, which are now known as Hawaii.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.798505073878914,
         "n_gen_tokens": 960,
@@ -13810,7 +13812,7 @@
       ],
       "vne": 0.35518060326936235,
       "judge_candidate": "1. Dilbert, a popular comic strip, features a cast of characters, one of whom is an engineer.\n2. The engineer character in Dilbert is easily recognizable by his big triangular hairstyle.\n3. The engineer with the big triangular hair-style in Dilbert is named Wally.\n\nFinal answer: Wally is the engineer with the big triangular hair-style in the Dilbert cartoons.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.961689650081098,
         "n_gen_tokens": 872,
@@ -14735,7 +14737,7 @@
       ],
       "vne": 0.39942973170726515,
       "judge_candidate": "East Malaysia consists of the states of Sabah and Sarawak on the island of Borneo, while West Malaysia comprises the peninsular states and the island of Penang. The separation is primarily geographical, with the South China Sea separating the two regions. The Strait of Malacca, a significant waterway, also separates West Malaysia from the Indonesian islands to the south. The political separation is due to the British and Dutch colonial powers, with the British controlling West Malaysia and the Dutch controlling parts of Borneo, which later became East Malaysia.\n\nFinal answer: East Malaysia is separated from West Malaysia by the South China Sea and the Strait of Malacca.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.772596151102334,
         "n_gen_tokens": 1120,
@@ -15185,7 +15187,7 @@
       ],
       "vne": 0.615742982667635,
       "judge_candidate": "1. The game show format is a common element in children's TV shows, and the booby prize is a term for an unwanted or undesirable prize.\n2. One popular children's game show is \"The Gong Show,\" but it did not use cabbages as a booby prize.\n3. The correct answer is \"The Magic Roundabout,\" a British animated series that did incorporate a game show segment called \"The Nonsense Show,\" where the losers were given cabbages.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.444382700137794,
         "n_gen_tokens": 1137,
@@ -15410,7 +15412,7 @@
       ],
       "vne": 0.3865636486583879,
       "judge_candidate": "1. The city of Battle Creek, MI, is historically associated with the cereal industry due to the presence of the Kellogg Company and Post Consumer Brands.\n2. Kellogg Company was founded in 1906, making it the older of the two major cereal companies in Battle Creek.\n3. Therefore, the cereal company founded in 1906 with headquarters in Battle Creek, MI, is the Kellogg Company.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.0600280980579555,
         "n_gen_tokens": 925,
@@ -15610,7 +15612,7 @@
       ],
       "vne": 0.44888066038287877,
       "judge_candidate": "This quote is from the 1913-1915 trial of Lord Charles Edward Maddox Astor, 2nd Viscount Astor, who was accused of committing adultery with a woman named Dorothy Evelyn Gibson. The quote \"Well he would, wouldn't he\" was said by Winston Churchill, a close friend of Lord Astor, in response to Lord Astor's denial of the allegations. Churchill's statement was intended to imply that Lord Astor would naturally deny the accusations, as they were damaging to his reputation.\n\nFinal answer: Winston Churchill said \"Well he would, wouldn't he\" in response to Lord Astor's denial during the trial of the adultery allegations against him.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.748308163136244,
         "n_gen_tokens": 1427,
@@ -15635,7 +15637,7 @@
       ],
       "vne": 0.42996606587710096,
       "judge_candidate": "A standard Scrabble board has 15 intersecting rows and columns, making a total of 15 x 15 = 225 squares. Double-word score squares are located at the center intersections of the board, which are 4 in number (one at each corner). Since these double-word score squares span two squares diagonally, each one covers 2 individual squares. Therefore, there are 4 * 2 = 8 double-word score squares on a standard Scrabble board.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.6199893723241985,
         "n_gen_tokens": 1082,
@@ -15660,7 +15662,7 @@
       ],
       "vne": 0.4321288099061136,
       "judge_candidate": "Pistol and Boo are two Yorkshire Terriers who gained international fame in 2015. They were the dogs owned by Kim Kardashian and Kanye West.\n\nFinal answer: Pistol and Boo are celebrity dogs.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.027043874841183,
         "n_gen_tokens": 799,
@@ -16085,7 +16087,7 @@
       ],
       "vne": 0.5314503503469709,
       "judge_candidate": "1. The first indigenous Australian to join the Parliament of Australia was Neville Bonner, who was elected as a Senator for Queensland in May 1971, a month before June.\n2. Bonner, a member of the Kok-Thaypan people, served from May 1971 until his retirement in 1983.\n3. Therefore, Neville Bonner was the first indigenous Australian to become a member of the Parliament of Australia in June 1971.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.505569151137024,
         "n_gen_tokens": 1213,
@@ -16210,7 +16212,7 @@
       ],
       "vne": 0.5434455569746717,
       "judge_candidate": "A group of jellyfish is called a \"smack\" or a \"bloom.\" However, the term \"smack\" is more commonly used for a group of jellyfish in the ocean, while \"bloom\" is often used for a large concentration of jellyfish in a specific area.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.460034049116075,
         "n_gen_tokens": 986,
@@ -16385,7 +16387,7 @@
       ],
       "vne": 0.6885777717919921,
       "judge_candidate": "The given names (Track, Bristol, Piper, Trig, Willow) are uncommon for adults but are often given to children. Bristol, Piper, and Willow are common names for girls, while Track, Trig are less common but still used for boys. The unique name Trig is a strong indicator that these names belong to a single family, as it is not a common name. Therefore, these children are likely the offspring of a single parent or a blended family.\n\nFinal answer: These children are likely the offspring of a single parent or a blended family.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.736794943921268,
         "n_gen_tokens": 1265,
@@ -16985,7 +16987,7 @@
       ],
       "vne": 0.4806201935698721,
       "judge_candidate": "1. Desperate Dan is a character from the British comic The Dandy, created by D.C. Thomson.\n2. The Dandy is set in a fictional town called Where's-Me-Jumper.\n3. Therefore, Desperate Dan lives in the fictional town of Where's-Me-Jumper.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.512620494235307,
         "n_gen_tokens": 783,
@@ -17185,7 +17187,7 @@
       ],
       "vne": 0.34582763700355595,
       "judge_candidate": "The Battle of the Ages was a boxing match that took place in April 1991. This fight was a highly publicized event, and it was not a regular match but a comeback fight for George Foreman, who was then 45 years old. The opponent who was 25 years younger was Muhammad Ali. Therefore, the boxer George Foreman fought against in the Battle of the Ages was Muhammad Ali.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.985701184719801,
         "n_gen_tokens": 958,
@@ -17585,7 +17587,7 @@
       ],
       "vne": 0.3700783046552479,
       "judge_candidate": "Borneo is one of the largest islands in the world due to its extensive land area of approximately 743,330 square kilometers. This size places it among the top five largest islands globally, along with Greenland, New Guinea, Canada's Ellesmere Island, and the world's largest island, Australia.\n\nFinal answer: Borneo is among the largest five islands globally due to its extensive land area.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.383954924996942,
         "n_gen_tokens": 798,
@@ -17610,7 +17612,7 @@
       ],
       "vne": 0.4293303652598528,
       "judge_candidate": "1. \"About A Boy\" and \"High Fidelity\" are novels that were later adapted into films. \"High Fidelity\" was also written by a British author.\n2. The author of \"High Fidelity\" is Nick Hornby, a well-known British novelist and screenwriter.\n3. Therefore, Nick Hornby also wrote \"About A Boy,\" as it is another novel by the same author.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.3528969143517315,
         "n_gen_tokens": 1116,
@@ -18135,7 +18137,7 @@
       ],
       "vne": 0.4415141660224208,
       "judge_candidate": "A geta is a traditional Japanese sandal. It is typically worn on the foot, specifically on the lower part of the leg, between the ankle and the toes. The design allows for good ventilation and is suitable for walking on various surfaces, including tatami mats and grass. Therefore, a Japanese person would wear a geta on their feet.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.85981455584988,
         "n_gen_tokens": 688,
@@ -18210,7 +18212,7 @@
       ],
       "vne": 0.4667950209853021,
       "judge_candidate": "1. The given birth year is 1912, and the question asks for a British Prime Minister. Only a few British Prime Ministers were born in the early 20th century, and Portsmouth is a city in the United Kingdom.\n\n2. By process of elimination, we can narrow down the list of potential candidates to those who were British Prime Ministers, born in the early 20th century, and hail from Portsmouth.\n\n3. One of the British Prime Ministers who fits this description is Winston Churchill, who was born in 1874 but served as Prime Minister from 1940 to 1945 and again from 1951 to 1955. However, he was not born in 1912.\n\n4. The only other British Prime Minister born in Portsmouth in the early 20th century is Harold",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 8.982924999203533,
         "n_gen_tokens": 1504,
@@ -18385,7 +18387,7 @@
       ],
       "vne": 0.42580016511415686,
       "judge_candidate": "The essential oil obtained chiefly from the Damask Rose is called Rose Oil. This oil is extracted from the petals of the Damask Rose, which is native to the Mediterranean region. It is known for its sweet, floral, and slightly spicy scent.\n\nFinal answer: Rose Oil.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.769702527206391,
         "n_gen_tokens": 760,
@@ -18535,7 +18537,7 @@
       ],
       "vne": 0.25769040364236556,
       "judge_candidate": "1. The cost of a presidential inauguration includes security, parades, balls, and other events.\n2. The most expensive inauguration of the 20th century was that of President Ronald Reagan in 1981, with an estimated cost of around $20 million (adjusted for inflation).\n3. This cost was significantly higher than any other 20th-century inauguration due to the large-scale events and security measures required following the assassination attempt on President Reagan's predecessor, President Carter.\n\nFinal answer: Ronald Reagan had the most expensive presidential inauguration ceremony of the 20th century.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.252231786958873,
         "n_gen_tokens": 1034,
@@ -19010,7 +19012,7 @@
       ],
       "vne": 0.4117176295328237,
       "judge_candidate": "The Triumph TR7 was produced by the British Leyland Motor Corporation, which was a British automobile manufacturing company. The Jaguar XJS, on the other hand, was produced by Jaguar Cars, which is a British luxury vehicle manufacturer. Therefore, the Triumph TR7 was not produced by Jaguar Cars, but by British Leyland Motor Corporation.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.355468387249857,
         "n_gen_tokens": 954,
@@ -19110,7 +19112,7 @@
       ],
       "vne": 0.2023089131106966,
       "judge_candidate": "The Jay is a member of the Corvidae family, which also includes crows, ravens, and magpies. This family is known for their intelligence and complex social behaviors. The Jay's distinctive features, such as their crest and checkered plumage, are common among Corvidae members. Therefore, the Jay belongs to the Corvidae family.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.7053739367984235,
         "n_gen_tokens": 636,
@@ -19335,7 +19337,7 @@
       ],
       "vne": 0.40910143190631676,
       "judge_candidate": "The moon, as the Apollo 11 mission in 1969 aimed to land on the lunar surface, not Earth. So, the correct answer is \"moon.\"\n\nHouston, Tranquility Base here. The moon has landed.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.75239214906469,
         "n_gen_tokens": 720,
@@ -19585,7 +19587,7 @@
       ],
       "vne": 0.3887122750582921,
       "judge_candidate": "Seat is a Spanish automobile manufacturer. The Volkswagen Group, a German multinational automotive corporation, owns Seat. This is because Seat was initially established as a state-owned company in 1950, but it was later acquired by the Volkswagen Group in 1986. Therefore, Seat is a subsidiary of the Volkswagen Group.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.95134026510641,
         "n_gen_tokens": 688,
@@ -19660,7 +19662,7 @@
       ],
       "vne": 0.42301056990229446,
       "judge_candidate": "1. Sara Jane Moore is known for an attempted assassination in the 1970s, a time when President Gerald Ford was in office.\n2. However, the attempt was not successful, and it was another individual, Sirhan Sirhan, who assassinated Senator Robert F. Kennedy in 1968.\n3. Therefore, Sara Jane Moore did not attempt to assassinate President Gerald Ford, but rather an unsuccessful attempt on President Ford's life occurred later in 1975 by another individual, Lynette \"Squeaky\" Fromme.\n\nFinal answer: Sara Jane Moore did not attempt to assassinate President Gerald Ford.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.600007936358452,
         "n_gen_tokens": 1038,
@@ -19910,7 +19912,7 @@
       ],
       "vne": 0.44008875807584413,
       "judge_candidate": "Idi Amin was a military officer in Uganda. In January 1971, he led a coup against President Milton Obote, who was also from Uganda. As a result, Idi Amin became the President of Uganda. Therefore, Idi Amin became President of Uganda in January 1971.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.777449346147478,
         "n_gen_tokens": 889,
@@ -20160,7 +20162,7 @@
       ],
       "vne": 0.30215627950254503,
       "judge_candidate": "1. The film 'Evita' released in 1996 is a biographical musical about Eva Perón, the wife of Argentine president Juan Perón.\n2. The lead role of Eva Perón was portrayed by a singer-actress in the film.\n3. The singer-actress who played 'Evita' in the 1996 film is Madonna.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.551389107014984,
         "n_gen_tokens": 904,
@@ -20235,7 +20237,7 @@
       ],
       "vne": 0.3362917369845745,
       "judge_candidate": "1. The character Danny Baldwin is a factory boss in the British soap opera 'Coronation Street.'\n2. The actor who portrayed this role is Ken Morley, a British actor known for his work in various television series.\n3. Therefore, Ken Morley played the role of factory boss Danny Baldwin in 'Coronation Street.'",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.40891724685207,
         "n_gen_tokens": 839,
@@ -20360,7 +20362,7 @@
       ],
       "vne": 0.3400429986575589,
       "judge_candidate": "1. To find the UK band that had two top ten singles in the same week, we need to look for a band with two songs that charted within the top ten positions on the UK Singles Chart in a single week.\n\n2. In 2001, the UK band Westlife achieved this feat with their singles \"Uptown Girl\" and \"I Have a Dream/What More Can I Give,\" both of which entered the top ten on the UK Singles Chart on the week of February 18, 2001.\n\nFinal answer: Westlife was the UK band that had two top ten singles in the same week in 2001.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.826149139087647,
         "n_gen_tokens": 1186,
@@ -20685,7 +20687,7 @@
       ],
       "vne": 0.32417271281968296,
       "judge_candidate": "The G7 is an annual summit of the leaders of seven major advanced economies: Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States. In 1997, Russia was invited to join, making the forum the G8. Therefore, Russia joined the G7 in 1997.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.673360063228756,
         "n_gen_tokens": 896,
@@ -21110,7 +21112,7 @@
       ],
       "vne": 0.3764535654449235,
       "judge_candidate": "The BDO World Professional Darts Championship is an annual event. To find the winner of a specific year, we would look up the results for that year. In 2009, the winner of the BDO World Professional Darts Championship was Tony O'Shea, who is also known by his nickname \"The Count.\"\n\nFinal answer: Tony O'Shea (The Count) won the BDO World Professional Darts Championship in 2009.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.772812542039901,
         "n_gen_tokens": 932,
@@ -21535,7 +21537,7 @@
       ],
       "vne": 0.5285081565824117,
       "judge_candidate": "1. QI is a British comedy panel game show that airs on BBC Two.\n2. The show is known for its quirky and intellectually stimulating questions, and it is hosted by a well-known British comedian.\n3. The host of QI is Stephen Fry.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.88831519568339,
         "n_gen_tokens": 885,
@@ -21560,7 +21562,7 @@
       ],
       "vne": 0.40536044926844256,
       "judge_candidate": "1. \"Night and Day\", \"I Get a Kick out of You\", \"Well, Did You Evah!\", and \"I've Got You Under My Skin\" are songs from the 1930s, a time when Cole Porter was active as a composer and lyricist.\n2. Cole Porter is known for his sophisticated, witty, and enduring songs, many of which were written for Broadway shows and Hollywood films.\n3. Therefore, Cole Porter is the composer who wrote \"Night and Day\", \"I Get a Kick out of You\", \"Well, Did You Evah!\", and \"I've Got You Under My Skin\".",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.198798708152026,
         "n_gen_tokens": 1340,
@@ -21810,7 +21812,7 @@
       ],
       "vne": 0.495543108897776,
       "judge_candidate": "1. The reptile in question is the Gila monster, a venomous lizard native to the southwestern United States and northwestern Mexico.\n2. Its name is derived from the Spanish word \"gila,\" which means \"gila\" or \"lizard\" in English.\n3. Therefore, the Gila monster is named after the Spanish word for lizard.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.493175393901765,
         "n_gen_tokens": 890,
@@ -22335,7 +22337,7 @@
       ],
       "vne": 0.38950295962155296,
       "judge_candidate": "1. To find the artist whose eighteenth studio album was released in March this year, we need to identify an artist who released an album in March 2022 that is titled \"Postcards from Paradise.\"\n\n2. A quick search reveals that the American country music singer-songwriter, Chris Young, released an album with that title in March 2022.\n\n3. Therefore, the artist whose eighteenth studio album released in March this year is Chris Young.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.2618424808606505,
         "n_gen_tokens": 1058,
@@ -22360,7 +22362,7 @@
       ],
       "vne": 0.22396363538880457,
       "judge_candidate": "1. In Greek mythology, Achilles was invulnerable except for his heel, which was not protected by his mother Thetis when she dipped him into the River Styx.\n2. The Trojan prince Paris shot an arrow into Achilles' heel, exploiting this weakness, during the Trojan War.\n3. Therefore, Paris wounded Achilles in the heel, leading to his death.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.766360552981496,
         "n_gen_tokens": 1078,
@@ -22585,7 +22587,7 @@
       ],
       "vne": 0.4259771259010754,
       "judge_candidate": "1. The Olympic baseball tournament was held in 1992, 2000, 2008, and 2021. Baseball was not an Olympic sport in 1988, 1996, 2004, 2012, and 2016.\n2. In 1992, the United States won the gold medal. In 2000, Japan won the gold medal. In 2008, South Korea won the gold medal. In 2021, Japan won the gold medal again.\n3. Therefore, the country that won 3 of the 5 Olympic gold medals awarded in baseball is Japan (1 time in 2000, 1 time in 2008, and 1 time in 2021).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.462654373142868,
         "n_gen_tokens": 1231,
@@ -23135,7 +23137,7 @@
       ],
       "vne": 0.3518956081329786,
       "judge_candidate": "1. To find the artist who had a UK No. 1 hit in 1977 with \"Silver Lady,\" we need to look for the song that topped the UK Singles Chart that year.\n2. Research shows that the song \"Silver Lady\" was a hit for Wings, a British-American band led by Paul McCartney, former member of The Beatles.\n3. Therefore, Wings had a UK No. 1 hit in 1977 with \"Silver Lady.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.885974360164255,
         "n_gen_tokens": 1245,
@@ -23310,7 +23312,7 @@
       ],
       "vne": 0.6008345388115679,
       "judge_candidate": "1. Fruit is not an animal, but a product of an animal (like apples from apple trees). Crickets and horseshoe crabs are animals, but they are not the same species.\n2. Horseshoe crabs are arthropods, but they are not the same as crickets, which are insects.\n3. Therefore, neither fruit, cricket, nor horseshoe are varieties of the same animal. They belong to different taxonomic groups.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.203188763931394,
         "n_gen_tokens": 1161,
@@ -23335,7 +23337,7 @@
       ],
       "vne": 0.40396646890156923,
       "judge_candidate": "1. The thickness of a bird's skull is often related to the bird's diet and the need for protection against predators or hard food sources.\n2. The Cassowary, a large flightless bird native to Southeast Asia, has a thick skull to protect itself from predators and to break open tough fruits.\n3. Therefore, the Cassowary, due to its large size and thick skull, has the thickest skull in relation to its size among birds.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.289914073888212,
         "n_gen_tokens": 1106,
@@ -23585,7 +23587,7 @@
       ],
       "vne": 0.5031571921052005,
       "judge_candidate": "Burgundy is a region in France, and regions in France do not have capitals in the same sense as countries. However, Dijon is the largest city and historical center of the region. Therefore, Dijon is often considered the unofficial capital of Burgundy.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.859903542790562,
         "n_gen_tokens": 986,
@@ -23760,7 +23762,7 @@
       ],
       "vne": 0.36496370569251174,
       "judge_candidate": "1. Meadowbank Thistle, now known as Ferranti Thistle, joined the Scottish Football League in 1974.\n2. In 1995, the club relocated from Meadowbank Stadium to Livingston, a town in West Lothian.\n3. As a result of the move, the club changed its name to Livingston F.C. to reflect its new location.\n\nFinal answer: Livingston F.C.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.346321985125542,
         "n_gen_tokens": 990,
@@ -24310,7 +24312,7 @@
       ],
       "vne": 0.6066424012801466,
       "judge_candidate": "The lyrics of \"Winter Wonderland\" mention a \"parson\" in the line, \"In the meadow we can build a snowman.\" The term \"parson\" is an old-fashioned word for a minister or priest. Therefore, the parson in the carol is a minister or priest.\n\nFinal answer: The parson in the carol \"Winter Wonderland\" is a minister or priest.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.947358432225883,
         "n_gen_tokens": 921,
@@ -24910,7 +24912,7 @@
       ],
       "vne": 0.5142174680068338,
       "judge_candidate": "1. The first live broadcast of the English FA Cup Final on television occurred in 1955. This was the year when the BBC aired the match between Manchester City and Newcastle United.\n2. The BBC started broadcasting the FA Cup Final in 1954, but it was the 1955 match that was the first to be shown live.\n3. Therefore, the complete English FA Cup Final was first shown live on television in 1955.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.827196007128805,
         "n_gen_tokens": 1211,

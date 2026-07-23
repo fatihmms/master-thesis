@@ -12,7 +12,9 @@
     "pool": "mean",
     "kernel": "cosine",
     "judge_temp": 0.1,
-    "no_repeat_ngram_low_temp": 6
+    "no_repeat_ngram_low_temp": 6,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": 0.4650344653951102,
   "hallucination_rate": 0.821,

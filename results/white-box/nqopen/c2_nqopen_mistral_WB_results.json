@@ -13,10 +13,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.7105899691505793,
-  "hallucination_rate": 0.401,
+  "auroc": 0.6945256257842942,
+  "hallucination_rate": 0.412,
   "details": [
     {
       "id": "nq_open-000000",
@@ -185,7 +187,7 @@
       ],
       "vne": 0.5495109309481211,
       "judge_candidate": "The lyrics \"Too Much Time on My Hands\" are from the song written by Styx. The lead vocals in the original recording are sung by Dennis DeYoung, a member of the band Styx. Therefore, Dennis DeYoung is the singer of the \"Too Much Time on My Hands\" lyrics.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.443860928993672,
         "n_gen_tokens": 907,
@@ -410,7 +412,7 @@
       ],
       "vne": 0.4318817807211287,
       "judge_candidate": "The TV series \"Drop Dead Diva\" features a character named Judge Deborah \" Deb\" Dobkins, who is played by Brooke Elliott. Elliott portrays the role of a plus-sized lawyer who dies and is reincarnated in the body of a supermodel, and later becomes a judge. Therefore, Brooke Elliott plays the judge in Drop Dead Diva.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.266722798813134,
         "n_gen_tokens": 754,
@@ -760,7 +762,7 @@
       ],
       "vne": 0.4117245249350637,
       "judge_candidate": "1. One Piece is a popular anime series, and episode 534 was released in the original Japanese language on October 16, 2017.\n2. The English dubbed version of anime episodes usually takes several months to be released after the original air date.\n3. As of now, there isn't a specific release date for One Piece episode 534 in English dubbed version. However, you can check Funimation or Crunchyroll's official websites for updates on the English dub release.\n\nFinal answer: The English dubbed release date for One Piece episode 534 is not currently available. Check Funimation or Crunchyroll's official websites for updates.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.153734168969095,
         "n_gen_tokens": 1541,
@@ -860,7 +862,7 @@
       ],
       "vne": 0.7006728834891149,
       "judge_candidate": "The seventh season of Pretty Little Liars consists of 22 episodes, as confirmed by the official ABC Family (now Freeform) schedule and IMDb database. Therefore, there are 22 episodes in season 7 of Pretty Little Liars.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.204498443286866,
         "n_gen_tokens": 750,
@@ -910,7 +912,7 @@
       ],
       "vne": 0.5155704052420146,
       "judge_candidate": "The 180 degree line of longitude is called the International Date Line (IDL). It separates one day from the next, and it runs roughly along the mid-Pacific Ocean.\n\nFinal answer: The 180 degree line of longitude is called the International Date Line (IDL).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.836008261889219,
         "n_gen_tokens": 867,
@@ -1260,7 +1262,7 @@
       ],
       "vne": 0.5301437963807485,
       "judge_candidate": "1. \"Angus, Thongs and Perfect Snogging\" is a 2008 British romantic comedy film based on the novel \"Angus, Thongs and Full-Frontal Snogging\" by Louise Rennison.\n2. The film follows the life of Georgia Nicolson, a 14-year-old girl, as she navigates her teenage years, including her romantic relationships.\n3. Therefore, Georgia Nicolson is the main character in the movie \"Angus, Thongs and Perfect Snogging.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.209691102616489,
         "n_gen_tokens": 1270,
@@ -1360,7 +1362,7 @@
       ],
       "vne": 0.42434680126219076,
       "judge_candidate": "1. Cristiano Ronaldo played for Real Madrid in La Liga from 2009 to 2018, scoring a total of 311 goals in 292 matches.\n2. From 2010 to 2018, he scored 252 goals in 207 La Liga matches, excluding the 2009-2010 season.\n3. Therefore, Cristiano Ronaldo scored 252 goals in La Liga for Real Madrid from 2010 to 2018.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.583238268271089,
         "n_gen_tokens": 1214,
@@ -1460,7 +1462,7 @@
       ],
       "vne": 0.3191656650735851,
       "judge_candidate": "In the United States, the age to purchase a BB gun varies by state. Generally, there is no federal law restricting the sale of BB guns to minors, but some states require individuals to be at least 18 years old. It's essential to check the specific laws in your state for the most accurate information. Therefore, the age to buy a BB gun is determined by the laws of your specific state.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.536969368811697,
         "n_gen_tokens": 929,
@@ -1510,7 +1512,7 @@
       ],
       "vne": 0.41508025246415386,
       "judge_candidate": "1. The NCAA Men's Basketball Tournament, also known as March Madness, takes place annually. Wisconsin's participation can be traced back from 1959, with a few exceptions due to NCAA sanctions.\n2. Wisconsin missed the NCAA Tournament in 2019, marking the last time they did not participate.\n3. Therefore, the last time Wisconsin missed the NCAA Tournament was in 2019.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.257873480673879,
         "n_gen_tokens": 1118,
@@ -1560,7 +1562,7 @@
       ],
       "vne": 0.551092901297222,
       "judge_candidate": "1. The show \"I'm a Celebrity...Get Me Out of Here!\" is a reality TV series where famous personalities from various fields are cast.\n2. Ant McPartlin and Declan Donnelly have been the main presenters of the show since its inception in 2002.\n3. However, Ant McPartlin took a break from the show in 2018, and Holly Willoughby filled in for him during that season.\n\nFinal answer: Ant McPartlin and Declan Donnelly are the main presenters of \"I'm a Celebrity...Get Me Out of Here!\", but Holly Willoughby presented in 2018 when Ant McPartlin was on a break.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.20398625684902,
         "n_gen_tokens": 1347,
@@ -1860,7 +1862,7 @@
       ],
       "vne": 0.43579607208522925,
       "judge_candidate": "The movie \"Santa Paws 2: The Santa Pups\" features a character named Janie. To find out who plays Janie, we look for the cast list of this movie. The character of Janie is played by actress Madison Pettis. Therefore, Madison Pettis plays Janie in the movie \"Santa Paws 2: The Santa Pups.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.5819333251565695,
         "n_gen_tokens": 882,
@@ -2010,7 +2012,7 @@
       ],
       "vne": 0.4466135478204364,
       "judge_candidate": "1. The Stanley Cup Finals is an annual championship series of the National Hockey League (NHL).\n2. To find out who played in the finals last year, we need to look at the NHL games from the previous year.\n3. In 2021, the Tampa Bay Lightning and the Montreal Canadiens faced off in the Stanley Cup Finals. Therefore, the players who played in the Stanley Cup Finals last year were from the Tampa Bay Lightning and the Montreal Canadiens.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.765743690077215,
         "n_gen_tokens": 1146,
@@ -2060,7 +2062,7 @@
       ],
       "vne": 0.3198365373980337,
       "judge_candidate": "Lionel Messi made his professional debut for Barcelona on August 16, 2004, in a friendly match against Porto B. However, his first official La Liga game was on October 16, 2004, against RCD Espanyol. This is the date generally recognized as his first game for Barcelona in a competitive match.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.0576367396861315,
         "n_gen_tokens": 739,
@@ -2185,7 +2187,7 @@
       ],
       "vne": 0.1870793034113657,
       "judge_candidate": "1. The outermost layer is the Crust, which is solid and forms the Earth's surface.\n2. Beneath the crust lies the Mantle, a thick, semi-fluid layer that is mostly solid but can flow over long periods.\n3. The Outer Core, beneath the mantle, is a liquid layer composed primarily of iron and nickel.\n4. The innermost layer is the Inner Core, a hot, dense, and highly pressurized sphere made mostly of iron.\n\nSo, the four major layers of the Earth, from outermost to innermost, are the Crust, Mantle, Outer Core, and Inner Core.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.255285243969411,
         "n_gen_tokens": 1449,
@@ -2285,7 +2287,7 @@
       ],
       "vne": 0.37957849807860283,
       "judge_candidate": "Greenland is not part of Europe. It is a part of North America, but it is not geographically connected to any North American continent and is politically part of the Kingdom of Denmark. Therefore, Greenland is not part of Europe.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.386936557944864,
         "n_gen_tokens": 757,
@@ -2310,7 +2312,7 @@
       ],
       "vne": 0.3188976136040427,
       "judge_candidate": "Wake Forest is located in the Piedmont Triad region of North Carolina. Specifically, it's in Wake County, which is part of the Research Triangle area, along with Raleigh and Durham. The exact coordinates are approximately 35.97°N 78.88°W. Therefore, Wake Forest is in central North Carolina.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.137716062832624,
         "n_gen_tokens": 710,
@@ -2410,7 +2412,7 @@
       ],
       "vne": 0.4926980131086673,
       "judge_candidate": "The Eagles won the Super Bowl in the 1960 season (Super Bowl V), in 1970, and in the 2017 season (Super Bowl LII). The most recent victory was in 2017.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.3566423379816115,
         "n_gen_tokens": 781,
@@ -2560,7 +2562,7 @@
       ],
       "vne": 0.4082220779700388,
       "judge_candidate": "The last manned mission to the moon was Apollo 17 in 1972, led by Eugene Cernan. Since then, no human has been to the moon. The most recent lunar exploration was unmanned, with the Chinese Chang'e 5 mission in 2020, which returned lunar samples to Earth.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.854902497027069,
         "n_gen_tokens": 845,
@@ -2635,7 +2637,7 @@
       ],
       "vne": 0.4690055749815921,
       "judge_candidate": "The Revolutionary War was fought by the American colonies seeking independence from British rule. The Continental Army, the military force of the colonies, was led by General George Washington. However, the Continental Congress, a representative body of the colonies, was the governing body that oversaw the war effort. Therefore, while George Washington was the military leader, the Continental Congress was in charge of the Revolutionary War.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.729581208899617,
         "n_gen_tokens": 1022,
@@ -2660,7 +2662,7 @@
       ],
       "vne": 0.6029869354854183,
       "judge_candidate": "The Grinch, a character in Dr. Seuss's book \"How the Grinch Stole Christmas,\" does not have a dog. The Grinch's only companion is Max, who is a dog-like creature, but not a dog in the traditional sense. Therefore, the dog's name in the Grinch Who Stole Christmas is not mentioned.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.11620087036863,
         "n_gen_tokens": 751,
@@ -2760,7 +2762,7 @@
       ],
       "vne": 0.3629374254676414,
       "judge_candidate": "\"I'm a Celebrity...Get Me Out of Here!\" typically airs annually in the United Kingdom during November and December. The exact start date varies each year, but it usually begins around the third week of November. For the most accurate and up-to-date information, I recommend checking the official ITV website or a reliable entertainment news source.\n\nFinal answer: The show usually starts in November, around the third week. Check the ITV website or a reliable entertainment news source for the exact start date.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.22319780709222,
         "n_gen_tokens": 1055,
@@ -2860,7 +2862,7 @@
       ],
       "vne": 0.41393601880194847,
       "judge_candidate": "1. The College Football Playoff National Championship is the primary competition for determining the national champion in American college football.\n2. Clemson University has participated in the CFP National Championship four times, winning in 2016, 2018, and 2020.\n3. The last time Clemson won the national championship was on January 13, 2020, when they defeated LSU in the CFP National Championship game.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.972979869693518,
         "n_gen_tokens": 842,
@@ -3010,7 +3012,7 @@
       ],
       "vne": 0.6292318947973784,
       "judge_candidate": "In the context of awards, if there's a tie for the \"Golden Boot\" (often given for the highest goal scorer in a soccer tournament), the rules for determining the winner may vary. Typically, the tie is broken by considering the number of assists, then the player with the most assists would receive the Golden Boot. If there's still a tie, other factors such as the number of minutes played or the number of goals scored with the head might be considered. However, the specific rules can change depending on the tournament or competition, so it's essential to refer to the official rules for the specific event in question.\n\nIn the case of a tie, the rules of the specific tournament or competition would determine who gets the Golden Boot.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.10009259590879,
         "n_gen_tokens": 1350,
@@ -3185,7 +3187,7 @@
       ],
       "vne": 0.5828326676736635,
       "judge_candidate": "The phrase \"Bob's your uncle\" is an idiomatic expression in British English, originating from the late 19th century. It is believed to have been popularized by British politician Sir Robert Gascoyne-Cecil, 3rd Marquess of Salisbury, who was often referred to as \"Bob.\" The phrase is used to indicate that a task or problem has been easily solved, as if the solution was as simple as being related to \"Bob.\" Therefore, the phrase \"Bob's your uncle\" means that the solution to a problem is at hand, or the problem has been solved easily.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.761137316934764,
         "n_gen_tokens": 1519,
@@ -3335,7 +3337,7 @@
       ],
       "vne": 0.5321971275133313,
       "judge_candidate": "Germany is a part of the European continent and specifically, it is located in Central Europe. The cultural region that Germany belongs to is Western Europe, which includes countries with similar historical, political, and economic ties, as well as shared cultural characteristics. Therefore, Germany is a part of Western Europe.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.013833856675774,
         "n_gen_tokens": 770,
@@ -3385,7 +3387,7 @@
       ],
       "vne": 0.3237444755909997,
       "judge_candidate": "The tradition of self-government in America began with the founding of the 13 original colonies, which were established in the late 17th and early 18th centuries. The colonies were initially governed by charters granted by the British monarchy, but they gradually developed their own local governments and assemblies, which laid the groundwork for the concept of self-government. The culmination of this tradition was the drafting and adoption of the U.S. Constitution in 1787, which established a federal system of government based on the principles of self-government and representative democracy.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.798129975330085,
         "n_gen_tokens": 1314,
@@ -3435,7 +3437,7 @@
       ],
       "vne": 0.2304007274543648,
       "judge_candidate": "OPEC, or the Organization of the Petroleum Exporting Countries, is an intergovernmental organization of 13 nations that have a significant influence on global oil production and exports. These countries are: Algeria, Angola, Equatorial Guinea, Iran, Iraq, Kuwait, Libya, Nigeria, Saudi Arabia, United Arab Emirates, Venezuela, Gabon, and the Republic of Congo. Therefore, there are 13 countries in OPEC.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.549843485001475,
         "n_gen_tokens": 1030,
@@ -3685,7 +3687,7 @@
       ],
       "vne": 0.4710392846654718,
       "judge_candidate": "1. EDF Energy is a British electricity and gas supplier, so we can look for the number of its customers in the UK.\n2. As of 2021, EDF Energy has approximately 5.7 million electricity customers and 3.8 million gas customers in the UK, totaling around 9.5 million customers.\n3. Therefore, EDF Energy has approximately 9.5 million customers in the UK.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.168913091998547,
         "n_gen_tokens": 1077,
@@ -3910,7 +3912,7 @@
       ],
       "vne": 0.3877320175901899,
       "judge_candidate": "The Nobel laureate who began his career as an accountant in Calcutta (now Kolkata) is Abhijit Banerjee. He was awarded the Nobel Memorial Prize in Economic Sciences in 2019, along with Esther Duflo and Michael Kremer, for their experimental approach to alleviating global poverty. Banerjee was born in Calcutta, India, and worked as an accountant before pursuing a career in academia.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.0659861783497036,
         "n_gen_tokens": 1053,
@@ -3985,7 +3987,7 @@
       ],
       "vne": 0.4399471983193347,
       "judge_candidate": "First, we need to identify the current government of Namibia. Namibia is a presidential republic, so the executive power lies with the President and the cabinet. The Minister of Youth, National Service, Sport and Culture is a member of the cabinet.\n\nAs of my last update, the Minister of Youth, National Service, Sport and Culture in Namibia is Katrina Hanse-Himarwa. However, for the most accurate and up-to-date information, I recommend checking the official government website or a reliable news source.\n\nFinal answer: As of my last update, Katrina Hanse-Himarwa is the Minister of Youth, National Service, Sport and Culture in Namibia.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.1533305696211755,
         "n_gen_tokens": 1092,
@@ -4010,7 +4012,7 @@
       ],
       "vne": 0.3014783473635574,
       "judge_candidate": "\"Gunsmoke\" was a long-running American Western television series that aired from 1955 to 1975. The final season, the 20th, was filmed primarily at Desilu Studios in Culver City, California, with some exterior shots taken in Simi Valley, California. Therefore, \"Gunsmoke\" was filmed in California for its last season.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.40560156898573,
         "n_gen_tokens": 1118,
@@ -4210,7 +4212,7 @@
       ],
       "vne": 0.47727529207355696,
       "judge_candidate": "The highest criminal court in a district is typically known as the Court of Appeals or the Appellate Court for criminal cases. The presiding judge over this court is usually the Chief Judge, or in some cases, the judge assigned to preside over a specific panel or division of the court.\n\nFinal answer: The judge who presides over the highest criminal court in a district is typically the Chief Judge or a judge assigned to a specific panel or division.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.628513568080962,
         "n_gen_tokens": 988,
@@ -4560,7 +4562,7 @@
       ],
       "vne": 0.5681225768870527,
       "judge_candidate": "The State of the Union address is a speech delivered annually by the President of the United States to a joint session of the United States Congress. The tradition began in 1790, during the presidency of George Washington, making it one of the oldest traditions in the U.S. government. The first formal response to the State of the Union was given by the opposition party in 1966, by Senator Everett M. Dirksen. However, informal responses have been given since the 1920s.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.207308642100543,
         "n_gen_tokens": 922,
@@ -4610,7 +4612,7 @@
       ],
       "vne": 0.6155185105931184,
       "judge_candidate": "The movie you're referring to is likely \"The Lion King,\" as it features a character called the Beast. In the 2019 live-action remake, the Beast's voice is provided by actor and singer, Donald Glover. Therefore, Donald Glover voices the Beast in the new movie.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.589186855126172,
         "n_gen_tokens": 991,
@@ -4685,7 +4687,7 @@
       ],
       "vne": 0.2411226186673024,
       "judge_candidate": "1. I'll use data from the United States Geological Survey (USGS) for this information.\n2. The most recent significant earthquake in Iran, as of my last update, occurred on November 12, 2020, with a magnitude of 5.9.\n3. Therefore, the last time Iran had an earthquake was on November 12, 2020.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.3536277348175645,
         "n_gen_tokens": 1087,
@@ -4785,7 +4787,7 @@
       ],
       "vne": 0.4455701114071849,
       "judge_candidate": "In the TV show \"The Flash,\" Barry Allen's mother, Nora Allen, was killed by a mugger named Tess Morgan, who was later revealed to be the Reverse-Flash (Thawne) in disguise. The actual murderer is the Reverse-Flash, as he manipulated events to make Tess believe she was the one committing the crime. The Reverse-Flash is the main antagonist in the series, responsible for many of the problems Barry Allen faces.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.807604078669101,
         "n_gen_tokens": 1032,
@@ -5160,7 +5162,7 @@
       ],
       "vne": 0.392436042695916,
       "judge_candidate": "Christmas as a holiday has roots in ancient Roman and pagan traditions, but the modern celebration of Christmas on December 25th began to be widely observed in the 4th century AD during the reign of Roman Emperor Constantine. This date was chosen to coincide with existing pagan festivals and to Christianize them, as the early Christian church wanted to assimilate into Roman culture. The first official recognition of Christmas as a holiday came in the 6th century when the Council of Tours in Gaul (modern France) decreed that the birthday of Jesus would be celebrated on December 25th. Therefore, Christmas was first celebrated as a holiday in the 4th century AD.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.257986351847649,
         "n_gen_tokens": 1066,
@@ -5185,7 +5187,7 @@
       ],
       "vne": 0.45013947779055447,
       "judge_candidate": "The book \"Where the Red Fern Grows\" is a novel by Wilson Rawls. The main character, Billy, has no last name mentioned in the book. Therefore, Billy's last name in the story is not specified.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.085338687058538,
         "n_gen_tokens": 775,
@@ -5335,7 +5337,7 @@
       ],
       "vne": 0.4517060227386254,
       "judge_candidate": "Mount Ruapehu, located in New Zealand, is a frequently active volcano. The last major eruption occurred in 2007, followed by minor eruptions in 2012 and 2019. However, as of my last update, it has been dormant since the minor eruption in 2019. For the most current information, I recommend checking the GeoNet website, which monitors volcanic activity in New Zealand.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.061110618989915,
         "n_gen_tokens": 863,
@@ -5410,7 +5412,7 @@
       ],
       "vne": 0.29753066184938637,
       "judge_candidate": "1. The Houston Astrodome, also known as the Eighth Wonder of the World, was opened in 1965. Major League Baseball's first game in the Astrodome was on April 9, 1965, between the Houston Astros and the New York Yankees.\n2. The first home run in the Astrodome was hit by the Houston Astros' player, Richie Ashburn, in the bottom of the 2nd inning of that first game.\n3. Therefore, Richie Ashburn hit the first home run in the Houston Astrodome.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.445661037694663,
         "n_gen_tokens": 1246,
@@ -5435,7 +5437,7 @@
       ],
       "vne": 0.5067275994728843,
       "judge_candidate": "1. The exact number of students at Monarch High School can't be determined without specific, up-to-date data.\n2. Monarch High School is a fictional school from the TV show \"Glee,\" so its student population isn't publicly available.\n3. Therefore, we cannot provide the exact number of students at Monarch High School.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.9957735617645085,
         "n_gen_tokens": 1072,
@@ -5660,7 +5662,7 @@
       ],
       "vne": 0.4481525486177807,
       "judge_candidate": "The term used to describe the dense bone of the socket and septal crest in radiography is \"dense bone\" or \"dense alveolar bone.\" This is because the socket and septal crest are areas of the alveolar bone that are typically denser than the surrounding bone due to their role in supporting the teeth. The term \"dense\" in this context refers to the high mineral content of the bone, which appears white or opaque on a radiograph.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.383284944109619,
         "n_gen_tokens": 971,
@@ -5960,7 +5962,7 @@
       ],
       "vne": 0.3907613113326768,
       "judge_candidate": "The person who carries the U.S. flag in the opening ceremony of the Olympics is typically a U.S. Olympic athlete chosen to be the flag bearer for their team. This selection is usually made by the U.S. Olympic and Paralympic Committee based on the athlete's achievements, leadership, and overall spirit of sportsmanship. The flag bearer leads the U.S. delegation into the stadium during the parade of nations.\n\nFinal answer: A U.S. Olympic athlete chosen by the U.S. Olympic and Paralympic Committee leads the U.S. delegation into the stadium, carrying the U.S. flag in the opening ceremony.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.98392400983721,
         "n_gen_tokens": 934,
@@ -6035,7 +6037,7 @@
       ],
       "vne": 0.4356520839277824,
       "judge_candidate": "The song \"I Dreamed a Dream\" is from the musical \"Les Misérables.\" The character who sings this song is Fantine, a character in the musical. The actress who originated the role of Fantine in the original London production and made the song famous is Susan Boyle. However, in the 2012 film adaptation, the role of Fantine was played by Anne Hathaway, who also sang the song.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.580199968069792,
         "n_gen_tokens": 983,
@@ -6110,7 +6112,7 @@
       ],
       "vne": 0.4780362090018375,
       "judge_candidate": "The movie \"The Shape of Water\" was released on December 8, 2017. As a movie, it doesn't have a book version. However, a novelization of the movie was written by Daniel Kraus and published on February 13, 2018. So, the book version of \"The Shape of Water\" came out on February 13, 2018.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.297957135364413,
         "n_gen_tokens": 960,
@@ -6160,7 +6162,7 @@
       ],
       "vne": 0.2616482730318904,
       "judge_candidate": "1. Lead was commonly used in paint until the mid-20th century due to its durability and low cost.\n2. However, research in the 1950s and 1960s revealed the harmful effects of lead on human health, particularly in children.\n3. As a result, the use of lead in paint was banned in the United States in 1978 by the Consumer Product Safety Commission. The European Union followed suit with a similar ban in 2000. Therefore, lead has not been used in paint for several decades.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.155325105879456,
         "n_gen_tokens": 1196,
@@ -6210,7 +6212,7 @@
       ],
       "vne": 0.3743391856625732,
       "judge_candidate": "MSC stands for Mediterranean Shipping Company. The MSC Cruises is a division of the MSC Group, a Swiss-based multinational transportation and logistics conglomerate. So, MSC Cruises is not an acronym in itself, but rather a brand name under the MSC Group. The \"Cruises\" part is self-explanatory, referring to the cruise ship services they offer. Therefore, MSC Cruises stands for Mediterranean Shipping Company Cruises.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.790428169071674,
         "n_gen_tokens": 772,
@@ -6235,7 +6237,7 @@
       ],
       "vne": 0.24470657009675012,
       "judge_candidate": "The film \"Walk the Line\" is a biographical drama about the life of country music singer Johnny Cash. The lead role of Johnny Cash was played by actor Joaquin Phoenix, while Reese Witherspoon portrayed Johnny's wife, June Carter Cash. So, the main stars of the film \"Walk the Line\" are Joaquin Phoenix and Reese Witherspoon.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.026403926312923,
         "n_gen_tokens": 739,
@@ -6385,7 +6387,7 @@
       ],
       "vne": 0.18403132315730827,
       "judge_candidate": "Whale sharks are the largest known fish species. On average, they can grow up to 12-18 meters in length. However, the longest recorded whale shark was over 18 meters. Therefore, a whale shark is typically between 12 and 18 meters long.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.8057538801804185,
         "n_gen_tokens": 732,
@@ -6435,7 +6437,7 @@
       ],
       "vne": 0.46681944377209256,
       "judge_candidate": "1. The electric guitar was first developed in the 1930s, with the Rickenbacker Frying Pan and the Ro-Pat-In Electric Spanish being among the earliest models.\n2. However, the first commercially successful electric guitar recording is often attributed to Les Paul, who recorded \"Lover\" with Mary Ford in 1948 using his custom-made solid-body electric guitar.\n3. Therefore, Les Paul is credited with making the first recorded use of the electric guitar.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.81835440825671,
         "n_gen_tokens": 1126,
@@ -6535,7 +6537,7 @@
       ],
       "vne": 0.5239311867062754,
       "judge_candidate": "The character of the \"Walking Boss\" is from the novel \"Cool Hand Luke\" by Donn Pearce, not a film. However, in the 1967 film adaptation, the character is portrayed by actor Strother Martin. In the book, the character is not named. Therefore, the Walking Boss in the film \"Cool Hand Luke\" is played by Strother Martin.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.11754358606413,
         "n_gen_tokens": 793,
@@ -6785,7 +6787,7 @@
       ],
       "vne": 0.35409778121220137,
       "judge_candidate": "The tallest building in Las Vegas is the Stratosphere Tower. To find its height, we look up the official measurements, which are approximately 1,149 feet (350 meters) tall, including the antenna. Therefore, the Stratosphere Tower is about 1,149 feet tall.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.6258528917096555,
         "n_gen_tokens": 666,
@@ -6810,7 +6812,7 @@
       ],
       "vne": 0.6161392980494745,
       "judge_candidate": "Oklahoma's geographic regions are defined by the following surface features:\n\n1. The Great Plains, characterized by rolling prairies and grasslands.\n2. The Ouachita Mountains, a range of low mountains in the south-central part of the state.\n3. The Arbuckle-Simpson Hills, a series of hills and small mountains in the south-central part of the state.\n4. The Oklahoma Panhandle, a region in the northwest that is part of the High Plains.\n5. The Cross Timbers, a region of wooded hills in the north-central part of the state.\n6. The Red River Valley, a flat region along the Red River in the northeast.\n7. The Kiamichi Mountains, a range of mountains in the southeast.\n8. The Wichita Mountains, a range of mountains in the southwest.\n9. The Osage",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.892899707891047,
         "n_gen_tokens": 1583,
@@ -6960,7 +6962,7 @@
       ],
       "vne": 0.19770750787485958,
       "judge_candidate": "The Army-Navy Game is an annual college football rivalry between the Army Black Knights and the Navy Midshipmen. To find the last time Army won, we look at the game results. The Army won in 2016, defeating Navy 21-17. Therefore, the last time Army won the Army-Navy Game was in 2016.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.296161585953087,
         "n_gen_tokens": 866,
@@ -7085,7 +7087,7 @@
       ],
       "vne": 0.2831520707717504,
       "judge_candidate": "Mount & Blade: With Fire & Sword is a historical action RPG set in the 17th century. The game is primarily based on the Thirty Years' War, a conflict that took place in Europe from 1618 to 1648, with a focus on the Cossack uprising in Ukraine. Therefore, the time period for Mount & Blade: With Fire & Sword is the 17th century, specifically the early to mid-1600s.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.65848942194134,
         "n_gen_tokens": 1179,
@@ -7110,7 +7112,7 @@
       ],
       "vne": 0.5274625371812042,
       "judge_candidate": "The Abbott and Costello movie \"Who's on First?\" is a skit, not a full-length film. However, it originated as a routine in their act, where the characters are named \"Who,\" \"I Don't Know,\" \"What,\" and \"That's My Boy.\" So, the character \"Who\" is present in this skit.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.715854962356389,
         "n_gen_tokens": 1039,
@@ -7235,7 +7237,7 @@
       ],
       "vne": 0.31387278476971303,
       "judge_candidate": "The Minnesota Vikings last appeared in the Super Bowl in 1976, in Super Bowl XI. However, they lost to the Oakland Raiders with a score of 13-7. Therefore, their last Super Bowl appearance was in 1976.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.227200078777969,
         "n_gen_tokens": 601,
@@ -7410,7 +7412,7 @@
       ],
       "vne": 0.2831512754789264,
       "judge_candidate": "The wheel was not invented in North America, but rather in the Middle East around 3500 BCE. The wheel was introduced to North America by European explorers during the late 15th and early 16th centuries, after Christopher Columbus's voyages.\n\nFinal answer: The wheel was not introduced to North America until the late 15th or early 16th century.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.690562516916543,
         "n_gen_tokens": 905,
@@ -7735,7 +7737,7 @@
       ],
       "vne": 0.3698766904838107,
       "judge_candidate": "The temperature of a gas is directly proportional to the kinetic energy of its particles. Kinetic energy is determined by the mass of the particle and the square of its velocity. Since the mass of gas particles is relatively constant, the temperature of a gas is primarily dependent on the velocity of its particles. Therefore, the temperature of a gas is directly proportional to the average velocity of its particles.\n\nIn conclusion, the temperature of a gas is directly proportional to the average velocity of its particles.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.928665605373681,
         "n_gen_tokens": 1182,
@@ -7810,7 +7812,7 @@
       ],
       "vne": 0.38929622025119925,
       "judge_candidate": "The Regulatory Reform (Fire Safety) Order 2005 was enacted on October 1, 2006, in the United Kingdom. However, it came into force on April 1, 2006, meaning it started to apply to buildings on that date. Therefore, the Regulatory Reform (Fire Safety) Order 2005 first came into effect on April 1, 2006.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.316475118976086,
         "n_gen_tokens": 992,
@@ -7885,7 +7887,7 @@
       ],
       "vne": 0.28794080346038187,
       "judge_candidate": "1. \"Star Wars: Episode II - Attack of the Clones\" features several main characters, including Anakin Skywalker (a young Obi-Wan Kenobi's apprentice), Padmé Amidala (a senator and secretly Anakin's love interest), Count Dooku (a former Jedi Knight turned Sith Lord), and Mace Windu (a powerful Jedi Master).\n\n2. Other notable characters include Yoda (a wise and powerful Jedi Master), Palpatine (a senator who secretly manipulates events as the Sith Lord Darth Sidious), and Jango Fett (a bounty hunter who serves as a template for the clone army).\n\n3. The final answer is that the main characters in \"Star Wars: Episode II - Attack of the Clones\" are Anakin Skywalker, Padmé Amidala, Count Dook",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 9.087001773994416,
         "n_gen_tokens": 1998,
@@ -7960,7 +7962,7 @@
       ],
       "vne": 0.4910394680822988,
       "judge_candidate": "The One Piece series is a long-running manga written and illustrated by Eiichiro Oda. As of my last update, there are 98 tankōbon volumes in the One Piece series. However, the number continues to grow as new volumes are released regularly. To get the most current count, you can check the official One Piece website or a reliable manga database.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.369649617001414,
         "n_gen_tokens": 1054,
@@ -8010,7 +8012,7 @@
       ],
       "vne": 0.3556703728671285,
       "judge_candidate": "Faze Clan is a popular esports organization with multiple teams and content creators. As of now, the individual with the most subscribers in Faze Clan is FaZe Banks, a content creator and music artist, with over 10 million subscribers on YouTube. However, it's important to note that subscriber counts can change frequently. For the most accurate and up-to-date information, I recommend checking the latest statistics on platforms like YouTube or social media.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.629227727651596,
         "n_gen_tokens": 989,
@@ -8110,7 +8112,7 @@
       ],
       "vne": 0.3530395448355564,
       "judge_candidate": "Fingerprinting as a forensic tool was first used by the British colonial administration in India in the mid-19th century, specifically in 1858 by Sir William Herschel. However, it wasn't until the 1890s that the use of fingerprinting became widespread in the United Kingdom and the United States, particularly after the work of Sir Francis Galton and Edward Henry. Therefore, fingerprinting was first used by the police in the late 19th century.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.11009974218905,
         "n_gen_tokens": 1161,
@@ -8310,7 +8312,7 @@
       ],
       "vne": 0.5265600259342581,
       "judge_candidate": "1. The Country Music Association (CMA) presents the Entertainer of the Year award annually to the artist who has demonstrated exceptional achievements in the entertainment industry, including touring, record sales, and overall impact on the genre.\n2. The winner of the Entertainer of the Year award for Country Music in recent years has been announced during the CMA Awards ceremony, which is a televised event.\n3. To find out who won the most recent Entertainer of the Year award, you can check the official CMA Awards website or reputable news sources that cover the country music industry.\n\nFinal answer: To find out who won the Entertainer of the Year award for Country Music, check the official CMA Awards website or reputable news sources.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.33386303531006,
         "n_gen_tokens": 1250,
@@ -8635,7 +8637,7 @@
       ],
       "vne": 0.48956556924004346,
       "judge_candidate": "The movie \"Rio Bravo\" was released in 1959. Stumpy is a character in this film. To find out who played Stumpy, we need to identify the cast members of the movie. Stumpy was played by actor John Russell. Therefore, John Russell played Stumpy in the movie Rio Bravo.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.305633443873376,
         "n_gen_tokens": 634,
@@ -8760,7 +8762,7 @@
       ],
       "vne": 0.4275910298430157,
       "judge_candidate": "NBC typically employs a team of commentators for their Olympic ice skating coverage. Notable commentators in the past include Terry Gannon, Tara Lipinski, and Johnny Weir for figure skating, and Scott Hamilton and Tanith White for ice dancing. However, the specific commentators for the upcoming Olympics may vary, so it's best to check the official NBC Olympics website for the most current information.\n\nFinal answer: NBC's Olympic ice skating commentators may include Terry Gannon, Tara Lipinski, Johnny Weir, Scott Hamilton, and Tanith White, but the specific lineup for the upcoming Olympics can be found on the official NBC Olympics website.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.148386688902974,
         "n_gen_tokens": 1003,
@@ -8785,7 +8787,7 @@
       ],
       "vne": 0.39908031665329124,
       "judge_candidate": "1. Winnie the Pooh is a character created by A.A. Milne, and the rights to his works are owned by his estate.\n2. The rights to Winnie the Pooh merchandise and adaptations are managed by Disney, as they purchased the rights in the 1960s.\n3. Therefore, royalties from Winnie the Pooh products and adaptations go to A.A. Milne's estate and Disney, depending on the specific rights involved.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.0769895147532225,
         "n_gen_tokens": 1150,
@@ -8885,7 +8887,7 @@
       ],
       "vne": 0.6044544442916597,
       "judge_candidate": "The movie \"Sing\" features various characters, each voiced by a different celebrity. The elephant character, named Meena, is voiced by Scarlett Johansson. Therefore, Scarlett Johansson is the voice of the elephant in the movie \"Sing.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.8017181889154017,
         "n_gen_tokens": 688,
@@ -9010,7 +9012,7 @@
       ],
       "vne": 0.20986513549650754,
       "judge_candidate": "1. A death must occur: The first requirement is that the death of a human being must have taken place.\n2. Duty of care: The defendant must have owed a duty of care to the deceased, meaning they had a responsibility to act in a way that would not put the deceased at an unreasonable risk of harm.\n3. Breach of duty: The defendant must have breached this duty of care by acting, or failing to act, in a manner that a reasonable person in the same circumstances would not have done.\n4. Gross negligence: The breach of duty must have been grossly negligent, meaning it was a marked departure from the standard of care expected in the situation, and the defendant's conduct showed a disregard for the risk of death or serious injury.\n\nFinal answer: To establish criminal liability for gross negligence manslaughter, there must be a death",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.901369248982519,
         "n_gen_tokens": 1934,
@@ -9085,7 +9087,7 @@
       ],
       "vne": 0.5306968566061201,
       "judge_candidate": "1. The movie \"Nanny McPhee and the Big Bang\" features a character named Cedric Brown, who is the father in the story.\n2. Cedric Brown is portrayed by actor Rhys Ifans.\n3. Therefore, Rhys Ifans plays the dad in \"Nanny McPhee and the Big Bang.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.333721634931862,
         "n_gen_tokens": 833,
@@ -9135,7 +9137,7 @@
       ],
       "vne": 0.331810411675473,
       "judge_candidate": "1. Rib vaults are a type of Gothic architectural element, characterized by the use of ribs, which are arches supported on columns or piers, and intersecting to form a series of triangular spaces.\n\n2. A key architectural feature of rib vaults is the use of diagonal and intersecting ribs, which transfer the weight of the structure to the supporting columns or piers.\n\n3. Rib vaults are commonly found in Gothic cathedrals, such as the Wells Cathedral in England, where they are used to create high, open spaces with intricate and visually striking designs.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.826343165244907,
         "n_gen_tokens": 1331,
@@ -9285,7 +9287,7 @@
       ],
       "vne": 0.3883508937714803,
       "judge_candidate": "The Hoover Dam was built between 1931 and 1936, during the Great Depression. Construction started on September 30, 1931, and the dam was officially dedicated on September 30, 1935. The final concrete pour was completed on March 1, 1936. Therefore, the bridge over the Hoover Dam was built during this timeframe, specifically between 1931 and 1936.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.172535294666886,
         "n_gen_tokens": 924,
@@ -9360,7 +9362,7 @@
       ],
       "vne": 0.23631817084524104,
       "judge_candidate": "The Los Angeles Dodgers, formerly the Brooklyn Dodgers, have won the World Series a total of 7 times. These victories occurred in 1955, 1959, 1963, 1981, 1988, 2020, and 2021.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.271959513891488,
         "n_gen_tokens": 867,
@@ -9810,7 +9812,7 @@
       ],
       "vne": 0.25808795820557634,
       "judge_candidate": "Pineapples are native to South America, specifically the region between southern Brazil and Paraguay. They were cultivated by indigenous peoples for centuries before being introduced to Europe in the 15th century. Today, the largest pineapple producers are China, Costa Rica, the Philippines, and Thailand. However, Hawaii is famous for its pineapple production and is often associated with the fruit.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.80443140398711,
         "n_gen_tokens": 997,
@@ -9885,7 +9887,7 @@
       ],
       "vne": 0.33056130203837214,
       "judge_candidate": "1. The Masters Tournament is an annual major golf championship held at Augusta National Golf Club in Augusta, Georgia.\n2. To determine who has played in the most Masters tournaments, we would look at the number of times each golfer has competed in this event.\n3. Jack Nicklaus holds the record for most Masters appearances with 51, having played in his first tournament in 1959 and his last in 2005.\n\nFinal answer: Jack Nicklaus has played in the most Masters tournaments.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.904850976075977,
         "n_gen_tokens": 1091,
@@ -10085,7 +10087,7 @@
       ],
       "vne": 0.40972759618102256,
       "judge_candidate": "Michael Jordan retired from the NBA in 1993, but he returned to the league in 1995, playing for the Chicago Bulls. His comeback is often referred to as \"The Return of the King.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.7088861209340394,
         "n_gen_tokens": 716,
@@ -10160,7 +10162,7 @@
       ],
       "vne": 0.28040920735840125,
       "judge_candidate": "AARP is primarily focused on advocating for the interests of older Americans, rather than a specific political party. However, it tends to lean towards liberal or progressive policies, such as supporting Medicare and Social Security, advocating for affordable healthcare, and promoting financial security for seniors. Therefore, it can be considered left-of-center on the political spectrum.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.6575625548139215,
         "n_gen_tokens": 1010,
@@ -10760,7 +10762,7 @@
       ],
       "vne": 0.3471607127359838,
       "judge_candidate": "The UEFA Champions League Round of 16 typically starts in February each year. The exact dates vary, but it usually begins around the middle of the month and continues for about two weeks. The schedule is determined by the knockout stage draw, which takes place in December. Therefore, the Champions League Round of 16 starts in February, following the group stage and the draw.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.619079818017781,
         "n_gen_tokens": 866,
@@ -10885,7 +10887,7 @@
       ],
       "vne": 0.43238782388313973,
       "judge_candidate": "1. \"How Do You Do It\" is a song by the British band Gerry and the Pacemakers.\n2. The lead vocalist and primary songwriter of Gerry and the Pacemakers was Gerry Marsden.\n3. Therefore, Gerry Marsden wrote \"How Do You Do It\" by Gerry and the Pacemakers.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.020613146945834,
         "n_gen_tokens": 856,
@@ -10910,7 +10912,7 @@
       ],
       "vne": 0.2985546352498552,
       "judge_candidate": "In the 1824 U.S. Presidential election, four candidates ran: John Quincy Adams, Andrew Jackson, William Crawford, and Henry Clay. John Quincy Adams received 81 electoral votes, Andrew Jackson received 99 electoral votes, and neither had a majority (269 electoral votes were needed). However, since no candidate received a majority, the House of Representatives decided the election, and John Quincy Adams was chosen as the winner. Therefore, John Quincy Adams received the most electoral votes but not a majority in the 1824 election.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.514866183977574,
         "n_gen_tokens": 1244,
@@ -10960,7 +10962,7 @@
       ],
       "vne": 0.3964523233722761,
       "judge_candidate": "The Pro Football Hall of Fame is an institution that honors great figures in American professional football. As of 2021, there are approximately 330 inductees, including players, coaches, and contributors to the sport. Therefore, there are 330 players in the Pro Football Hall of Fame.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.8908392479643226,
         "n_gen_tokens": 824,
@@ -11035,7 +11037,7 @@
       ],
       "vne": 0.5253753459153248,
       "judge_candidate": "In the Dragon Ball Z series, Goku intentionally gives up against Cell in the Cell Games Saga, specifically in the episode titled \"The Ultimate Battle! Goku vs. Cell\" (episode 161 in the original Japanese version). This event occurs during the final stages of the Cell Games, when Goku transforms into Super Saiyan 3 for the first time but decides to give up after realizing that the fight could potentially destroy the planet. The final answer is episode 161 of Dragon Ball Z.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.449691437184811,
         "n_gen_tokens": 1087,
@@ -11060,7 +11062,7 @@
       ],
       "vne": 0.3708109121850119,
       "judge_candidate": "The \"Back in Black\" album was released by the Australian rock band AC/DC in 1980. The lead vocalist of AC/DC at that time was Bon Scott, but he passed away before the album's release. The vocals on \"Back in Black\" were actually performed by Brian Johnson, who joined AC/DC as the new lead vocalist after Bon Scott's death. Therefore, Brian Johnson sang on the \"Back in Black\" album.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.625184514094144,
         "n_gen_tokens": 719,
@@ -11260,7 +11262,7 @@
       ],
       "vne": 0.3600805049042187,
       "judge_candidate": "\"Some Like It Hot\" is a classic American comedy film. The story unfolds in two main locations: Chicago and Florida. In Chicago, the characters, Joe and Jerry, witness a mob hit and disguise themselves as women to escape. Later, they join an all-female band and travel to Florida, where the majority of the film's events take place. Therefore, the primary setting of \"Some Like It Hot\" is Florida.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.71271349908784,
         "n_gen_tokens": 1144,
@@ -11585,7 +11587,7 @@
       ],
       "vne": 0.38527327012508705,
       "judge_candidate": "1. The latest version of Google Chrome is determined by the updates released by Google. As of March 2023, the latest stable version is Chrome 102.0.5005.61.\n2. You can check the latest version on the official Google Chrome website or by updating your browser directly.\n3. Therefore, as of March 2023, the latest version of Chrome is Chrome 102.0.5005.61.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.501070389058441,
         "n_gen_tokens": 974,
@@ -12285,7 +12287,7 @@
       ],
       "vne": 0.4308118801664114,
       "judge_candidate": "\"The Quiet Man\" is a 1952 American romantic comedy-drama film directed by John Ford. The film's release year is 1952. Therefore, the year \"The Quiet Man\" takes place is not specified as it is a fictional story set in Ireland during the 1920s.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.576191931962967,
         "n_gen_tokens": 688,
@@ -12360,7 +12362,7 @@
       ],
       "vne": 0.37735653961548793,
       "judge_candidate": "1. The revelation that the Smoking Man, a recurring antagonist in \"The X-Files,\" is Mulder's father was a plot twist in the season 5 episode \"Patient X.\"\n2. This was revealed through a flashback sequence, where it was shown that the Smoking Man was present during Mulder's abduction by aliens as a child.\n3. Therefore, the Smoking Man was revealed to be Mulder's father in the fifth season of \"The X-Files.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.054393323138356,
         "n_gen_tokens": 1049,
@@ -12460,7 +12462,7 @@
       ],
       "vne": 0.40469857489625655,
       "judge_candidate": "The United States and the United Kingdom (UK) became allies during World War I, with the UK joining the war in 1914 and the U.S. entering in 1917. The formal alliance was not established until the signing of the Treaty of Alliance in 1940 during World War II. However, their relationship as allies can be traced back to the late 18th century, particularly during the American Revolution, when the UK provided support to the American colonies in their fight for independence.\n\nFinal answer: The UK and the U.S. became formal allies during World War II in 1940, but their alliance can be traced back to the late 18th century.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.714667406398803,
         "n_gen_tokens": 1130,
@@ -12535,7 +12537,7 @@
       ],
       "vne": 0.445355153074236,
       "judge_candidate": "The song \"You'll Be a Woman Soon\" is featured in the movie \"Pulp Fiction.\" The song is sung by Nancy Sinatra, not by a character in the movie. Therefore, Nancy Sinatra is the singer of \"You'll Be a Woman Soon\" in the movie \"Pulp Fiction.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.438911971170455,
         "n_gen_tokens": 1160,
@@ -12710,7 +12712,7 @@
       ],
       "vne": 0.5572709580180361,
       "judge_candidate": "The presiding officer of the Legislative Council in India is the Deputy Chairman. This position is appointed by the Governor of the state for a term of 6 years, or until they cease to be a member of the Council, whichever is earlier. The Deputy Chairman, like the Speaker in the Lok Sabha, presides over the proceedings of the Council and maintains order and decorum.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.259547515306622,
         "n_gen_tokens": 854,
@@ -12735,7 +12737,7 @@
       ],
       "vne": 0.31320572447657585,
       "judge_candidate": "The Teenage Mutant Ninja Turtles first appeared in comic books published by Mirage Studios in 1984. The animated television series based on the characters debuted in 1987. However, the theatrical release of the first live-action Teenage Mutant Ninja Turtles film was in 1990. So, the animated series came out first in 1987, while the first movie was released in 1990.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.786040313076228,
         "n_gen_tokens": 985,
@@ -12810,7 +12812,7 @@
       ],
       "vne": 0.315380697464111,
       "judge_candidate": "1. The Indian Ocean is warmer than other oceans due to its geographical location and climate conditions. It is situated largely between the tropics, which receive the most sunlight, and its shallow waters absorb and retain heat more effectively.\n\n2. The monsoon winds, which bring heavy rainfall to the surrounding lands, also contribute to the ocean's warmth by transporting heat from the equator towards the poles.\n\n3. Therefore, the Indian Ocean is the warmest ocean in the world.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.461177253164351,
         "n_gen_tokens": 1309,
@@ -12835,7 +12837,7 @@
       ],
       "vne": 0.30891683986574475,
       "judge_candidate": "Benue State, located in Nigeria, is divided into 23 Local Government Areas (LGAs). Here is a list of them:\n\n1. Ado Local Government Area\n2. Agatu Local Government Area\n3. Apa Local Government Area\n4. Buruku Local Government Area\n5. Guma Local Government Area\n6. Gwer East Local Government Area\n7. Gwer West Local Government Area\n8. Katsina-Ala Local Government Area\n9. Kwande Local Government Area\n10. Logo Local Government Area\n11. Makurdi Local Government Area\n12. Obi Local Government Area\n13. Ogbadibo Local Government Area\n14. Ohimini Local Government Area\n15. Oju Local Government Area\n16. Okpokwu Local Government Area\n17. Oshimili North Local Government Area (Note: This is not in",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 9.080992433708161,
         "n_gen_tokens": 1952,
@@ -13160,7 +13162,7 @@
       ],
       "vne": 0.24710303319955376,
       "judge_candidate": "The Eiffel Tower, originally built as a symbol for the 1889 Exposition Universelle (World's Fair), now serves primarily as a telecommunications tower in modern times. It houses antennas for television and radio broadcasting, and it also provides a platform for scientific research. Additionally, it's a major tourist attraction, welcoming millions of visitors each year.\n\nFinal answer: The main use of the Eiffel Tower in modern times is as a telecommunications tower and a tourist attraction.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.580895287916064,
         "n_gen_tokens": 1128,
@@ -13385,7 +13387,7 @@
       ],
       "vne": 0.4828479771110276,
       "judge_candidate": "The movie \"Proof of Life\" is primarily set in South America, specifically in the fictional city of San Gerardo, which is depicted as a dangerous and unstable location due to political unrest and kidnappings. The film also features scenes in the United States, particularly in Pittsburgh, Pennsylvania, where the protagonist's family resides. Therefore, the movie \"Proof of Life\" takes place in both South America and the United States.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.683351410087198,
         "n_gen_tokens": 796,
@@ -13460,7 +13462,7 @@
       ],
       "vne": 0.24867901324918978,
       "judge_candidate": "An edge connects two vertices in a graph. Since an edge cannot connect a vertex to itself, an edge that is between a vertex and itself does not exist in a graph. Therefore, such an edge does not exist.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.233663571998477,
         "n_gen_tokens": 623,
@@ -13635,7 +13637,7 @@
       ],
       "vne": 0.3614254057348289,
       "judge_candidate": "ABC is a major national network, and its channel number can vary depending on the location and the cable or satellite provider. In Phoenix, Arizona, ABC is typically found on channel 5.1 on digital antennas, and on channel 3 on most cable and satellite providers.\n\nFinal answer: In Phoenix, Arizona, ABC is usually on channel 5.1 for digital antennas and channel 3 for cable and satellite providers.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.446530822198838,
         "n_gen_tokens": 913,
@@ -13735,7 +13737,7 @@
       ],
       "vne": 0.4979581884857893,
       "judge_candidate": "The Hunger Games book was first published on August 23, 2008. This is based on the publication date listed on the book's cover and the official website of the author, Suzanne Collins. Therefore, the first Hunger Games book was published in 2008.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.860634482000023,
         "n_gen_tokens": 739,
@@ -13910,7 +13912,7 @@
       ],
       "vne": 0.48266906793357206,
       "judge_candidate": "1. The PGA Championship is a major golf tournament where the winner is determined by the lowest total score after four rounds.\n2. To win by the most shots, a player must have a significantly larger score difference compared to the second-place finisher.\n3. The player with the largest winning margin in PGA Championship history is Walter Hagen, who won by 11 strokes in 1929. Therefore, Walter Hagen won the PGA Championship by the most shots.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.276424423791468,
         "n_gen_tokens": 1166,
@@ -13935,7 +13937,7 @@
       ],
       "vne": 0.3744400640954081,
       "judge_candidate": "Beijing, the capital of China, was previously known as Peking. This name change occurred during the late 1940s when the Chinese government decided to use the traditional Chinese characters for the city's name, which translates to Beijing. Before that, it was known as Zhongdu during the Jin Dynasty, and Jicheng during the Tang Dynasty. However, the most common name before Peking was Bianliang during the Jin, Tang, and Five Dynasties periods.\n\nFinal answer: Before Beijing, the city was known as Bianliang during various historical periods.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.690001811366528,
         "n_gen_tokens": 1108,
@@ -14085,7 +14087,7 @@
       ],
       "vne": 0.5125203186705705,
       "judge_candidate": "The movie \"Requiem for a Dream\" is about four characters struggling with drug addiction. The main characters, Harry Goldfarb, Marion Silver, Tyrone C. Love, and Sara Goldfarb, all use various drugs throughout the film. However, the drug that Sara Goldfarb, the mother, primarily uses is diet pills, specifically a fictional brand called \"Twin Peaks\". The drug is used to suppress her appetite, but it leads to hallucinations and other harmful effects.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.908638013992459,
         "n_gen_tokens": 872,
@@ -14160,7 +14162,7 @@
       ],
       "vne": 0.49929079956692035,
       "judge_candidate": "The song \"Hit Me Baby One More Time\" was written by Max Martin and Rami Yacoub. Max Martin, a Swedish songwriter and record producer, is known for his work with numerous pop artists. Rami Yacoub is a Swedish musician, songwriter, and record producer who often collaborates with Max Martin. The song was written for and performed by Britney Spears, who rose to fame with this hit single in 1998.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.473331511951983,
         "n_gen_tokens": 767,
@@ -14260,7 +14262,7 @@
       ],
       "vne": 0.4530098395869483,
       "judge_candidate": "Leo Dalton, a character in the British crime drama \"Silent Witness,\" died in Season 14, Episode 1, titled \"The Last Sermon.\" He was shot by a sniper while investigating a case. The sniper was revealed to be a former colleague seeking revenge. Therefore, Leo Dalton died due to gunshot wounds caused by a sniper.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.725225245114416,
         "n_gen_tokens": 892,
@@ -14285,7 +14287,7 @@
       ],
       "vne": 0.29858929745251694,
       "judge_candidate": "1. The NBA All-Star Game Most Valuable Player (MVP) award has been given out since 1951.\n2. As of 2022, LeBron James and Kareem Abdul-Jabbar have won the most All-Star MVP awards with 4 each.\n3. Therefore, LeBron James and Kareem Abdul-Jabbar share the record for the most All-Star MVP awards.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.030600203666836,
         "n_gen_tokens": 1039,
@@ -14310,7 +14312,7 @@
       ],
       "vne": 0.4786615105328113,
       "judge_candidate": "The first season of \"Slasher\" was filmed in Ontario, Canada. Specifically, it was filmed in Toronto and the surrounding areas. This was confirmed by the show's creator, Aaron Martin, in various interviews. Therefore, the first season of \"Slasher\" was filmed in Ontario, Canada.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.031649328768253,
         "n_gen_tokens": 778,
@@ -14360,7 +14362,7 @@
       ],
       "vne": 0.6416694678446117,
       "judge_candidate": "The Lion King is an animated movie, not a documentary. The main character, Simba, is a lion, but the film also features other animals. The bird species in The Lion King is the hornbill, which is a type of bird that appears in the movie, notably during the \"I Just Can't Wait to Be King\" scene. However, it's important to note that these birds are not real lions in disguise; they are animated characters.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.121888678986579,
         "n_gen_tokens": 890,
@@ -14510,7 +14512,7 @@
       ],
       "vne": 0.37743025235571,
       "judge_candidate": "The television show \"The Rifleman\" aired from 1958 to 1963. The main character, Mark McCain, was a widowed rancher and single father. The actor who played Mark McCain was Chuck Connors. Therefore, Chuck Connors played Mark on the show \"The Rifleman.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.91247839294374,
         "n_gen_tokens": 639,
@@ -14660,7 +14662,7 @@
       ],
       "vne": 0.578284514121826,
       "judge_candidate": "1. The last episode of a TV show doesn't predict future events in real life, as it's a work of fiction.\n2. The events in the last episode of a TV show are the culmination of the storyline developed throughout the series.\n3. Therefore, the last episode of a TV show doesn't provide information about what happens to your real-life family. Your family's current status is based on your real-life experiences.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.772490838076919,
         "n_gen_tokens": 1086,
@@ -14685,7 +14687,7 @@
       ],
       "vne": 0.5757061812696892,
       "judge_candidate": "The philosopher who advocated the idea of returning to nature is Henry David Thoreau. He is best known for his work \"Walden,\" where he emphasized living simply and harmoniously with nature, away from the distractions of modern society. This philosophy is often referred to as Transcendentalism.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.783697691746056,
         "n_gen_tokens": 942,
@@ -15110,7 +15112,7 @@
       ],
       "vne": 0.2708999103524301,
       "judge_candidate": "The Major League Baseball (MLB) regular season typically starts in late March or early April and ends in late September or early October. The exact start date varies from year to year, but the World Series, the championship series, usually begins in October and concludes in late October or early November. The 2023 season, for example, is scheduled to start on March 30 and end on October 1.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.691377566196024,
         "n_gen_tokens": 965,
@@ -15235,7 +15237,7 @@
       ],
       "vne": 0.3791284142425241,
       "judge_candidate": "Thanksgiving is celebrated on the fourth Thursday of November each year in the United States. To find the last year it was on the 23rd, we need to find the last time the fourth Thursday fell on the 23rd of November. This happened in 2003, as the fourth Thursday of November 2003 was the 23rd.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.448277169838548,
         "n_gen_tokens": 1235,
@@ -15460,7 +15462,7 @@
       ],
       "vne": 0.4951993587557184,
       "judge_candidate": "1. First, we go to the Wikipedia page for \"List of Chief Ministers of Tamil Nadu.\"\n2. This page lists all the individuals who have served as the Chief Minister of Tamil Nadu, along with their terms in office.\n3. The current list includes M. Karunanidhi, M.G. Ramachandran, J. Jayalalithaa, O. Panneerselvam, and Edappadi K. Palaniswami.\n\nFinal answer: The chief ministers of Tamil Nadu mentioned on Wikipedia are M. Karunanidhi, M.G. Ramachandran, J. Jayalalithaa, O. Panneerselvam, and Edappadi K. Palaniswami.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.310771928168833,
         "n_gen_tokens": 1759,
@@ -15885,7 +15887,7 @@
       ],
       "vne": 0.4647946245456545,
       "judge_candidate": "The location of the next Olympics is decided through a bidding process by the International Olympic Committee (IOC). As of my last update, the next Summer Olympics will be held in Tokyo, Japan in 2021, and the next Winter Olympics will be in Beijing, China in 2022. After these, the location for the 2024 Summer Olympics has been awarded to Paris, France, and for the 2026 Winter Olympics, it will be held in Milan-Cortina d'Ampezzo, Italy.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.882584990002215,
         "n_gen_tokens": 1247,
@@ -16110,7 +16112,7 @@
       ],
       "vne": 0.323823475720568,
       "judge_candidate": "The song \"I Put a Spell on You\" is a popular track, but it's most famously sung by Screamin' Jay Hawkins. However, in the movie \"Hocus Pocus,\" the Sanderson Sisters perform a version of this song. So, while the original is by Screamin' Jay Hawkins, in the context of the movie, the Sanderson Sisters are the singers.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.461010268889368,
         "n_gen_tokens": 1095,
@@ -16410,7 +16412,7 @@
       ],
       "vne": 0.6723993034282223,
       "judge_candidate": "Red Dead Redemption 1 was developed by Rockstar Games. The game was released on May 18, 2010, for PlayStation 3 and Xbox 360. Therefore, Red Dead Redemption 1 came out in 2010.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.8458614009432495,
         "n_gen_tokens": 727,
@@ -16835,7 +16837,7 @@
       ],
       "vne": 0.33694929305031524,
       "judge_candidate": "Venezuela's climate is primarily determined by its geographical location near the equator, which places it within the tropical region. Additionally, the presence of the Andes mountain range influences the climate, causing a rain shadow effect in the eastern regions and creating a tropical monsoon climate. The final answer is that the geographical location near the equator and the influence of the Andes mountain range are the biggest determinants of Venezuela's climate.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.936091846320778,
         "n_gen_tokens": 1342,
@@ -16885,7 +16887,7 @@
       ],
       "vne": 0.31253958279551597,
       "judge_candidate": "1. To find the most consecutive games with 20+ points in NBA history, we need to look at the players with the longest streaks of scoring 20 or more points in consecutive games.\n\n2. The longest such streak was set by Wilt Chamberlain, who scored 20 or more points in 100 consecutive games from November 1961 to March 1962.\n\nFinal answer: Wilt Chamberlain holds the record for the most consecutive games with 20+ points in NBA history, with 100 games.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.70567901711911,
         "n_gen_tokens": 1378,
@@ -16960,7 +16962,7 @@
       ],
       "vne": 0.3572658954527169,
       "judge_candidate": "The TV show \"The Waltons\" first aired on CBS on January 16, 1972. It was initially broadcast as a movie-length pilot episode, and the series officially began on September 12, 1972. The show ran until May 31, 1981, spanning nine seasons.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.8575836531817913,
         "n_gen_tokens": 688,
@@ -17010,7 +17012,7 @@
       ],
       "vne": 0.34159471638835875,
       "judge_candidate": "The Scopes Trial, also known as the \"Monkey Trial,\" took place in Dayton, Tennessee, in 1925. The defendant, John T. Scopes, was a high school teacher who violated a state law by teaching evolution in his classroom. John Scopes did not actually represent the state of Tennessee in the trial, but rather, he was the defendant. The prosecution was led by William Jennings Bryan, and the defense was led by Clarence Darrow.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.089670029003173,
         "n_gen_tokens": 1283,
@@ -17135,7 +17137,7 @@
       ],
       "vne": 0.4696630571450646,
       "judge_candidate": "From Dusk Till Dawn is a television series based on the 1996 film of the same name. The series ran for 4 seasons, with each season consisting of 10 episodes, except for the fourth season, which had 13 episodes. Therefore, the total number of episodes in all seasons is 40 (4 seasons * 10 episodes per season) + 13 = 53 episodes. However, if you're asking about the number of seasons, the answer is 4.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.090408436022699,
         "n_gen_tokens": 789,
@@ -17310,7 +17312,7 @@
       ],
       "vne": 0.46408027055206486,
       "judge_candidate": "Sabrina the Teenage Witch originally aired for 7 seasons from 1996 to 2003. Each season typically consists of 22 episodes, so we multiply the number of seasons by the number of episodes per season. Therefore, there are 7 * 22 = 154 episodes of Sabrina the Teenage Witch in total.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.549140218645334,
         "n_gen_tokens": 1012,
@@ -17460,7 +17462,7 @@
       ],
       "vne": 0.21225756007013227,
       "judge_candidate": "1. The Royal Rumble is a professional wrestling match where participants enter at timed intervals, and the last one remaining wins.\n2. The record for the longest time spent in a Royal Rumble match is held by \"Stone Cold\" Steve Austin, who lasted 1 hour, 4 minutes, and 6 seconds in the 1998 event.\n3. Therefore, Steve Austin is the wrestler who lasted the longest in the Royal Rumble.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.930185597855598,
         "n_gen_tokens": 1152,
@@ -17485,7 +17487,7 @@
       ],
       "vne": 0.3864958792458776,
       "judge_candidate": "City & Guilds qualifications are vocational awards that are typically below degree level but above GCSEs or equivalent. They are often associated with technical and practical skills, and their level can range from Entry Level to Level 3, with Level 3 being equivalent to A-Levels in the UK education system. Therefore, a City & Guilds qualification is generally considered a vocational qualification at a secondary or post-secondary level.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.035413753241301,
         "n_gen_tokens": 1396,
@@ -17535,7 +17537,7 @@
       ],
       "vne": 0.5242482115608392,
       "judge_candidate": "The House of Representatives and the Senate are the two chambers of the U.S. Congress. Term limits for members of the House of Representatives are not explicitly stated in the U.S. Constitution, but the 22nd Amendment limits a president to two terms. However, the House has a term limit of two years, as stated in Article I, Section 2 of the Constitution.\n\nFor the Senate, the term limit is six years, as stated in Article I, Section 3 of the Constitution. Senators serve for six-year terms, with one-third of the Senate being up for election every two years. This ensures a rotation of senators and continuity in government.\n\nIn summary, the House of Representatives has an implicit two-year term limit, while the Senate has a six-year term limit.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.396641533821821,
         "n_gen_tokens": 1416,
@@ -17585,7 +17587,7 @@
       ],
       "vne": 0.5537600363901848,
       "judge_candidate": "1. The Miss America pageant has been held annually since 1921, and the title of Miss Texas has been represented multiple times.\n2. The most recent Miss Texas to win the Miss America title was Kára McCullough in 2017.\n3. Therefore, the last time Miss Texas won Miss America was in 2017.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.792607915122062,
         "n_gen_tokens": 881,
@@ -17835,7 +17837,7 @@
       ],
       "vne": 0.4533560718526283,
       "judge_candidate": "1. According to a study by Credit Suisse, the top 1% of the U.S. population owns about 39% of the country's total wealth.\n2. The top 10% of the population owns about 70% of the total wealth.\n3. Therefore, a smaller percentage, less than 10%, controls a majority of the wealth in the U.S. Final answer: Less than 10% of the U.S. population controls the majority of the wealth.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.333551254123449,
         "n_gen_tokens": 1059,
@@ -18185,7 +18187,7 @@
       ],
       "vne": 0.30823241029394155,
       "judge_candidate": "In the anime series Puella Magi Madoka Magica, Madoka Kaname becomes a magical girl after making a contract with Kyubey, a creature who grants magical powers, in exchange for her humanity and soul in order to fight witches. This transformation occurs in the second episode of the series, titled \"Decision at the School Festival.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.023280953988433,
         "n_gen_tokens": 838,
@@ -18485,7 +18487,7 @@
       ],
       "vne": 0.58560191237858,
       "judge_candidate": "The U.S. Navy ranks are divided into four main categories: Enlisted, Warrant Officer, Officer, and Flag Officer. From lowest to highest, the ranks are:\n\n1. Enlisted: Recruit, Apprentice, Seaman, Seaman Apprentice, Seaman, Fireman, Fireman Apprentice, Petty Officer Third Class, Petty Officer Second Class, Petty Officer First Class, Chief Petty Officer, Senior Chief Petty Officer, Master Chief Petty Officer, and Fleet Master Chief Petty Officer.\n\n2. Warrant Officer: Warrant Officer 1, Warrant Officer 2, Chief Warrant Officer 2, Chief Warrant Officer 3, and Chief Warrant Officer 4.\n\n3. Officer: Ensign, Lieutenant Junior Grade, Lieutenant, Lieutenant Commander, Commander, Captain, and Rear Admiral (Lower Half, Upper Half, and Two Star).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 9.06474015628919,
         "n_gen_tokens": 1836,
@@ -18760,7 +18762,7 @@
       ],
       "vne": 0.5095253174049067,
       "judge_candidate": "The song \"I Wanna Be the Only One\" is a hit by the British R&B singer-songwriter, En Vogue. En Vogue is a female group, so it's not a solo artist. The members of En Vogue at the time this song was released (1996) were Terry Ellis, Maxine Jones, Cindy Herron, and Rhona Bennett. Therefore, En Vogue sang \"I Wanna Be the Only One.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.453326553106308,
         "n_gen_tokens": 909,
@@ -19010,7 +19012,7 @@
       ],
       "vne": 0.46409026571754974,
       "judge_candidate": "The animated television series \"Shimmer and Shine\" features music composed by Brian K. Vibberts. He is a prolific composer who has worked on numerous Nickelodeon shows, including \"Shimmer and Shine.\" Therefore, Brian K. Vibberts is the music composer for \"Shimmer and Shine.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.9899536981247365,
         "n_gen_tokens": 821,
@@ -19160,7 +19162,7 @@
       ],
       "vne": 0.43029292204603276,
       "judge_candidate": "1. The medal count for Canada in the Olympics is updated after each Olympic Games and can be found on official Olympic Committee websites.\n2. As of the 2020 Tokyo Olympics, Canada has won a total of 246 medals, including 98 gold, 85 silver, and 63 bronze medals.\n3. Therefore, the medal count for Canada in the Olympics is 246 medals (98 gold, 85 silver, and 63 bronze).",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.443426409270614,
         "n_gen_tokens": 1019,
@@ -19210,7 +19212,7 @@
       ],
       "vne": 0.6009452487463689,
       "judge_candidate": "Reba McEntire's song \"Back to God\" was released in 2003. This can be confirmed by checking the release dates of her albums, as this song is from her album \"Room to Breathe,\" which was released on October 28, 2003. Therefore, Reba McEntire recorded \"Back to God\" in 2003.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.368764427956194,
         "n_gen_tokens": 938,
@@ -19260,7 +19262,7 @@
       ],
       "vne": 0.6651812129108174,
       "judge_candidate": "1. The Cash Cab driver, who is also the host, reads the questions from a tablet or screen mounted in the cab.\n2. The questions are pre-written and selected from a database, often tailored to the route or topic of the day.\n3. The driver reads the questions aloud to the passengers, who then answer for a chance to win cash prizes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.299867819994688,
         "n_gen_tokens": 1046,
@@ -19285,7 +19287,7 @@
       ],
       "vne": 0.3861771766119824,
       "judge_candidate": "1. First, we need to identify the years from the last 10 years. That would be from 2012 to 2021.\n2. Next, we look for La Liga champions for each of these years.\n3. The teams that won La Liga in the last 10 years are Real Madrid (2012, 2017, 2018, 2019, 2020, 2022), Barcelona (2013, 2015, 2019, 2021), and Atletico Madrid (2014, 2023 - this is a mistake, Atletico Madrid won in 2014, not 2023).\n\nFinal answer: Real Madrid (5 times), Barcelona (4 times), and Atletico Madrid (1 time).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 9.042973850853741,
         "n_gen_tokens": 1685,
@@ -19385,7 +19387,7 @@
       ],
       "vne": 0.24862156249995596,
       "judge_candidate": "1. The University of Michigan School of Public Health is consistently ranked among the top public health schools in the United States.\n2. In the 2021 U.S. News & World Report rankings, the University of Michigan School of Public Health was ranked 3rd among all public health schools in the country.\n3. Therefore, the University of Michigan School of Public Health is highly ranked and is considered one of the best public health schools in the United States.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.050344831775874,
         "n_gen_tokens": 1155,
@@ -19610,7 +19612,7 @@
       ],
       "vne": 0.3461062336428181,
       "judge_candidate": "The H1N1 virus, also known as Swine Flu, is a strain of influenza virus primarily found in pigs. However, it can infect humans and other animals as well, causing disease. The primary carriers of the H1N1 virus are pigs, but humans can also carry and spread it after being infected. Therefore, humans can act as secondary carriers of the H1N1 virus.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.0125328954309225,
         "n_gen_tokens": 1047,
@@ -19910,7 +19912,7 @@
       ],
       "vne": 0.4697013724405851,
       "judge_candidate": "The Electronic Fund Transfer Act (EFTA) was signed into law on October 28, 1978, during the presidency of Jimmy Carter. This act established consumer protections for electronic fund transfers, such as debit cards, automated teller machines (ATMs), and direct deposit. The EFTA is significant as it helped to promote the growth of electronic banking and protect consumers in the digital age.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.511587804183364,
         "n_gen_tokens": 815,
@@ -19960,7 +19962,7 @@
       ],
       "vne": 0.4313293235444938,
       "judge_candidate": "1. Silver, like other metals, is a chemical element with the symbol Ag (from Latin: Argentum) and atomic number 47 on the periodic table.\n2. It has similar properties to other transition metals, such as being malleable, ductile, and a good conductor of electricity and heat.\n3. Silver is also known for its lustrous white or slightly yellowish color, which is similar to other noble metals like gold and platinum.\n\nFinal answer: Silver shares similarities with other metals in terms of being malleable, ductile, a good conductor, and having a lustrous appearance. It is also a transition metal and has the symbol Ag.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.413175805006176,
         "n_gen_tokens": 1463,
@@ -20160,7 +20162,7 @@
       ],
       "vne": 0.4261450690368682,
       "judge_candidate": "Caste is a social hierarchy in the Indian subcontinent, traditionally based on a person's birth into a specific group. The concept of a \"closed class\" in sociology refers to a group where membership is not easily changeable.\n\nThe idea that caste is a closed class is often attributed to sociologists who have studied the Indian caste system, as it is difficult for individuals to move out of their caste due to social, economic, and cultural barriers.\n\nTherefore, it can be said that the caste system in India is often considered a closed class. However, it's important to note that this is a simplification, as there have been instances of social mobility within the caste system throughout history.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.048307157121599,
         "n_gen_tokens": 1534,
@@ -20235,7 +20237,7 @@
       ],
       "vne": 0.5195903182110612,
       "judge_candidate": "The Summer Olympics are held every four years. To find the location of the 2012 Summer Olympics, we subtract four years from the current year (2022) and look back to the year 2012. The 2012 Summer Olympics were held in London, United Kingdom.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.817601764108986,
         "n_gen_tokens": 756,
@@ -20460,7 +20462,7 @@
       ],
       "vne": 0.28862301114743344,
       "judge_candidate": "\"The Curious Case of Benjamin Button\" was a film released in 2008. It won three Academy Awards: Best Achievement in Visual Effects, Best Performance by an Actress in a Supporting Role (Taraji P. Henson), and Best Achievement in Makeup. However, it was not nominated for the Best Picture award, despite being a highly acclaimed film.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.284402142744511,
         "n_gen_tokens": 1082,
@@ -20735,7 +20737,7 @@
       ],
       "vne": 0.3491348211224387,
       "judge_candidate": "1. The New Kingdom of Ancient Egypt, which spanned from approximately 1550 BCE to 1077 BCE, was marked by a resurgence of Egyptian power and influence.\n2. During this period, many pharaohs were considered divine and were often associated with specific gods, but one of the most significant religious figures was the solar deity Amen-Ra.\n3. Amen-Ra was the combined form of the god Amun and the sun god Ra, and he was often depicted as a man with the head of a falcon or a bull. He was the king of the gods and was particularly revered during the New Kingdom, especially under the rule of Pharaoh Akhenaten, who promoted a form of monotheism centered on Aten, a solar deity closely related to Amen-Ra.\n\nFinal answer: Amen-Ra was the most important new religious",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 9.011524789966643,
         "n_gen_tokens": 1703,
@@ -20935,7 +20937,7 @@
       ],
       "vne": 0.2919397804811775,
       "judge_candidate": "The \"bad guy\" in \"The Silence of the Lambs\" is Dr. Hannibal Lecter, a cannibalistic serial killer and former psychiatrist, who aids the protagonist, Clarice Starling, with information about another serial killer, Buffalo Bill, but ultimately has ulterior motives. However, the main antagonist is Buffalo Bill, a transgender serial killer who skins his victims to create a \"woman suit\" for himself. Final answer: Both Dr. Hannibal Lecter and Buffalo Bill are the main antagonists in \"The Silence of the Lambs.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.455592740792781,
         "n_gen_tokens": 1162,
@@ -21060,7 +21062,7 @@
       ],
       "vne": 0.2692686419896203,
       "judge_candidate": "The ICC Under-19 World Cup 2018 was held in New Zealand. The final match was played between India and Australia. India emerged victorious, winning the tournament by 8 wickets. Therefore, India won the ICC Under-19 World Cup 2018.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.7769735641777515,
         "n_gen_tokens": 709,
@@ -21260,7 +21262,7 @@
       ],
       "vne": 0.4955777040370428,
       "judge_candidate": "Stranger Things Season 1 has 8 episodes. The average length of each episode is approximately 50 minutes. Therefore, the total length of all episodes in Season 1 is about 8 * 50 = 400 minutes or 6 hours and 40 minutes.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.023243156727403,
         "n_gen_tokens": 1024,
@@ -21485,7 +21487,7 @@
       ],
       "vne": 0.3850615882040226,
       "judge_candidate": "1. \"The Young and the Restless\" is a popular American soap opera. Ashley Abbott is a character on this show.\n2. Ashley Abbott was portrayed by Eileen Davidson from 1982 to 1999, and then by Sharon Case from 1999 to 2001.\n3. Therefore, Eileen Davidson and Sharon Case have played the role of Ashley Abbott on \"The Young and the Restless.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.376295148860663,
         "n_gen_tokens": 1017,
@@ -21535,7 +21537,7 @@
       ],
       "vne": 0.37996077372420384,
       "judge_candidate": "The character Daya in the Indian television show \"Taarak Mehta Ka Ooltah Chashmah\" is a housekeeper for the Patel family. The actress who plays Daya is Disha Vakani. Therefore, the real name of Daya in the show is not given, as it is a fictional character. However, the real name of the actress who plays Daya is Disha Vakani.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.456487921066582,
         "n_gen_tokens": 973,
@@ -21685,7 +21687,7 @@
       ],
       "vne": 0.3802939915442277,
       "judge_candidate": "1. The 2014 Olympic Winter Games were held in Sochi, Russia.\n2. The International Olympic Committee (IOC) announces the participating countries for each Olympic Games.\n3. According to the official IOC website, 88 countries participated in the 2014 Winter Olympics, and 15 of them were making their debut.\n\nFinal answer: 15 countries participated for the first time in the 2014 Olympic Winter Games in Sochi.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.733892783988267,
         "n_gen_tokens": 1264,
@@ -21735,7 +21737,7 @@
       ],
       "vne": 0.34617255300187133,
       "judge_candidate": "Canada did not gain independence from Great Britain. Instead, it became a self-governing dominion within the British Empire in 1867 through the British North America Act. Canada's full independence came in 1982 with the enactment of the Constitution Act. The final answer is that Canada achieved its full independence in 1982.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.335205678828061,
         "n_gen_tokens": 1111,
@@ -22035,7 +22037,7 @@
       ],
       "vne": 0.26912073591069124,
       "judge_candidate": "The Soviet Union, officially known as the Union of Soviet Socialist Republics (USSR), was established on December 30, 1922, when four republics (Russia, Ukraine, Belarus, and Transcaucasian SFSR) signed the Union Treaty. The Soviet Union ended on December 26, 1991, when the leaders of Russia, Ukraine, and Belarus signed the Belavezha Accords, effectively dissolving the USSR.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.954109241254628,
         "n_gen_tokens": 860,
@@ -22135,7 +22137,7 @@
       ],
       "vne": 0.5370116241926226,
       "judge_candidate": "The British were not alone in the French and Indian War, which was fought from 1754 to 1763. They were allied with several Native American tribes, such as the Iroquois, Delaware, and Shawnee, who opposed the French expansion in North America. Additionally, the British received military support from German mercenaries known as Hessians. However, the most significant ally was the Kingdom of Prussia, whose military aid was crucial in the decisive Battle of Quebec in 1759. Therefore, the British were primarily assisted by their Native American allies, Hessian mercenaries, and the Kingdom of Prussia during the French and Indian War.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.514193261042237,
         "n_gen_tokens": 984,
@@ -22310,7 +22312,7 @@
       ],
       "vne": 0.40951500601576074,
       "judge_candidate": "1. The release date for the next Warrior book isn't publicly announced yet.\n2. To find out, you should check the official website or social media accounts of the author or publisher.\n3. As of now, the release date is unknown, so I'm unable to provide a specific date.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.655772292986512,
         "n_gen_tokens": 1320,
@@ -22385,7 +22387,7 @@
       ],
       "vne": 0.3495743829675032,
       "judge_candidate": "The Academy Award for Best Picture was won by \"The Deer Hunter\" in 1978. However, the award for Best Director was given to Michael Cimino for \"The Deer Hunter,\" but not for Best Actor or Actress. The Best Actor award that year went to Jon Voight for \"Coming Home,\" and the Best Actress award went to Jane Fonda for \"Coming Home.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.510448835790157,
         "n_gen_tokens": 1107,
@@ -22560,7 +22562,7 @@
       ],
       "vne": 0.40326205301375595,
       "judge_candidate": "The character Shmuel is from the novel \"The Boy in the Striped Pyjamas\" by John Boyne. In the 2008 film adaptation, the role of Shmuel was played by actor Asa Butterfield. Therefore, Asa Butterfield played Shmuel in the movie.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.424844955094159,
         "n_gen_tokens": 809,
@@ -22660,7 +22662,7 @@
       ],
       "vne": 0.3860849888130758,
       "judge_candidate": "The President of India is elected by an electoral college consisting of elected members of both the Lok Sabha (House of the People) and the Rajya Sabha (Council of States), along with members of the legislative assemblies of the states and the Union territories with legislatures. The Presidential election in 2017 did not take place as the term of President Pranab Mukherjee ended in 2017 and the next President, Ram Nath Kovind, was elected in 2017. Therefore, Ram Nath Kovind was the nominee for President of India in 2017. Meira Kumar was the main opposition candidate.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.6476395931094885,
         "n_gen_tokens": 1403,
@@ -22985,7 +22987,7 @@
       ],
       "vne": 0.27863854184856723,
       "judge_candidate": "The Super Bowl is a championship game for the National Football League (NFL), which consists of the AFC (American Football Conference) and NFC (National Football Conference). To determine which conference has more Super Bowl wins, we simply compare the total number of Super Bowl wins by teams from each conference. As of the most recent Super Bowl (LV), the NFC has won 27 Super Bowls, while the AFC has won 31. Therefore, the AFC has more Super Bowl wins.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.924427106976509,
         "n_gen_tokens": 1033,
@@ -23060,7 +23062,7 @@
       ],
       "vne": 0.5206250972994854,
       "judge_candidate": "1. Joey's agent on \"Friends\" was Estelle, a character who appeared in several episodes.\n2. Estelle was portrayed by actress and comedian, Kathleen Turner.\n3. Therefore, Kathleen Turner played Joey's agent Estelle on \"Friends.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.575675163883716,
         "n_gen_tokens": 818,
@@ -23360,7 +23362,7 @@
       ],
       "vne": 0.3575176307867206,
       "judge_candidate": "The character Cindy Lou Who is from the Dr. Seuss book \"How the Grinch Stole Christmas.\" In the live-action adaptation of the story, the role was played by Taylor Momsen in 2000, and in the animated version from 2018, the voice of Cindy Lou Who was provided by Cameron Seely. However, in the 2018 animated film, Cindy Lou Who is not a single character but a group of Who children, each voiced by different actresses.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.27332048304379,
         "n_gen_tokens": 828,
@@ -23435,7 +23437,7 @@
       ],
       "vne": 0.5326976182585293,
       "judge_candidate": "The film \"Layer Cake\" features a protagonist who is not named directly in the movie. However, he is often referred to as \"XXX\" or \"The Connector.\" In the novelization of the film, the main character's name is Danny. Therefore, while the movie itself does not reveal his name, the novelization identifies him as Danny.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.676293399184942,
         "n_gen_tokens": 867,
@@ -23560,7 +23562,7 @@
       ],
       "vne": 0.38904205491679256,
       "judge_candidate": "Athens, one of the most influential city-states in ancient Greece, became the wealthiest during the Classical period, which spanned from around 480 BCE to 323 BCE. This wealth was primarily due to its strategic location, maritime trade, and the prosperity brought by the Golden Age of Pericles, during which the Parthenon and other significant structures were built. Therefore, Athens was at its wealthiest during the Classical period, particularly in the 5th century BCE.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.63477999670431,
         "n_gen_tokens": 1231,
@@ -23610,7 +23612,7 @@
       ],
       "vne": 0.5030837134283177,
       "judge_candidate": "The character Cruella de Vil was first introduced in the 1956 novel \"The Hundred and One Dalmatians\" by Dodie Smith. In the 1961 animated film adaptation, Cruella was voiced by Betty Lou Gerson. However, the character gained wider recognition from the live-action films, with Glenn Close portraying Cruella de Vil in the 1996 film \"101 Dalmatians\" and Emma Stone in the 2016 film \"Cruella.\" Therefore, Glenn Close played Cruella de Vil in the 1996 live-action adaptation of \"101 Dalmatians.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.348740392830223,
         "n_gen_tokens": 1005,
@@ -23710,7 +23712,7 @@
       ],
       "vne": 0.5431980013465006,
       "judge_candidate": "The latest series of \"Keeping Up with the Kardashians\" is Season 20. This reality TV show, which follows the personal and professional lives of the Kardashian-Jenner family, aired its final episode on June 10, 2021. After this, the family announced that they would not be renewing the show for another season. Therefore, as of now, there is no new series of \"Keeping Up with the Kardashians.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.0317457667551935,
         "n_gen_tokens": 1268,
@@ -23935,7 +23937,7 @@
       ],
       "vne": 0.560866294832146,
       "judge_candidate": "The Royal TV series, also known as \"The Crown,\" was primarily filmed in the United Kingdom. Specific locations include Elstree Studios in Hertfordshire for interior scenes, and various exterior shots were taken at locations such as Windsor Castle, Buckingham Palace, and Highclere Castle (which stands in for Downton Abbey). The final answer is that \"The Crown\" was filmed in the UK.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.332422725856304,
         "n_gen_tokens": 1113,
@@ -23985,7 +23987,7 @@
       ],
       "vne": 0.3307898915684473,
       "judge_candidate": "The musical \"Grease\" is set in the 1950s and is primarily based in Rydell High School. However, the famous car race in the movie \"Grease\" takes place off-campus, specifically at a local drive-in theater parking lot. Therefore, the race in \"Grease\" takes place at a drive-in theater parking lot.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.208901707548648,
         "n_gen_tokens": 834,
@@ -24160,7 +24162,7 @@
       ],
       "vne": 0.4243451710053482,
       "judge_candidate": "George Bailey is the main character in the movie \"It's a Wonderful Life.\" He is a man who, throughout the story, reflects on his life and the impact he has had on his community. Initially, George Bailey is portrayed as a young man, before he takes over his father's building and loan business. Therefore, in the beginning of the movie, George Bailey is a young man.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.741478377953172,
         "n_gen_tokens": 1151,
@@ -24185,7 +24187,7 @@
       ],
       "vne": 0.3733956580273384,
       "judge_candidate": "The Hunger Games is a trilogy of novels written by Suzanne Collins. The three books in the series are:\n\n1. The Hunger Games\n2. Catching Fire\n3. Mockingjay\n\nThese books were later adapted into four films, with the fourth one being split into two parts. The Hunger Games is the title of the first book and the first film in the series.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.62768587982282,
         "n_gen_tokens": 966,
@@ -24285,7 +24287,7 @@
       ],
       "vne": 0.4446719030843227,
       "judge_candidate": "In the original Star Wars trilogy, the relationship between Luke Skywalker and Leia Organa is not revealed until Star Wars: Episode V - The Empire Strikes Back. Darth Vader reveals to Luke that Leia is his sister, making them siblings. This revelation occurs in the Cloud City scene when Vader confronts Luke.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.023553912062198,
         "n_gen_tokens": 1352,
@@ -24885,7 +24887,7 @@
       ],
       "vne": 0.31789639937108594,
       "judge_candidate": "The Army-Navy Game is an annual college football game between the Army Black Knights and the Navy Midshipmen. The game is traditionally played at a neutral site, rotating between Philadelphia (Lincoln Financial Field), Baltimore (M&T Bank Stadium), and New York (MetLife Stadium). This year's game is scheduled to be played at Lincoln Financial Field in Philadelphia on December 11, 2021.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.924437006004155,
         "n_gen_tokens": 1044,

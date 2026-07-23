@@ -13,10 +13,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.7077922077922078,
-  "hallucination_rate": 0.286,
+  "auroc": 0.6942798334707252,
+  "hallucination_rate": 0.261,
   "details": [
     {
       "id": "triviaqa-000000",
@@ -124,7 +126,7 @@
       "vne": 0.9849632511351538,
       "judge_candidate": "Boiling a liquid rapidly causes evaporation, which reduces the volume of the liquid. As the liquid loses water, the remaining liquid becomes more concentrated. This process is called 'Reduction by Evaporation.'\n\nFinal Answer: Reduction by Evaporation",
       "judge_extracted": "Reduction by Evaporation",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.627527429256588,
         "n_gen_tokens": 650,
@@ -238,7 +240,7 @@
       "vne": 0.8137191958501065,
       "judge_candidate": "Marge Simpson is the wife of Homer Simpson in the animated series The Simpsons. Her maiden name is revealed in the episode \"Two Cars in Every Garage and Three Eyes on Every Fish,\" where it is stated that she was born Margaret Bouvier.\n\nFinal Answer: Margaret Bouvier is Marge Simpson's maiden name.",
       "judge_extracted": "Margaret Bouvier is Marge Simpson's maiden name.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.0206575081683695,
         "n_gen_tokens": 912,
@@ -314,7 +316,7 @@
       "vne": 0.7897275273672871,
       "judge_candidate": "The artist in question is Paul McCartney. He married Jane Asher in 1981, and they have a daughter named Stella McCartney and two sons named James McCartney and Alasdhair McCartney.\n\nFinal Answer: Paul McCartney",
       "judge_extracted": "Paul McCartney",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.021544174756855,
         "n_gen_tokens": 863,
@@ -694,7 +696,7 @@
       "vne": 0.6878572185432141,
       "judge_candidate": "Focaccia is a type of Italian flatbread, typically seasoned with olive oil, salt, and sometimes herbs. So, if you ask for Focaccia in an Italian restaurant, you would expect to receive a fluffy, olive oil-soaked bread with a slightly crispy crust and a soft, airy interior.\n\nFinal Answer: You would expect to receive a fluffy, olive oil-soaked bread with a slightly crispy crust and a soft, airy interior.",
       "judge_extracted": "You would expect to receive a fluffy, olive oil-soaked bread with a slightly crispy crust and a soft, airy interior.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.824188353028148,
         "n_gen_tokens": 1010,
@@ -998,7 +1000,7 @@
       "vne": 0.9668361230499831,
       "judge_candidate": "Jack Lovelock is a New Zealander, and the timeframe given is the 1930s. The most likely field where he gained fame during this period is athletics, specifically in the 1500 meters race, as he won the gold medal in the 1936 Berlin Olympics for this event.\n\nFinal Answer: Athletics (1500 meters race)",
       "judge_extracted": "Athletics (1500 meters race)",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.0734524661675096,
         "n_gen_tokens": 790,
@@ -1948,7 +1950,7 @@
       "vne": 1.1020488775255546,
       "judge_candidate": "The miners in Ashington, Northumberland, formed a group to study adult education and cultural activities, aiming to improve their lives beyond mining. This group is known as the 'Ashington Group' or 'Ashington Set.' (Final Answer: The Ashington Group or Ashington Set)",
       "judge_extracted": "The Ashington Group or Ashington Set)",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.4746991391293705,
         "n_gen_tokens": 769,
@@ -2290,7 +2292,7 @@
       "vne": 0.9233407501425582,
       "judge_candidate": "The Kray twins, Ronnie and Reggie Kray, were born in London, England. Their parents were Violet Kathleen (née Baker) and Jack Kray.\n\nFinal Answer: Violet Kathleen (Baker) was the first name of the Kray twins' mother.",
       "judge_extracted": "Violet Kathleen (Baker) was the first name of the Kray twins' mother.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.7092959261499345,
         "n_gen_tokens": 574,
@@ -2366,7 +2368,7 @@
       "vne": 0.8765287077258174,
       "judge_candidate": "1. The Football League, now known as the EFL (English Football League), was established in 1888, and the FA Cup is an annual knockout football competition in England.\n2. The team from outside the League that won the FA Cup in 1901 was Tottenham Hotspur, who were not part of the Football League at the time but joined the Second Division in 1908.\n3. Final Answer: Tottenham Hotspur won the FA Cup in 1901.",
       "judge_extracted": "Tottenham Hotspur won the FA Cup in 1901.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.862059262115508,
         "n_gen_tokens": 1262,
@@ -2556,7 +2558,7 @@
       "vne": 0.42919248191402626,
       "judge_candidate": "1. The President who died in office in July 1850 was Zachary Taylor. He passed away on July 9, 1850.\n2. Millard Fillmore was Taylor's Vice President at the time.\n3. Therefore, Millard Fillmore became President upon Taylor's death.\n\nFinal Answer: Millard Fillmore became President upon the death of Zachary Taylor in July 1850.",
       "judge_extracted": "Millard Fillmore became President upon the death of Zachary Taylor in July 1850.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.483099238947034,
         "n_gen_tokens": 1043,
@@ -2860,7 +2862,7 @@
       "vne": 0.43403683541025795,
       "judge_candidate": "The SS Thistlegorm is a sunken WWII ship that serves as a popular diving destination. This ship was sunk in the Red Sea, which is a part of the Indian Ocean.\n\nFinal Answer: The SS Thistlegorm is located in the Red Sea, which is part of the Indian Ocean.",
       "judge_extracted": "The SS Thistlegorm is located in the Red Sea, which is part of the Indian Ocean.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.861921942792833,
         "n_gen_tokens": 634,
@@ -3050,7 +3052,7 @@
       "vne": 0.3553454362358579,
       "judge_candidate": "The European Union (EU) consists of several countries in Europe. To find the most southerly one, we need to look at the southernmost point. Portugal is the westernmost country in the EU, but Spain is to its south. Malta is an island nation in the Mediterranean Sea, south of Italy, and it's also part of the EU. However, the most southerly country is Cyprus, an island nation in the Eastern Mediterranean, south of Turkey.\n\nFinal Answer: The most southerly country of the EU is Cyprus.",
       "judge_extracted": "The most southerly country of the EU is Cyprus.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.765725038945675,
         "n_gen_tokens": 817,
@@ -3088,7 +3090,7 @@
       "vne": 0.7467573813489942,
       "judge_candidate": "The average elevation of a major American city is significantly higher than 2 feet below sea level. Cities in the United States are generally located above sea level. However, New Orleans, Louisiana, has areas that are below sea level, but it is not the only major city in the U.S. with such conditions. The city's average elevation is not 2 feet below sea level.\n\nFinal Answer: No major American city has an average elevation of 2 feet below sea level.",
       "judge_extracted": "No major American city has an average elevation of 2 feet below sea level.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.2780708079226315,
         "n_gen_tokens": 750,
@@ -3696,7 +3698,7 @@
       "vne": 0.9371588274077653,
       "judge_candidate": "Huey Lewis is the lead vocalist of the band Huey Lewis and the News. The band consists of multiple members, so no one specifically sings 'behind' Huey Lewis in the traditional sense. However, backing vocals are provided by other band members such as Johnnie Colla, Bill Gibson, and Marvin McFadden.\n\nFinal Answer: Other band members such as Johnnie Colla, Bill Gibson, and Marvin McFadden provide backing vocals for Huey Lewis in the band Huey Lewis and the News.",
       "judge_extracted": "Other band members such as Johnnie Colla, Bill Gibson, and Marvin McFadden provide backing vocals for Huey Lewis in the band Huey Lewis and the News.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.412878354080021,
         "n_gen_tokens": 947,
@@ -4608,7 +4610,7 @@
       "vne": 0.9051883913744606,
       "judge_candidate": "Hickory and persimmon were traditionally used in the production of golf club shafts and golf ball cores, respectively. However, with advancements in technology, graphite and titanium have replaced these materials in modern golf equipment due to their lightweight, durable, and consistent properties.\n\nFinal Answer: Golf club shafts and golf ball cores.",
       "judge_extracted": "Golf club shafts and golf ball cores.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.668934796005487,
         "n_gen_tokens": 1002,
@@ -4646,7 +4648,7 @@
       "vne": 0.37704260192121647,
       "judge_candidate": "The film \"The Birds\" is a suspense thriller directed by Alfred Hitchcock. The setting for this movie is primarily in a coastal town in California, with key scenes also taking place in a small village and a few characters' homes.\n\nFinal Answer: The setting for the Alfred Hitchcock film \"The Birds\" is a coastal town in California, a small village, and various characters' homes.",
       "judge_extracted": "The setting for the Alfred Hitchcock film \"The Birds\" is a coastal town in California, a small village, and various characters' homes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.019687672145665,
         "n_gen_tokens": 939,
@@ -4760,7 +4762,7 @@
       "vne": 0.5139074663079835,
       "judge_candidate": "Keswick is located in the county of Cumbria, which is in North West England. The Lake District National Park, a region known for its lakes, is also in Cumbria. Therefore, Keswick lies north of Lake Derwentwater, which is one of the larger lakes in the Lake District.\n\nFinal Answer: Keswick lies north of Lake Derwentwater.",
       "judge_extracted": "Keswick lies north of Lake Derwentwater.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.321032560896128,
         "n_gen_tokens": 671,
@@ -4836,7 +4838,7 @@
       "vne": 0.6721656094276135,
       "judge_candidate": "The South London gang in question is the Richardsons, led by Charles and Ronald (not Eddie) Richardsons. They were rivals of the Krays, a notorious gang based in the East End of London. The Richardsons were known for their control over the horse racing industry and their violent feuds with the Krays in the 1960s.\n\nFinal Answer: The Richardsons, led by Charles and Ronald Richardsons, were rivals of the Krays.",
       "judge_extracted": "The Richardsons, led by Charles and Ronald Richardsons, were rivals of the Krays.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.112467473838478,
         "n_gen_tokens": 843,
@@ -4950,7 +4952,7 @@
       "vne": 0.44079937211203346,
       "judge_candidate": "A standard deck of cards has 4 suits: hearts, diamonds, clubs, and spades. Each suit has 13 cards, and only one King per suit. Since Kings don't have moustaches in standard playing cards, there are no Kings with a moustache in a standard deck.\n\nFinal Answer: There are no Kings with a moustache in a standard deck of cards.",
       "judge_extracted": "There are no Kings with a moustache in a standard deck of cards.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.9341585277579725,
         "n_gen_tokens": 824,
@@ -5368,7 +5370,7 @@
       "vne": 0.40245703167633246,
       "judge_candidate": "'Pax' in property rental context typically refers to the number of people that a room or accommodation can comfortably sleep. It's a shorthand for 'person(s) accommodated eXtra.'\n\nFinal Answer: 'Pax' in property rental means the number of people that a room or accommodation can comfortably sleep.",
       "judge_extracted": "'Pax' in property rental means the number of people that a room or accommodation can comfortably sleep.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.4019436039961874,
         "n_gen_tokens": 749,
@@ -6356,7 +6358,7 @@
       "vne": 0.3585825232163668,
       "judge_candidate": "Tenzin Gyatso is the 14th Dalai Lama, a spiritual leader of Tibetan Buddhism. He is better known as the 14th Dalai Lama.\n\nFinal Answer: Tenzin Gyatso is better known as the 14th Dalai Lama.",
       "judge_extracted": "Tenzin Gyatso is better known as the 14th Dalai Lama.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.537485030014068,
         "n_gen_tokens": 839,
@@ -8712,7 +8714,7 @@
       "vne": 0.6165647067014433,
       "judge_candidate": "The final carrier of the Olympic flame in the Olympic Torch Relay is typically a prominent figure, often a Greek citizen, to symbolize the origin of the Olympic Games. This person is usually kept secret until the last moment for dramatic effect.\n\nFinal Answer: The final carrier of the Olympic flame is usually a prominent Greek citizen, often kept secret until the last moment.",
       "judge_extracted": "The final carrier of the Olympic flame is usually a prominent Greek citizen, often kept secret until the last moment.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.1032887334004045,
         "n_gen_tokens": 851,
@@ -9434,7 +9436,7 @@
       "vne": 0.5157504116779222,
       "judge_candidate": "Terry Scott was known for his comedic roles. He played a middle-aged character in a sitcom. The suburban setting is common in many sitcoms, but one of Terry Scott's most famous roles was as Terry Fletcher in the British sitcom \"Terry and June.\"\n\nFinal Answer: Terry Scott starred as Terry Fletcher in the television comedy series \"Terry and June.\"",
       "judge_extracted": "Terry Scott starred as Terry Fletcher in the television comedy series \"Terry and June.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.952718055341393,
         "n_gen_tokens": 884,
@@ -9624,7 +9626,7 @@
       "vne": 0.23600734401270823,
       "judge_candidate": "Pakistan's currency is the Pakistani Rupee (PKR). It is the official currency of Pakistan and is abbreviated as PKR in financial transactions.\n\nFinal Answer: The currency of Pakistan is Pakistani Rupee (PKR).",
       "judge_extracted": "The currency of Pakistan is Pakistani Rupee (PKR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.6373589881695807,
         "n_gen_tokens": 688,
@@ -10118,7 +10120,7 @@
       "vne": 0.9451958332138094,
       "judge_candidate": "Al Capone was a businessman, but more specifically, he was a bootlegger and gangster during the Prohibition era in the United States. His business card would likely have reflected his role as a head of a criminal organization involved in illegal activities such as bootlegging and racketeering.\n\nFinal Answer: Al Capone's business card would have identified him as a gangster or bootlegger.",
       "judge_extracted": "Al Capone's business card would have identified him as a gangster or bootlegger.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.087047036737204,
         "n_gen_tokens": 822,
@@ -10916,7 +10918,7 @@
       "vne": 0.8881932884798529,
       "judge_candidate": "The first televised proceedings of the House of Commons in the United Kingdom occurred on June 25, 1949. This event marked the beginning of regular television coverage of parliamentary sessions. (Final Answer: 1949)",
       "judge_extracted": "1949)",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.65126281324774,
         "n_gen_tokens": 967,
@@ -11486,7 +11488,7 @@
       "vne": 0.7280087266971896,
       "judge_candidate": "The chair set ready at each Passover meal, according to Jewish tradition, is Elijah's chair. Elijah the prophet is believed to announce the coming of the Messiah. So, the chair is set in anticipation of his arrival.\n\nFinal Answer: Elijah's chair.",
       "judge_extracted": "Elijah's chair.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.3153753988444805,
         "n_gen_tokens": 904,
@@ -11676,7 +11678,7 @@
       "vne": 0.9009072276497228,
       "judge_candidate": "Yuan Yuan is a Chinese individual, and the question mentions a 'Chinese team.' This suggests a sports team or a team within a specific organization, not a drug-smuggling organization. However, the question does not specify the type of team. Since Yuan Yuan was caught with drugs, it's likely that the team she was associated with was a sports team that was under investigation for drug-related offenses.\n\nFinal Answer: Yuan Yuan was caught carrying drugs for an unspecified Chinese sports team.",
       "judge_extracted": "Yuan Yuan was caught carrying drugs for an unspecified Chinese sports team.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.914973936975002,
         "n_gen_tokens": 985,
@@ -11714,7 +11716,7 @@
       "vne": 0.7904125248287748,
       "judge_candidate": "The Beaufort Scale is a wind speed scale that ranges from 0 (calm) to 12 (hurricane). A gale is a wind speed of 6-11 on the Beaufort Scale. Therefore, the number on the Beaufort Scale that equates to a gale is 6 or above, and 11 is the highest gale category.\n\nFinal Answer: The Beaufort Scale numbers that equate to a gale are 6, 7, 8, 9, and 10.",
       "judge_extracted": "The Beaufort Scale numbers that equate to a gale are 6, 7, 8, 9, and 10.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.303234391845763,
         "n_gen_tokens": 935,
@@ -13196,7 +13198,7 @@
       "vne": 0.3804347259380879,
       "judge_candidate": "Mistletoe berries are typically white or yellow. These berries are not edible for humans due to their toxicity.\n\nFinal Answer: Mistletoe berries are white or yellow.",
       "judge_extracted": "Mistletoe berries are white or yellow.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.427676148712635,
         "n_gen_tokens": 605,
@@ -15172,7 +15174,7 @@
       "vne": 0.7473567213644453,
       "judge_candidate": "1. 'St. Elmo's Fire' and 'About Last Night …' are both 1980s romantic drama films, while 'Wayne's World' is a 1992 comedy film. They share a common actor: Emilio Estevez.\n2. Emilio Estevez appeared in 'St. Elmo's Fire' (1985) and 'About Last Night …' (1986).\n3. He also played the role of Wayne's boss, Veronica Corningstone, in 'Wayne's World' (1992), although he played a female character in drag.\n\nFinal Answer: Emilio Estevez had parts in 'St. Elmo’s Fire', ‘About Last Night …’ and ‘Wayne’s World’.",
       "judge_extracted": "Emilio Estevez had parts in 'St. Elmo’s Fire', ‘About Last Night …’ and ‘Wayne’s World’.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.339715321082622,
         "n_gen_tokens": 1260,
@@ -15514,7 +15516,7 @@
       "vne": 0.28359092849761225,
       "judge_candidate": "India's currency is the Indian Rupee (INR). It is the only legal tender in India and is divided into 100 paise. The Indian Rupee is issued by the Reserve Bank of India.\n\nFinal Answer: The currency of India is the Indian Rupee (INR).",
       "judge_extracted": "The currency of India is the Indian Rupee (INR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.505446726921946,
         "n_gen_tokens": 692,
@@ -16540,7 +16542,7 @@
       "vne": 0.7436623841636605,
       "judge_candidate": "The British Open, also known as The Open Championship, is a major golf tournament that is not exclusive to British players. To find the first US-born winner, we need to look for American players who have won this tournament. The first US-born winner was Francis Ouimet, who won in 1913.\n\nFinal Answer: Francis Ouimet was the first US-born winner of golf's British Open.",
       "judge_extracted": "Francis Ouimet was the first US-born winner of golf's British Open.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.675575530156493,
         "n_gen_tokens": 1037,
@@ -17528,7 +17530,7 @@
       "vne": 1.3450350913146834,
       "judge_candidate": "The TV series 'Upstairs Downstairs' features a character named Hudson, who is the butler. The actor who played Hudson was Gordon Jackson. To find the surname of the character, we look at the character's name in the show. Hudson's surname is not explicitly stated in the series, but in the 1979 film spin-off 'Thomas and Sarah', Hudson's surname is revealed to be Barrington.\n\nFinal Answer: Hudson's surname in Upstairs Downstairs is Barrington.",
       "judge_extracted": "Hudson's surname in Upstairs Downstairs is Barrington.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.823851499240845,
         "n_gen_tokens": 635,
@@ -18592,7 +18594,7 @@
       "vne": 0.8412232276474507,
       "judge_candidate": "First, we need to identify the time period in question, which is the 2nd century BC. Next, we focus on the city, which is Syracuse. The two famous tyrants who ruled Syracuse during this time were Hieronymus and Dionysius.\n\nFinal Answer: Hieronymus and Dionysius.",
       "judge_extracted": "Hieronymus and Dionysius.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.202123248949647,
         "n_gen_tokens": 1093,
@@ -19048,7 +19050,7 @@
       "vne": 0.7662066684204981,
       "judge_candidate": "Head cheese is a type of meat jelly made from the head of a cow, pig, or other animal. The term 'head' in this context does not refer to a man's physical strength. Instead, a man's physical strength is often referred to as 'brawn' or 'muscle.'\n\nFinal Answer: Head cheese is not alternatively called 'brawn' or 'muscle.'",
       "judge_extracted": "Head cheese is not alternatively called 'brawn' or 'muscle.'",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.851895918138325,
         "n_gen_tokens": 1187,
@@ -19200,7 +19202,7 @@
       "vne": 0.8480537951911475,
       "judge_candidate": "The West Indian cricketer Sarwan is commonly known by his first name, Shivnarine. This name is of Indian origin and means 'Lord Shiva, the Hindu god of destruction'.\n\nFinal Answer: Shivnarine",
       "judge_extracted": "Shivnarine",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.758975255303085,
         "n_gen_tokens": 676,
@@ -19276,7 +19278,7 @@
       "vne": 0.5303305395116257,
       "judge_candidate": "The three-age system is a historical periodization that divides human history into the Stone Age, Bronze Age, and Iron Age. Following the Bronze Age, the Iron Age is the last age in this system.\n\nFinal Answer: The Iron Age followed the Bronze Age in the three-age system.",
       "judge_extracted": "The Iron Age followed the Bronze Age in the three-age system.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.9707802929915488,
         "n_gen_tokens": 637,
@@ -19580,7 +19582,7 @@
       "vne": 0.6075845066395936,
       "judge_candidate": "The massacre of Huguenots, also known as the St. Bartholomew's Day Massacre, occurred on August 24. This event took place during the reign of King Charles IX of France, and it was on this day that the majority of the killings took place.\n\nFinal Answer: August 24.",
       "judge_extracted": "August 24.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.562094680033624,
         "n_gen_tokens": 1062,
@@ -19846,7 +19848,7 @@
       "vne": 0.6224236096714999,
       "judge_candidate": "The objects you're referring to are known as asteroids. They are rocky bodies that orbit the sun, and they are located primarily in the asteroid belt, which lies between the orbits of Mars and Jupiter.\n\nFinal Answer: Asteroid Belt",
       "judge_extracted": "Asteroid Belt",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.5774393500760198,
         "n_gen_tokens": 470,
@@ -19922,7 +19924,7 @@
       "vne": 0.7694331235207298,
       "judge_candidate": "In 1961, the FA Cup tie in question is the third round match between Margate and West Bromwich Albion. West Bromwich Albion's striker, Tony Brown, scored six goals, but Margate managed to score seven, resulting in a loss for West Bromwich Albion despite Brown's impressive individual performance.\n\nFinal Answer: Tony Brown (1961)",
       "judge_extracted": "Tony Brown (1961)",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.383592676836997,
         "n_gen_tokens": 937,
@@ -20530,7 +20532,7 @@
       "vne": 0.885091501474941,
       "judge_candidate": "George Formby is known for his humorous songs, and the lyrics \"It may be sticky, but I never complain, I like to have a nibble at it now and again\" are suggestive of a playful double entendre. The phrase \"sticky\" is often used to describe a sweet substance, but in this context, it could also be a euphemism for something else. The phrase \"have a nibble\" further supports this interpretation. Final Answer: George Formby was ostensibly referring to a sweet substance or a euphemism for something else, likely in a playful and suggestive manner.",
       "judge_extracted": "George Formby was ostensibly referring to a sweet substance or a euphemism for something else, likely in a playful and suggestive manner.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.5202061627060175,
         "n_gen_tokens": 871,
@@ -21860,7 +21862,7 @@
       "vne": 0.4342193141078605,
       "judge_candidate": "The Tony Awards for Best Musical were first presented in 1947, so there were no awards in 1949 due to a strike. The first Tony Award for Best Musical was won by 'Hammerstein and Kern's 'Show Boat' in 1949, but this was actually a revival of a 1927 play. Cole Porter did not have a musical nominated for the first Tony Awards in 1949.\n\nFinal Answer: No Cole Porter play won the first Tony Award for Best Musical in 1949.",
       "judge_extracted": "No Cole Porter play won the first Tony Award for Best Musical in 1949.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.726519708056003,
         "n_gen_tokens": 1126,
@@ -23608,7 +23610,7 @@
       "vne": 1.1765944970764979,
       "judge_candidate": "The home row on a QWERTY keyboard layout is ASDFJKL;GH. The missing key from the given sequence is 'R'.\n\nFinal Answer: The missing key is 'R'.",
       "judge_extracted": "The missing key is 'R'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.4050583387725055,
         "n_gen_tokens": 820,
@@ -23798,7 +23800,7 @@
       "vne": 0.5416422083771807,
       "judge_candidate": "Pistol and Boo are two Yorkshire Terriers who gained international fame in 2015 due to their association with a high-profile public figure. They are pet dogs.\n\nFinal Answer: Pistol and Boo are pet dogs.",
       "judge_extracted": "Pistol and Boo are pet dogs.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.311553136911243,
         "n_gen_tokens": 666,
@@ -24634,7 +24636,7 @@
       "vne": 0.5583862192618373,
       "judge_candidate": "A group of jellyfish is called a 'smack' or a 'bloom'. However, the term 'smack' is more commonly used for a group of jellyfish that are caught in a fishery, while 'bloom' is used when there is a large number of jellyfish in a particular area.\n\nFinal Answer: A group of jellyfish can be called a 'smack' or a 'bloom'.",
       "judge_extracted": "A group of jellyfish can be called a 'smack' or a 'bloom'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.5401946497149765,
         "n_gen_tokens": 652,
@@ -24862,7 +24864,7 @@
       "vne": 0.9890240004182216,
       "judge_candidate": "Single malt whisky in Scotland is not made from cereal crops. Instead, it is distilled from malted barley. The barley is first soaked, germinated, and then dried to produce malt. This malt is then mashed, fermented, and distilled to produce single malt whisky.\n\nFinal Answer: Single malt whisky in Scotland is not made from cereal crops. It is made from malted barley.",
       "judge_extracted": "Single malt whisky in Scotland is not made from cereal crops. It is made from malted barley.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.878632292617112,
         "n_gen_tokens": 905,
@@ -25280,7 +25282,7 @@
       "vne": 1.0410304539515995,
       "judge_candidate": "The Spice Girls gained fame in the mid-1990s. Scary Spice was a member of the group. Her real name is Melanie Janine Brown, but her stage name is a reference to her personality, not her surname. So, Scary Spice's surname at the time of the Spice Girls' fame was Brown.\n\nFinal Answer: Brown",
       "judge_extracted": "Brown",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.071330698207021,
         "n_gen_tokens": 844,
@@ -25698,7 +25700,7 @@
       "vne": 0.8048163257434254,
       "judge_candidate": "The opera by Verdi that is often used as an acronym in advertising and selling professions is 'AIDA'. This stands for Attention, Interest, Desire, and Action, which are key steps in the process of persuading potential customers. The opera 'Aida' by Giuseppe Verdi does not share the same letters, so it's not the opera being referred to in this context.\n\nFinal Answer: The Verdi opera that is also a popular acronym used in the advertising and selling professions is not 'Aida', but rather 'AIDA'.",
       "judge_extracted": "The Verdi opera that is also a popular acronym used in the advertising and selling professions is not 'Aida', but rather 'AIDA'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.077781773172319,
         "n_gen_tokens": 1184,
@@ -26116,7 +26118,7 @@
       "vne": 0.9136976865555004,
       "judge_candidate": "The Battle of the Ages was a boxing match that took place in April 1991. This event was a highly publicized heavyweight bout between two legendary boxers. One of them was George Foreman. The other boxer was Michael Moorer.\n\nFinal Answer: Michael Moorer",
       "judge_extracted": "Michael Moorer",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.67267373483628,
         "n_gen_tokens": 795,
@@ -26192,7 +26194,7 @@
       "vne": 0.5753376695585329,
       "judge_candidate": "Inspector Clouseau is a character from the Pink Panther series. His manservant is named Cato Fong.\n\nFinal Answer: Cato Fong",
       "judge_extracted": "Cato Fong",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.8091811700724065,
         "n_gen_tokens": 453,
@@ -26610,7 +26612,7 @@
       "vne": 0.7870415956557473,
       "judge_candidate": "The film 'Django Unchained' is about a character named Django, and in this context, a surname is typically a last name. In the movie, Django's last name is not explicitly stated, but it is commonly referred to as 'Django' without a surname.\n\nFinal Answer: Django (no surname given in the film 'Django Unchained').",
       "judge_extracted": "Django (no surname given in the film 'Django Unchained').",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.897252839058638,
         "n_gen_tokens": 906,
@@ -26724,7 +26726,7 @@
       "vne": 0.5543004768785277,
       "judge_candidate": "Borneo is one of the largest islands in the world due to its extensive land area. It is the third largest island, following Greenland and New Guinea.\n\nFinal Answer: Borneo ranks among the largest five globally due to its third-largest land area among islands.",
       "judge_extracted": "Borneo ranks among the largest five globally due to its third-largest land area among islands.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.549409600906074,
         "n_gen_tokens": 851,
@@ -28586,7 +28588,7 @@
       "vne": 0.9295310849697931,
       "judge_candidate": "The phrase \"Who would do anything for love (but not that)\" suggests that the subject is willing to go to great lengths for love, but there is a limit to what they would do. The phrase \"not that\" implies that there is a specific action or act of love that the subject would not do. However, the phrase does not specify what that action is.\n\nFinal Answer: The phrase does not provide a specific answer about what the subject would not do for love.",
       "judge_extracted": "The phrase does not provide a specific answer about what the subject would not do for love.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.046289901249111,
         "n_gen_tokens": 1118,
@@ -28624,7 +28626,7 @@
       "vne": 0.5053537201729804,
       "judge_candidate": "A copperhead is a type of venomous snake. It belongs to the Viperidae family, specifically the genus Agkistrodon, and is native to North America.\n\nFinal Answer: A copperhead is a venomous snake from the Viperidae family, specifically the Agkistrodon genus.",
       "judge_extracted": "A copperhead is a venomous snake from the Viperidae family, specifically the Agkistrodon genus.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.097356860060245,
         "n_gen_tokens": 789,
@@ -28700,7 +28702,7 @@
       "vne": 0.7675339540573527,
       "judge_candidate": "The Duke of Edinburgh, Prince Philip, and Prince Charles, his son, both attended the same public school, which is the Cheam School in Berkshire, England. Later, they both continued their education at Gordonstoun School in Moray, Scotland.\n\nFinal Answer: The Duke of Edinburgh and Prince Charles attended Cheam School and Gordonstoun School.",
       "judge_extracted": "The Duke of Edinburgh and Prince Charles attended Cheam School and Gordonstoun School.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.881546619348228,
         "n_gen_tokens": 829,
@@ -29460,7 +29462,7 @@
       "vne": 0.7918434521672401,
       "judge_candidate": "Joe Clark served as the Prime Minister of Canada. He assumed office on June 4, 1979, making him the 16th Prime Minister of Canada. He was the youngest to hold the position at the time, taking over from Pierre Trudeau.\n\nFinal Answer: Joe Clark was the Prime Minister of Canada on June 4, 1979.",
       "judge_extracted": "Joe Clark was the Prime Minister of Canada on June 4, 1979.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.21580990916118,
         "n_gen_tokens": 951,
@@ -29802,7 +29804,7 @@
       "vne": 0.7700171315772278,
       "judge_candidate": "The song \"Taxman\" by The Beatles is known for its opening line, \"The taxman's taken all my dough.\" This song was written by George Harrison and is part of The Beatles' 1966 album, \"Revolver.\"\n\nFinal Answer: The song that begins with the line \"The taxman's taken all my dough\" is \"Taxman\" by The Beatles.",
       "judge_extracted": "The song that begins with the line \"The taxman's taken all my dough\" is \"Taxman\" by The Beatles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.7668958669528365,
         "n_gen_tokens": 734,
@@ -30676,7 +30678,7 @@
       "vne": 0.5638080574721714,
       "judge_candidate": "Friggatriskaidekaphobia is the fear of the number 13. This phobia is associated with the number 13 itself, not specific events or objects related to it. The term 'Friggatriskaidekaphobia' is a modern one, derived from the combination of the Norse goddess Frigga, who was believed to be unlucky, and the Greek word 'triskaidekaphobia' meaning fear of the number 13.\n\nFinal Answer: Friggatriskaidekaphobia is the fear of the number 13.",
       "judge_extracted": "Friggatriskaidekaphobia is the fear of the number 13.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.620327349752188,
         "n_gen_tokens": 856,
@@ -31436,7 +31438,7 @@
       "vne": 0.26836175772246784,
       "judge_candidate": "The G7 was initially formed by seven major industrialized countries in 1975. In 1997, Russia was invited to join, expanding the group to eight members, making it the G8.\n\nFinal Answer: Russia joined the G7 in 1997.",
       "judge_extracted": "Russia joined the G7 in 1997.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.6738606048747897,
         "n_gen_tokens": 678,
@@ -32082,7 +32084,7 @@
       "vne": 0.24916745527036002,
       "judge_candidate": "The BDO World Professional Darts Championship is an annual event. To find the winner of a specific year, we need to look up the results for that year. In 2009, the winner of the BDO World Professional Darts Championship was Scott Waites, who is also known by his nickname 'The Count.'\n\nFinal Answer: Scott Waites (The Count) won the BDO World Professional Darts Championship in 2009.",
       "judge_extracted": "Scott Waites (The Count) won the BDO World Professional Darts Championship in 2009.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.524679894093424,
         "n_gen_tokens": 851,
@@ -32158,7 +32160,7 @@
       "vne": 0.7345985496335419,
       "judge_candidate": "Peter Warlock, whose real name was Philip Heseltine, was not a father. However, his sister, Marjorie Heseltine, was an art critic and writer.\n\nFinal Answer: Peter Warlock was not the father of any art critic. His sister, Marjorie Heseltine, was an art critic.",
       "judge_extracted": "Peter Warlock was not the father of any art critic. His sister, Marjorie Heseltine, was an art critic.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.656290787272155,
         "n_gen_tokens": 783,
@@ -32652,7 +32654,7 @@
       "vne": 0.7847548618858071,
       "judge_candidate": "The phrase 'Go West' originated in the mid-1800s during the westward expansion of the United States. It was used to encourage people to move towards the western territories, which were largely undeveloped at the time. Final Answer: It encouraged people to move from the eastern states towards the western territories.",
       "judge_extracted": "It encouraged people to move from the eastern states towards the western territories.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.2554648937657475,
         "n_gen_tokens": 858,
@@ -32918,7 +32920,7 @@
       "vne": 0.3099801411357154,
       "judge_candidate": "Farfalle is named after the Italian word for butterfly, as the pasta shape resembles the wings of a butterfly.\n\nFinal Answer: Farfalle is named after the butterfly.",
       "judge_extracted": "Farfalle is named after the butterfly.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.928230434190482,
         "n_gen_tokens": 511,
@@ -33982,7 +33984,7 @@
       "vne": 0.4696046057653969,
       "judge_candidate": "Achilles was invulnerable to all wounds except for his heel, which was unprotected because his mother Thetis held him by the heel while dipping him into the River Styx. In the Trojan War, Paris of Troy shot an arrow into Achilles' heel, causing the fatal wound.\n\nFinal Answer: Paris of Troy wounded Achilles in the heel, leading to his death.",
       "judge_extracted": "Paris of Troy wounded Achilles in the heel, leading to his death.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.127373224589974,
         "n_gen_tokens": 1122,
@@ -34704,7 +34706,7 @@
       "vne": 0.6071026453227117,
       "judge_candidate": "Angiosperms are land plants that have seeds enclosed within an ovary, which develops into a fruit after fertilization. This characteristic sets them apart from other seed plants like gymnosperms, where seeds are not enclosed.\n\nFinal Answer: Angiosperms have seeds enclosed within an ovary, which develops into a fruit.",
       "judge_extracted": "Angiosperms have seeds enclosed within an ovary, which develops into a fruit.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.182269901968539,
         "n_gen_tokens": 678,
@@ -36946,7 +36948,7 @@
       "vne": 0.7412981231209084,
       "judge_candidate": "The lyrics of \"Winter Wonderland\" mention a parson, a schoolmaster, and a landlady. The parson is a religious leader, often associated with the church.\n\nFinal Answer: The name of the parson mentioned in the lyrics of \"Winter Wonderland\" is not specified, as the carol does not provide a name for any of the characters.",
       "judge_extracted": "The name of the parson mentioned in the lyrics of \"Winter Wonderland\" is not specified, as the carol does not provide a name for any of the characters.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.845426519867033,
         "n_gen_tokens": 927,
@@ -38010,7 +38012,7 @@
       "vne": 0.8962611232293926,
       "judge_candidate": "The film 'Lolita' is based on the novel by Vladimir Nabokov. The protagonist of the story, who is the focus of Humbert Humbert's obsession, is named Dolores Haze. However, she is often referred to as 'Lolita' throughout the story.\n\nFinal Answer: Dolores (Dolly) Haze is Lolita's first name.",
       "judge_extracted": "Dolores (Dolly) Haze is Lolita's first name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.615957686211914,
         "n_gen_tokens": 800,
