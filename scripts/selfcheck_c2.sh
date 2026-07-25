@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=fatih_selfcheck_c2
+#SBATCH --job-name=selfcheck_c2_fatih
 #SBATCH --output=logs/selfcheck_c2_%A_%a.out     # %A = array job id, %a = task id (0-5)
 #SBATCH --error=logs/selfcheck_c2_%A_%a.err
 #SBATCH --time=00:30:00                          # 10 NLI pairs/question, batched -> 1000 q in minutes

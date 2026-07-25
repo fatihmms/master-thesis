@@ -1,9 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=fatih_se_c2
+#SBATCH --job-name=se_c2_fatih
 #SBATCH --output=logs/se_c2_%j.out
 #SBATCH --error=logs/se_c2_%j.err
 #SBATCH --time=00:10:00                          # pure numpy/sklearn re-score over 6 cells x ~1000 rows; no model, no GPU -> seconds of compute
-#SBATCH --partition=gpu_h100_short                # no CPU-only partition exists in this project's convention (see scripts/*.sh); requested here purely for a fast allocation slot, GPU not used
+#SBATCH --partition=gpu_h100_short   
+#SBATCH --gres=gpu:1              # no CPU-only partition exists in this project's convention (see scripts/*.sh); requested here purely for a fast allocation slot, GPU not used
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
 
