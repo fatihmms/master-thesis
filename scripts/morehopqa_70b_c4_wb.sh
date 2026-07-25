@@ -2,8 +2,8 @@
 #SBATCH --job-name=70b_c4_wb_fatih_kle_morehopqa
 #SBATCH --output=logs/morehopqa_70b_c4_wb_%j.out
 #SBATCH --error=logs/morehopqa_70b_c4_wb_%j.err
-#SBATCH --time=23:00:00                          # smoke: 54.1s/q x1000 = ~15.0h; checkpointed, x1.5 safety margin (72h partition max)
-#SBATCH --partition=gpu_h100_il                  # WB cells routed here (same H100 chip, separate 5-node pool, 48h cap fits); BB cells stay on gpu_h100
+#SBATCH --time=10:00:00                          # smoke: 54.1s/q x1000 = ~15.0h; checkpointed, x1.5 safety margin (72h partition max)
+#SBATCH --partition=gpu_a100_il                  # WB cells routed here (same H100 chip, separate 5-node pool, 48h cap fits); BB cells stay on gpu_h100
 #SBATCH --gres=gpu:4                             # 70B bf16 ~140GB weights -> sharded over 4x H100 via device_map=auto
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=64G                                # smoke test used ~5-7.5GB host RAM (not GPU VRAM); 64G is a generous margin

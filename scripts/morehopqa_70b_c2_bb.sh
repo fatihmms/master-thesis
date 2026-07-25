@@ -2,7 +2,7 @@
 #SBATCH --job-name=70b_c2_bb_fatih_kle_morehopqa
 #SBATCH --output=logs/morehopqa_70b_c2_bb_%j.out
 #SBATCH --error=logs/morehopqa_70b_c2_bb_%j.err
-#SBATCH --time=55:00:00                          # smoke: 129.9s/q x1000 = ~36.1h, x1.5 safety margin (72h partition max)
+#SBATCH --time=28:00:00                          # smoke: 129.9s/q x1000 = ~36.1h, x1.5 safety margin (72h partition max)
 #SBATCH --partition=gpu_h100                     # fallback gpu_h100_il also has 4x H100 but caps at 48h -- NOT enough for this cell's 55:00:00 request
 #SBATCH --gres=gpu:4                             # 70B bf16 ~140GB weights -> sharded over 4x H100 via device_map=auto
 #SBATCH --cpus-per-task=32

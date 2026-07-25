@@ -2,7 +2,7 @@
 #SBATCH --job-name=70b_c2_wb_fatih_kle_morehopqa
 #SBATCH --output=logs/morehopqa_70b_c2_wb_%j.out
 #SBATCH --error=logs/morehopqa_70b_c2_wb_%j.err
-#SBATCH --time=14:00:00                          # smoke: 33.4s/q x1000 = ~9.3h, x1.5 safety margin (72h partition max)
+#SBATCH --time=07:00:00                          # smoke: 33.4s/q x1000 = ~9.3h, x1.5 safety margin (72h partition max)
 #SBATCH --partition=gpu_h100_il                  # WB cells routed here (same H100 chip, separate 5-node pool, 48h cap fits); BB cells stay on gpu_h100
 #SBATCH --gres=gpu:4                             # 70B bf16 ~140GB weights -> sharded over 4x H100 via device_map=auto
 #SBATCH --cpus-per-task=32
