@@ -2,7 +2,7 @@
 #SBATCH --job-name=fatih_llmcheck_c2
 #SBATCH --output=logs/llmcheck_c2_%A_%a.out      # %A = array job id, %a = task id (0-5)
 #SBATCH --error=logs/llmcheck_c2_%A_%a.err
-#SBATCH --time=06:00:00                          # ~2-5 s/question (1 fwd pass + CPU SVD) -> 1000 q well under 6h
+#SBATCH --time=00:45:00                          # measured on 8B: 421-524s/1000q (~0.4-0.5 s/q) -> ~9 min compute; 45 min covers model load + first-time Mistral download
 #SBATCH --partition=gpu_h100                     # Override at submit: sbatch --partition=gpu_h100_short ... (smoke)
 #SBATCH --gres=gpu:1                             # single teacher-forced fwd pass; 8B bf16 + eager attn fits on 1 GPU
 #SBATCH --cpus-per-task=8                        # SVD / eigen scores run on CPU (official code path)

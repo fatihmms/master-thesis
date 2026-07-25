@@ -13,10 +13,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.6917291729172917,
-  "hallucination_rate": 0.505,
+  "auroc": 0.6834953650455424,
+  "hallucination_rate": 0.453,
   "details": [
     {
       "id": "nq_open-000000",
@@ -124,7 +126,7 @@
       "vne": 0.6623128434481738,
       "judge_candidate": "The Academy Award for Best Original Score is given annually for the best musical score created for a film. The winner is chosen by the members of the Academy of Motion Picture Arts and Sciences. In 2020, the winner was Hildur Guðnadóttir for the score of the film 'Joker.'\n\nFinal Answer: Hildur Guðnadóttir won the Academy Award for Best Original Score in 2020 for 'Joker.'",
       "judge_extracted": "Hildur Guðnadóttir won the Academy Award for Best Original Score in 2020 for 'Joker.'",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.818845053669065,
         "n_gen_tokens": 1048,
@@ -238,7 +240,7 @@
       "vne": 0.8226652244508227,
       "judge_candidate": "In the television series NCIS: Los Angeles, 'G' stands for Grisha, which is the character's name played by actor Daniela Ruah. This character is Kensi Blye's partner and husband in the show.\n\nFinal Answer: In NCIS: Los Angeles, 'G' stands for Grisha.",
       "judge_extracted": "In NCIS: Los Angeles, 'G' stands for Grisha.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.660711896140128,
         "n_gen_tokens": 954,
@@ -276,7 +278,7 @@
       "vne": 0.5073105954416001,
       "judge_candidate": "The song \"Too Much Time on My Hands\" is a popular track by the band Styx. The lead vocals are sung by the band's frontman, Dennis DeYoung.\n\nFinal Answer: Dennis DeYoung sings the lyrics to \"Too Much Time on My Hands.\"",
       "judge_extracted": "Dennis DeYoung sings the lyrics to \"Too Much Time on My Hands.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.054165818262845,
         "n_gen_tokens": 808,
@@ -1264,7 +1266,7 @@
       "vne": 0.43665986449186045,
       "judge_candidate": "The Golden State Warriors have won the NBA Finals on multiple occasions. The first time was in 2015, followed by 2017, 2018, and 2022.\n\nFinal Answer: The Golden State Warriors have won the NBA Finals in 2015, 2017, 2018, and 2022.",
       "judge_extracted": "The Golden State Warriors have won the NBA Finals in 2015, 2017, 2018, and 2022.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.0019991379231215,
         "n_gen_tokens": 1008,
@@ -1302,7 +1304,7 @@
       "vne": 0.7417623599662935,
       "judge_candidate": "Season 7 of Pretty Little Liars consists of 22 episodes. This is because the season was split into two parts, with 10 episodes in Part 1 and 12 episodes in Part 2.\n\nFinal Answer: The season 7 of Pretty Little Liars has 22 episodes.",
       "judge_extracted": "The season 7 of Pretty Little Liars has 22 episodes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.5563302380032837,
         "n_gen_tokens": 590,
@@ -2252,7 +2254,7 @@
       "vne": 0.6559054051615787,
       "judge_candidate": "'AUV' in the context of cars typically stands for 'All-Wheel-Drive Utility Vehicle'. This type of vehicle is designed to provide power to all four wheels, enhancing traction and handling, especially in challenging road conditions.\n\nFinal Answer: The meaning of AUV in cars is All-Wheel-Drive Utility Vehicle.",
       "judge_extracted": "The meaning of AUV in cars is All-Wheel-Drive Utility Vehicle.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.593907157890499,
         "n_gen_tokens": 863,
@@ -2404,7 +2406,7 @@
       "vne": 0.7479823549586208,
       "judge_candidate": "French immigrants primarily settled in Texas along the Gulf Coast, particularly in the areas that are now known as La Bahía del Espíritu Santo (the Bay of the Holy Spirit) and the surrounding region, which includes present-day Victoria, Refugio, and Goliad counties. This area was initially settled by the French Acadians, who were expelled from Acadia (Nova Scotia) by the British in the 18th century. Final Answer: French immigrants settled in Texas along the Gulf Coast, primarily in the areas that are now known as Victoria, Refugio, and Goliad counties.",
       "judge_extracted": "French immigrants settled in Texas along the Gulf Coast, primarily in the areas that are now known as Victoria, Refugio, and Goliad counties.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.58944516768679,
         "n_gen_tokens": 1172,
@@ -2518,7 +2520,7 @@
       "vne": 0.2663993844757742,
       "judge_candidate": "Elena Gilbert turns into a vampire in the TV series \"The Vampire Diaries\" during the second season, in the episode titled \"The Night of the Comet.\" This transformation occurs after she drinks the blood of a werewolf during a full moon.\n\nFinal Answer: Elena turns into a vampire in the second season, episode \"The Night of the Comet.\"",
       "judge_extracted": "Elena turns into a vampire in the second season, episode \"The Night of the Comet.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.657972904853523,
         "n_gen_tokens": 982,
@@ -2632,7 +2634,7 @@
       "vne": 0.6653999205183556,
       "judge_candidate": "The Ethiopian Airlines Flight 961 was a Boeing 767 that crashed into the Indian Ocean on August 27, 1996. The crash occurred due to the pilot's attempt to return to the airport after a hijacking, which led to a fuel exhaustion. The plane ran out of fuel and crashed into the sea, resulting in the loss of all 175 passengers and crew members on board.\n\nFinal Answer: The Ethiopia Flight 961 crashed into the sea due to a combination of factors, including a hijacking that led to a fuel exhaustion during an attempted return to the airport.",
       "judge_extracted": "The Ethiopia Flight 961 crashed into the sea due to a combination of factors, including a hijacking that led to a fuel exhaustion during an attempted return to the airport.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.527856878936291,
         "n_gen_tokens": 1384,
@@ -2670,7 +2672,7 @@
       "vne": 0.5985658550846897,
       "judge_candidate": "The movie \"I Can Only Imagine\" is a biographical drama film about the Christian band MercyMe and their lead singer Bart Millard. To find out who produced this movie, we look for the production company credited in the film. The production company for \"I Can Only Imagine\" is the Brookwell McNamara Entertainment.\n\nFinal Answer: Brookwell McNamara Entertainment produced the movie \"I Can Only Imagine.\"",
       "judge_extracted": "Brookwell McNamara Entertainment produced the movie \"I Can Only Imagine.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.656387544237077,
         "n_gen_tokens": 778,
@@ -2784,7 +2786,7 @@
       "vne": 0.3190690999395702,
       "judge_candidate": "Clifford the Big Red Dog is based on a book series written by Norman Bridwell. The TV show adaptation, titled simply \"Clifford the Big Red Dog,\" premiered on PBS Kids on September 14, 2000.\n\nFinal Answer: The TV show \"Clifford the Big Red Dog\" first aired on September 14, 2000.",
       "judge_extracted": "The TV show \"Clifford the Big Red Dog\" first aired on September 14, 2000.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.200249971821904,
         "n_gen_tokens": 785,
@@ -3316,7 +3318,7 @@
       "vne": 0.5448245250442034,
       "judge_candidate": "1. The outermost layer is the Crust, which is the solid, rocky shell that we live on.\n2. Beneath the crust lies the Mantle, a hot, semi-fluid layer that makes up most of the Earth's volume.\n3. The Outer Core is the layer beneath the mantle, primarily composed of liquid iron and nickel.\n4. The innermost layer is the Inner Core, a solid ball of iron and nickel.\n\nFinal Answer: Crust, Mantle, Outer Core, Inner Core.",
       "judge_extracted": "Crust, Mantle, Outer Core, Inner Core.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 7.425484085921198,
         "n_gen_tokens": 1454,
@@ -3430,7 +3432,7 @@
       "vne": 0.4377528127395152,
       "judge_candidate": "Lori is a character in the TV series \"The Walking Dead.\" Her death occurs in Season 3, Episode 9, titled \"Killer Within.\"\n\nFinal Answer: Lori dies in Season 3, Episode 9 of The Walking Dead.",
       "judge_extracted": "Lori dies in Season 3, Episode 9 of The Walking Dead.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.6450528618879616,
         "n_gen_tokens": 643,
@@ -3506,7 +3508,7 @@
       "vne": 0.3032139754349733,
       "judge_candidate": "Wake Forest is located in the Piedmont Triad region of North Carolina. Specifically, it's in Wake County, which is in the central part of the state.\n\nFinal Answer: Wake Forest is located in Wake County, North Carolina, which is in the central part of the state, within the Piedmont Triad region.",
       "judge_extracted": "Wake Forest is located in Wake County, North Carolina, which is in the central part of the state, within the Piedmont Triad region.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.8103024372830987,
         "n_gen_tokens": 728,
@@ -3658,7 +3660,7 @@
       "vne": 0.49839201074959394,
       "judge_candidate": "The Philadelphia Eagles won the Super Bowl in the 2017 season. They defeated the New England Patriots in Super Bowl LII, which was held on February 4, 2018.\n\nFinal Answer: The Philadelphia Eagles won the Super Bowl in 2017 (February 4, 2018).",
       "judge_extracted": "The Philadelphia Eagles won the Super Bowl in 2017 (February 4, 2018).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.750689391978085,
         "n_gen_tokens": 881,
@@ -4076,7 +4078,7 @@
       "vne": 0.4885367037906584,
       "judge_candidate": "Iodine is a halogen, which means it belongs to Group 17 in the periodic table. Specifically, it is the 53rd element and is represented by the symbol I.\n\nFinal Answer: Iodine is found in the periodic table at the 53rd position, in Group 17, and is represented by the symbol I.",
       "judge_extracted": "Iodine is found in the periodic table at the 53rd position, in Group 17, and is represented by the symbol I.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.3311760001815856,
         "n_gen_tokens": 841,
@@ -4114,7 +4116,7 @@
       "vne": 0.6780176942916378,
       "judge_candidate": "The organelle where ATP is primarily produced is the mitochondrion through a process called cellular respiration. ATP is not stored in the mitochondria; instead, it is quickly used by the cell or transported to other parts of the cell as needed. However, a small amount of ATP can be stored in the cytoplasm for immediate use.\n\nFinal Answer: The site of ATP production is the mitochondrion, and it is not stored in the mitochondrion, but rather in the cytoplasm.",
       "judge_extracted": "The site of ATP production is the mitochondrion, and it is not stored in the mitochondrion, but rather in the cytoplasm.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.584732937160879,
         "n_gen_tokens": 970,
@@ -4836,7 +4838,7 @@
       "vne": 0.7131208667262671,
       "judge_candidate": "The phrase \"Bob's your uncle\" is a colloquial expression in English, often used to indicate that a solution to a problem or a desired outcome has been achieved with minimal effort. It's believed to originate from a political joke in the late 19th century involving Robert Arthur Talbot Gascoyne-Cecil, the 3rd Marquess of Salisbury, who was known as Lord Robert Cecil. The joke, which involved a complex series of events leading to a simple solution, ended with the line \"And Bob's your uncle!\" Final Answer: The phrase \"Bob's your uncle\" is thought to originate from a political joke in the late 19th century involving Lord Robert Cecil.",
       "judge_extracted": "The phrase \"Bob's your uncle\" is thought to originate from a political joke in the late 19th century involving Lord Robert Cecil.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 8.259177024941891,
         "n_gen_tokens": 1688,
@@ -5140,7 +5142,7 @@
       "vne": 0.4310148363262909,
       "judge_candidate": "The tradition of self-government in America began with the founding of the 13 original colonies, which were established in the late 17th and early 18th centuries. The colonies were governed by their own assemblies, and this local self-governance was a significant influence on the development of the concept of self-government in the United States. The Declaration of Independence, signed in 1776, marked the formal rejection of British rule and the establishment of self-government as a fundamental principle of the new nation.\n\nFinal Answer: The tradition of self-government in America began in the late 17th and early 18th centuries with the founding of the 13 original colonies, and was formalized with the signing of the Declaration of Independence in 1776.",
       "judge_extracted": "The tradition of self-government in America began in the late 17th and early 18th centuries with the founding of the 13 original colonies, and was formalized with the signing of the Declaration of Independence in 1776.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.058018142357469,
         "n_gen_tokens": 1406,
@@ -5406,7 +5408,7 @@
       "vne": 0.5229524946614847,
       "judge_candidate": "The series you're referring to is \"Lilo & Stitch.\" It's an animated television show that aired from 2003 to 2006, based on the 2002 Disney film of the same name. The first season of the show consists of 26 episodes. To find the first episode, we count from the beginning. The first episode of Season 1 is titled \"Aloha, Stitch!\"\n\nFinal Answer: The first episode of Lilo & Stitch Season 1 is \"Aloha, Stitch!\"",
       "judge_extracted": "The first episode of Lilo & Stitch Season 1 is \"Aloha, Stitch!\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.3596776449121535,
         "n_gen_tokens": 1131,
@@ -5444,7 +5446,7 @@
       "vne": 0.5842786156214302,
       "judge_candidate": "Phosphorus is a key nutrient for life, and most of it is stored in the Earth's crust, primarily in rocks such as apatite. However, a significant amount is also found in the oceans, primarily in the form of dissolved phosphates.\n\nFinal Answer: The majority of phosphorus is stored in the Earth's crust, with a significant amount also found in the oceans.",
       "judge_extracted": "The majority of phosphorus is stored in the Earth's crust, with a significant amount also found in the oceans.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.332894769962877,
         "n_gen_tokens": 1017,
@@ -5672,7 +5674,7 @@
       "vne": 0.4312481274222367,
       "judge_candidate": "The first book to be adapted into a movie was Le Voyage dans la Lune (A Trip to the Moon), a science fiction novel by Georges Méliès, in 1902. This was not a traditional novel but a book of illustrations, and the adaptation was a silent film.\n\nFinal Answer: The first book made into a movie was Le Voyage dans la Lune in 1902.",
       "judge_extracted": "The first book made into a movie was Le Voyage dans la Lune in 1902.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.112576056737453,
         "n_gen_tokens": 1020,
@@ -5862,7 +5864,7 @@
       "vne": 0.5033081724527452,
       "judge_candidate": "Jimmy John's is a sandwich chain with franchises across the United States. The exact number of Jimmy John's locations can be found on their official website, which is updated regularly. As of my last update, there were over 2,800 locations.\n\nFinal Answer: Over 2,800 Jimmy John's locations in the U.S.",
       "judge_extracted": "Over 2,800 Jimmy John's locations in the U.S.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.441134442109615,
         "n_gen_tokens": 913,
@@ -5938,7 +5940,7 @@
       "vne": 0.5587439679080304,
       "judge_candidate": "The Nobel laureate who began his career as an accountant in Calcutta is Abhijit Banerjee. He was born in Calcutta (now Kolkata), India, and worked as an accountant before transitioning to academia and economics research.\n\nFinal Answer: Abhijit Banerjee",
       "judge_extracted": "Abhijit Banerjee",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.40789080504328,
         "n_gen_tokens": 925,
@@ -6128,7 +6130,7 @@
       "vne": 0.33353536851985965,
       "judge_candidate": "The Oscar nominations are typically announced in January, usually around the third week. The exact date varies each year. For the 2018 Oscars, the nominations were announced on January 23, 2018.\n\nFinal Answer: The 2018 Oscar nominations were announced on January 23, 2018.",
       "judge_extracted": "The 2018 Oscar nominations were announced on January 23, 2018.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.83378506405279,
         "n_gen_tokens": 873,
@@ -6280,7 +6282,7 @@
       "vne": 0.636650312476026,
       "judge_candidate": "The United Nations Security Council (UNSC) does not directly provide troops for military actions. Instead, it authorizes member states to use force under Chapter VII of the United Nations Charter. Member states that contribute troops are typically those with the capacity and willingness to do so, often from countries with well-established military forces.\n\nFinal Answer: The UN Security Council does not provide troops for military actions. Instead, it authorizes member states to contribute troops for peacekeeping or enforcement actions.",
       "judge_extracted": "The UN Security Council does not provide troops for military actions. Instead, it authorizes member states to contribute troops for peacekeeping or enforcement actions.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.948681495618075,
         "n_gen_tokens": 877,
@@ -6584,7 +6586,7 @@
       "vne": 0.6544517456503965,
       "judge_candidate": "1. Phyllis on the soap opera 'The Young and the Restless' is portrayed by Gina Tognoni.\n2. As of 2022, Gina Tognoni was born on February 1, 1973, making her 49 years old.\n\nFinal Answer: Gina Tognoni, who plays Phyllis on 'The Young and the Restless', is 49 years old.",
       "judge_extracted": "Gina Tognoni, who plays Phyllis on 'The Young and the Restless', is 49 years old.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.023039409890771,
         "n_gen_tokens": 888,
@@ -7002,7 +7004,7 @@
       "vne": 0.9280310037784357,
       "judge_candidate": "The Beast in the new movie is a character from Disney's live-action remake of \"Beauty and the Beast.\" The voice of the Beast is provided by actor Dan Stevens, but in the singing scenes, it's the voice of singer and actor, Sir Ian McKellen.\n\nFinal Answer: Dan Stevens and Sir Ian McKellen provide the voice of the Beast in the new movie.",
       "judge_extracted": "Dan Stevens and Sir Ian McKellen provide the voice of the Beast in the new movie.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.78963235905394,
         "n_gen_tokens": 834,
@@ -7306,7 +7308,7 @@
       "vne": 0.7325269296943342,
       "judge_candidate": "In Florida, individuals who wish to purchase a firearm must first obtain a license. This is known as a Florida Concealed Weapons or Firearms License (CWL/CWFL). However, a separate permit is not required to own a gun in Florida, only to carry it concealed in public.\n\nFinal Answer: You need a Florida Concealed Weapons or Firearms License (CWL/CWFL) to purchase a firearm for concealed carry in public, but not to own a gun in Florida.",
       "judge_extracted": "You need a Florida Concealed Weapons or Firearms License (CWL/CWFL) to purchase a firearm for concealed carry in public, but not to own a gun in Florida.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.4232710669748485,
         "n_gen_tokens": 939,
@@ -7534,7 +7536,7 @@
       "vne": 0.580648167359565,
       "judge_candidate": "Cory Monteith, a Canadian actor, played the role of Finn Hudson in the television series Glee. He died in 2013.\n\nFinal Answer: Cory Monteith died in 2013.",
       "judge_extracted": "Cory Monteith died in 2013.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.036297827027738,
         "n_gen_tokens": 582,
@@ -7648,7 +7650,7 @@
       "vne": 0.46508351530452385,
       "judge_candidate": "The movie \"Percy Jackson & the Olympians\" was filmed in various locations in the United States. Principal photography took place in Vancouver, British Columbia, Canada, and additional filming was done in Los Angeles, California, and in New York City, New York. Final Answer: The movie \"Percy Jackson & the Olympians\" was filmed in Vancouver, Los Angeles, and New York.",
       "judge_extracted": "The movie \"Percy Jackson & the Olympians\" was filmed in Vancouver, Los Angeles, and New York.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.431322042830288,
         "n_gen_tokens": 1101,
@@ -7838,7 +7840,7 @@
       "vne": 0.543131827330656,
       "judge_candidate": "The first recorded celebration of Christmas as a holiday was on December 25 in Rome during the 4th century. This date was chosen to coincide with the pagan festival of Saturnalia and the Roman solstice, and it was later adopted by early Christians to celebrate the birth of Jesus Christ. Final Answer: Christmas was first celebrated as a holiday in the 4th century.",
       "judge_extracted": "Christmas was first celebrated as a holiday in the 4th century.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.631536551285535,
         "n_gen_tokens": 989,
@@ -8028,7 +8030,7 @@
       "vne": 0.5346527650484976,
       "judge_candidate": "The Skanda Purana, an ancient Indian text, mentions the first minting of gold coins by the Mauryan Emperor Chandragupta Maurya around 300 BCE. However, the Punch-marked silver coins, which are the earliest archaeologically verified coins in India, were issued by the Magadha Empire, also during the Mauryan period.\n\nFinal Answer: The Mauryan Empire, specifically Emperor Chandragupta Maurya, is believed to have issued gold coins for the first time in India.",
       "judge_extracted": "The Mauryan Empire, specifically Emperor Chandragupta Maurya, is believed to have issued gold coins for the first time in India.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.578944840002805,
         "n_gen_tokens": 1056,
@@ -8180,7 +8182,7 @@
       "vne": 0.7875652288027911,
       "judge_candidate": "The movie \"Silver Linings Playbook\" was filmed in several locations in the United States. The majority of the filming took place in and around Philadelphia, Pennsylvania, with specific locations including the Philadelphia International Airport, Rittenhouse Square, and the suburbs of Bensalem and Norristown. Some scenes were also filmed in New York City.\n\nFinal Answer: The movie \"Silver Linings Playbook\" was filmed in Philadelphia, Pennsylvania, and New York City.",
       "judge_extracted": "The movie \"Silver Linings Playbook\" was filmed in Philadelphia, Pennsylvania, and New York City.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.876975184772164,
         "n_gen_tokens": 760,
@@ -8294,7 +8296,7 @@
       "vne": 0.9231288203860529,
       "judge_candidate": "The lioness is the female lion in the Lion King. This is because the term 'lion' typically refers to the male, and the female is given the specific term 'lioness.'\n\nFinal Answer: The female lion in the Lion King is called a lioness.",
       "judge_extracted": "The female lion in the Lion King is called a lioness.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.529216899070889,
         "n_gen_tokens": 716,
@@ -8370,7 +8372,7 @@
       "vne": 0.5202284009961714,
       "judge_candidate": "1. The minimum wage in France is set by the French government and is known as the Smic (Salaire Minimum Interprofessionnel de Croissance).\n2. As of 2022, the Smic is €10.15 per hour for workers aged 18 and over.\n3. Final Answer: The minimum wage in France per hour is €10.15.",
       "judge_extracted": "The minimum wage in France per hour is €10.15.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.829569509252906,
         "n_gen_tokens": 974,
@@ -8484,7 +8486,7 @@
       "vne": 0.6042545178588278,
       "judge_candidate": "The song \"Humble and Kind\" is a country ballad. It was written by Lori McKenna, along with two other songwriters, Zach Crowell and Barry Dean. The song was later recorded by Tim McGraw and became a hit in 2015.\n\nFinal Answer: The song \"Humble and Kind\" was written by Lori McKenna, Zach Crowell, and Barry Dean.",
       "judge_extracted": "The song \"Humble and Kind\" was written by Lori McKenna, Zach Crowell, and Barry Dean.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.717710766941309,
         "n_gen_tokens": 831,
@@ -9320,7 +9322,7 @@
       "vne": 0.8124080760101331,
       "judge_candidate": "The song \"Ain't Living Long Like This\" is a track from the album \"The Darkness and the Light\" by the band Coldplay. The lead vocalist and primary songwriter of Coldplay is Chris Martin.\n\nFinal Answer: Chris Martin wrote \"Ain't Living Long Like This.\"",
       "judge_extracted": "Chris Martin wrote \"Ain't Living Long Like This.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.07622410543263,
         "n_gen_tokens": 781,
@@ -9928,7 +9930,7 @@
       "vne": 0.618037891458541,
       "judge_candidate": "The character of the \"Walking Boss\" is from the movie \"Cool Hand Luke,\" not a specific actor. The character is portrayed by actor Strother Martin.\n\nFinal Answer: Strother Martin plays the Walking Boss in Cool Hand Luke.",
       "judge_extracted": "Strother Martin plays the Walking Boss in Cool Hand Luke.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.642117189243436,
         "n_gen_tokens": 741,
@@ -9966,7 +9968,7 @@
       "vne": 0.5291102558063419,
       "judge_candidate": "The first Jurassic Park movie was released on June 11, 1993. The second movie, The Lost World: Jurassic Park, came out on May 23, 1997. Jurassic Park III was released on July 18, 2001. The fourth movie, Jurassic World, was released on June 12, 2015. The fifth movie, Jurassic World: Fallen Kingdom, was released on June 22, 2018. The sixth movie, Jurassic World Dominion, is set to be released on June 10, 2022.\n\nFinal Answer: The Jurassic Park movies were released on June 11, 1993, May 23, 1997, July 18, 2001, June 12, 20",
       "judge_extracted": "The Jurassic Park movies were released on June 11, 1993, May 23, 1997, July 18, 2001, June 12, 20",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 8.838621846400201,
         "n_gen_tokens": 1321,
@@ -10650,7 +10652,7 @@
       "vne": 0.527091142151267,
       "judge_candidate": "The Phoenix Mall in Chennai is a well-known shopping mall. To find out who its owner is, we can look for information about the mall's management or the company that developed it. The Phoenix Malls and Multiplexes Ltd. is the company that owns and operates the Phoenix Malls in India, including the one in Chennai.\n\nFinal Answer: The owner of Phoenix Mall in Chennai is Phoenix Malls and Multiplexes Ltd.",
       "judge_extracted": "The owner of Phoenix Mall in Chennai is Phoenix Malls and Multiplexes Ltd.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.942267618142068,
         "n_gen_tokens": 833,
@@ -11220,7 +11222,7 @@
       "vne": 0.581529774805987,
       "judge_candidate": "The surname Waller originates from Old English and Old Norse roots. It is a topographic name for someone who lived in a valley or a dweller near a wall, derived from the Old English 'wealh' meaning 'foreigner' or 'wall' and 'hlawr' meaning 'hill'. Final Answer: The last name Waller originates from Old English and Old Norse roots, meaning it was likely a name for someone who lived in a valley or near a wall, or was a foreigner dwelling on a hill.",
       "judge_extracted": "The last name Waller originates from Old English and Old Norse roots, meaning it was likely a name for someone who lived in a valley or near a wall, or was a foreigner dwelling on a hill.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.505439167376608,
         "n_gen_tokens": 970,
@@ -11448,7 +11450,7 @@
       "vne": 0.7502645874194046,
       "judge_candidate": "\"Come Fly with Me\" is a song written by Sammy Cahn and Jule Styne, first recorded by Frank Sinatra in 1957. The song was released as a single in December 1957.\n\nFinal Answer: The song \"Come Fly with Me\" came out in December 1957.",
       "judge_extracted": "The song \"Come Fly with Me\" came out in December 1957.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.2735020741820335,
         "n_gen_tokens": 707,
@@ -11600,7 +11602,7 @@
       "vne": 0.3856032628174033,
       "judge_candidate": "The Virginia Plan was proposed at the Constitutional Convention by James Madison and Edmund Randolph, both delegates from Virginia. They presented it on May 29, 1787.\n\nFinal Answer: James Madison and Edmund Randolph proposed the Virginia Plan at the Constitutional Convention.",
       "judge_extracted": "James Madison and Edmund Randolph proposed the Virginia Plan at the Constitutional Convention.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.619388785213232,
         "n_gen_tokens": 670,
@@ -11980,7 +11982,7 @@
       "vne": 0.9464859789508283,
       "judge_candidate": "1. \"Star Wars: Episode II - Attack of the Clones\" features various characters from the Star Wars universe.\n2. The main characters include Anakin Skywalker (played by Hayden Christensen), Obi-Wan Kenobi (played by Ewan McGregor), Padmé Amidala (played by Natalie Portman), Count Dooku (played by Christopher Lee), and Jango Fett (played by Temuera Morrison).\n3. Other notable characters include Mace Windu (played by Samuel L. Jackson), Yoda (voiced by Frank Oz), and Palpatine (played by Ian McDiarmid).\n\nFinal Answer: Anakin Skywalker, Obi-Wan Kenobi, Padmé Amidala, Count Dooku, Jango Fett, Mace Windu, Yoda, and Palpatine are some of",
       "judge_extracted": "Anakin Skywalker, Obi-Wan Kenobi, Padmé Amidala, Count Dooku, Jango Fett, Mace Windu, Yoda, and Palpatine are some of",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 9.041317977942526,
         "n_gen_tokens": 2000,
@@ -12018,7 +12020,7 @@
       "vne": 0.5307736143139821,
       "judge_candidate": "John Steinbeck wrote \"Of Mice and Men\" in 1936. This novel was published in 1937. Final Answer: 1936 (year written) and 1937 (year published).",
       "judge_extracted": "1936 (year written) and 1937 (year published).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.1671464438550174,
         "n_gen_tokens": 600,
@@ -12322,7 +12324,7 @@
       "vne": 0.4806832548534813,
       "judge_candidate": "Fingerprinting as a forensic tool was first used by the British colonial administration in India in the mid-19th century, specifically in 1858 by Sir William Herschel. However, it wasn't until the late 19th and early 20th centuries that it became widely used by police forces, particularly in the United States.\n\nFinal Answer: Fingerprinting was first used by the police in the mid-19th century (1858) by the British colonial administration in India, but it became widely used by police forces in the late 19th and early 20th centuries.",
       "judge_extracted": "Fingerprinting was first used by the police in the mid-19th century (1858) by the British colonial administration in India, but it became widely used by police forces in the late 19th and early 20th centuries.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.923706599976867,
         "n_gen_tokens": 1022,
@@ -13310,7 +13312,7 @@
       "vne": 0.6430571461295953,
       "judge_candidate": "NBC typically employs a team of commentators for their Olympic ice skating coverage. Notable commentators in the past include Terry Gannon, Tara Lipinski, and Johnny Weir. However, the specific commentators for the current Olympics may vary.\n\nFinal Answer: The current NBC Olympic ice skating commentators may include Terry Gannon, Tara Lipinski, and Johnny Weir, but the exact lineup can be found on the NBC Sports website.",
       "judge_extracted": "The current NBC Olympic ice skating commentators may include Terry Gannon, Tara Lipinski, and Johnny Weir, but the exact lineup can be found on the NBC Sports website.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.6383164850994945,
         "n_gen_tokens": 1009,
@@ -13766,7 +13768,7 @@
       "vne": 0.7098564771111293,
       "judge_candidate": "The State of the Union address is delivered by the President of the United States. This tradition dates back to George Washington, who delivered the first address in 1790. Since then, every president has given the address, with some exceptions, to report on the state of the nation and outline their legislative agenda.\n\nFinal Answer: The President of the United States starts the State of the Union address.",
       "judge_extracted": "The President of the United States starts the State of the Union address.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.14030347019434,
         "n_gen_tokens": 635,
@@ -14222,7 +14224,7 @@
       "vne": 0.45208249163277686,
       "judge_candidate": "The Los Angeles Dodgers are a Major League Baseball team. The World Series is the championship series of Major League Baseball. To find out how many World Series wins the Dodgers have, we look at their World Series titles. As of 2021, the Dodgers have won the World Series 7 times.\n\nFinal Answer: 7 World Series wins",
       "judge_extracted": "7 World Series wins",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.3362997029908,
         "n_gen_tokens": 868,
@@ -14488,7 +14490,7 @@
       "vne": 0.6634644392286894,
       "judge_candidate": "The song \"Mary Did You Know\" is a contemporary Christian song written by Mark Lowry and Buddy Greene in 1991. It has been recorded by various artists, but the version that gained significant popularity is the one by the Christian music group, Pentatonix.\n\nFinal Answer: Pentatonix sings the Christmas song \"Mary Did You Know.\"",
       "judge_extracted": "Pentatonix sings the Christmas song \"Mary Did You Know.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.715201545972377,
         "n_gen_tokens": 951,
@@ -15096,7 +15098,7 @@
       "vne": 0.4564410994114823,
       "judge_candidate": "The song \"Can't Get You Out of My Head\" is a hit by the Australian singer-songwriter Kylie Minogue. She co-wrote the lyrics with Cathy Dennis and Rob Davis.\n\nFinal Answer: Kylie Minogue, Cathy Dennis, and Rob Davis wrote the lyrics for \"Can't Get You Out of My Head.\"",
       "judge_extracted": "Kylie Minogue, Cathy Dennis, and Rob Davis wrote the lyrics for \"Can't Get You Out of My Head.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.704464852809906,
         "n_gen_tokens": 784,
@@ -15286,7 +15288,7 @@
       "vne": 0.608913604480218,
       "judge_candidate": "1. The modern gambling industry in Las Vegas began to develop in the early 20th century, with the opening of the Golden Gate Hotel and Casino in 1906.\n2. However, it was the passage of the Nevada State Constitution in 1931, which legalized casino gambling, that truly transformed Las Vegas into a gambling town.\n3. The construction of the Hoover Dam in the 1930s brought a large workforce to the area, and the opening of the Flamingo Hotel in 1946 marked the beginning of the city's growth as a major gambling destination.\n\nFinal Answer: Las Vegas became a gambling town in the 1930s, following the legalization of casino gambling in Nevada in 1931 and the construction of the Hoover Dam and the Flamingo Hotel in the 1930s and 1940s.",
       "judge_extracted": "Las Vegas became a gambling town in the 1930s, following the legalization of casino gambling in Nevada in 1931 and the construction of the Hoover Dam and the Flamingo Hotel in the 1930s and 1940s.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 8.547910409979522,
         "n_gen_tokens": 1385,
@@ -15362,7 +15364,7 @@
       "vne": 0.3245702928445463,
       "judge_candidate": "The potter's wheel is believed to have originated around 3,500 BCE in Mesopotamia, specifically in the city of Ur. It was later adopted by the ancient Egyptians and spread to other civilizations, such as the Greeks and Romans, through trade and cultural exchange.\n\nFinal Answer: The potter's wheel first developed in Mesopotamia, around 3,500 BCE.",
       "judge_extracted": "The potter's wheel first developed in Mesopotamia, around 3,500 BCE.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.927644302137196,
         "n_gen_tokens": 921,
@@ -16350,7 +16352,7 @@
       "vne": 0.45704956363932225,
       "judge_candidate": "The Champions League Round of 16 is the second knockout stage of the UEFA Champions League. It follows the group stage and the round of 32. The exact start date varies each year, but it typically begins in February and lasts for about a month.\n\nFinal Answer: The Champions League Round of 16 usually starts in February.",
       "judge_extracted": "The Champions League Round of 16 usually starts in February.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.652709475718439,
         "n_gen_tokens": 778,
@@ -16502,7 +16504,7 @@
       "vne": 0.36015981704242284,
       "judge_candidate": "Toll roads in Mexico are commonly known as \"Autopistas Cuota\" or simply \"Cuotas.\" These are high-speed, toll-based highways that provide faster travel between cities. 'Final Answer: Autopistas Cuota or Cuotas'",
       "judge_extracted": "Autopistas Cuota or Cuotas'",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.5316469348035753,
         "n_gen_tokens": 702,
@@ -16616,7 +16618,7 @@
       "vne": 0.6547667960451774,
       "judge_candidate": "The hymn \"To God Be the Glory\" was written by Fanny Crosby, an American hymn writer, in 1875. The original title of the hymn is \"Blessed Assurance.\" Final Answer: 1875.",
       "judge_extracted": "1875.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.351981507614255,
         "n_gen_tokens": 1083,
@@ -16768,7 +16770,7 @@
       "vne": 0.793949878403336,
       "judge_candidate": "Goku's fight against Cell is a significant arc in the Dragon Ball Z series. The fight reaches its climax in the 'Cell Games Saga.' However, Goku gives up during the 'Cell Jr. Saga.' Final Answer: Goku gives up against Cell in the 'Cell Jr. Saga.'",
       "judge_extracted": "Goku gives up against Cell in the 'Cell Jr. Saga.'",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.09708902798593,
         "n_gen_tokens": 1014,
@@ -16958,7 +16960,7 @@
       "vne": 0.8884359543071861,
       "judge_candidate": "The movie \"Jeremiah Johnson\" was filmed in various locations in the United States. Principal photography took place in Utah, specifically in the Uinta Mountains and Duchesne County. Some scenes were also shot in Colorado, specifically in the San Juan Mountains.\n\nFinal Answer: The movie \"Jeremiah Johnson\" was filmed in Utah and Colorado.",
       "judge_extracted": "The movie \"Jeremiah Johnson\" was filmed in Utah and Colorado.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.954097238369286,
         "n_gen_tokens": 690,
@@ -17110,7 +17112,7 @@
       "vne": 0.5929027506890767,
       "judge_candidate": "\"Some Like It Hot\" is a classic American comedy film. The story unfolds in two main locations: Chicago and Florida. In Chicago, the characters Joe and Jerry witness a mob hit and disguise themselves as women to escape. Later, they join an all-female band and travel to Florida, where the majority of the film's events take place.\n\nFinal Answer: The film \"Some Like It Hot\" primarily takes place in Florida.",
       "judge_extracted": "The film \"Some Like It Hot\" primarily takes place in Florida.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.6067904769442976,
         "n_gen_tokens": 803,
@@ -17680,7 +17682,7 @@
       "vne": 0.48195810929294336,
       "judge_candidate": "1. The primary legislation for data protection and security in the UK is the Data Protection Act 2018 (DPA 2018), which implements the General Data Protection Regulation (GDPR) of the European Union.\n\n2. The DPA 2018 sets out principles for the processing of personal data, including requirements for lawful, fair, and transparent processing, and the need to protect personal data from unauthorized or unlawful processing.\n\n3. Additionally, the UK has the Privacy and Electronic Communications Regulations (PECR) that supplement the DPA 2018, focusing on specific areas such as electronic marketing, cookies, and unsolicited communications.\n\nFinal Answer: The Data Protection Act 2018 (DPA 2018) and the Privacy and Electronic Communications Regulations (PECR) are the key pieces of legislation regarding data protection and security in the UK.",
       "judge_extracted": "The Data Protection Act 2018 (DPA 2018) and the Privacy and Electronic Communications Regulations (PECR) are the key pieces of legislation regarding data protection and security in the UK.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 9.033710296265781,
         "n_gen_tokens": 1805,
@@ -18478,7 +18480,7 @@
       "vne": 0.39029185438686564,
       "judge_candidate": "The Northeast region of the United States includes seven states: Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, and New York.\n\nFinal Answer: Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, and New York are the states in the Northeast region.",
       "judge_extracted": "Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, and New York are the states in the Northeast region.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.9890810609795153,
         "n_gen_tokens": 720,
@@ -18554,7 +18556,7 @@
       "vne": 0.6174063732479438,
       "judge_candidate": "The song \"I Write Sins Not Tragedies\" is by the band Panic! at the Disco. The lead vocalist of Panic! at the Disco is Brendon Urie.\n\nFinal Answer: Brendon Urie is the original singer of \"I Write Sins Not Tragedies.\"",
       "judge_extracted": "Brendon Urie is the original singer of \"I Write Sins Not Tragedies.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.8013535952195525,
         "n_gen_tokens": 731,
@@ -19580,7 +19582,7 @@
       "vne": 0.8302475404183014,
       "judge_candidate": "The song \"I Hate You, I Love You\" is a track by American singer-songwriter, JoJo. This song is from her second studio album, \"The High Road,\" released in 2006.\n\nFinal Answer: JoJo wrote the song \"I Hate You, I Love You.\"",
       "judge_extracted": "JoJo wrote the song \"I Hate You, I Love You.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.102655490860343,
         "n_gen_tokens": 919,
@@ -19922,7 +19924,7 @@
       "vne": 0.35153001904610415,
       "judge_candidate": "The Red River starts in northwestern Texas, near the Texas-Oklahoma border. In Louisiana, it flows from the north and forms a natural boundary with Texas for a significant portion. The Red River ends at its confluence with the Atchafalaya River, near Simmesport, Louisiana.\n\nFinal Answer: The Red River starts in northwestern Texas and ends at its confluence with the Atchafalaya River in Louisiana.",
       "judge_extracted": "The Red River starts in northwestern Texas and ends at its confluence with the Atchafalaya River in Louisiana.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.4416091330349445,
         "n_gen_tokens": 1061,
@@ -19998,7 +20000,7 @@
       "vne": 0.2704481904926362,
       "judge_candidate": "The Eiffel Tower, originally built as a symbol for the 1889 Exposition Universelle (World's Fair), now serves primarily as a telecommunications tower. It houses antennas for television and radio broadcasting, and it also provides a popular tourist attraction in Paris, France.\n\nFinal Answer: The main use of the Eiffel Tower in modern times is as a telecommunications tower and a tourist attraction.",
       "judge_extracted": "The main use of the Eiffel Tower in modern times is as a telecommunications tower and a tourist attraction.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.89995188312605,
         "n_gen_tokens": 957,
@@ -20226,7 +20228,7 @@
       "vne": 0.2687664500390783,
       "judge_candidate": "Secretory cells of endocrine glands secrete their products directly into the interstitial fluid, which then gets transported to the bloodstream. This process allows the hormones to travel to target organs or tissues throughout the body.\n\nFinal Answer: Secretory cells of endocrine glands secrete their products into the interstitial fluid.",
       "judge_extracted": "Secretory cells of endocrine glands secrete their products into the interstitial fluid.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.17665524687618,
         "n_gen_tokens": 780,
@@ -20378,7 +20380,7 @@
       "vne": 0.5585176447864736,
       "judge_candidate": "1. European powers, such as Portugal, Spain, France, Britain, and Belgium, colonized various regions of Africa during the 15th to 20th centuries.\n2. These colonies were primarily established along the coasts, including West Africa (Nigeria, Senegal, Ghana), Central Africa (Congo, Angola), East Africa (Kenya, Tanzania, Uganda), and Southern Africa (South Africa, Namibia, Zimbabwe).\n3. Some interior regions, like Algeria and Ethiopia, were also colonized, but they were exceptions due to their geographical and cultural differences.\n\nFinal Answer: The areas of Africa involved in colonization include West Africa, Central Africa, East Africa, and Southern Africa, with exceptions like Algeria and Ethiopia.",
       "judge_extracted": "The areas of Africa involved in colonization include West Africa, Central Africa, East Africa, and Southern Africa, with exceptions like Algeria and Ethiopia.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 8.493925107643008,
         "n_gen_tokens": 1457,
@@ -20530,7 +20532,7 @@
       "vne": 0.8484503221168885,
       "judge_candidate": "The Eagles are a popular American rock band known for hits like \"Hotel California\" and \"Take It Easy.\" \"Love Will Keep Us Alive\" is a song that appears on their album \"The Long Run,\" released in 1979. The lead vocals for this song are shared by Don Henley and Glenn Frey.\n\nFinal Answer: Don Henley and Glenn Frey sing \"Love Will Keep Us Alive\" by The Eagles.",
       "judge_extracted": "Don Henley and Glenn Frey sing \"Love Will Keep Us Alive\" by The Eagles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.1266485676169395,
         "n_gen_tokens": 922,
@@ -20872,7 +20874,7 @@
       "vne": 0.5291212333238178,
       "judge_candidate": "The Hunger Games book was first published on August 23, 2008. It was the debut novel by Suzanne Collins. Final Answer: August 23, 2008.",
       "judge_extracted": "August 23, 2008.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.14771692128852,
         "n_gen_tokens": 568,
@@ -20910,7 +20912,7 @@
       "vne": 0.5113599436887118,
       "judge_candidate": "The Cold War was primarily a conflict between two major superpowers: the United States and the Soviet Union. Other countries that were part of the Western Bloc, led by the U.S., included Western Europe (e.g., France, West Germany, Italy, and the United Kingdom) and NATO members. On the Eastern side, the Soviet Union was allied with countries in the Warsaw Pact, such as East Germany, Poland, and Czechoslovakia. China also became a significant player in the Cold War, aligning itself with the Soviet Union after the Communist Revolution in 1949.\n\nFinal Answer: The major countries involved in the Cold War were the United States, Soviet Union, Western European countries (France, West Germany, Italy, United Kingdom), China, and Eastern European countries (East Germany, Poland, Czechoslovakia).",
       "judge_extracted": "The major countries involved in the Cold War were the United States, Soviet Union, Western European countries (France, West Germany, Italy, United Kingdom), China, and Eastern European countries (East Germany, Poland, Czechoslovakia).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 7.623883992899209,
         "n_gen_tokens": 1216,
@@ -21100,7 +21102,7 @@
       "vne": 0.8997214788795845,
       "judge_candidate": "1. To find the length of a straight line between two locations, we use the Pythagorean theorem, which states that in a right-triangle, the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides. In this case, the two locations are the two endpoints of the line, and the line itself is the hypotenuse.\n\n2. To find the direction of the line, we can use the slope-intercept form of a linear equation, y = mx + b. The slope (m) gives us the direction of the line, and it can be calculated using the formula (y2 - y1) / (x2 - x1), where (x1, y1) and (x2, y2) are the coordinates of the two locations.\n\nFinal Answer: The length of a straight line between two locations can",
       "judge_extracted": "The length of a straight line between two locations can",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 9.039312191773206,
         "n_gen_tokens": 1902,
@@ -21138,7 +21140,7 @@
       "vne": 0.9751152062814354,
       "judge_candidate": "1. The PGA Championship is a golf tournament where the winner is determined by the lowest total score at the end of four rounds.\n2. The largest margin of victory in the PGA Championship history is 8 strokes, achieved by Tiger Woods in 2000 and Rory McIlroy in 2014.\n3. Final Answer: Tiger Woods and Rory McIlroy are the two players who won the PGA Championship by the most shots, with a margin of 8 strokes each.",
       "judge_extracted": "Tiger Woods and Rory McIlroy are the two players who won the PGA Championship by the most shots, with a margin of 8 strokes each.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.505315090995282,
         "n_gen_tokens": 1186,
@@ -21328,7 +21330,7 @@
       "vne": 0.07174866377408419,
       "judge_candidate": "World War II started on September 1, 1939, when Germany, under Adolf Hitler, invaded Poland. The war ended on September 2, 1945, with the signing of the unconditional surrender of the Axis powers, represented by Japan, at the conclusion of the Tokyo War Crimes Tribunal.\n\nFinal Answer: World War II started on September 1, 1939, and ended on September 2, 1945.",
       "judge_extracted": "World War II started on September 1, 1939, and ended on September 2, 1945.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.242411958053708,
         "n_gen_tokens": 1036,
@@ -21404,7 +21406,7 @@
       "vne": 0.6750937309244841,
       "judge_candidate": "The movie \"Requiem for a Dream\" is a drama about substance abuse, focusing on four characters and their struggles with drugs. The main characters in the story are Marion, Harry, Tyrone, and Sara Goldfarb. Marion uses heroin, Harry uses heroin and Quaaludes, Tyrone uses heroin, and Sara Goldfarb uses diet pills (specifically, a fictional brand called \"Tic Tac\").\n\nFinal Answer: Sara Goldfarb uses diet pills (Tic Tac) in the movie \"Requiem for a Dream.\"",
       "judge_extracted": "Sara Goldfarb uses diet pills (Tic Tac) in the movie \"Requiem for a Dream.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.086558031849563,
         "n_gen_tokens": 967,
@@ -21442,7 +21444,7 @@
       "vne": 0.5280285040167753,
       "judge_candidate": "1. Pitch Perfect 3 features the returning Bellas, an all-female a cappella group from Barden University.\n2. The film also introduces new a cappella groups, including Evermoor, Saddle Up, and The Saddle-tracks.\n3. Final Answer: The bands in Pitch Perfect 3 are the Bellas, Evermoor, Saddle Up, and The Saddle-tracks.",
       "judge_extracted": "The bands in Pitch Perfect 3 are the Bellas, Evermoor, Saddle Up, and The Saddle-tracks.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.301495440769941,
         "n_gen_tokens": 1122,
@@ -21746,7 +21748,7 @@
       "vne": 0.3956463815465271,
       "judge_candidate": "The first season of Slasher, a Canadian horror anthology television series, was filmed in Ontario, Canada. Specifically, it was filmed in Toronto and the surrounding areas.\n\nFinal Answer: The first season of Slasher was filmed in Ontario, Canada, specifically in Toronto and its surrounding areas.",
       "judge_extracted": "The first season of Slasher was filmed in Ontario, Canada, specifically in Toronto and its surrounding areas.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 3.745283512864262,
         "n_gen_tokens": 725,
@@ -21860,7 +21862,7 @@
       "vne": 0.5146216442371606,
       "judge_candidate": "Morse code was used by various nations during World War II for communication, especially in situations where radio transmission was necessary but voice communication was not feasible or desirable. It was used by both military and civilian personnel. Final Answer: Many nations used Morse code in World War II.",
       "judge_extracted": "Many nations used Morse code in World War II.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.6023655249737203,
         "n_gen_tokens": 743,
@@ -21974,7 +21976,7 @@
       "vne": 0.3530383919728828,
       "judge_candidate": "The variable region of the heavy chain in an antibody is coded by the V, D, and J gene segments in the immunoglobulin heavy chain locus. These segments are part of the variable (V), diversity (D), and joining (J) regions, respectively.\n\nFinal Answer: The variable region of the heavy chain is coded by the V, D, and J gene segments.",
       "judge_extracted": "The variable region of the heavy chain is coded by the V, D, and J gene segments.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.955892973113805,
         "n_gen_tokens": 1273,
@@ -22050,7 +22052,7 @@
       "vne": 0.29860624210176767,
       "judge_candidate": "The television show \"The Rifleman\" aired from 1958 to 1963. The main character, Mark McCain, was a widowed rancher and single father. The actor who portrayed Mark McCain was Chuck Connors.\n\nFinal Answer: Chuck Connors played Mark on the show The Rifleman.",
       "judge_extracted": "Chuck Connors played Mark on the show The Rifleman.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.4151617512106895,
         "n_gen_tokens": 747,
@@ -22316,7 +22318,7 @@
       "vne": 0.5297179349835877,
       "judge_candidate": "The philosopher who advocated the idea of returning to nature is Henry David Thoreau. He is best known for his book \"Walden,\" where he promotes living simply in harmony with nature and self-reliance.\n\nFinal Answer: Henry David Thoreau",
       "judge_extracted": "Henry David Thoreau",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.044072713237256,
         "n_gen_tokens": 754,
@@ -22354,7 +22356,7 @@
       "vne": 0.7606034890000073,
       "judge_candidate": "The Treaty of Versailles was signed after World War I, and Germany was a major party in the conflict. The treaty was signed by German representatives, but the exact individual who signed it on behalf of Germany was Matthias Erzberger, a member of the German delegation. However, the treaty was officially ratified by the German government, not by Erzberger personally.\n\nFinal Answer: Matthias Erzberger, a member of the German delegation, signed the Treaty of Versailles.",
       "judge_extracted": "Matthias Erzberger, a member of the German delegation, signed the Treaty of Versailles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.729364860802889,
         "n_gen_tokens": 908,
@@ -23722,7 +23724,7 @@
       "vne": 0.9300722582302928,
       "judge_candidate": "The song \"He Thinks He'll Keep Her\" is a popular country song. The lyrics are from the perspective of a man who believes he can maintain a relationship with a woman, despite her showing signs of moving on. The song was written and recorded by American country music artist Hank Williams Sr. in 1953.\n\nFinal Answer: Hank Williams Sr. sings \"He Thinks He'll Keep Her.\"",
       "judge_extracted": "Hank Williams Sr. sings \"He Thinks He'll Keep Her.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.284358847886324,
         "n_gen_tokens": 673,
@@ -25242,7 +25244,7 @@
       "vne": 0.6821476338086518,
       "judge_candidate": "The Big Ten Network (BTN) is a sports channel that broadcasts games and shows related to Big Ten Conference colleges. To find the channel on FiOS, you would typically look for it under the Sports category. Final Answer: Big Ten Network (BTN) is on FiOS channel 94 or 594 HD, depending on your specific FiOS package and region. You can verify the exact channel number by checking your FiOS TV channel lineup online or contacting Verizon customer service.",
       "judge_extracted": "Big Ten Network (BTN) is on FiOS channel 94 or 594 HD, depending on your specific FiOS package and region. You can verify the exact channel number by checking your FiOS TV channel lineup online or contacting Verizon customer service.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.270748291164637,
         "n_gen_tokens": 1005,
@@ -25964,7 +25966,7 @@
       "vne": 0.8902257947888839,
       "judge_candidate": "The first season of Stranger Things introduces us to a character named Barry, who is a friend of the main character, Mike Wheeler. In the first episode, Barry dies while playing a game of Dungeons & Dragons, which is a fictional death within the context of the game. However, in the real world, no main character dies in the first episode.\n\nFinal Answer: No main character dies in the first episode of Stranger Things.",
       "judge_extracted": "No main character dies in the first episode of Stranger Things.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.097974292933941,
         "n_gen_tokens": 728,
@@ -26116,7 +26118,7 @@
       "vne": 0.6284000110319834,
       "judge_candidate": "1. Product-market fit refers to a situation where a product is designed to meet the needs and wants of a specific market.\n2. This is achieved when the product solves a problem or fulfills a need for the target customers in a way that they are willing to pay for.\n3. Final Answer: Product-market fit means having a product that effectively addresses the needs of a market, resulting in customer satisfaction and willingness to pay.",
       "judge_extracted": "Product-market fit means having a product that effectively addresses the needs of a market, resulting in customer satisfaction and willingness to pay.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.603022404015064,
         "n_gen_tokens": 1070,
@@ -26192,7 +26194,7 @@
       "vne": 0.6888765301079015,
       "judge_candidate": "The National Service Act was passed in the United Kingdom in 1949, which established both National Service for men and National Service for Women. However, National Service for men was abolished in 1960, while National Service for women was abolished in 1975.\n\nFinal Answer: National Service for men was abolished in the UK in 1960.",
       "judge_extracted": "National Service for men was abolished in the UK in 1960.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.251065853051841,
         "n_gen_tokens": 1127,
@@ -26572,7 +26574,7 @@
       "vne": 0.7937529024486174,
       "judge_candidate": "City & Guilds qualifications are vocational awards that are typically given for successful completion of a course in a specific trade, technical, or service-industry subject. The levels of these qualifications range from Entry Level (for beginners) to Level 3 (equivalent to A-Levels in the UK education system).\n\nFinal Answer: City & Guilds qualifications are vocational awards ranging from Entry Level to Level 3, with Level 3 being equivalent to A-Levels in the UK education system.",
       "judge_extracted": "City & Guilds qualifications are vocational awards ranging from Entry Level to Level 3, with Level 3 being equivalent to A-Levels in the UK education system.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.712662793695927,
         "n_gen_tokens": 1104,
@@ -26876,7 +26878,7 @@
       "vne": 0.6875697156014571,
       "judge_candidate": "Coronation Street, often abbreviated as Corrie, is a British soap opera. As of 2021, it has aired over 10,000 episodes since its debut in 1960.\n\nFinal Answer: Over 10,000 episodes of Coronation Street have been aired.",
       "judge_extracted": "Over 10,000 episodes of Coronation Street have been aired.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.952051328960806,
         "n_gen_tokens": 950,
@@ -27636,7 +27638,7 @@
       "vne": 0.436648434512485,
       "judge_candidate": "Madoka Kaname becomes a magical girl in Puella Magi Madoka Magica after making a contract with Kyubey, a cat-like creature, in episode 3, titled \"Decision at the School Festival.\" This contract grants her magical powers to fight witches, but comes with a heavy price.\n\nFinal Answer: Madoka becomes a magical girl in episode 3 of Puella Magi Madoka Magica.",
       "judge_extracted": "Madoka becomes a magical girl in episode 3 of Puella Magi Madoka Magica.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.626316464040428,
         "n_gen_tokens": 868,
@@ -27674,7 +27676,7 @@
       "vne": 0.5482272053899948,
       "judge_candidate": "The song \"Love Me Tender\" is a classic Elvis Presley song, first released in 1956. In the movie \"The Princess Diaries 2: Royal Engagement,\" the character Mia Thermopolis (played by Anne Hathaway) sings a cover of this song during a talent show. However, the singing voice in the movie is not Anne Hathaway's, but a professional singer's. Final Answer: The song \"Love Me Tender\" in \"The Princess Diaries 2\" is sung by a professional singer, not Anne Hathaway.",
       "judge_extracted": "The song \"Love Me Tender\" in \"The Princess Diaries 2\" is sung by a professional singer, not Anne Hathaway.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.303273022174835,
         "n_gen_tokens": 1020,
@@ -28548,7 +28550,7 @@
       "vne": 0.5251121336667828,
       "judge_candidate": "Gestalt psychology is a branch of psychology that focuses on the principles of perceptual organization and the way humans perceive and interpret the world around them. It was developed in the early 20th century. Today, it is considered a part of the broader field of cognitive psychology.\n\nFinal Answer: Today, Gestalt psychology is part of Cognitive Psychology.",
       "judge_extracted": "Today, Gestalt psychology is part of Cognitive Psychology.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.961315100081265,
         "n_gen_tokens": 718,
@@ -28624,7 +28626,7 @@
       "vne": 0.6974792203136552,
       "judge_candidate": "The filming locations for Harry Potter and the Deathly Hallows Part 1 include various places in England. Notable locations include Durmstrang Institute (Alnwick Castle), Godric's Hollow (Ivinghoe Beacon), and the Malfoy Manor (Royal Naval College, Greenwich). Final Answer: England.",
       "judge_extracted": "England.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.138934114947915,
         "n_gen_tokens": 1402,
@@ -28662,7 +28664,7 @@
       "vne": 0.8254101103263077,
       "judge_candidate": "Harry Potter books have been translated into numerous languages. As of 2020, there are over 80 languages that the series has been translated into.\n\nFinal Answer: Over 80 languages.",
       "judge_extracted": "Over 80 languages.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.572352597955614,
         "n_gen_tokens": 778,
@@ -29460,7 +29462,7 @@
       "vne": 0.5112719632677508,
       "judge_candidate": "The University of Michigan School of Public Health is often ranked among the top public health schools globally. According to U.S. News & World Report's 2021 rankings, it is ranked 3rd among public health schools in the United States and 5th overall.\n\nFinal Answer: The University of Michigan School of Public Health is ranked 3rd among public health schools in the U.S. and 5th overall by U.S. News & World Report's 2021 rankings.",
       "judge_extracted": "The University of Michigan School of Public Health is ranked 3rd among public health schools in the U.S. and 5th overall by U.S. News & World Report's 2021 rankings.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.921883351169527,
         "n_gen_tokens": 1105,
@@ -29498,7 +29500,7 @@
       "vne": 0.6004906200693747,
       "judge_candidate": "A Chamber of Commerce is a type of business organization that represents the interests of businesses in a community. It provides networking opportunities, advocates for business-friendly policies, and offers resources to help businesses grow.\n\nFinal Answer: Chamber of Commerce is a business advocacy organization.",
       "judge_extracted": "Chamber of Commerce is a business advocacy organization.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.41143152769655,
         "n_gen_tokens": 647,
@@ -30030,7 +30032,7 @@
       "vne": 0.6581924291315573,
       "judge_candidate": "1. The distribution of hair color in the human population is not uniform across the globe, but generally, it follows a bell curve with the majority having brown hair, followed by black, and a smaller percentage having blonde hair.\n2. According to various studies, the percentage of naturally blonde individuals in the Caucasian population is around 2-10%, while it is significantly lower in other ethnicities.\n3. Final Answer: The percentage of the global population that is naturally blonde is approximately 2-10%.",
       "judge_extracted": "The percentage of the global population that is naturally blonde is approximately 2-10%.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.812540990766138,
         "n_gen_tokens": 1001,
@@ -30258,7 +30260,7 @@
       "vne": 0.477921176156265,
       "judge_candidate": "The Electronic Fund Transfer Act (EFTA) was enacted as part of the Consumer Credit Protection Act on October 15, 1978. It was signed into law by President Jimmy Carter.\n\nFinal Answer: The Electronic Fund Transfer Act was signed into law on October 15, 1978, by President Jimmy Carter.",
       "judge_extracted": "The Electronic Fund Transfer Act was signed into law on October 15, 1978, by President Jimmy Carter.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.717136282008141,
         "n_gen_tokens": 906,
@@ -30562,7 +30564,7 @@
       "vne": 0.6528211836532123,
       "judge_candidate": "Game of Thrones is a fantasy series, but it's set in a fictional world that is heavily influenced by medieval Europe. The events in the series span several years, but the main timeline is roughly contemporaneous with the War of the Five Kings, which begins in the year 298 AC (After Conquest) in the world of Westeros.\n\nFinal Answer: The time setting of Game of Thrones is in the year 298 AC (After Conquest) in the fictional world of Westeros.",
       "judge_extracted": "The time setting of Game of Thrones is in the year 298 AC (After Conquest) in the fictional world of Westeros.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.351777920965105,
         "n_gen_tokens": 1239,
@@ -30714,7 +30716,7 @@
       "vne": 0.8198616611475962,
       "judge_candidate": "The movie \"The Wolf of Wall Street\" is known for its explicit language. To find the number of 'F' words, we'll focus on the most common usage, 'F-word' and 'F**k'. A quick internet search for the number of times these words are used in the script reveals that the movie uses the 'F-word' approximately 506 times and 'F**k' around 390 times. Adding these together, we get a total of approximately 896 instances of the 'F' word in \"The Wolf of Wall Street.\"\n\nFinal Answer: Approximately 896 instances of the 'F' word in \"The Wolf of Wall Street.\"",
       "judge_extracted": "Approximately 896 instances of the 'F' word in \"The Wolf of Wall Street.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.278920032083988,
         "n_gen_tokens": 1051,
@@ -30790,7 +30792,7 @@
       "vne": 0.4694876365824926,
       "judge_candidate": "The song \"Can't Help Falling in Love\" was originally recorded by Elvis Presley in 1961. However, the version that gained significant popularity is the one by UB40, a British reggae band, which was released in 1993.\n\nFinal Answer: The version by UB40 is more popular, but the original recording was by Elvis Presley.",
       "judge_extracted": "The version by UB40 is more popular, but the original recording was by Elvis Presley.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.809760310221463,
         "n_gen_tokens": 915,
@@ -31892,7 +31894,7 @@
       "vne": 1.0899670796046912,
       "judge_candidate": "Points on a sphere are measured using angles in degrees or radians, similar to angles in a circle. However, the unit of measurement for points on a sphere is not a separate unit; it's the same as the angular measurement. Final Answer: Angles (in degrees or radians) are used to measure points on a sphere or angles in a circle.",
       "judge_extracted": "Angles (in degrees or radians) are used to measure points on a sphere or angles in a circle.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.9222796726971865,
         "n_gen_tokens": 873,
@@ -32310,7 +32312,7 @@
       "vne": 0.7215166038127354,
       "judge_candidate": "Stranger Things Season 1 consists of 8 episodes. The average running time for each episode is approximately 50 minutes. Therefore, the total length of all episodes in Season 1 is 8 * 50 minutes = 400 minutes or 6 hours and 40 minutes.\n\nFinal Answer: The total length of episodes in Stranger Things Season 1 is 6 hours and 40 minutes.",
       "judge_extracted": "The total length of episodes in Stranger Things Season 1 is 6 hours and 40 minutes.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.5045809000730515,
         "n_gen_tokens": 794,
@@ -32728,7 +32730,7 @@
       "vne": 0.8454818708654664,
       "judge_candidate": "Daya is a character in the Indian television show \"Taarak Mehta Ka Ooltah Chashmah\". Her real name is Dayaben, which is a combination of her husband's name Daya (meaning 'compassionate') and the suffix -ben, a common honorific for women in Gujarati culture.\n\nFinal Answer: Daya's real name in Taarak Mehta Ka Ooltah Chashmah is Dayaben.",
       "judge_extracted": "Daya's real name in Taarak Mehta Ka Ooltah Chashmah is Dayaben.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.2194538176991045,
         "n_gen_tokens": 907,
@@ -32880,7 +32882,7 @@
       "vne": 0.7094182615749425,
       "judge_candidate": "The BBC miniseries \"The Secret of Crickley Hall\" consists of 4 episodes. Each episode is approximately 60 minutes long.\n\nFinal Answer: The series has 4 episodes.",
       "judge_extracted": "The series has 4 episodes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.065827699843794,
         "n_gen_tokens": 579,
@@ -33032,7 +33034,7 @@
       "vne": 0.5564492791295992,
       "judge_candidate": "Canada did not gain independence from Great Britain. Instead, it became a self-governing dominion within the British Empire in 1867 through the British North America Act. The process of Canadian independence was gradual, and it achieved full sovereignty in 1982 with the enactment of the Constitution Act.\n\nFinal Answer: Canada achieved full sovereignty in 1982.",
       "judge_extracted": "Canada achieved full sovereignty in 1982.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.891782748047262,
         "n_gen_tokens": 1045,
@@ -33146,7 +33148,7 @@
       "vne": 0.9943820865450701,
       "judge_candidate": "Superman hails from the fictional planet Krypton. In the context of elements, elements are substances that are named based on their properties, not the origin of fictional characters. However, the element Krypton is named after the planet Krypton from Superman's story.\n\nFinal Answer: The element named after the fictional planet from which Superman came is Krypton.",
       "judge_extracted": "The element named after the fictional planet from which Superman came is Krypton.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.192522455006838,
         "n_gen_tokens": 829,
@@ -33488,7 +33490,7 @@
       "vne": 0.07703609036280078,
       "judge_candidate": "The Soviet Union, officially known as the Union of Soviet Socialist Republics (USSR), was established on December 30, 1922, when the Russian SFSR, Ukraine SSR, Belarus SSR, and Transcaucasian SFSR signed the Union Treaty. The Soviet Union ended on December 26, 1991, when the Soviet flag was lowered from the flagpole at the Kremlin in Moscow, marking the dissolution of the union.\n\nFinal Answer: The Soviet Union started on December 30, 1922, and ended on December 26, 1991.",
       "judge_extracted": "The Soviet Union started on December 30, 1922, and ended on December 26, 1991.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.872793398797512,
         "n_gen_tokens": 1258,
@@ -33640,7 +33642,7 @@
       "vne": 0.7341794358342062,
       "judge_candidate": "The British were not alone in the French and Indian War, which was fought from 1754 to 1763. They were allied with several Native American tribes, such as the Iroquois Confederacy, and the colonies of Virginia and Pennsylvania. However, the most significant ally was the Kingdom of Prussia, whose military support was crucial in the decisive Battle of Quebec in 1759.\n\nFinal Answer: The British were allied with several Native American tribes, the colonies of Virginia and Pennsylvania, and the Kingdom of Prussia during the French and Indian War.",
       "judge_extracted": "The British were allied with several Native American tribes, the colonies of Virginia and Pennsylvania, and the Kingdom of Prussia during the French and Indian War.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.039861344732344,
         "n_gen_tokens": 999,
@@ -33716,7 +33718,7 @@
       "vne": 0.6823713335152681,
       "judge_candidate": "Fungi are decomposers, not consumers or producers. They break down dead organic matter, such as leaves and dead organisms, and recycle nutrients back into the environment. Therefore, they do not typically occupy a specific position in a food web, but rather, they are part of the decomposer layer in an ecosystem.\n\nFinal Answer: Fungi are part of the decomposer layer in an ecosystem, not a part of a food web.",
       "judge_extracted": "Fungi are part of the decomposer layer in an ecosystem, not a part of a food web.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.457238728180528,
         "n_gen_tokens": 1015,
@@ -33754,7 +33756,7 @@
       "vne": 0.3835446138765481,
       "judge_candidate": "The TV show \"Taarak Mehta Ka Ooltah Chashmah\" is an Indian sitcom. Directors for this show are Asit Kumar Modi and Aatish Kapadia. They have been involved in the production of the show since its inception in 2008.\n\nFinal Answer: Asit Kumar Modi and Aatish Kapadia are the directors of Taarak Mehta Ka Ooltah Chashmah.",
       "judge_extracted": "Asit Kumar Modi and Aatish Kapadia are the directors of Taarak Mehta Ka Ooltah Chashmah.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.200584671925753,
         "n_gen_tokens": 868,
@@ -33868,7 +33870,7 @@
       "vne": 0.7519823579052649,
       "judge_candidate": "The song \"Send in the Clowns\" is a well-known ballad from the musical \"A Little Night Music\" by Stephen Sondheim. The original singer of the song in the musical was the character Desirée Armfeldt, but the song has been covered by many artists over the years. However, the original recording of the song was by Judy Collins in 1975.\n\nFinal Answer: Judy Collins sang the original recording of the song \"Send in the Clowns.\"",
       "judge_extracted": "Judy Collins sang the original recording of the song \"Send in the Clowns.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.421656432095915,
         "n_gen_tokens": 943,
@@ -34286,7 +34288,7 @@
       "vne": 0.28094435284870073,
       "judge_candidate": "The character Shmuel is a fictional character from the novel 'The Boy in the Striped Pyjamas' by John Boyne. In the 2008 film adaptation, the role of Shmuel was played by actor Asa Butterfield.\n\nFinal Answer: Asa Butterfield played Shmuel in the film adaptation of 'The Boy in the Striped Pyjamas'.",
       "judge_extracted": "Asa Butterfield played Shmuel in the film adaptation of 'The Boy in the Striped Pyjamas'.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.176333830226213,
         "n_gen_tokens": 918,
@@ -34324,7 +34326,7 @@
       "vne": 0.8079070460564783,
       "judge_candidate": "In the Roman Republic, only adult male citizens aged 18 and above, who were not slaves or bound to debt, were allowed to vote. Final Answer: Adult male citizens aged 18 and above, who were not slaves or bound to debt.",
       "judge_extracted": "Adult male citizens aged 18 and above, who were not slaves or bound to debt.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.522862451151013,
         "n_gen_tokens": 796,
@@ -34970,7 +34972,7 @@
       "vne": 0.3624925333668178,
       "judge_candidate": "The term \"baby boomer\" was coined by demographers William Strauss and Neil Howe in 1976. They used it to describe the demographic cohort born after World War II, between 1946 and 1964.\n\nFinal Answer: Demographers William Strauss and Neil Howe came up with the term baby boomer.",
       "judge_extracted": "Demographers William Strauss and Neil Howe came up with the term baby boomer.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.9345913040451705,
         "n_gen_tokens": 1003,
@@ -35236,7 +35238,7 @@
       "vne": 0.5512031551402391,
       "judge_candidate": "Rajya Sabha members are elected by the members of the Electoral College, which consists of elected members of the Lok Sabha (the lower house of the Indian Parliament) and the Legislative Assemblies of the states. The exact number of votes each member casts depends on the size of their state or territory.\n\nFinal Answer: Members of the Electoral College, which includes elected members of the Lok Sabha and the Legislative Assemblies of the states, vote to elect a Rajya Sabha member.",
       "judge_extracted": "Members of the Electoral College, which includes elected members of the Lok Sabha and the Legislative Assemblies of the states, vote to elect a Rajya Sabha member.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.127862769644707,
         "n_gen_tokens": 1127,
@@ -35274,7 +35276,7 @@
       "vne": 0.8148835024366878,
       "judge_candidate": "The song \"It's a Long Long Way to Tipperary\" was written by Jack Judge and Harry Williams in 1912. However, the song you mentioned, \"It's a Long Long Way to Pasadena,\" is a different song. It was written by Randy Newman in 1963.\n\nFinal Answer: Randy Newman wrote \"It's a Long Long Way to Pasadena.\"",
       "judge_extracted": "Randy Newman wrote \"It's a Long Long Way to Pasadena.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.708320254925638,
         "n_gen_tokens": 1174,
@@ -35388,7 +35390,7 @@
       "vne": 0.5734089710679633,
       "judge_candidate": "The bayou is a type of swampy area, often found in southern United States. Trees in a swampy area may have moss growing on them. Moss is a type of plant that grows on other plants, and it doesn't have roots to anchor itself to the ground, so it hangs from the trees.\n\nFinal Answer: Moss hangs from the trees in the bayou.",
       "judge_extracted": "Moss hangs from the trees in the bayou.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 4.514109611045569,
         "n_gen_tokens": 794,
@@ -35616,7 +35618,7 @@
       "vne": 0.5883606108252468,
       "judge_candidate": "The main character in the film \"Layer Cake\" is named Danny. He is a cocaine dealer who decides to leave the business and wants to exit cleanly.\n\nFinal Answer: The main character's name in Layer Cake is Danny.",
       "judge_extracted": "The main character's name in Layer Cake is Danny.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.711585206910968,
         "n_gen_tokens": 739,
@@ -35768,7 +35770,7 @@
       "vne": 0.7376399489400386,
       "judge_candidate": "The song \"Gimme Some Lovin'\" is a popular hit by the British band The Spencer Davis Group. However, in the movie \"Days of Thunder,\" the character Cole Trickle (played by Tom Cruise) sings a modified version of this song. The original version is not sung by Tom Cruise in the movie.\n\nFinal Answer: Tom Cruise does not sing \"Gimme Some Lovin'\" in the movie \"Days of Thunder.\" The original version is sung by The Spencer Davis Group.",
       "judge_extracted": "Tom Cruise does not sing \"Gimme Some Lovin'\" in the movie \"Days of Thunder.\" The original version is sung by The Spencer Davis Group.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.1809953837655485,
         "n_gen_tokens": 1098,
@@ -36034,7 +36036,7 @@
       "vne": 0.47081844638240966,
       "judge_candidate": "The Kardashian family's reality TV show, \"Keeping Up with the Kardashians,\" aired from 2007 to 2021. The final season was the 20th season, which aired from September 2020 to March 2021.\n\nFinal Answer: The latest series of \"Keeping Up with the Kardashians\" is the 20th season, which aired from September 2020 to March 2021.",
       "judge_extracted": "The latest series of \"Keeping Up with the Kardashians\" is the 20th season, which aired from September 2020 to March 2021.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 6.190906086936593,
         "n_gen_tokens": 1212,
@@ -36186,7 +36188,7 @@
       "vne": 0.2686499689658915,
       "judge_candidate": "The cell cycle consists of four main phases: G1 (First Growth), S (Synthesis), G2 (Second Growth), and M (Mitosis). The resting stage is the G1 phase, during which the cell grows in size, prepares for DNA replication, and checks for any damage before entering the S phase.\n\nFinal Answer: The resting stage of the cell cycle is the G1 phase.",
       "judge_extracted": "The resting stage of the cell cycle is the G1 phase.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 5.189177501015365,
         "n_gen_tokens": 1039,
@@ -36414,7 +36416,7 @@
       "vne": 0.4934628585831254,
       "judge_candidate": "The Winter Olympics are held every four years, and the host cities are selected during the International Olympic Committee's (IOC) Session. The next Winter Olympics will be held in Beijing, China, in 2022, and the following Winter Olympics will be held in Milan and Cortina d'Ampezzo, Italy, in 2026.\n\nFinal Answer: The next Winter Olympics after Beijing, China (2022) will be held in Milan and Cortina d'Ampezzo, Italy (2026).",
       "judge_extracted": "The next Winter Olympics after Beijing, China (2022) will be held in Milan and Cortina d'Ampezzo, Italy (2026).",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 6.400687289889902,
         "n_gen_tokens": 1231,
@@ -36756,7 +36758,7 @@
       "vne": 0.48411040170702707,
       "judge_candidate": "The Hunger Games is a trilogy of novels written by Suzanne Collins. The three books in the series are titled:\n\n1. The Hunger Games\n2. Catching Fire\n3. Mockingjay\n\nFinal Answer: The names of the Hunger Games are The Hunger Games, Catching Fire, and Mockingjay.",
       "judge_extracted": "The names of the Hunger Games are The Hunger Games, Catching Fire, and Mockingjay.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.523718123789877,
         "n_gen_tokens": 897,
@@ -36832,7 +36834,7 @@
       "vne": 0.7522849304025616,
       "judge_candidate": "The song \"It's Gonna Take a Lot of Love\" is a popular track by American singer-songwriter Mac Davis. He wrote the song in 1972, and it was later covered by various artists, including George Benson and Randy Travis.\n\nFinal Answer: Mac Davis wrote \"It's Gonna Take a Lot of Love.\"",
       "judge_extracted": "Mac Davis wrote \"It's Gonna Take a Lot of Love.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.268382935319096,
         "n_gen_tokens": 994,
@@ -37212,7 +37214,7 @@
       "vne": 0.3693568631853827,
       "judge_candidate": "The prefrontal cortex, particularly the anterior cingulate cortex and the medial prefrontal cortex, are regions of the brain that are involved in complex thinking, decision-making, and problem-solving. These areas are responsible for planning complex cognitive behavior, personality expression, decision making, and moderating social behavior.\n\nFinal Answer: The prefrontal cortex, specifically the anterior cingulate cortex and the medial prefrontal cortex, is responsible for complex thinking.",
       "judge_extracted": "The prefrontal cortex, specifically the anterior cingulate cortex and the medial prefrontal cortex, is responsible for complex thinking.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.9289728929288685,
         "n_gen_tokens": 881,
@@ -37478,7 +37480,7 @@
       "vne": 0.8434125260054985,
       "judge_candidate": "In the movie \"You Get Me,\" Tyler's romantic interest is initially with Hannah, but after a series of events, he ends up with Allison. Final Answer: Tyler ends up with Allison.",
       "judge_extracted": "Tyler ends up with Allison.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.877752418164164,
         "n_gen_tokens": 781,
@@ -37516,7 +37518,7 @@
       "vne": 0.3665697430341456,
       "judge_candidate": "Half-Life 2 was initially released in 2004, and its episodes were released sequentially. Half-Life 2: Episode 2 was released on October 1, 2007.\n\nFinal Answer: Half-Life 2: Episode 2 was released on October 1, 2007.",
       "judge_extracted": "Half-Life 2: Episode 2 was released on October 1, 2007.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.10553650604561,
         "n_gen_tokens": 816,
@@ -37668,7 +37670,7 @@
       "vne": 0.4958282981968373,
       "judge_candidate": "Iron ore in Australia primarily comes from the Pilbara region in Western Australia and the Iron Range in South Australia. These areas have large deposits of hematite and magnetite, the two most common types of iron ores. Final Answer: Iron ore in Australia comes from the Pilbara region in Western Australia and the Iron Range in South Australia.",
       "judge_extracted": "Iron ore in Australia comes from the Pilbara region in Western Australia and the Iron Range in South Australia.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 5.0893762041814625,
         "n_gen_tokens": 1116,
@@ -37934,7 +37936,7 @@
       "vne": 0.5255033848366667,
       "judge_candidate": "Ganglion cells in the retina are neurons that process visual information. These ganglion cells send their axons to form the optic nerve, which carries the visual information to the brain.\n\nFinal Answer: The ganglion axons forming the optic nerve run to the brain.",
       "judge_extracted": "The ganglion axons forming the optic nerve run to the brain.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 4.43706011865288,
         "n_gen_tokens": 844,

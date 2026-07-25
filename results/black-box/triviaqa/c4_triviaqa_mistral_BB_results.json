@@ -15,13 +15,15 @@
     "heat_t": 0.3,
     "alpha": 0.5,
     "strict_entailment": true,
-    "seed": 42
+    "seed": 42,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": {
-    "max": 0.7765346292215254,
-    "mean": 0.7145655572507581
+    "max": 0.7617077659182921,
+    "mean": 0.6928818549871183
   },
-  "hallucination_rate": 0.306,
+  "hallucination_rate": 0.285,
   "n_valid": 1000,
   "details": [
     {
@@ -246,7 +248,7 @@
         "mean": 1.4661036269644747
       },
       "candidate": "The De Havilland Comet was the first commercial jet airliner to go into service in the UK.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.378741434775293,
@@ -430,7 +432,7 @@
         "mean": 1.3493730379182385
       },
       "candidate": "You can expect to receive a serving of Focaccia.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.81801924481988,
@@ -752,7 +754,7 @@
         "mean": 2.0257604604196398
       },
       "candidate": "Dr. Robert Bentley Todd did not describe the disease in \"An Essay on the Shaking Palsy\". The disease was first described by Dr. James Parkinson.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.584661995992064,
@@ -1189,7 +1191,7 @@
         "mean": 1.655587223220494
       },
       "candidate": "The miners likely formed a group to study mining-related topics.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.730562429875135,
@@ -1235,7 +1237,7 @@
         "mean": 1.4060640541735026
       },
       "candidate": "A flight (of hawks or falcons)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.330419901758432,
@@ -2246,7 +2248,7 @@
         "mean": 1.9235727989915599
       },
       "candidate": "Bill Gibson sang behind Huey Lewis.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.02488897368312,
@@ -2315,7 +2317,7 @@
         "mean": 1.7243049720082342
       },
       "candidate": "The term used for a driver on Memorial Day weekend attempting to race in the Indianapolis 500 during the day and the Coca-Cola 600 during the night is a \"double duty\" driver.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.36138068791479,
@@ -2567,7 +2569,7 @@
         "mean": 1.6279158795335829
       },
       "candidate": "The word Punic, as in the Punic Wars, originates from the Latin word Phoenicus, which refers to the Phoenicians, a civilization that included Carthage, the city-state with which Rome waged the Punic Wars.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 17.63475358625874,
@@ -2751,7 +2753,7 @@
         "mean": 1.021039177082051
       },
       "candidate": "William Thacker runs the bookshop in 'Notting Hill'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.727681512013078,
@@ -3003,7 +3005,7 @@
         "mean": 1.4532937794550447
       },
       "candidate": "There are no Kings with a moustache in a standard deck of cards.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.80457569193095,
@@ -3578,7 +3580,7 @@
         "mean": 1.0610916771295062
       },
       "candidate": "Scarlett O'Hara has a charm that can be so captivating that it can make men overlook her lack of beauty, as shown by the Tarleton twins' case.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.421367907896638,
@@ -3854,7 +3856,7 @@
         "mean": 1.5587107365960273
       },
       "candidate": "The 14th Dalai Lama",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.55273404205218,
@@ -5830,7 +5832,7 @@
         "mean": 0.5906066574826268
       },
       "candidate": "The currency of Pakistan is the Pakistani Rupee (PKR).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 8.947615925688297,
@@ -6129,7 +6131,7 @@
         "mean": 1.853146157195857
       },
       "candidate": "Al Capone's business card likely listed a legitimate profession, such as a restaurant owner or a nightclub operator, given the context of the Prohibition era and the format of a business card. However, without specific details about the profession listed on the card, it is impossible to provide an exact answer.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.34506718022749,
@@ -6175,7 +6177,7 @@
         "mean": 1.7262692629477314
       },
       "candidate": "Doc is the dwarf who wears spectacles in various adaptations of the Disney tale of Snow White. However, it's important to note that in the original Disney movie, Doc does not wear glasses.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.693575968034565,
@@ -6198,7 +6200,7 @@
         "mean": 1.6768934602971137
       },
       "candidate": "Both Protons and Neutrons are examples of particles that take their name from the Greek for 'heavy'.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.529563546180725,
@@ -6290,7 +6292,7 @@
         "mean": 1.728044093419908
       },
       "candidate": "A 300-yard golf hole is generally considered a par-3.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.330415927805007,
@@ -6497,7 +6499,7 @@
         "mean": 1.2900125228085795
       },
       "candidate": "Taiwan, Malaysia, Singapore, and the People's Republic of China.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.951669472269714,
@@ -7807,7 +7809,7 @@
         "mean": 1.795596029632818
       },
       "candidate": "The Moonstone in the novel by Wilkie Collins is a diamond, not a moonstone mineral.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.136647862847894,
@@ -8358,7 +8360,7 @@
         "mean": 1.9859051056688752
       },
       "candidate": "Queen Joan of Navarre was the stepmother of Henry VI.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.72131853364408,
@@ -8703,7 +8705,7 @@
         "mean": 1.7963058495928035
       },
       "candidate": "The cube root of 27,000 is 3.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.72655862569809,
@@ -8726,7 +8728,7 @@
         "mean": 1.8211193908090326
       },
       "candidate": "The Profumo family left Cliveden House shortly after the Profumo Affair of the 1960s.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.465515439398587,
@@ -8749,7 +8751,7 @@
         "mean": 1.5290862991072995
       },
       "candidate": "The fruit known as ananas in French is still called pineapple in English.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.412560823373497,
@@ -9232,7 +9234,7 @@
         "mean": 1.4927075436249035
       },
       "candidate": "David Mitchell (as of now, verify from a reliable source)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.501984504051507,
@@ -9393,7 +9395,7 @@
         "mean": 0.5040990163209075
       },
       "candidate": "The currency of India is the Indian Rupee (INR).",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 8.488501307088882,
@@ -10311,7 +10313,7 @@
         "mean": 1.9330931586183688
       },
       "candidate": "The word for frugality derived from Lacedaemon is Spartan.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.208681241609156,
@@ -10518,7 +10520,7 @@
         "mean": 1.1872692914738892
       },
       "candidate": "Alopecia causes hair loss in humans.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 13.146410607267171,
@@ -10931,7 +10933,7 @@
         "mean": 1.3863819965420536
       },
       "candidate": "Peter Paul Rubens' Antwerp home is now a museum.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.345047187060118,
@@ -12193,7 +12195,7 @@
         "mean": 1.3539899638303214
       },
       "candidate": "Mosquitoes, due to the diseases they transmit such as West Nile virus and Zika virus, cause more deaths in the U.S. than any other animal. However, it's important to note that direct attacks by other animals like bears, sharks, or snakes are much less common.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.710895523894578,
@@ -12308,7 +12310,7 @@
         "mean": 1.8146289165644227
       },
       "candidate": "There were no artists or groups known as \"On The Road Again\" in 1968.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.178336697164923,
@@ -12423,7 +12425,7 @@
         "mean": 1.7118693383301313
       },
       "candidate": "It is not possible to definitively determine what George Formby was referring to without more context. However, based on the provided lyrics and the context of his humor, it is reasonable to assume that he was referring to a situation or object that is sticky or awkward but still finds enjoyment in it.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.1632347907871,
@@ -12469,7 +12471,7 @@
         "mean": 0.8330145816423205
       },
       "candidate": "Wellington College is in Berkshire County.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 12.084711357019842,
@@ -13895,7 +13897,7 @@
         "mean": 1.5072379401244635
       },
       "candidate": "Nagaland is a constituent state of India, which is a country in Southeast Asia when considering it geographically.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.89838740695268,
@@ -14240,7 +14242,7 @@
         "mean": 1.2061829160748863
       },
       "candidate": "Odontology is the medical specialty that studies teeth and associated structures in the mouth.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.156628096010536,
@@ -14263,7 +14265,7 @@
         "mean": 1.5200798295723104
       },
       "candidate": "Etruria Works",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.998541533015668,
@@ -14355,7 +14357,7 @@
         "mean": 2.0425456025870328
       },
       "candidate": "The speaker of the phrase \"Well he would, wouldn't he\" in the court case regarding Lord Astor is not Lord Astor, but rather an observer or someone involved in the case who finds Lord Astor's denial unsurprising. However, the exact speaker is not specified in the question.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.366336370818317,
@@ -14378,7 +14380,7 @@
         "mean": 1.8631497777958668
       },
       "candidate": "There are 13 double-word score squares on a standard Scrabble board.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.0014397026971,
@@ -14860,7 +14862,7 @@
         "mean": 1.8231546550763003
       },
       "candidate": "The first battle of the English Civil War took place near Kineton, Warwickshire, England.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.995158053934574,
@@ -14906,7 +14908,7 @@
         "mean": 1.7893227145104715
       },
       "candidate": "A group of jellyfish is called a smack.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.852905656211078,
@@ -15158,7 +15160,7 @@
         "mean": 1.5831521675351532
       },
       "candidate": "The International Committee of the Red Cross (ICRC)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.240511289332062,
@@ -15204,7 +15206,7 @@
         "mean": 1.8742844033751613
       },
       "candidate": "Mickey",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.765549721661955,
@@ -15296,7 +15298,7 @@
         "mean": 1.453736183005326
       },
       "candidate": "Mel Brown (or Melanie Brown) was Scary Spice's surname at the time the Spice Girls became famous.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.162552281282842,
@@ -16099,7 +16101,7 @@
         "mean": 1.826569333229686
       },
       "candidate": "Django's surname in 'Django Unchained' is not explicitly given in the film. He is often referred to simply as 'Django'.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.127304316964,
@@ -16168,7 +16170,7 @@
         "mean": 1.249302256370062
       },
       "candidate": "Borneo's large land area ranks it among the largest five globally.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 14.574382432270795,
@@ -16742,7 +16744,7 @@
         "mean": 1.4072711017630386
       },
       "candidate": "There is no British Prime Minister who was born in Portsmouth in 1912.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.318550541065633,
@@ -17362,7 +17364,7 @@
         "mean": 1.7469221422039312
       },
       "candidate": "Prince Philip and Prince Charles did not attend a typical public school. Instead, they were educated privately and at boarding schools such as Gordonstoun in Scotland.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.835486940573901,
@@ -17431,7 +17433,7 @@
         "mean": 1.7593379780670713
       },
       "candidate": "Gnasher is the Beano's Redskin Chum. However, it's important to note that this character was originally named Redskin Chum, but his name was changed to Gnasher in the 1990s due to concerns about racial stereotyping.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.82630068110302,
@@ -17499,7 +17501,7 @@
         "mean": 1.3192485795262041
       },
       "candidate": "Weather systems",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.048923512920737,
@@ -17591,7 +17593,7 @@
         "mean": 1.5139067407258986
       },
       "candidate": "The United Kingdom.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.728784618899226,
@@ -18601,7 +18603,7 @@
         "mean": 1.2890799138157212
       },
       "candidate": "Kevin Kennedy",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 13.72496503777802,
@@ -19404,7 +19406,7 @@
         "mean": 1.4572467027934408
       },
       "candidate": "Scott Waites (The Count) won the BDO World Professional Darts Championship in 2009.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.302605231758207,
@@ -20067,7 +20069,7 @@
         "mean": 1.3351395397869312
       },
       "candidate": "Brooklyn is situated within the city of New York.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.014914757106453,
@@ -20159,7 +20161,7 @@
         "mean": 1.583205876907238
       },
       "candidate": "Giant Haystacks (Ramsay Campbell) was the wrestler who weighed up to 48 stone.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.41657189372927,
@@ -20182,7 +20184,7 @@
         "mean": 0.7485748678546377
       },
       "candidate": "Arthur Tudor",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 11.486082064919174,
@@ -20205,7 +20207,7 @@
         "mean": 1.4968440102028557
       },
       "candidate": "Pinocchio",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.196661666966975,
@@ -20550,7 +20552,7 @@
         "mean": 1.712586594278972
       },
       "candidate": "Paris, a Trojan prince, wounded Achilles in the heel, leading to his death.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 15.897029506973922,
@@ -20825,7 +20827,7 @@
         "mean": 1.190140695490059
       },
       "candidate": "The headquarters of Nestle is in Switzerland, a European country.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 12.237008217722178,
@@ -20986,7 +20988,7 @@
         "mean": 1.3002863564265883
       },
       "candidate": "Angiosperms have seeds enclosed within an ovary, which means they have an embryo, endosperm, and a protective seed coat.",
-      "is_halluc": 0,
+      "is_halluc": 1,
       "error": null,
       "cost": {
         "t_seconds": 16.148947674315423,
@@ -21055,7 +21057,7 @@
         "mean": 1.3630348694182015
       },
       "candidate": "The Arsacid Dynasty ruled the Parthian Empire.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 15.414582908153534,
@@ -21376,7 +21378,7 @@
         "mean": 1.4194113729461098
       },
       "candidate": "England (and some parts of Scotland and Wales during their rule)",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.578390151262283,
@@ -21422,7 +21424,7 @@
         "mean": 1.8349913626417587
       },
       "candidate": "Fruit, cricket, and horseshoe are varieties of animals, but Fruit and Horseshoe are not actual animal names.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.485093791037798,
@@ -21651,7 +21653,7 @@
         "mean": 1.5399535095481662
       },
       "candidate": "There is no letter of the alphabet which does not appear in any of the names of the 50 American states.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 18.027762022335082,
@@ -21720,7 +21722,7 @@
         "mean": 1.8931950165259792
       },
       "candidate": "Iron Eyes Cody",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 14.962698971386999,
@@ -21743,7 +21745,7 @@
         "mean": 1.6944942880169729
       },
       "candidate": "A full-name boxer who followed Marvin Hart in the heavyweight division could be Jack Johnson. However, to confirm, it's best to cross-check with historical boxing records.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.97613699082285,
@@ -22249,7 +22251,7 @@
         "mean": 1.8677364387558948
       },
       "candidate": "The Land of Nod, where Cain dwelt, is located east of the Middle East, specifically east of Iraq.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 16.483719028998166,
@@ -22318,7 +22320,7 @@
         "mean": 1.3777001573872312
       },
       "candidate": "Otitis can be an inflammation of the outer ear (otitis externa), middle ear (otitis media), or inner ear (otitis interna). However, otitis externa and otitis media are more commonly associated with ear inflammation.",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 17.738440150860697,
@@ -22524,7 +22526,7 @@
         "mean": 1.5104035165463836
       },
       "candidate": "Victorinox SwissChamp",
-      "is_halluc": 1,
+      "is_halluc": 0,
       "error": null,
       "cost": {
         "t_seconds": 13.866526684258133,

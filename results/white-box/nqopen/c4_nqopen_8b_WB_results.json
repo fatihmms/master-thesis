@@ -19,7 +19,9 @@
     "label_mode": "judge",
     "f1_threshold": 0.3,
     "agg_primary": "max",
-    "seed": 42
+    "seed": 42,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
   "auroc": {
     "max": 0.7071898131793617,

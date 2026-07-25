@@ -13,10 +13,12 @@
     "alpha": 0.5,
     "strict_entailment": true,
     "judge_temp": 0.1,
-    "no_repeat_ngram_low_temp": 6
+    "no_repeat_ngram_low_temp": 6,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.46432814541998335,
-  "hallucination_rate": 0.886,
+  "auroc": 0.5246068194767661,
+  "hallucination_rate": 0.823,
   "details": [
     {
       "id": "morehopqa-000000",
@@ -649,7 +651,7 @@
         -2.2223144201156844
       ],
       "judge_candidate": "The concatenation of the final letters of Hugh Cholmonдеlеy, 1st Earl of Cholmondeley’s paternal grandmother's first and last name in lowercase is \"yldy\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.301155872470648,
       "cost": {
         "t_seconds": 11.459526247810572,
@@ -761,7 +763,7 @@
         -2.357428951943555
       ],
       "judge_candidate": "Charlie McDermott played Axl Heck on the TV show \"The Middle\" which premiered on September 24, 2009. Therefore, one year before that date would be September 24,2008.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.174464610501725,
       "cost": {
         "t_seconds": 11.902463927865028,
@@ -1107,7 +1109,7 @@
         -2.278769175035095
       ],
       "judge_candidate": "Brendan Becker has 3 additional letters compared to Diya, the first name of Diya Al- Dawla.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.030596513804386,
       "cost": {
         "t_seconds": 8.515014363918453,
@@ -1332,7 +1334,7 @@
         -2.2820285726705882
       ],
       "judge_candidate": "The last vowel in \"Harvard University,\" the institution attended by Edith Wharton, author of \"Elizabeth and After,\" is 'a' in \"Harvard.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.229487458862318,
       "cost": {
         "t_seconds": 9.84685095679015,
@@ -1626,7 +1628,7 @@
         -2.245211529572679
       ],
       "judge_candidate": "The Danish plant ecologist, who assisted a Danic chemist famous for the introduction of pH, died in the year 1935, which, in reverse order, is 531.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.273054911828953,
       "cost": {
         "t_seconds": 12.09552199114114,
@@ -1686,7 +1688,7 @@
         -2.2870635524179446
       ],
       "judge_candidate": "The last consonant in \"Antwerp,\" where Peter Paul Rubens studied, is 'r'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2738175135420633,
       "cost": {
         "t_seconds": 8.970718005206436,
@@ -1923,7 +1925,7 @@
         -2.3512705128765696
       ],
       "judge_candidate": "The reverse order of the letters of the first name of the character opposite Billy Howle in the upcoming British drama is \"Sophie.\" (The character is played by Saoirse Ronan, but her character's name is Sophie.)",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.27604540459366,
       "cost": {
         "t_seconds": 10.958828799892217,
@@ -1980,7 +1982,7 @@
         -2.378273829340102
       ],
       "judge_candidate": "The first letter of Abu Mansur F ulad Sutun' paternal grandfather's last name in lowercase is 'f'.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.6585988544407617,
       "cost": {
         "t_seconds": 9.816874932963401,
@@ -2733,7 +2735,7 @@
         -1.4594360584509676
       ],
       "judge_candidate": "The first name of the father in the film \"A No-Hit No- Run Summer\" does not appear to be explicitly stated, so I cannot provide an alphabetical order.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.064318935520947,
       "cost": {
         "t_seconds": 11.244771807920188,
@@ -2966,7 +2968,7 @@
         -2.299365478271615
       ],
       "judge_candidate": "I cannot provide the answer without knowing the director's last name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8797135315820732,
       "cost": {
         "t_seconds": 9.743534592911601,
@@ -3025,7 +3027,7 @@
         -2.3241692773194624
       ],
       "judge_candidate": "The date one week before the plaintiff's birthdate in the 1882 Barbed Wire PatENT Case would be specific to the plaintiff' Joseph Glidden's actual birthdate, which is August 28, 1813. So, one week before that would",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7869670953647936,
       "cost": {
         "t_seconds": 12.804310817271471,
@@ -3145,7 +3147,7 @@
         -2.431216059213558
       ],
       "judge_candidate": "There are 3 more vowels than Consonants in Eochaid Mac Fiachenai's pateral grandfather's name (Eochaid).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.250357820952282,
       "cost": {
         "t_seconds": 11.286081149242818,
@@ -3382,7 +3384,7 @@
         -2.5309066121381902
       ],
       "judge_candidate": "I'm sorry for any confusion, but the question lacks specific names. The director of the film \"Bratuku Teruvu\" is not publicly associated with a specific spouse, so I'm unable to provide the combined length of their spouse's first and last name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9372983363211675,
       "cost": {
         "t_seconds": 12.090960999950767,
@@ -3676,7 +3678,7 @@
         -2.372729751497781
       ],
       "judge_candidate": "The author of \"Elizabeth and After,\" Colette, did not attend a university, so the question is not applicable.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0687251523406682,
       "cost": {
         "t_seconds": 9.962160544935614,
@@ -4139,7 +4141,7 @@
         -2.332018739902097
       ],
       "judge_candidate": "The closest palindrome number, in the year 2015, when \"Dog with a Blog\" ended, is 2002.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.789758845623306,
       "cost": {
         "t_seconds": 7.259542195126414,
@@ -4781,7 +4783,7 @@
         -2.3073629287137147
       ],
       "judge_candidate": "Rick Norton and Albert G. Simms do not share a family relationship, so there is no comparison to be made regarding their last names.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.157517638701051,
       "cost": {
         "t_seconds": 9.852380901109427,
@@ -4959,7 +4961,7 @@
         -2.3895185900015417
       ],
       "judge_candidate": "There are 2 more vowels than Consonants in Edward Wingfield.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.0063774284072626,
       "cost": {
         "t_seconds": 5.92759711900726,
@@ -5185,7 +5187,7 @@
         -2.297047560150525
       ],
       "judge_candidate": "The first letter of the firstname of the spouse of the Longest Reigning British Monarch (Queen Elizabeth II) is 'p' (for Philip). However, it's important to note that Prince Philip is not a monarch, but a consort.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.9966514428172887,
       "cost": {
         "t_seconds": 9.79932006308809,
@@ -6219,7 +6221,7 @@
         -2.3115555246111437
       ],
       "judge_candidate": "The total number of letters in Kalanipauah's niece's husband's last name cannot be determined as the specific names are not provided.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.1246196534644826,
       "cost": {
         "t_seconds": 7.762546831276268,
@@ -6456,7 +6458,7 @@
         -2.241948312029518
       ],
       "judge_candidate": "The concatenation of thefirst and last digits of that year (1950) is 05. Marvel Classics Comics, which adapted literary classics like Moby Dick by Herman Melville, specialized in the 1950s.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.229383266699273,
       "cost": {
         "t_seconds": 11.113654422108084,
@@ -6860,7 +6862,7 @@
         -2.2859610449062315
       ],
       "judge_candidate": "There are three syllables in the first name of Henry Ford, the paternal grandfather of Edsel Ford II.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7204166191248011,
       "cost": {
         "t_seconds": 6.358248132281005,
@@ -7218,7 +7220,7 @@
         -2.353951822973564
       ],
       "judge_candidate": "The concatenation of the final letters of Mike Schur's first and last name (who created \"Brooklyn Nine-Nine\") is \"RSC\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.228268217987973,
       "cost": {
         "t_seconds": 10.870069325901568,
@@ -8090,7 +8092,7 @@
         -2.242095935817682
       ],
       "judge_candidate": "The U2 album song \"An Cat Dubh / Into The Heart\" was released on October 14, 1980.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.287737418603949,
       "cost": {
         "t_seconds": 8.500214625149965,
@@ -9248,7 +9250,7 @@
         -2.342502096445038
       ],
       "judge_candidate": "I'm sorry for any confusion, but the question lacks specific details about the director and the film \"The Monocle Laugh\" as it doesn't provide the names of the director or the mother in question. Therefore, I'm unable to provide an accurate answer.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.411512934274319,
       "cost": {
         "t_seconds": 12.022647950332612,
@@ -9426,7 +9428,7 @@
         -2.234661096998165
       ],
       "judge_candidate": "The deadline is January 8, 2008 at 14:37 (UTC-6) in the county where Kimbrough Memorial Stadium (located in Hattiesburg, Mississippi) is situated, considering it follows Central Standard Time (CST).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.261924818603121,
       "cost": {
         "t_seconds": 11.786246304865927,
@@ -9891,7 +9893,7 @@
         -2.321138373462751
       ],
       "judge_candidate": "Luke Null was an actor on \"Saturday Night Live,\" which premiered its 44th season on September 29, 2018. However, Null was a cast member during the 43rd season (2017-2018).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9522459744227765,
       "cost": {
         "t_seconds": 10.841839437372983,
@@ -10006,7 +10008,7 @@
         -2.31011524748172
       ],
       "judge_candidate": "Fitzroy Somerset, the 5th Baron Raglan'sr father, passed away in the month of January. (His exact date of death is not specified in the question.)",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.9751714165243446,
       "cost": {
         "t_seconds": 10.114734333008528,
@@ -10121,7 +10123,7 @@
         -2.5220604803388857
       ],
       "judge_candidate": "There are three syllables in the last name of John Wayles, Harriet Hemings' maternal grandfather. (Way-les)",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.1236241064858907,
       "cost": {
         "t_seconds": 8.756373810116202,
@@ -10181,7 +10183,7 @@
         -2.2751983272551466
       ],
       "judge_candidate": "The date one week before the birth of the director of the film \"Liberated Hands,\" known as Aki Kaurismäki, would be determined by his date of birth, which is August 24, 1957. To find the date one week before, you would subtract",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.3007089791116786,
       "cost": {
         "t_seconds": 12.142372931353748,
@@ -10940,7 +10942,7 @@
         -2.2232497164244527
       ],
       "judge_candidate": "The date 10 years later from the premiere of \"The Middle\" (2009) when Charlie McDermot plays Axl Heck would be September 26, 2019 + 10 years, which is September 26,2029.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.173496949973968,
       "cost": {
         "t_seconds": 13.286484309006482,
@@ -11169,7 +11171,7 @@
         -2.3475205340664944
       ],
       "judge_candidate": "The date one week after the movement Hans Knirsc was an activist for, officially gained traction, would be one week later than the specified date. The exact date would depend on the initial date provided.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3874396092012495,
       "cost": {
         "t_seconds": 10.204487374052405,
@@ -11400,7 +11402,7 @@
         -2.2175122800896525
       ],
       "judge_candidate": "The binary code for the lowercase 'a' in Abu Mansur Fulan Sutun's (assuming his last name is Sutun) paternal grandfather's first letter is 1100001.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.7511252613751003,
       "cost": {
         "t_seconds": 9.89295346243307,
@@ -12208,7 +12210,7 @@
         -2.4497533559531286
       ],
       "judge_candidate": "The first letter of Joseph-AndréTaschereau'sbirth name (Joseph-André Guillaume Taschereau) is 'j'. However, since we are asked for his paternal grandfather, the first name would be 'g' (Guillaume).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.2497367350101398,
       "cost": {
         "t_seconds": 7.225126316770911,
@@ -12388,7 +12390,7 @@
         -2.3545996413553416
       ],
       "judge_candidate": "The year 1968 was founded by The Rip Off Review of Western Culture, and its unique prime factors are 2, 3, and 7.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2663634147185427,
       "cost": {
         "t_seconds": 10.602429390884936,
@@ -12443,7 +12445,7 @@
         -2.4281131790258996
       ],
       "judge_candidate": "I'm unable to provide the answer as I don't have the given name of Ollom Fotal's paternal grandfather.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.288796085038167,
       "cost": {
         "t_seconds": 9.494110960979015,
@@ -12500,7 +12502,7 @@
         -2.3526387732659844
       ],
       "judge_candidate": "Charlie McDermott portrays Axl Heck on the TV show \"The Middle,\" which premiered in 2009. However, the specific year for a particular episode would depend on the episode's air date within the show's timeline.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.593809346195063,
       "cost": {
         "t_seconds": 12.124071312136948,
@@ -12796,7 +12798,7 @@
         -2.4191622827744945
       ],
       "judge_candidate": "The last name of Chiang Hsia-Wu's paternal grandfather is Chiang (as Chiang Hsia Wu is the son of Chiang Kai-Shek, who is also known as Jiang Jieshi). However, without specific information about his paternal grandfather,",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.75890394605555,
       "cost": {
         "t_seconds": 11.257928489241749,
@@ -12912,7 +12914,7 @@
         -2.321303638657963
       ],
       "judge_candidate": "The date one month before the end of the Disney sitcom \"Dog With a Blog,\" where Genevieve Hannelius played Avery Jennings, would be the last day of the month preceding the final episode's air date. However, without the specific air date, I can't provide the",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0735235963978487,
       "cost": {
         "t_seconds": 13.899789206217974,
@@ -13079,7 +13081,7 @@
         -0.8284409828612345
       ],
       "judge_candidate": "The first name of Neal has 4 fewer letters than the last name of Hsiao-chung (the other child of Chian's father).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0618363790584553,
       "cost": {
         "t_seconds": 7.461818488314748,
@@ -13249,7 +13251,7 @@
         -2.31492421977036
       ],
       "judge_candidate": "The publisher of Hürriyaet was founded in 1948, so 10 years after would be 1958.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.9927031835169122,
       "cost": {
         "t_seconds": 8.710306590422988,
@@ -13423,7 +13425,7 @@
         -2.271988119335636
       ],
       "judge_candidate": "I'm unable to provide the binary code for a specific person without knowing the last name of HughMontgomerie, 7th Earl of Eglinton's grandmother. However, I can show you how to convert a lowercase 'g' into binary: 0111011.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9192840003857412,
       "cost": {
         "t_seconds": 13.098757291212678,
@@ -13481,7 +13483,7 @@
         -2.3367381867859143
       ],
       "judge_candidate": "The longest substring of consecutive alphabetical letters in the spouse's first name of the director of the film \"The Belles of St. Trinian's\" is \"St\".",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8420201837849233,
       "cost": {
         "t_seconds": 11.640840210020542,
@@ -13541,7 +13543,7 @@
         -2.3820836658229108
       ],
       "judge_candidate": "The longest word in the name \"Rome,\" where the author of Hannabal and Scipio (Marcus Annaeus Seneca) was educated, is \"Rome\" itself.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.299195425565151,
       "cost": {
         "t_seconds": 12.72286975895986,
@@ -13941,7 +13943,7 @@
         -2.294321843875735
       ],
       "judge_candidate": "I cannot provide the exact number of days as I don't have real-time access to calculate dates or personal information about individuals. Timothy Shriver' father, Sargent Shriver, passed away on January 18, 2011. You can calculate the number of days between the two",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9295314358372169,
       "cost": {
         "t_seconds": 12.175394827034324,
@@ -14220,7 +14222,7 @@
         -2.238070171400496
       ],
       "judge_candidate": "The letter \"f\" does not appear in the first name if the child of Caroline Le Roy's spouse is a boy (e.g., John, James, Robert), as the letter \"f\" is not typically used in male names. If the child is a girl, the answer would depend on the chosen",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.5421099418632074,
       "cost": {
         "t_seconds": 9.459600382950157,
@@ -15446,7 +15448,7 @@
         -2.3514475353344206
       ],
       "judge_candidate": "The Disney sitcom \"Dog With a Blog\" starring Genevieve Hannelius as Avery Jennings concluded in the month of March, specifically in the year 2015 (3/25).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0258747205628,
       "cost": {
         "t_seconds": 9.848642214667052,
@@ -15675,7 +15677,7 @@
         -2.1695753841922967
       ],
       "judge_candidate": "Bert Conway has 3 fewer letters compared to Brenda, the last name of the hypothetical director's mother.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.0604519439777733,
       "cost": {
         "t_seconds": 8.547965440899134,
@@ -16081,7 +16083,7 @@
         -2.233093859554435
       ],
       "judge_candidate": "The first letter of the first director's name in the 1977 movie \"michael\" is 'm'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2960855658668287,
       "cost": {
         "t_seconds": 11.285159620922059,
@@ -16141,7 +16143,7 @@
         -2.2756314385983143
       ],
       "judge_candidate": "The last name of Roberto Zúñiga has 7 fewer letters compared to the last name \"Tuchet.\"",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.296594803260657,
       "cost": {
         "t_seconds": 10.40163806406781,
@@ -16483,7 +16485,7 @@
         -2.563860639922109
       ],
       "judge_candidate": "The length of the longest sub string that consists of letters that directly follow each other in the alphabet in \"Björkman\" (the spouse of the director of the film På Solsidden) is 3 (b-c-d).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.0427334517344,
       "cost": {
         "t_seconds": 12.662117171101272,
@@ -16774,7 +16776,7 @@
         -2.2464672129393533
       ],
       "judge_candidate": "I cannot provide the binary code of a specific person's name without knowing the paternal grandfather's last name of Nia Segamian. However, for example, if we take the last letter 'n' of 'Segamian', its ASCII value is 110101",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.730856822305555,
       "cost": {
         "t_seconds": 11.71725494414568,
@@ -16891,7 +16893,7 @@
         -2.280536306599867
       ],
       "judge_candidate": "I'm unable to provide the exact answer as I don't have the information about the mother of the director for La Cage Aux Folle 3: The Wedging. The film doesn't seem to have been released yet, so there's no publicly available data about its production team.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7976544846352884,
       "cost": {
         "t_seconds": 12.872582622803748,
@@ -17592,7 +17594,7 @@
         -2.363135872606235
       ],
       "judge_candidate": "The last name of the person designing and building the park linking Salisbury Woodland Garden with a zoo is not specified in the question. Therefore, it cannot be determined how many additional letters Darryl Harrison's last name has compared to this person's last name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9478844130358957,
       "cost": {
         "t_seconds": 10.096427174750715,
@@ -17710,7 +17712,7 @@
         -2.3321892164018347
       ],
       "judge_candidate": "The longest word in the name of the university (University of Oxford) attended by the author of \"Elizabeth and After\" (Virginia Woolf) contains 8 letters.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.280022664495309,
       "cost": {
         "t_seconds": 10.419905656017363,
@@ -17768,7 +17770,7 @@
         -2.3572851845087985
       ],
       "judge_candidate": "The deadline in the county where Tim Dubois was born (assuming it's in the Eastern Time Zone, as most of the U.S.) would be August 13, 2029 at 10:50 AM Eastern Daylight Time (EDT).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.9343137431562498,
       "cost": {
         "t_seconds": 12.578683495987207,
@@ -18238,7 +18240,7 @@
         -2.348136280784466
       ],
       "judge_candidate": "I'm sorry for any confusion, but the question asks for the binary code of a specific character, and it's not possible to determine the last name of Ollom Fotal's paternal grandfather without knowing his name. Therefore, I can't provide the binary code for the last letter of",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0915947399363035,
       "cost": {
         "t_seconds": 13.504462911281735,
@@ -18357,7 +18359,7 @@
         -2.2590032986015283
       ],
       "judge_candidate": "The first name of the child (assuming the author's child) who helped adapt \"One More Time\" into a play would be alphabetized under the letter \"E,\" as the name is Emma.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2693228116750466,
       "cost": {
         "t_seconds": 11.099720706231892,
@@ -19063,7 +19065,7 @@
         -2.4002663950857386
       ],
       "judge_candidate": "The first letter of the first author's name, who wrote the play adapted into a film featuring the Suite from Henry V, is 's' (Shakespeare).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2406838181493063,
       "cost": {
         "t_seconds": 10.178210564889014,
@@ -19411,7 +19413,7 @@
         -0.33785038353162283
       ],
       "judge_candidate": "The Rip Off Review of Western Culture was founded in a year prior to 2024.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.588483310638595,
       "cost": {
         "t_seconds": 5.329363347031176,
@@ -19584,7 +19586,7 @@
         -2.449337627470646
       ],
       "judge_candidate": "The number of hours between the winter time zone where the headquarters of the publisher (Oxford University Press) is located (London, UK) and UTC depends on whether Daylight Saving Time is in effect. When Daylight Saving Time (DST) is not in effect, London is GMT (Green",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8784551970709336,
       "cost": {
         "t_seconds": 12.670136730186641,
@@ -20572,7 +20574,7 @@
         -2.280965143605873
       ],
       "judge_candidate": "The combined length of the first and last name of Chian Hsiaochang's other child's name cannot be determined as the other child's name is not provided in the given information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6669295094487864,
       "cost": {
         "t_seconds": 8.580350283067673,
@@ -20745,7 +20747,7 @@
         -2.273817521086746
       ],
       "judge_candidate": "The actor who played Colonel Sherман T. Potter in M*A*S**H did not play a role named Kentucky Jones.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9007877285835217,
       "cost": {
         "t_seconds": 9.45630631223321,
@@ -20802,7 +20804,7 @@
         -2.2940709258928975
       ],
       "judge_candidate": "The result cannot be determined as the specific year of King George V's birth is not provided in the question.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.6695229912494272,
       "cost": {
         "t_seconds": 10.864956428296864,
@@ -20862,7 +20864,7 @@
         -2.237277606232589
       ],
       "judge_candidate": "The last name of HubertBeil has 3 fewer letters compared to the last name \"Watts,\" the father of Nim in Return to Nim’s Island.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2621886562445326,
       "cost": {
         "t_seconds": 10.208450932055712,
@@ -21214,7 +21216,7 @@
         -2.1879261310165585
       ],
       "judge_candidate": "The closest palindrome number, in terms of the year of the death of the composer of the film \"Oomana Thinkal,\" is 1991 (reads the same backward). However, the composer of \"Oomana Thinkil,\" M. Jayachandran, did not die in",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.284564829624677,
       "cost": {
         "t_seconds": 13.60228154528886,
@@ -21784,7 +21786,7 @@
         -2.2564415616360063
       ],
       "judge_candidate": "The alphabetical order of letters in Charles Monck's pateral grandfather's first name is C-A-R-L.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.9809309749189181,
       "cost": {
         "t_seconds": 8.30777048273012,
@@ -22462,7 +22464,7 @@
         -2.3914468640362894
       ],
       "judge_candidate": "The year before the Cleveland Browns placed fourth (in 2009) and adopted its current name was 2008.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.6770608039483229,
       "cost": {
         "t_seconds": 7.542178029194474,
@@ -22809,7 +22811,7 @@
         -2.2867326203880327
       ],
       "judge_candidate": "The product of the digits for the year when Gina Torres (Kaylee Frye in Firefly) and Alan Dale co-starred in a sci-Fi TV film has no definitive answer as there is no specific year recorded for such a collaboration in a sci-FI film.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6555603406072212,
       "cost": {
         "t_seconds": 13.354208294767886,
@@ -22986,7 +22988,7 @@
         -2.347802078215053
       ],
       "judge_candidate": "The concatenation of thefirst and last digits of Viktoras Kulvinskas' year of birth (1937) is 37.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2987234555692515,
       "cost": {
         "t_seconds": 12.333488945383579,
@@ -23046,7 +23048,7 @@
         -2.315075228493289
       ],
       "judge_candidate": "The longest substring of consecutive alphabetical letters in the first name of Robert Strausz-Hupé (the person who sponsored the resolution) is \"Strausz\".",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.26070178295037,
       "cost": {
         "t_seconds": 11.026425790041685,
@@ -23106,7 +23108,7 @@
         -2.3519622002036975
       ],
       "judge_candidate": "Anna Camp's character in Pitch Perfect, Aubrey Posen, has a two-letter combination of \"Po\" in her last name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.299676177273593,
       "cost": {
         "t_seconds": 9.50223978376016,
@@ -23342,7 +23344,7 @@
         -2.203590981515198
       ],
       "judge_candidate": "The last name of Mable (5 letters) has 3 fewer letters than the first name of David (8 letters), who is the husband of Kalanikauahi's (14 letters) niece.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2017446055093526,
       "cost": {
         "t_seconds": 11.465528710745275,
@@ -23697,7 +23699,7 @@
         -2.1353982590218608
       ],
       "judge_candidate": "The year 7 years after Daft Punk was formed (2006) would be 2013.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.259655970011049,
       "cost": {
         "t_seconds": 9.724470925051719,
@@ -24869,7 +24871,7 @@
         -2.2483260879834717
       ],
       "judge_candidate": "There are 16 distinct two-letter combinations in the last name \"Chiang\" (assuming no diacritics and considering only the English alphabet).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.247231285440456,
       "cost": {
         "t_seconds": 11.88188156299293,
@@ -24929,7 +24931,7 @@
         -2.2820576353541213
       ],
       "judge_candidate": "There are 6 consonants in the name \"Geoffrey,\" who designed and built the Marwell Wildlife Park, which connects Salisbury Woodland Garden with a zoo.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2639291491337565,
       "cost": {
         "t_seconds": 11.17512540705502,
@@ -24985,7 +24987,7 @@
         -2.4227239441246433
       ],
       "judge_candidate": "The longest substring of consecutive alphabetical letters in the first name of Queen Elizabeth II's spouse (Prince Philip) is \"philip\".",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.7155541727166714,
       "cost": {
         "t_seconds": 8.948018421884626,
@@ -26434,7 +26436,7 @@
         -2.306220839254475
       ],
       "judge_candidate": "The first name of Alexandre Berthiers' paternal grandfather does not provide enough information to determine the number of consonants.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8720734477245533,
       "cost": {
         "t_seconds": 8.287693665828556,
@@ -26608,7 +26610,7 @@
         -2.5670182689071264
       ],
       "judge_candidate": "The exact number of days cannot be determined as the death date of Humphrey de Bohun, 1st Earl of Hereford, father of Humphrey De Bohum, 2nd Earl of Hereford, is not known for the year 1994.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6637801318447099,
       "cost": {
         "t_seconds": 11.702394428197294,
@@ -26785,7 +26787,7 @@
         -2.345636744199727
       ],
       "judge_candidate": "The last letter of Eva Chamberlain’s maternal grandmother's last name is 'N'. (Assuming her maternal grandmother's surname is 'Chamberlin'.)",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6763750752622177,
       "cost": {
         "t_seconds": 7.412296592723578,
@@ -27716,7 +27718,7 @@
         -2.4271615805109428
       ],
       "judge_candidate": "Mehmed I' s paternal grandmother's name is not provided, so it's impossible to determine the number of times the letter \"u\" appears in her last name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.957124216067201,
       "cost": {
         "t_seconds": 9.330642628949136,
@@ -28883,7 +28885,7 @@
         -2.275583309155283
       ],
       "judge_candidate": "The concatenation of the year (2015) the Guild of Music supervisors awarded the film \"Carol\" is 51 (first digit: 5, last digit: 1).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.1612774794244913,
       "cost": {
         "t_seconds": 10.248033954761922,
@@ -29535,7 +29537,7 @@
         -2.251390773919228
       ],
       "judge_candidate": "The date one year before Leopold de Rothschild's (1845-1915) father, Mayer Amschel de Rothschild (1788-1855), died would be May 23, 1854.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.296692340513678,
       "cost": {
         "t_seconds": 10.50308569893241,
@@ -29768,7 +29770,7 @@
         -2.171404603447176
       ],
       "judge_candidate": "I'm unable to provide an exact answer as I don't have the specific name of the director of the film \"På Solsiden\" or the name of their spouse.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.100804755058125,
       "cost": {
         "t_seconds": 10.791778028011322,
@@ -29885,7 +29887,7 @@
         -2.3527100661790357
       ],
       "judge_candidate": "The difference between the winter time zone (Central European Time, CET) of the director of the film Romulus And The Savines, Federico Fellini, who passed away in Rome, Italy, and UTC (Coordinated Universal Time) can vary due to daylight saving time, but typically it is",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9800657156566102,
       "cost": {
         "t_seconds": 13.68644686928019,
@@ -30183,7 +30185,7 @@
         -2.288494963525519
       ],
       "judge_candidate": "The author of \"Cock and Bull\" was J.R.R. Tolkien, and the year before his birth (1892) is 1891.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.1068058782082324,
       "cost": {
         "t_seconds": 7.847703509032726,
@@ -30474,7 +30476,7 @@
         -2.373016625267336
       ],
       "judge_candidate": "The alphabetical order of letters in Abaqa Khan' paternal grandmother's last name cannot be determined as the specific name is not provided.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3813547569141358,
       "cost": {
         "t_seconds": 10.62721921922639,
@@ -31112,7 +31114,7 @@
         -2.2336090276075087
       ],
       "judge_candidate": "Lori Lyons has 2 additional letters compared to the first name (Frances) of Frances Freeling Brodrip's sibling, assuming the sibling's name is also a common English name and not a middle name or nickname.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.1741241683432606,
       "cost": {
         "t_seconds": 10.704941046889871,
@@ -32334,7 +32336,7 @@
         -1.2160009814457717
       ],
       "judge_candidate": "The alphabetical order of letters in Diya Al-Dawa's paternal grandfather's first name cannot be determined without knowing his name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.8112989292450489,
       "cost": {
         "t_seconds": 10.228657331317663,
@@ -32685,7 +32687,7 @@
         -2.1495507785071166
       ],
       "judge_candidate": "I'm unable to provide the ASCII code without knowing the last name of Eva Chambers' maternal grandmother.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8183712284760134,
       "cost": {
         "t_seconds": 9.819808857049793,
@@ -33390,7 +33392,7 @@
         -2.4367858206169397
       ],
       "judge_candidate": "The year is 2012, seven years after the actress, Jewel Staite, starred in the sci-fi TV film \"The Jury\" with Alan Dale, which was released in 2005.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2958228576989557,
       "cost": {
         "t_seconds": 13.018471006769687,
@@ -33685,7 +33687,7 @@
         -2.2634848364524274
       ],
       "judge_candidate": "The last name of Ora has 5 additional letters compared to the first name (O) of the father of the film's director, who is Orson Welles.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2858228511986023,
       "cost": {
         "t_seconds": 10.784656458999962,
@@ -34152,7 +34154,7 @@
         -2.2634873022230875
       ],
       "judge_candidate": "I'm unable to provide the answer as I don't have the name of the mother of Ava DuVernay, the director of the film \"Cop Or Hood.\" Ava DuVernays' films include \"Selma\" and \"A Wrinkle in Time,\" but she did not",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.07909559789775,
       "cost": {
         "t_seconds": 11.634442531969398,
@@ -34385,7 +34387,7 @@
         -2.140801605484312
       ],
       "judge_candidate": "I'm unable to provide an answer as I don't have the specific name of the director or the spouse of the director for the film På Solsider.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7785711082987345,
       "cost": {
         "t_seconds": 10.21397788869217,
@@ -34618,7 +34620,7 @@
         -2.249827922186315
       ],
       "judge_candidate": "The letters in the first name \"Ahmose\" of Ahmose- Henutemipet are arranged in alphabetical order.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.845725182908068,
       "cost": {
         "t_seconds": 10.17994531383738,
@@ -34965,7 +34967,7 @@
         -2.183537039361498
       ],
       "judge_candidate": "There are 10 letters between the first and last letter of Philip of Ibelin's maternal grandmother's last name (assuming it is \"Maria Comnena,\" which has M and N as the first and last letters, with 9 letters in between).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2885352974438797,
       "cost": {
         "t_seconds": 13.055146941915154,
@@ -35944,7 +35946,7 @@
         -2.3038711366220603
       ],
       "judge_candidate": "The reverse order of the letters of the first name of the director of the film \"The Invisible Menace\" (assuming the director's name is not mentioned in the question) cannot be determined, as there is no spouse mentioned.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.01201481918917,
       "cost": {
         "t_seconds": 11.499983449932188,
@@ -36110,7 +36112,7 @@
         -2.4142536189889476
       ],
       "judge_candidate": "The last letter of the firstname of the father of the film director Dino De Laurentiis is \"L\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.500679533104935,
       "cost": {
         "t_seconds": 9.356632845941931,
@@ -36288,7 +36290,7 @@
         -2.5368427114155065
       ],
       "judge_candidate": "The last name of Victoria Sacketville-West, Baronness Sackville'schild-in-law has 2 more letters compared to the last name Jessie Harper.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.270945212360531,
       "cost": {
         "t_seconds": 9.581151765305549,
@@ -36346,7 +36348,7 @@
         -2.2485908344646415
       ],
       "judge_candidate": "The last name of Chiang Hsia-Wu does not provide information about the paternal grandfather's name, so it's impossible to determine the number of vowels in his last name based on the given information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8469077718932523,
       "cost": {
         "t_seconds": 10.31470098067075,
@@ -36689,7 +36691,7 @@
         -2.2418934749956034
       ],
       "judge_candidate": "I'm unable to provide the exact name of the performer of the song \"Everybody Needs A Best friend\" as it's not specified in the question. Therefore, I can't determine the total number of letters for the first name of the performer's father.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.4445124537454925,
       "cost": {
         "t_seconds": 11.585422944277525,
@@ -36982,7 +36984,7 @@
         -2.2792842722626743
       ],
       "judge_candidate": "I'm sorry for any confusion, but the question lacks specific names. To provide an answer, I would need to know the name of the director and the name of their mother.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.5264010752767379,
       "cost": {
         "t_seconds": 11.009678281843662,
@@ -37378,7 +37380,7 @@
         -2.3658958034316506
       ],
       "judge_candidate": "The binary code of the last letters of \"Starr\" (from Ringo) and \"Tarantula\" (from the movie) cannot be directly compared as they are not the same type of data (name vs movie title). However, if we convert the letters of \"Starr,\" it would be",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.218116120966874,
       "cost": {
         "t_seconds": 12.774599550757557,
@@ -37669,7 +37671,7 @@
         -2.4369651919315913
       ],
       "judge_candidate": "The last letter of the firstname of Ahmose- Henutemipet's paternal grandfather is not provided in the given information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0043522745405913,
       "cost": {
         "t_seconds": 8.812188484240323,
@@ -38420,7 +38422,7 @@
         -2.269092615268279
       ],
       "judge_candidate": "I don't have access to personal information about Dolores Gangoteno's husband, so I'm unable to provide the answer.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3738040064638297,
       "cost": {
         "t_seconds": 7.081626553088427,
@@ -38941,7 +38943,7 @@
         -2.249549041357841
       ],
       "judge_candidate": "The release date of the professional Wrestling video game featuring Mark Henry as a \"legend\" would be 4 days earlier on the specified release date.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6475312217912932,
       "cost": {
         "t_seconds": 7.790353750810027,
@@ -40159,7 +40161,7 @@
         -2.441791462438236
       ],
       "judge_candidate": "The last name of the child (assuming it's Rollins) has 1 fewer letter than the first name of Nicholas (Rollins has 7 letters, while Nicholas has 8).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9989656602336734,
       "cost": {
         "t_seconds": 7.664985314011574,
@@ -40212,7 +40214,7 @@
         -2.2984412762714608
       ],
       "judge_candidate": "The last letter of the firstname of Albert G. Simm's father-inlaw cannot be determined as the first name is not provided.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.5823838963621609,
       "cost": {
         "t_seconds": 7.9083054340444505,
@@ -40272,7 +40274,7 @@
         -2.1045164533927982
       ],
       "judge_candidate": "There are four syllables in \"Montgomerie.\" The given name does not provide information about the grandmother's name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2298600429746585,
       "cost": {
         "t_seconds": 8.290153137873858,
@@ -40444,7 +40446,7 @@
         -2.3272356824746128
       ],
       "judge_candidate": "The first name of Dimuthu Bandera Abayakoon contains one repeated letter ('m').",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.905382601753833,
       "cost": {
         "t_seconds": 5.377493344247341,
@@ -40501,7 +40503,7 @@
         -2.24018123714483
       ],
       "judge_candidate": "I cannot provide an exact date as I don't have real-time access to personal information or events. Maria Isabel De Alcantara's mother's date of death is not publicly known, so it's impossible to calculate the number of days between her death and a specific future date.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.4609607636576343,
       "cost": {
         "t_seconds": 12.17847627401352,
@@ -41782,7 +41784,7 @@
         -2.5042741351183713
       ],
       "judge_candidate": "The alphabetical order of letters in the first name (Dimuthu) of the founder of the party of DimuthuBandara Abayakoon is D-I-M-U-T-H-U.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.971565710447883,
       "cost": {
         "t_seconds": 10.072404054924846,
@@ -42127,7 +42129,7 @@
         -2.378118327465846
       ],
       "judge_candidate": "John Annesley, the 4th Earl of Anglesey's known father, Sir Richard Annesley, died in 1780. As of Thu, 07/27/21 (the date you provided), the number of days between his death and the given date",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9297817585510557,
       "cost": {
         "t_seconds": 13.073497817851603,
@@ -42187,7 +42189,7 @@
         -2.2909233573287806
       ],
       "judge_candidate": "I'm unable to provide the ASCII code as I don't have real-time access to external databases or the internet. However, the first name of the director of the film \"A No-Hit No- Run Summer\" is Akihiko Shiota, and in lowercase,",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.1312831898281304,
       "cost": {
         "t_seconds": 12.765615764074028,
@@ -42298,7 +42300,7 @@
         -2.2885160168181327
       ],
       "judge_candidate": "The combined length of Diya Al- Dawla's paternal grandfather's first and last name is not provided in the given information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.3712063291351967,
       "cost": {
         "t_seconds": 7.966193244792521,
@@ -42818,7 +42820,7 @@
         -2.2213888319836346
       ],
       "judge_candidate": "There is 1 more vowel than consonants in the first name of Hook's brother, which is \"Ethan.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2478136050074524,
       "cost": {
         "t_seconds": 11.792268351186067,
@@ -43118,7 +43120,7 @@
         -2.5840969905269118
       ],
       "judge_candidate": "The closest palindrome number, when considering years, to the year Tefik SelimMborja was a part (1991) of the Democratic Party of Albania (1991-2005), is 1999.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.27579084601632,
       "cost": {
         "t_seconds": 11.023317150305957,
@@ -43177,7 +43179,7 @@
         -2.4126704364030056
       ],
       "judge_candidate": "There are 2 more vowels than Consonants in Saoirse (the first name of the person Billy Howle will be opposite in the upcoming British film \"Misbehaviour\", directed by Dominic Coake).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.165674574236618,
       "cost": {
         "t_seconds": 10.07837635371834,
@@ -44163,7 +44165,7 @@
         -2.1971612831426226
       ],
       "judge_candidate": "The magazine started in the year 2006, so the reverse order would be 2006 in years, months, and days would be 06-20-20.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2521635274723018,
       "cost": {
         "t_seconds": 9.95043688127771,
@@ -44568,7 +44570,7 @@
         -2.1943954561909
       ],
       "judge_candidate": "The concatenation of the initials of the current drummer (Matthew \"M\" and Mustafa \"a\") of the band Khalid's band (Khalid did \"What Lovers Do\", not his band) in lowercase is \"ma\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.3006725234935703,
       "cost": {
         "t_seconds": 13.263243050314486,
@@ -44737,7 +44739,7 @@
         -2.4149182550957753
       ],
       "judge_candidate": "The concatenation of thesecond and third digits of King George V's year of birth (1865) is 65.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.409443487257943,
       "cost": {
         "t_seconds": 9.111923635005951,
@@ -46585,7 +46587,7 @@
         -2.3672064528867787
       ],
       "judge_candidate": "The combined length of the first and last name of Kalanipauahu's niece's husband is not provided in the given information.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.976043047493967,
       "cost": {
         "t_seconds": 9.794843055773526,
@@ -46695,7 +46697,7 @@
         -2.3215975089293943
       ],
       "judge_candidate": "I cannot provide the answer as I don't have the last name of Alice Clere's paternal grandfather.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.1008711985213688,
       "cost": {
         "t_seconds": 7.032046685926616,
@@ -46812,7 +46814,7 @@
         -2.1661090629039634
       ],
       "judge_candidate": "There are 5 letters between the first and last letter of the first name of Jake Scott (the director of American Woman, 2018), which is \"J\" and \"S\". So, the letters in between are \"a\", \"k\", \"e\", and \"t\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.289138337813892,
       "cost": {
         "t_seconds": 12.256188089959323,
@@ -47379,7 +47381,7 @@
         -1.6135681386541856
       ],
       "judge_candidate": "The year when the largest conventioncenter in the U.S state of Georgia opened is different from the year 2014 (as of my last update).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.5636116971488634,
       "cost": {
         "t_seconds": 8.261148519814014,
@@ -47783,7 +47785,7 @@
         -2.3067834270924563
       ],
       "judge_candidate": "The concatenation of the initial and final digits of the year when the British rock band Radiohead released \"Lost!\" (2003) is 033.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.293925651367296,
       "cost": {
         "t_seconds": 9.952109682839364,
@@ -47954,7 +47956,7 @@
         -2.144126284014187
       ],
       "judge_candidate": "There are 9 distinct two-letter combinations in the first name of Kam Heskin (KA, AM). However, the film and character you mentioned, \"Paige Morgan,\" do not relate to Kam Heskin. Kam Heskin's character in the given year (2004",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9537281384869047,
       "cost": {
         "t_seconds": 13.137983163353056,
@@ -48603,7 +48605,7 @@
         -2.348374257662952
       ],
       "judge_candidate": "The publisher of The Miscellanny News was founded in 1893, so 10 years after that would be 1903.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2234388273226577,
       "cost": {
         "t_seconds": 7.494580477010459,
@@ -48841,7 +48843,7 @@
         -2.1503826104978807
       ],
       "judge_candidate": "The first letters of the first and last name of the play's author, who wrote \"Henry V\" and whose work was adapted into a film featuring the orchestral arrangement \"Suite from Henry V\", is \"shakespeare\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8909731890951709,
       "cost": {
         "t_seconds": 8.873738532885909,
@@ -49137,7 +49139,7 @@
         -2.2853385712633694
       ],
       "judge_candidate": "There is one more vowel than consonants in the first name of Ava DuVernay, the director of the film Cop Or Hood (her mother's name is not provided in the question).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2318456415411534,
       "cost": {
         "t_seconds": 11.21119376597926,
@@ -49315,7 +49317,7 @@
         -1.2386231679707091
       ],
       "judge_candidate": "I'm unable to provide the ASCII code for a specific historical figure's name as it's not applicable, as ASCII codes are used for English characters and Yujiulü Dölün's paternal grandparent's name is in a different language. However, if we",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7623736510702772,
       "cost": {
         "t_seconds": 12.984240184072405,
@@ -49662,7 +49664,7 @@
         -2.3520981259914966
       ],
       "judge_candidate": "The actress who created The Dog Woman telemovies was born in the year 1960, so the reverse order of her year of birth is 0619.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2125962931023286,
       "cost": {
         "t_seconds": 12.04577469220385,
@@ -50543,7 +50545,7 @@
         -2.2671451826284126
       ],
       "judge_candidate": "The total number of letters in Robert Petre, 9th Baron Petre's (not 8th, there seems to be a mistake) paternal grandmother's last name is seven.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7438356083755124,
       "cost": {
         "t_seconds": 8.448897919151932,
@@ -50602,7 +50604,7 @@
         -2.337199017233932
       ],
       "judge_candidate": "I'm unable to determine the father's name of the performer of the song \"Everybody Needs A Best friend.\" Therefore, I can't count the number of repeated letters in that name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.144304105408897,
       "cost": {
         "t_seconds": 10.440469739958644,
@@ -50840,7 +50842,7 @@
         -2.1950407815807362
       ],
       "judge_candidate": "The closest palindrome number, in terms of the year of birth of Richard Hornsby (1825), is 1925.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2773766242653175,
       "cost": {
         "t_seconds": 10.019456832204014,
@@ -51487,7 +51489,7 @@
         -2.4880687414279654
       ],
       "judge_candidate": "The last letter of the firstname of the spouse of the film director of The Invisible Menace is not provided in the question as the director and the spouse's name are not specified.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.777416454319185,
       "cost": {
         "t_seconds": 10.727466749027371,
@@ -51547,7 +51549,7 @@
         -2.2084873836031824
       ],
       "judge_candidate": "I cannot provide the binary code of a specific person as I don't have personal data. However, the first letter of Diya Al- Dawla's paternal grandfather's first name in lowercase is 'd', and in binary it would be 01100001.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0948615822522796,
       "cost": {
         "t_seconds": 12.984236403368413,
@@ -51726,7 +51728,7 @@
         -2.299964216570185
       ],
       "judge_candidate": "I'm unable to provide the ASCII code as the question asks for the last letter of a name, not a specific ASCII code. However, the director of the film \"Snake In The Eagle’s Shadow\" is Jackie Chan, and the last letter of his first name is '",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2184895104027014,
       "cost": {
         "t_seconds": 13.367037027142942,
@@ -51786,7 +51788,7 @@
         -2.362706612078218
       ],
       "judge_candidate": "I cannot provide the ASCII code without knowing the current drummer's first name of the band who did \"What Lovers Do.\" The song was originally performed by SZA featuring Maroon 5, and Maroon 5's drummer is Matt Flynn. However, for the song \"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.211554495672988,
       "cost": {
         "t_seconds": 13.604384256061167,
@@ -51960,7 +51962,7 @@
         -2.3737016983210557
       ],
       "judge_candidate": "The English inventor Richard Hornsby's date of birth is not publicly known with certainty, so it's not possible to determine which day of the week it fell on.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.240637404992812,
       "cost": {
         "t_seconds": 10.037265906110406,
@@ -52018,7 +52020,7 @@
         -2.2906158756720063
       ],
       "judge_candidate": "The actor who played Colonel Sherман T. Potter in M*A*S**H did not play Kentucky Jones, so there is no alphabetical order to determine for that character.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8991258147970465,
       "cost": {
         "t_seconds": 11.70351705700159,
@@ -52078,7 +52080,7 @@
         -2.405797887133621
       ],
       "judge_candidate": "The deadline is on June 4, 1973 at 22:43 UTC in the place of the performer's death (assuming the performer was in a time zone with UTC+0 time difference). However, please note that the performer of the song \"I'll",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.212597579121509,
       "cost": {
         "t_seconds": 13.759985412005335,
@@ -52604,7 +52606,7 @@
         -2.4420148561259376
       ],
       "judge_candidate": "There is one more vowel than consonants in the first name of Durval Discos' father, as 'Durval' contains 4 vowels (u, a, u, a) and 3 consonants (d, r, v).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.1485728321229978,
       "cost": {
         "t_seconds": 11.348200243897736,
@@ -52835,7 +52837,7 @@
         -1.5158899769421001
       ],
       "judge_candidate": "There are 3 more vowels than Consonants in Brenda Brave.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.4031185401889419,
       "cost": {
         "t_seconds": 6.074353572912514,
@@ -52949,7 +52951,7 @@
         -2.309770139403892
       ],
       "judge_candidate": "The birth year of the player Charles Barkley changed his Jersey number to #32, Julius Erving (1950), is different from the year 2014, as it is a year earlier.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8599792229623668,
       "cost": {
         "t_seconds": 12.220905737020075,
@@ -53950,7 +53952,7 @@
         -2.325905726503426
       ],
       "judge_candidate": "The cube of the summed digits of Charles Barkley's honored jersey number change year (1990) cannot be directly determined as it is not his birth year. However, the sum of the digITS of 32 (the number he changed to) is 5 (3",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.16569161665015,
       "cost": {
         "t_seconds": 12.343376819044352,
@@ -54419,7 +54421,7 @@
         -2.2571056695449707
       ],
       "judge_candidate": "The first name of Alexander FloRES has 6 letters, while the last name of Pattie Boyd (the former member of The Beatles married to George Harrison and the actress in The Black Belly of The Tarantula) has 4 letters. So, Alexander Flores has 2 additional letters in",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2135666633328057,
       "cost": {
         "t_seconds": 10.01918845390901,
@@ -55003,7 +55005,7 @@
         -1.5951005858539824
       ],
       "judge_candidate": "The concatenation of the final letter of Mervyn (y) and the first letter of Tuchet (t) is \"yt\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0484126479672664,
       "cost": {
         "t_seconds": 10.685893910005689,
@@ -55120,7 +55122,7 @@
         -2.4653787235699562
       ],
       "judge_candidate": "The alphabetical order of letters in the first name (in-law) of Victoria Sackville West's child-in law is: D (for Duncan). This is based on the assumption that the child-in-law is Duncan Grant, who was married to her daughter, Judith Sackville",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.1865406764733084,
       "cost": {
         "t_seconds": 10.737623323686421,
@@ -55239,7 +55241,7 @@
         -2.2934041916737593
       ],
       "judge_candidate": "The concatenation of the year's first and last digits for the founding of The Rip OffReview Of Western Culture (assuming it was founded in 1973) is 73.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2928762204781075,
       "cost": {
         "t_seconds": 11.107615274377167,
@@ -55297,7 +55299,7 @@
         -2.2332538659555943
       ],
       "judge_candidate": "I cannot provide the answer as I don't have information about Dui Finn's paternal grandfather's name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8724755025702686,
       "cost": {
         "t_seconds": 8.145954131148756,
@@ -55414,7 +55416,7 @@
         -2.251690399217262
       ],
       "judge_candidate": "The name of the person who built the park connecting Salisbury Woodland Garden and a zoo is not provided, so it's impossible to determine the number of \"s\" appearances in their first name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6529953548213858,
       "cost": {
         "t_seconds": 10.671437301207334,
@@ -55932,7 +55934,7 @@
         -2.2485498656459235
       ],
       "judge_candidate": "I'm unable to provide a specific answer as I don't have the name of the actress who played the role of Susan Walker in Miracle On 34th Street, nor do I have information about her siblings.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2040293455105084,
       "cost": {
         "t_seconds": 12.646441502962261,
@@ -56222,7 +56224,7 @@
         -2.497582528628155
       ],
       "judge_candidate": "Duleep Singh'sr father, Maharaja Ranjit Singh, passed away on a Sunday (June 27, 1839).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0167465050873488,
       "cost": {
         "t_seconds": 9.472826157230884,
@@ -56278,7 +56280,7 @@
         -2.44837354592742
       ],
       "judge_candidate": "a is the first letter of annas last name in pitch perfect (bella from the bellas).",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.718519312438605,
       "cost": {
         "t_seconds": 8.126947643235326,
@@ -57153,7 +57155,7 @@
         -2.3297719534632444
       ],
       "judge_candidate": "There are 3 more vowels than Consonants in the first name of Hitchcock's mother, whose name is Emma.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.2564707827908173,
       "cost": {
         "t_seconds": 12.388900265097618,
@@ -57562,7 +57564,7 @@
         -2.36178443282959
       ],
       "judge_candidate": "I'm unable to provide an exact answer as I don't have the specific last name of the director of the film På Solsider (On the Sunny Side) and the identity of their spouse.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.5571636109387914,
       "cost": {
         "t_seconds": 10.679787777829915,
@@ -57621,7 +57623,7 @@
         -2.422369133701311
       ],
       "judge_candidate": "I'm unable to provide a definitive answer as I don't have the name of the actress who played the role of Susan Walker in Miracle On 34th Street or her sibling's name.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0816345644965364,
       "cost": {
         "t_seconds": 11.67278881976381,

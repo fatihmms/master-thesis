@@ -2,8 +2,8 @@
 #SBATCH --job-name=fatih_kle_morehopqa_70b
 #SBATCH --output=logs/morehopqa_70b_%A_%a.out    # %A = array job id, %a = task id (0-7)
 #SBATCH --error=logs/morehopqa_70b_%A_%a.err
-#SBATCH --time=72:00:00                          # C4 cells estimated 25-35h at N=1000; 72h is the partition max
-#SBATCH --partition=gpu_h100                     # fallback with 4x H100 nodes: sbatch --partition=gpu_h100_il (48h max!)
+#SBATCH --time=01:00:00                          # C4 cells estimated 25-35h at N=1000; 72h is the partition max
+#SBATCH --partition=gpu_h100_il                     # fallback with 4x H100 nodes: sbatch --partition=gpu_h100_il (48h max!)
 #SBATCH --gres=gpu:4                             # 70B bf16 ~140GB weights -> sharded over 4x H100 via device_map=auto
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=256G

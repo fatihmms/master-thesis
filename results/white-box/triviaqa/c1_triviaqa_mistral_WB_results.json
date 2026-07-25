@@ -11,10 +11,12 @@
     "hidden_layer": 16,
     "pool": "mean",
     "kernel": "cosine",
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.7630981087706011,
-  "hallucination_rate": 0.278,
+  "auroc": 0.7472881778284064,
+  "hallucination_rate": 0.269,
   "details": [
     {
       "id": "triviaqa-000000",
@@ -383,7 +385,7 @@
       ],
       "vne": 0.35858707539980134,
       "judge_candidate": "The Dramatic Copyright Society was founded in 1831 by James Winston, Samuel James Arnold, Samuel Beazley, Sir Andrew Francis Barnard, and Francis Mills to promote the protection and revenue of playwrights and theatrical works.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.8682070509530604,
         "n_gen_tokens": 492,
@@ -458,7 +460,7 @@
       ],
       "vne": 0.19479428783865874,
       "judge_candidate": "You would expect to receive a traditional Italian flatbread, typically topped with olive oil, salt, and sometimes herbs, in an Italian restaurant.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.6567415320314467,
         "n_gen_tokens": 306,
@@ -1333,7 +1335,7 @@
       ],
       "vne": 0.32702875794411673,
       "judge_candidate": "A group of hawks or falcons is called a \"cast\" or a \"tourney.\" However, a group of falcons specifically raised for falconry is called a \"mew.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.372686570044607,
         "n_gen_tokens": 325,
@@ -2208,7 +2210,7 @@
       ],
       "vne": 0.20047059165000408,
       "judge_candidate": "The sticky toffee pudding was invented at the Hungry Monk in Alfriston, Sussex.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.4181382488459349,
         "n_gen_tokens": 262,
@@ -2458,7 +2460,7 @@
       ],
       "vne": 0.15233415221983873,
       "judge_candidate": "There is no British Formula 1 Grand Prix held in Northamptonshire. The British Grand Prix is usually held at Silverstone Circuit in Buckinghamshire.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.8851432767696679,
         "n_gen_tokens": 331,
@@ -2783,7 +2785,7 @@
       ],
       "vne": 0.34845838679410307,
       "judge_candidate": "The word \"Punic\" originates from the Latin term \"Phoenicus,\" which refers to the Phoenicians, a maritime civilization that included Carthage, the city-state involved in the Punic Wars.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.621200964320451,
         "n_gen_tokens": 497,
@@ -2808,7 +2810,7 @@
       ],
       "vne": 0.17507340015096767,
       "judge_candidate": "Galba, the Roman Emperor, took his own life in 68 AD after being declared a public enemy by the Senate.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.484686641022563,
         "n_gen_tokens": 270,
@@ -3108,7 +3110,7 @@
       ],
       "vne": 1.002428539741611,
       "judge_candidate": "One piece, better than none. (This proverb refers to the idea that having something, even if it's not perfect, is better than having nothing.)",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.9968884410336614,
         "n_gen_tokens": 231,
@@ -3183,7 +3185,7 @@
       ],
       "vne": 0.24910430277325324,
       "judge_candidate": "The Richardsons, led by Charles and Ronald, were rivals of the Krays in South London.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.448395973071456,
         "n_gen_tokens": 236,
@@ -3783,7 +3785,7 @@
       ],
       "vne": 0.4806458854637351,
       "judge_candidate": "The cow ran away with the dish and the spoon in the nursery rhyme \"Hey Diddle Diddle.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5268823257647455,
         "n_gen_tokens": 195,
@@ -3933,7 +3935,7 @@
       ],
       "vne": 0.39009730864748404,
       "judge_candidate": "Crash, rise, and hi-hat are types of drum sounds or cymbal sounds, not specific musical instruments. They are components of a drum kit.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.2148780608549714,
         "n_gen_tokens": 307,
@@ -4008,7 +4010,7 @@
       ],
       "vne": 0.23015671948194216,
       "judge_candidate": "The Duke and Duchess of Wessex, Prince Edward and Sophie, reside at Bagshot Park in Surrey.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6802039360627532,
         "n_gen_tokens": 277,
@@ -4908,7 +4910,7 @@
       ],
       "vne": 0.28580532960715044,
       "judge_candidate": "William S. Hart, known as the \"Father of the American Western,\" made 336 western films between 1910 and 1935, often riding his horse named Tony.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.128231381997466,
         "n_gen_tokens": 398,
@@ -5083,7 +5085,7 @@
       ],
       "vne": 0.470545825363453,
       "judge_candidate": "The temple is known as the Pantheon, built by Agrippa and later rebuilt by Hadrian in Rome.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.5555214770138264,
         "n_gen_tokens": 260,
@@ -5258,7 +5260,7 @@
       ],
       "vne": 0.07964575979852144,
       "judge_candidate": "Jimi Hendrix died at the age of 27.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.7495726919732988,
         "n_gen_tokens": 130,
@@ -5733,7 +5735,7 @@
       ],
       "vne": 0.1996078260685852,
       "judge_candidate": "The final carrier of the Olympic flame in the Olympic Torch Relay is typically the Olympic host city's mayor or a prominent local figure.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.8595636328682303,
         "n_gen_tokens": 304,
@@ -5808,7 +5810,7 @@
       ],
       "vne": 0.22878968419444484,
       "judge_candidate": "In Welsh, the police are called \"Heddlu Polis\".",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4896335611119866,
         "n_gen_tokens": 185,
@@ -6158,7 +6160,7 @@
       ],
       "vne": 0.16286272601072363,
       "judge_candidate": "Monte Cervino is known as the Matterhorn in Switzerland.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.0165866683237255,
         "n_gen_tokens": 177,
@@ -6208,7 +6210,7 @@
       ],
       "vne": 0.22287498560338595,
       "judge_candidate": "Terry Scott starred as Terry Fletcher in the British television comedy series \"Terry and June.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4430283810943365,
         "n_gen_tokens": 225,
@@ -6333,7 +6335,7 @@
       ],
       "vne": 0.023980502278696195,
       "judge_candidate": "The currency of Pakistan is the Pakistani Rupee (PKR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.8613262390717864,
         "n_gen_tokens": 156,
@@ -6658,7 +6660,7 @@
       ],
       "vne": 0.46210316301921306,
       "judge_candidate": "Al Capone's business card identified him as a \"President of the Palm Island Fruit Company.\" However, this was a front for his illegal activities.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.3964831717312336,
         "n_gen_tokens": 418,
@@ -6733,7 +6735,7 @@
       ],
       "vne": 0.19434195344194022,
       "judge_candidate": "Protons and Neutrons are examples of hadrons, derived from the Greek word 'hadros', meaning heavy.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.9586110627278686,
         "n_gen_tokens": 279,
@@ -6933,7 +6935,7 @@
       ],
       "vne": 0.293251839965422,
       "judge_candidate": "Major league baseball teams have retired the number 42 in honor of Jackie Robinson, who was born on January 31, 1919.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 2.264110458083451,
         "n_gen_tokens": 395,
@@ -7583,7 +7585,7 @@
       ],
       "vne": 0.34396368249207576,
       "judge_candidate": "In the television series \"The Man from U.N.C.L.E.,\" there were two bosses: Alexander Waverly (Napoleon Solo's boss) and Mr. Waverly (Illya Kuryakin's boss). However, they were not the",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 3.060390366241336,
         "n_gen_tokens": 622,
@@ -7808,7 +7810,7 @@
       ],
       "vne": 0.1012648252410152,
       "judge_candidate": "Aled Jones infamously forgot the words to \"Walking in the Air\" during the 1985 Royal Variety Performance.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.5836169691756368,
         "n_gen_tokens": 286,
@@ -7858,7 +7860,7 @@
       ],
       "vne": 0.024694887075056574,
       "judge_candidate": "\"If I Ruled The World\" comes from the musical \"The Roar of the Greasepaint - The Smell of the Crowd.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.753632805775851,
         "n_gen_tokens": 324,
@@ -9333,7 +9335,7 @@
       ],
       "vne": 0.0712457952216619,
       "judge_candidate": "Spain produces the most olive oil in the world.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.6623708582483232,
         "n_gen_tokens": 102,
@@ -9958,7 +9960,7 @@
       ],
       "vne": 0.2326795501327382,
       "judge_candidate": "The style of music is Ska, characterized by staccato offbeat rhythms and influenced by mento, jazz, ska, and rhythm and blues.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.7993140071630478,
         "n_gen_tokens": 347,
@@ -9983,7 +9985,7 @@
       ],
       "vne": 0.07382756682057998,
       "judge_candidate": "Emilio Estevez acted in 'St. Elmo's Fire', 'About Last Night ...', and 'Wayne's World'.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.611648052930832,
         "n_gen_tokens": 308,
@@ -10208,7 +10210,7 @@
       ],
       "vne": 9.176644012749244e-05,
       "judge_candidate": "The currency of India is the Indian Rupee (INR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.7757920012809336,
         "n_gen_tokens": 140,
@@ -10883,7 +10885,7 @@
       ],
       "vne": 0.29723802919240244,
       "judge_candidate": "The first US-born winner of golf's British Open was Francis Ouimet in 1913.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.446986182127148,
         "n_gen_tokens": 232,
@@ -12633,7 +12635,7 @@
       ],
       "vne": 0.48575000157452886,
       "judge_candidate": "Shivnarine Sarwan is known by his first name, Shivnarine.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.5504053551703691,
         "n_gen_tokens": 191,
@@ -12683,7 +12685,7 @@
       ],
       "vne": 0.2822366294329823,
       "judge_candidate": "The Iron Age followed the Bronze Age in the three-age system.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1424280302599072,
         "n_gen_tokens": 176,
@@ -12983,7 +12985,7 @@
       ],
       "vne": 0.5585129304692177,
       "judge_candidate": "Albrecht Durer was born in 1471 in Nuremberg, Germany.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.5357564059086144,
         "n_gen_tokens": 266,
@@ -14733,7 +14735,7 @@
       ],
       "vne": 0.4604414773979417,
       "judge_candidate": "The South China Sea separates East and West Malaysia.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.243552953004837,
         "n_gen_tokens": 245,
@@ -15633,7 +15635,7 @@
       ],
       "vne": 0.030064410396140995,
       "judge_candidate": "There are 15 double-word score squares on a standard Scrabble board.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1266544363461435,
         "n_gen_tokens": 184,
@@ -16283,7 +16285,7 @@
       ],
       "vne": 0.3807470069947768,
       "judge_candidate": "Verdi's \"Falstaff\" was his last opera.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.1548536191694438,
         "n_gen_tokens": 187,
@@ -16358,7 +16360,7 @@
       ],
       "vne": 0.3313767645305059,
       "judge_candidate": "No cereal crop is used to make single malt whisky in Scotland. Barley is the primary grain used for malted and distilled to produce single malt whisky.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.8720847084186971,
         "n_gen_tokens": 265,
@@ -16908,7 +16910,7 @@
       ],
       "vne": 0.6123794744551045,
       "judge_candidate": "The opera \"Aida\" by Verdi is not an acronym, but the acronym \"AIDA\" (Attention, Interest, Desire, Action) is a marketing and sales technique that originated from the title of the opera.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.8803265187889338,
         "n_gen_tokens": 527,
@@ -17233,7 +17235,7 @@
       ],
       "vne": 0.04260968046823188,
       "judge_candidate": "Inspector Clouseau's manservant is named Cato Fong.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.9603171567432582,
         "n_gen_tokens": 169,
@@ -17583,7 +17585,7 @@
       ],
       "vne": 0.17652433536336437,
       "judge_candidate": "Borneo is among the largest five islands globally.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.7977562719024718,
         "n_gen_tokens": 137,
@@ -18158,7 +18160,7 @@
       ],
       "vne": 0.21177249572819476,
       "judge_candidate": "In 2011, the Classic Brit Awards named Sir Elton John as \"Artist of the Decade.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4992030798457563,
         "n_gen_tokens": 248,
@@ -18583,7 +18585,7 @@
       ],
       "vne": 0.5652340737467989,
       "judge_candidate": "The name of Jimmy James' backing group was The Vagrants.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.8584501277655363,
         "n_gen_tokens": 258,
@@ -19333,7 +19335,7 @@
       ],
       "vne": 0.6106272646215591,
       "judge_candidate": "Eagle has landed.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.7350975601002574,
         "n_gen_tokens": 350,
@@ -19458,7 +19460,7 @@
       ],
       "vne": 0.2997284807828103,
       "judge_candidate": "Traditional water pudding is flavored with vanilla or lemon.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.355766424909234,
         "n_gen_tokens": 178,
@@ -19558,7 +19560,7 @@
       ],
       "vne": 0.4762652470381106,
       "judge_candidate": "Inspector Morse, the TV detective, was assisted by DS George Toolan.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.547825946006924,
         "n_gen_tokens": 221,
@@ -19583,7 +19585,7 @@
       ],
       "vne": 0.13970609762124328,
       "judge_candidate": "Seat is a subsidiary of the Volkswagen Group.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 0.9014474460855126,
         "n_gen_tokens": 144,
@@ -19608,7 +19610,7 @@
       ],
       "vne": 0.28220365357404426,
       "judge_candidate": "The song is \"Taxman\" by The Beatles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1859241151250899,
         "n_gen_tokens": 161,
@@ -19883,7 +19885,7 @@
       ],
       "vne": 0.07804938113103695,
       "judge_candidate": "Charles D. Barrow devised the game Monopoly and sold it to the Parker Brothers organization in 1935.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.6838439777493477,
         "n_gen_tokens": 302,
@@ -20233,7 +20235,7 @@
       ],
       "vne": 0.12394196082320648,
       "judge_candidate": "Ken Morley played the role of factory boss Danny Baldwin in the British television soap 'Coronation Street'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.1809052899479866,
         "n_gen_tokens": 210,
@@ -20258,7 +20260,7 @@
       ],
       "vne": 0.5301927612903683,
       "judge_candidate": "The TV comedy series starring Windsor Davies and Donald Sinden as antique dealers was called \"Love, Antiques and Us.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.363009345717728,
         "n_gen_tokens": 438,
@@ -20733,7 +20735,7 @@
       ],
       "vne": 0.5471260619840084,
       "judge_candidate": "Originated as Orange UK, before rebranding to EE in 2012.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.1060742512345314,
         "n_gen_tokens": 152,
@@ -21958,7 +21960,7 @@
       ],
       "vne": 0.39186604375846756,
       "judge_candidate": "The older brother of Henry VIII was Arthur Tudor.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4854141250252724,
         "n_gen_tokens": 136,
@@ -22208,7 +22210,7 @@
       ],
       "vne": 0.02739098037687279,
       "judge_candidate": "Buprenorphine is a synthetic opioid used to help treat heroin addiction.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.1101020858623087,
         "n_gen_tokens": 190,
@@ -22758,7 +22760,7 @@
       ],
       "vne": 0.2003027291032793,
       "judge_candidate": "Emma Hamilton, after marrying Sir William Hamilton in 1791 and living in Naples, became the mistress of Lord Nelson in 1798, having his child, Horatia, in 1801.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.6790275531820953,
         "n_gen_tokens": 475,
@@ -22833,7 +22835,7 @@
       ],
       "vne": 0.5101342544545809,
       "judge_candidate": "Angiosperms are land plants that have seeds enclosed within an ovule in a fruit.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.051896451972425,
         "n_gen_tokens": 130,
@@ -22858,7 +22860,7 @@
       ],
       "vne": 0.32081181723778,
       "judge_candidate": "Christian Slater was born first, on August 18, 1969, while Kiefer Sutherland was born on December 21, 1966.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.305705293081701,
         "n_gen_tokens": 308,
@@ -23308,7 +23310,7 @@
       ],
       "vne": 0.36898995396940076,
       "judge_candidate": "Fruit, cricket, and horseshoe are not varieties of animals. Fruit is a product of plants, crickets are insects, and horseshoes are tools used by humans, not animals.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.3882583416998386,
         "n_gen_tokens": 410,
@@ -23533,7 +23535,7 @@
       ],
       "vne": 0.3146465889536762,
       "judge_candidate": "Lapis lazuli is a deep blue semi-precious stone.",
-      "judge_correct": true,
+      "judge_correct": false,
       "cost": {
         "t_seconds": 1.060512148309499,
         "n_gen_tokens": 176,
@@ -23808,7 +23810,7 @@
       ],
       "vne": 0.15724685969939572,
       "judge_candidate": "\"In God We Trust\" first appeared on US banknotes on this day in 1982.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 1.4155492400750518,
         "n_gen_tokens": 233,
@@ -24333,7 +24335,7 @@
       ],
       "vne": 0.5432715127066542,
       "judge_candidate": "Dakar Rally is not named after the capital city of Dakar; it is named after the Senegalese city of Dakar, but the capital city of Senegal is Dakar itself. The misconception arises due to the similarity in names.",
-      "judge_correct": false,
+      "judge_correct": true,
       "cost": {
         "t_seconds": 2.9276263881474733,
         "n_gen_tokens": 395,

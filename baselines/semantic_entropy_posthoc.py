@@ -1,7 +1,7 @@
 """
 Semantic Entropy baseline (Kuhn 2023 / Farquhar 2024) — pure post-hoc, no GPU.
 
-Recomputes SE from the SAVED black-box result files (C1-C3, all datasets and
+Recomputes SE from the SAVED black-box C2 result files (all datasets and
 models): the stored `semantic_ids` (strict-entailment NLI clusters, identical
 to the ones KLE used) and `log_lik_per_sem_id` are re-scored with the two SE
 estimators:
@@ -18,7 +18,12 @@ KLE numbers (also echoed per cell as `kle_reported`).
 
 Runs anywhere (numpy + sklearn; no torch, no GPU):
     python baselines/semantic_entropy_posthoc.py
-Writes -> results/se_c1c2c3_results.json (missing cells skipped with a note).
+Writes -> results/se_c2_results.json (missing cells skipped with a note).
+
+Scope is C2 only: the thesis baseline comparison (Sec. 5.7) is defined
+against the C2 generations specifically, and C4 has no persisted per-step
+sample texts/semantic_ids to re-cluster post-hoc (only the aggregated
+step_scores are saved), so C1/C3/C4 are intentionally out of scope here.
 """
 
 import os
@@ -28,9 +33,9 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 
 OUT_DIR  = "./results/"
-OUT_FILE = "se_c1c2c3_results.json"
+OUT_FILE = "se_c2_results.json"
 
-CONDITIONS = ["c1", "c2", "c3"]
+CONDITIONS = ["c2"]
 DATASETS   = ["triviaqa", "nqopen", "morehopqa"]
 MODELS     = ["8b", "mistral"]
 

@@ -14,10 +14,12 @@
     "heat_t": 0.3,
     "alpha": 0.5,
     "strict_entailment": true,
-    "judge_temp": 0.1
+    "judge_temp": 0.1,
+    "judge_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "judge_mode": "fixed"
   },
-  "auroc": 0.8456387133177257,
-  "hallucination_rate": 0.281,
+  "auroc": 0.8408625513888672,
+  "hallucination_rate": 0.259,
   "details": [
     {
       "id": "triviaqa-000000",
@@ -441,7 +443,7 @@
         -2.2130754193258833
       ],
       "judge_candidate": "The artist in question is Paul McCartney. He married Jane Asher in 1981, and they have a daughter named Stella McCartney and two sons named James McCartney and Alasdhair McCartney.\n\nFinal Answer: Paul McCartney",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.208271033676097,
       "cost": {
         "t_seconds": 18.61842021206394,
@@ -1001,7 +1003,7 @@
         -2.3346733208614534
       ],
       "judge_candidate": "Focaccia is a type of Italian flatbread, typically seasoned with olive oil, salt, and sometimes herbs. So, in an Italian restaurant, you would expect to receive a dish that resembles a flattened, oily, and herb-topped bread.\n\nFinal Answer: You would expect to receive Focaccia, a type of Italian flatbread, seasoned with olive oil, salt, and possibly herbs.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8168131720188316,
       "cost": {
         "t_seconds": 25.947111525107175,
@@ -1107,7 +1109,7 @@
         -2.4170244795373224
       ],
       "judge_candidate": "1. The song \"Like A Virgin\" was released by Madonna in 1984, but it was the title track from her album \"Like a Virgin,\" which was released in 1984 as well.\n2. However, in 1985, Madonna released another album, \"True Blue,\" which also had several hit songs.\n3. \"True Blue\" was Madonna's second consecutive number-one album in the United States, and it spent 38 non-consecutive weeks on the Billboard 200 chart.\n\nFinal Answer: Madonna had a top album in 1985 with \"True Blue.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.9259204359369922,
       "cost": {
         "t_seconds": 26.120455771684647,
@@ -1434,7 +1436,7 @@
         -2.536699424545368
       ],
       "judge_candidate": "Jack Lovelock is a New Zealander, and the timeframe given is the 1930s. The most likely field where he gained fame during this period is athletics, specifically in the 1500 meters race, as he won the gold medal in the 1936 Berlin Olympics for this event.\n\nFinal Answer: Athletics (1500 meters race)",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.1088869639599965,
       "cost": {
         "t_seconds": 20.304147763177752,
@@ -2795,7 +2797,7 @@
         -2.223708103198414
       ],
       "judge_candidate": "The miners in Ashington, Northumberland, formed a group to study adult education and cultural activities, aiming to improve their lives beyond mining. This group is known as the 'Ashington Group' or 'Ashington Set'. Final Answer: The Ashington Group.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0003496058255448,
       "cost": {
         "t_seconds": 20.785952935926616,
@@ -3288,7 +3290,7 @@
         -2.231619467375251
       ],
       "judge_candidate": "The Kray twins, Ronnie and Reggie Kray, were born in London, England. Their parents were Violet Kathleen (née Fowler) and Jack Kray.\n\nFinal Answer: Violet Kathleen (Fowler) was the first name of the Kray twins' mother.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.9858396866470782,
       "cost": {
         "t_seconds": 15.631251539103687,
@@ -3399,7 +3401,7 @@
         -2.2901385236656098
       ],
       "judge_candidate": "1. The Football League, now known as the EFL (English Football League), was established in 1888, and the FA Cup is an annual knockout football competition in England.\n2. The team from outside the League that won the FA Cup in 1901 was Tottenham Hotspur, who were not part of the Football League at the time but joined the Second Division in 1908.\n3. Final Answer: Tottenham Hotspur won the FA Cup in 1901.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.263456161570314,
       "cost": {
         "t_seconds": 35.11553149390966,
@@ -3670,7 +3672,7 @@
         -2.2745092817175374
       ],
       "judge_candidate": "1. The President who died in office in July 1850 was Zachary Taylor. He passed away on July 9, 1850.\n2. Millard Fillmore served as Taylor's Vice President at that time.\n3. Therefore, Millard Fillmore became the President upon Taylor's death.\n\nFinal Answer: Millard Fillmore was the President who succeeded Zachary Taylor, who died in office in July 1850.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0829957453025265,
       "cost": {
         "t_seconds": 24.222364332992584,
@@ -4432,7 +4434,7 @@
         -1.1153760195932108
       ],
       "judge_candidate": "The average elevation of a major American city is significantly higher than 2 feet below sea level. Cities in the United States are typically located above sea level. However, New Orleans, Louisiana, has areas that are below sea level, but it does not have an average elevation of 2 feet below sea level.\n\nFinal Answer: No major American city has an average elevation of 2 feet below sea level.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.2228067202506596,
       "cost": {
         "t_seconds": 18.21253868425265,
@@ -5298,7 +5300,7 @@
         -1.5822286189426853
       ],
       "judge_candidate": "Huey Lewis is the lead vocalist of the band Huey Lewis and the News. The band consists of multiple members, so no one specifically sings 'behind' Huey Lewis in the traditional sense. However, backing vocals are provided by other band members such as Johnnie Colla, Bill Gibson, and Marvin McFadden.\n\nFinal Answer: Other band members such as Johnnie Colla, Bill Gibson, and Marvin McFadden provide backing vocals for Huey Lewis in the band Huey Lewis and the News.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7339315555463437,
       "cost": {
         "t_seconds": 27.43726904410869,
@@ -6461,7 +6463,7 @@
         -2.333500722253325
       ],
       "judge_candidate": "Charles Rennie Mackintosh was a Scottish architect, designer, watercolorist, and artist, primarily active during the late 19th and early 20th centuries. He is best known for his significant contributions to the Glasgow Style, a movement that emerged in Scotland around the 1890s. This style was characterized by its organic, floral motifs, rich colors, and asymmetrical designs.\n\nFinal Answer: Charles Rennie Mackintosh was a leading exponent of the Glasgow Style art movement.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3355814007124467,
       "cost": {
         "t_seconds": 25.53725537704304,
@@ -6623,7 +6625,7 @@
         -2.4156229170087085
       ],
       "judge_candidate": "Hickory and persimmon were traditionally used in the production of golf club shafts and golf ball cores, respectively. However, with advancements in technology, graphite and titanium have replaced these materials in modern golf equipment due to their lightweight, durable, and high-performance properties.\n\nFinal Answer: Golf club shafts and golf ball cores.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.4672232489585988,
       "cost": {
         "t_seconds": 29.510344529058784,
@@ -6683,7 +6685,7 @@
         -2.3463898573518023
       ],
       "judge_candidate": "The film \"The Birds\" is a suspense thriller directed by Alfred Hitchcock. The setting for this movie is primarily in a coastal town in California, with key scenes also taking place in a small village and a few characters' homes.\n\nFinal Answer: The setting for the Alfred Hitchcock film \"The Birds\" is a coastal town in California, a small village, and various characters' homes.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9258307206448655,
       "cost": {
         "t_seconds": 24.783089697826654,
@@ -6958,7 +6960,7 @@
         -2.3884876367068557
       ],
       "judge_candidate": "The South London gang in question is the Richardsons, led by Charles and Ronald (not Eddie) Richardsons. They were rivals of the Krays, a notorious gang based in the East End of London, during the 1960s. The Richardsons were known for their involvement in the heroin trade and were often in conflict with the Krays over territory and control.\n\nFinal Answer: The Richardsons, led by Charles and Ronald Richardsons, were the South London gang that were rivals of the Krays.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3231463659645037,
       "cost": {
         "t_seconds": 25.39436760218814,
@@ -7130,7 +7132,7 @@
         -2.341707724681236
       ],
       "judge_candidate": "A standard deck of cards has 4 suits: hearts, diamonds, clubs, and spades. Each suit has 13 cards, and only one King per suit. Since Kings don't have moustaches in traditional card designs, there are no Kings with moustaches in a standard deck.\n\nFinal Answer: There are no Kings with moustaches in a standard deck of cards.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.8586359340486566,
       "cost": {
         "t_seconds": 22.192601890768856,
@@ -7395,7 +7397,7 @@
         -1.6215951502408954
       ],
       "judge_candidate": "Ameliorate means to make something that was bad, improve it.\n\nFinal Answer: Ameliorate makes something bad, better.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.7551687431297984,
       "cost": {
         "t_seconds": 13.270595632959157,
@@ -7717,7 +7719,7 @@
         -2.282584836898181
       ],
       "judge_candidate": "'Pax' in property rental context typically refers to the number of people that a room or accommodation can comfortably sleep. It's a shorthand used in the hospitality industry.\n\nFinal Answer: 'Pax' in property rental means the number of people that a room or accommodation can comfortably sleep.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0711588160547967,
       "cost": {
         "t_seconds": 20.127285164315253,
@@ -8263,7 +8265,7 @@
         -2.237803020871117
       ],
       "judge_candidate": "The characters in the nursery rhyme \"Hey Diddle Diddle\" are the cat and the fiddle. The line that mentions a spoon is \"The cow with the crumpet on her head, I know where that cow has been, up to the moon to have a bit of fun, and to get the milk pail off her head.\" There is no explicit mention of the spoon running away. However, the cat is often associated with mischief, so it's possible to infer that the cat might have taken the spoon, but the rhyme does not confirm this.\n\nFinal Answer: The rhyme does not explicitly state that the spoon ran away with anyone.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.002684706791045,
       "cost": {
         "t_seconds": 29.268382865935564,
@@ -8638,7 +8640,7 @@
         -2.272977846603979
       ],
       "judge_candidate": "Cape Wrath is located in the northwest of Scotland, so it belongs to the United Kingdom.\n\nFinal Answer: Cape Wrath is in the United Kingdom.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.8641641981444658,
       "cost": {
         "t_seconds": 9.387120566796511,
@@ -8747,7 +8749,7 @@
         -2.2453766148044623
       ],
       "judge_candidate": "The royal couple residing at Bagshot Park is the Duke and Duchess of Wessex, Prince Edward and Sophie, Countess of Wessex. This is a residence often used by the British royal family for private stays.\n\nFinal Answer: The Duke and Duchess of Wessex, Prince Edward and Sophie, live at Bagshot Park in Surrey.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3073435479024884,
       "cost": {
         "t_seconds": 22.77008325792849,
@@ -9027,7 +9029,7 @@
         -2.278688158696011
       ],
       "judge_candidate": "Benjy and Laska were two rhesus monkeys. They were sent into space as part of the U.S. space program's Jupiter AM-1 mission, launched on January 31, 1958. This mission was a suborbital flight, and it was the first U.S. space mission to carry living beings other than insects.\n\nFinal Answer: Benjy and Laska were sent into space as living beings in the Jupiter AM-1 mission, which was a suborbital flight launched on January 31, 1958.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.1111613910146776,
       "cost": {
         "t_seconds": 24.533021450974047,
@@ -9134,7 +9136,7 @@
         -2.4667640737813996
       ],
       "judge_candidate": "Tenzin Gyatso is the 14th Dalai Lama, the spiritual leader of Tibetan Buddhism. He is better known as the 14th Dalai Lama.\n\nFinal Answer: He is better known as the 14th Dalai Lama.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.9714976722840005,
       "cost": {
         "t_seconds": 17.874998542945832,
@@ -10160,7 +10162,7 @@
         -1.5855468030938422
       ],
       "judge_candidate": "The Queen does not personally own all the horses that run in races, but she does have a number of horses in her ownership. The Ascot Gold Cup is a prestigious horse race held annually in England. To find out which of the Queen's horses won the 2013 Ascot Gold Cup, we can look at the race results. The winner of the 2013 Ascot Gold Cup was Estimate, which is one of the Queen's horses.\n\nFinal Answer: Estimate won the 2013 Ascot Gold Cup.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6530471560136473,
       "cost": {
         "t_seconds": 28.203735365998,
@@ -12514,7 +12516,7 @@
         -2.3992787497408203
       ],
       "judge_candidate": "The final carrier of the Olympic flame in the Olympic Torch Relay is typically a prominent figure, often a Greek citizen, who symbolizes the spirit of the games. This person is usually chosen to light the cauldron at the opening ceremony of the Olympic Games. Final Answer: The final carrier is usually a prominent Greek citizen.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.865315827777838,
       "cost": {
         "t_seconds": 21.05605311319232,
@@ -13327,7 +13329,7 @@
         -2.323531096481002
       ],
       "judge_candidate": "The given quote is characteristic of a certain animal's lifestyle and the setting is a home. This suggests a story set in a natural environment, often associated with children's literature. The use of the word \"little\" indicates a small, cozy home, which is common in children's books. The mole's hard work during spring cleaning is a common theme in children's stories. Given these clues, the novel \"The Tale of Mr. Tod (also known as The Adventures of Mr. Toad) by Kenneth Grahame\" is the answer. However, the quote is actually from \"The Wind in the Willows\" by Kenneth Grahame, where the mole is a main character, but the novel does not begin with the given quote.\n\nFinal Answer: The novel does not begin with the given quote, but the quote is from \"The Wind in the Willows\" by Kenneth Grahame.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.2296007956597435,
       "cost": {
         "t_seconds": 38.59477850981057,
@@ -13545,7 +13547,7 @@
         -2.281033070992609
       ],
       "judge_candidate": "Terry Scott was known for his comedic roles. He played a middle-aged character in a sitcom. The suburban setting is common in many sitcoms, but Terry Scott's most famous suburban role was as Terry Fletcher in the British sitcom \"Terry and June.\"\n\nFinal Answer: Terry Scott starred as Terry Fletcher in the television comedy series \"Terry and June.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.1331039063838104,
       "cost": {
         "t_seconds": 28.593594130128622,
@@ -13811,7 +13813,7 @@
         -2.3639163106673733
       ],
       "judge_candidate": "Pakistan's currency is the Pakistani Rupee (PKR). It's the official currency of Pakistan, and it's abbreviated as PKR in financial transactions.\n\nFinal Answer: The currency of Pakistan is Pakistani Rupee (PKR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.34590514088963364,
       "cost": {
         "t_seconds": 16.245476657990366,
@@ -14518,7 +14520,7 @@
         -2.326444699026283
       ],
       "judge_candidate": "Al Capone was a businessman, but more specifically, he was a bootlegger and gangster during the Prohibition era in the United States. His business card would likely have reflected his role as a head of a criminal organization involved in the illegal distribution of alcohol.\n\nFinal Answer: Al Capone's business card would have identified him as a gangster or bootlegger.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.0466421786699147,
       "cost": {
         "t_seconds": 25.65993714472279,
@@ -15670,7 +15672,7 @@
         -1.659654023675282
       ],
       "judge_candidate": "The first televised proceedings of the House of Commons in the United Kingdom occurred on June 25, 1949. This event marked the beginning of regular television coverage of parliamentary sessions. (Final Answer: 1949)",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.9177210702669432,
       "cost": {
         "t_seconds": 23.256498129107058,
@@ -16267,7 +16269,7 @@
         -2.298007305044491
       ],
       "judge_candidate": "Fairy rings are circular patches of grass that appear to be greener and denser than the surrounding area. They are not made of any solid material, but rather the result of a fungus, specifically the Armillaria or Marasmius species, growing beneath the ground. The fungus feeds on dead organic matter, such as roots, and releases nutrients back into the soil, causing the ring of lush growth.\n\nFinal Answer: Fairy rings are not made of any solid material, but are caused by a fungus, specifically Armillaria or Marasmius species, growing beneath the ground.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.7673672468946156,
       "cost": {
         "t_seconds": 27.737520119175315,
@@ -17145,7 +17147,7 @@
         -2.2705172345431572
       ],
       "judge_candidate": "The song \"If I Ruled The World\" is a duet between Jimmy Ruffin and Lena Horne, and it was originally released in 1963. However, a more popular version was released by the group The Impressions in 1970. This version was also used in the 1975 musical 'The Roar of the Greasepaint - The Smell of the Crowd.' Final Answer: The song \"If I Ruled The World\" comes from the musical 'The Roar of the Greasepaint - The Smell of the Crowd.'",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.1903168408026543,
       "cost": {
         "t_seconds": 26.344572572037578,
@@ -18944,7 +18946,7 @@
         -1.1102230246251565e-16
       ],
       "judge_candidate": "Mistletoe berries are typically white or yellow. These berries are not edible for humans due to their toxicity.\n\nFinal Answer: Mistletoe berries are white or yellow.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.084120717110094,
       "cost": {
         "t_seconds": 12.16073934501037,
@@ -21720,7 +21722,7 @@
         -0.33879833239583296
       ],
       "judge_candidate": "1. Mento is a genre from Jamaica that predates ska, and it has a strong influence on ska music. Ska also incorporates elements of jazz, rhythm and blues, and has a distinctive staccato offbeat rhythm.\n2. Ska music, therefore, can be characterized by staccato offbeat rhythms and owes much to the influence of mento, jazz, ska, and rhythm and blues.\n\nFinal Answer: The style of music characterized by staccato offbeat rhythms and owing much to the influence of mento, jazz, ska, and rhythm and blues is Ska music.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.615349399468305,
       "cost": {
         "t_seconds": 30.288170638959855,
@@ -22041,7 +22043,7 @@
         -0.10313268211121922
       ],
       "judge_candidate": "The Museum of Bags and Purses is located in Amsterdam, which is a city in Europe. This museum is a part of the cultural heritage of Amsterdam, known for its unique collection of handbags and purses.\n\nFinal Answer: The Museum of Bags and Purses is in Amsterdam, Europe.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.3568566934433218,
       "cost": {
         "t_seconds": 17.183700514025986,
@@ -22254,7 +22256,7 @@
         -2.4021474593164682
       ],
       "judge_candidate": "India's currency is the Indian Rupee (INR). It is the only legal tender used in India and is divided into 100 paise. The Indian Rupee is issued and managed by the Reserve Bank of India.\n\nFinal Answer: The currency of India is the Indian Rupee (INR).",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.34167971934254676,
       "cost": {
         "t_seconds": 16.030319665092975,
@@ -23712,7 +23714,7 @@
         -2.273210928722663
       ],
       "judge_candidate": "The British Open, also known as The Open Championship, is a major golf tournament held in the United Kingdom. To win this tournament, a golfer must be born in the UK or have dual citizenship with the UK. Since the first British Open in 1860, no US-born golfer could have won it because the tournament started before the United States even existed as a country.\n\nThe first US-born golfer to win the British Open was Francis Ouimet in 1913.\n\nFinal Answer: Francis Ouimet (1913) was the first US-born winner of golf's British Open.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6680952808860776,
       "cost": {
         "t_seconds": 27.048008129931986,
@@ -25129,7 +25131,7 @@
         -2.214375098035834
       ],
       "judge_candidate": "The TV series 'Upstairs Downstairs' features a character named Hudson, who is the butler. The actor who played Hudson was Gordon Jackson. To find the surname of the character, we look at the character's name in the show. Hudson's surname is 'Beale'.\n\nFinal Answer: Hudson Beale is the surname of the butler played by Gordon Jackson in Upstairs Downstairs.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.685075686441089,
       "cost": {
         "t_seconds": 15.424354752060026,
@@ -25677,7 +25679,7 @@
         -2.3261383261859296
       ],
       "judge_candidate": "'Arthur' in the novel 'Arthur and George' is a fictional character based on Sir Arthur Conan Doyle, the famous author of the Sherlock Holmes series. He is portrayed as a successful but preoccupied author who becomes involved in the real-life case of George Edalji, a solicitor wrongly accused of a crime.\n\nFinal Answer: Arthur is a fictional character based on Sir Arthur Conan Doyle.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.5435805653917765,
       "cost": {
         "t_seconds": 22.465052377898246,
@@ -27325,7 +27327,7 @@
         -2.2112442400323116
       ],
       "judge_candidate": "Head cheese is a type of meat jelly made from the head of a cow, pig, or other animal. The term 'head' in this context does not refer to a man's physical strength. An alternative name for head cheese is 'Sauerkraut Sausage' in some regions, but this does not relate to physical strength either. The term that refers to a man's physical strength is 'brawn' or 'brute strength.'\n\nFinal Answer: Head cheese does not have an alternative name that refers to a man's physical strength. The term for that is 'brawn' or 'brute strength.'",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.6130747797760434,
       "cost": {
         "t_seconds": 30.084121230989695,
@@ -27536,7 +27538,7 @@
         -2.4478720269184393
       ],
       "judge_candidate": "The West Indian cricketer Sarwan is commonly known by his first name, Shivnarine. This name is of Indian origin and means 'Lord Shiva, the Hindu god of destruction'.\n\nFinal Answer: Shivnarine",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.8127327036294976,
       "cost": {
         "t_seconds": 21.818669800180942,
@@ -27641,7 +27643,7 @@
         -1.5638315965390606
       ],
       "judge_candidate": "The three-age system is a historical periodization that divides human history into the Stone Age, Bronze Age, and Iron Age. Following the Bronze Age, the next age in this system is the Iron Age.\n\nFinal Answer: The Iron Age followed the Bronze Age in the three-age system.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.9056795151914435,
       "cost": {
         "t_seconds": 16.759650810156018,
@@ -28076,7 +28078,7 @@
         -2.2531471869816073
       ],
       "judge_candidate": "The massacre of Huguenots, also known as the St. Bartholomew's Day Massacre, occurred on a day associated with St. Bartholomew, one of the apostles. The Catholic calendar recognizes St. Bartholomew's Day on August 24th.\n\nFinal Answer: August 24th.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.3192115118481886,
       "cost": {
         "t_seconds": 26.802683770656586,
@@ -28562,7 +28564,7 @@
         -2.310494861360179
       ],
       "judge_candidate": "In 1961, the FA Cup tie in question is the third round match between Margate and West Bromwich Albion. West Bromwich Albion's striker, Tony Brown, scored six goals, but Margate managed to score seven goals, resulting in a loss for West Bromwich Albion despite Brown's impressive individual performance.\n\nFinal Answer: Tony Brown (1961)",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7498085593584125,
       "cost": {
         "t_seconds": 23.35014773765579,
@@ -29169,7 +29171,7 @@
         -2.4806716251907814
       ],
       "judge_candidate": "The song \"On the Road Again\" was not released until 1973 by Willie Nelson. However, in 1968, the song was written by Nelson and recorded by Canned Heat on their album \"Human Being\" under the title \"On the Road.\"\n\nFinal Answer: In 1968, Canned Heat recorded \"On the Road Again.\"",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9762664826377938,
       "cost": {
         "t_seconds": 28.365348695777357,
@@ -30059,7 +30061,7 @@
         -2.21752067678743
       ],
       "judge_candidate": "James Gandolfini is known for his role as Tony Soprano in \"The Sopranos.\" However, in 2001, he also starred in a film. Robert Redford is also an actor, so they could have been in a film together. The only 2001 film where both actors appeared is \"Spy Game.\" In \"Spy Game,\" Robert Redford plays a CIA agent, and James Gandolfini plays a military prison commandant named Colonel Burnett, not Winter. However, there seems to be a mistake in the question, as Colonel Burnett is not Colonel Winter. After checking other films, it appears that James Gandolfini played Colonel Winter in the 2003 film \"The Last Castle.\"\n\nFinal Answer: James Gandolfini played Colonel Winter in \"The Last Castle\" in 2003.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9221317374713047,
       "cost": {
         "t_seconds": 31.351758301258087,
@@ -32287,7 +32289,7 @@
         -2.265438212056235
       ],
       "judge_candidate": "The Rugby World Cup is an international rugby union competition held every four years. The final of the 1999 Rugby World Cup was the concluding match of the tournament. The host country for the 1999 Rugby World Cup was Wales, and the final was held at the Millennium Stadium in Cardiff, Wales.\n\nFinal Answer: The final of the 1999 Rugby World Cup was held at the Millennium Stadium in Cardiff, Wales.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8129645365189129,
       "cost": {
         "t_seconds": 25.862089309375733,
@@ -33853,7 +33855,7 @@
         -2.2964459953548553
       ],
       "judge_candidate": "The home row on a QWERTY keyboard layout is ASDFJKL;GH. The missing key from the given sequence is 'R'.\n\nFinal Answer: The missing key is 'R'.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.152324959654377,
       "cost": {
         "t_seconds": 15.955720493104309,
@@ -34138,7 +34140,7 @@
         -2.3650234006607147
       ],
       "judge_candidate": "Pistol and Boo are two Yorkshire Terriers who gained international fame in 2015 due to their association with a high-profile public figure. They were the pet dogs of the Duchess of Cambridge, Kate Middleton.\n\nFinal Answer: Pistol and Boo were internationally famous pet dogs of the Duchess of Cambridge, Kate Middleton.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8887657603291317,
       "cost": {
         "t_seconds": 17.79583438578993,
@@ -35222,7 +35224,7 @@
         -2.2196660686142917
       ],
       "judge_candidate": "The English Civil War took place from 1642 to 1651, and the first major engagement was the Battle of Edgehill on October 23, 1642. This battle occurred in Warwickshire, England.\n\nFinal Answer: The first battle of the English Civil War took place in Warwickshire, England.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.8078199156231052,
       "cost": {
         "t_seconds": 21.752521991264075,
@@ -35654,7 +35656,7 @@
         -2.312963762138743
       ],
       "judge_candidate": "Single malt whisky in Scotland is not made from cereal crops. Instead, it is distilled from malted barley. The barley is first soaked, germinated, and then dried to produce malt. This malt is then mashed, fermented, and distilled to produce single malt Scotch whisky.\n\nFinal Answer: Single malt whisky in Scotland is not made from cereal crops, but from malted barley.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.515759840852755,
       "cost": {
         "t_seconds": 23.113539915066212,
@@ -36252,7 +36254,7 @@
         -2.2992338164605775
       ],
       "judge_candidate": "The Spice Girls gained fame in the mid-1990s. Scary Spice was a member of the group. Her real name is Melanie Janine Brown, but in the Spice Girls, she was known by her nickname, Scary Spice.\n\nFinal Answer: Scary Spice's surname at the time the Spice Girls became famous was Brown.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.4274944513937293,
       "cost": {
         "t_seconds": 21.44515476282686,
@@ -36845,7 +36847,7 @@
         -2.3032707239514467
       ],
       "judge_candidate": "The acronym AIDA, which stands for Attention, Interest, Desire, and Action, is a common sales and advertising model. In the world of opera, Giuseppe Verdi composed an opera titled 'La forza del destino,' which translates to 'The Force of Destiny.' However, the acronym AIDA does not directly relate to any Verdi opera titles.\n\nFinal Answer: There is no Verdi opera that is also the popular acronym AIDA used in advertising and selling professions.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.846880155674691,
       "cost": {
         "t_seconds": 29.736527272034436,
@@ -37447,7 +37449,7 @@
         -2.368907508321534
       ],
       "judge_candidate": "The Battle of the Ages was a boxing match that took place in April 1991. This event was a highly publicized heavyweight bout between two legendary boxers. One of them was George Foreman. The other boxer was Michael Moorer.\n\nFinal Answer: Michael Moorer",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.733145984528154,
       "cost": {
         "t_seconds": 22.28669120417908,
@@ -37557,7 +37559,7 @@
         -2.596206140951893
       ],
       "judge_candidate": "Inspector Clouseau is a character from the Pink Panther series. His manservant is named Cato Fong.\n\nFinal Answer: Cato Fong",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.5807672274802174,
       "cost": {
         "t_seconds": 9.295156381092966,
@@ -38002,7 +38004,7 @@
         -2.37537255846472
       ],
       "judge_candidate": "David Copperfield is the protagonist of Charles Dickens' novel by the same name. In the book, David Copperfield describes his own hair color. He says, \"I had the usual baby curls, and a great deal of hair, which was auburn.\"\n\nFinal Answer: David Copperfield had auburn hair.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.7661804959869354,
       "cost": {
         "t_seconds": 15.70447024796158,
@@ -38175,7 +38177,7 @@
         -2.238919958460801
       ],
       "judge_candidate": "The 2012 film 'Django Unchained' features a character named Django. In this context, a surname is a family name, and in the movie, Django's surname is not explicitly stated. However, the character's name is simply 'Django' without a surname.\n\nFinal Answer: Django, in 'Django Unchained', does not have a surname mentioned in the film.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.159695510434824,
       "cost": {
         "t_seconds": 27.542389632202685,
@@ -38335,7 +38337,7 @@
         -2.28557372140483
       ],
       "judge_candidate": "Borneo is one of the largest islands in the world due to its vast land area. It is the third largest island, after Greenland and New Guinea (which is part of Indonesia and Papua New Guinea).\n\nFinal Answer: Borneo ranks among the largest five globally due to its third-largest land area.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.2610520621791494,
       "cost": {
         "t_seconds": 24.65774548286572,
@@ -39568,7 +39570,7 @@
         -2.2915582474679073
       ],
       "judge_candidate": "The Classic Brit Awards are an annual ceremony honoring British classical music. The \"Artist of the Decade\" award is given to an artist who has made significant contributions to the genre over a ten-year period. In 2011, the award was given to Andrea Bocelli, a renowned Italian tenor who has achieved great success in the classical music world.\n\nFinal Answer: Andrea Bocelli was named \"Artist of the Decade\" at the Classic Brit Awards in 2011.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.0622862330428275,
       "cost": {
         "t_seconds": 26.22436120500788,
@@ -40011,7 +40013,7 @@
         -2.3559479779459434
       ],
       "judge_candidate": "La Brabanconne is a military march, not a traditional anthem. However, it was used as a temporary national anthem of Belgium during the Belgian Revolution in 1830.\n\nFinal Answer: La Brabanconne was the temporary national anthem of Belgium.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.9606842111087508,
       "cost": {
         "t_seconds": 22.61889720382169,
@@ -40992,7 +40994,7 @@
         -1.6356109941127692
       ],
       "judge_candidate": "The phrase \"Who would do anything for love (but not that)\" suggests that the subject is willing to go to great lengths for love, but there is a limit to what they won't do. The phrase \"not that\" implies that there is a specific action or act of love that the subject is unwilling to perform. However, the phrase does not specify what that action is.\n\nFinal Answer: The phrase does not provide a specific answer about what the subject would not do for love.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.3353726638032921,
       "cost": {
         "t_seconds": 28.13202888984233,
@@ -41049,7 +41051,7 @@
         -2.3298366027389146
       ],
       "judge_candidate": "A copperhead is a type of venomous snake. It belongs to the Viperidae family, specifically the genus Agkistrodon. The copperhead is native to parts of North America.\n\nFinal Answer: The copperhead is a venomous snake belonging to the Viperidae family and the genus Agkistrodon.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.6075419777197646,
       "cost": {
         "t_seconds": 19.966011085081846,
@@ -42750,7 +42752,7 @@
         -2.317033040181772
       ],
       "judge_candidate": "The line \"The taxman's taken all my dough\" is a famous opening from a song by The Beatles. The Beatles are a British rock band known for numerous hit songs. Among their songs, this line is only found in \"Taxman.\"\n\nFinal Answer: The song that begins with the line \"The taxman's taken all my dough\" is \"Taxman\" by The Beatles.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.1972041027419675,
       "cost": {
         "t_seconds": 20.657390454318374,
@@ -44012,7 +44014,7 @@
         -2.3577784780765314
       ],
       "judge_candidate": "Friggatriskaidekaphobia is a fear of the number 13. This phobia is associated with the number 13 itself, not specific events or objects related to it. It originates from various cultural, religious, and superstitious beliefs surrounding the number 13.\n\nFinal Answer: Friggatriskaidekaphobia is the fear of the number 13.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0385737995168043,
       "cost": {
         "t_seconds": 22.822554720100015,
@@ -45118,7 +45120,7 @@
         -1.1167326501406152
       ],
       "judge_candidate": "The G7 was initially formed by seven major industrialized countries in 1975. In 1997, Russia was invited to join the forum, making it the G8.\n\nFinal Answer: Russia joined the G7 in 1997.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 0.6334836376268759,
       "cost": {
         "t_seconds": 16.933336961083114,
@@ -46157,7 +46159,7 @@
         -2.3814625269726353
       ],
       "judge_candidate": "Peter Warlock, whose real name was Philip Heseltine, was not a father. However, his sister, Marjorie Heseltine, was an art critic and writer.\n\nFinal Answer: Peter Warlock was not the father of any art critic. His sister, Marjorie Heseltine, was an art critic.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 2.269922285222341,
       "cost": {
         "t_seconds": 18.730197488795966,
@@ -47240,7 +47242,7 @@
         -2.252605193754101
       ],
       "judge_candidate": "Farfalle is named after the Italian word for butterfly due to its bow-tie shape, which resembles the wings of a butterfly.\n\nFinal Answer: Farfalle is named after the butterfly.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.0625033325355562,
       "cost": {
         "t_seconds": 13.624007190112025,
@@ -47845,7 +47847,7 @@
         -2.2592187392555347
       ],
       "judge_candidate": "1. Giant Haystacks is a well-known professional wrestler known for his immense size.\n2. The weight of a person in stone is an older measurement system, and 1 stone equals approximately 14 pounds.\n3. Therefore, 48 stone is equivalent to 672 pounds.\n\nFinal Answer: The wrestler who weighed up to 48 stone (672 pounds) under the ring-name Giant Haystacks is Ramsay Campbell Quin, a British professional wrestler.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 2.257413416070823,
       "cost": {
         "t_seconds": 28.297241766005754,
@@ -48769,7 +48771,7 @@
         -2.2403169584858924
       ],
       "judge_candidate": "Achilles was invulnerable to all wounds except for his heel, which was unprotected because his mother Thetis held him by the heel while dipping him in the River Styx. In the Trojan War, Paris of Troy shot an arrow into Achilles' heel, causing his death.\n\nFinal Answer: Paris of Troy wounded Achilles in the heel, leading to his death.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.2280289117396541,
       "cost": {
         "t_seconds": 23.102750470861793,
@@ -49812,7 +49814,7 @@
         -2.24269484992674
       ],
       "judge_candidate": "Angiosperms are land plants that have seeds enclosed within an ovary, which develops into a fruit after fertilization. This characteristic sets them apart from other seed plants like gymnosperms, where the seeds are not enclosed.\n\nFinal Answer: Angiosperms have seeds enclosed within an ovary, which develops into a fruit.",
-      "judge_correct": true,
+      "judge_correct": false,
       "kle_full": 1.4158831158605873,
       "cost": {
         "t_seconds": 17.15310700284317,
@@ -50079,7 +50081,7 @@
         -1.6420603515279528
       ],
       "judge_candidate": "Lent is a Christian religious observance that lasts for 40 days, not including Sundays. This period represents the time Jesus spent fasting in the desert before starting his public ministry. So, Lent consists of 40 weekdays.\n\nFinal Answer: Lent consists of 40 weekdays.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 0.8592950103918561,
       "cost": {
         "t_seconds": 20.616646522656083,
@@ -50843,7 +50845,7 @@
         -2.2027597572193
       ],
       "judge_candidate": "Fruit is not an animal, but it's a product of certain types of plants. Crickets are insects, and horseshoes are used for horses, which are mammals. Therefore, neither fruit, cricket, nor horseshoe is a variety of an animal.\n\nFinal Answer: None of the given items are varieties of an animal.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.8568511861771744,
       "cost": {
         "t_seconds": 25.76140330126509,
@@ -53026,7 +53028,7 @@
         -2.5143399221869465
       ],
       "judge_candidate": "The lyrics of \"Winter Wonderland\" mention a parson, a schoolmaster, and a landlady. The parson is a religious leader, often associated with the church.\n\nFinal Answer: The name of the parson mentioned in the lyrics of \"Winter Wonderland\" is not explicitly stated, as the song does not provide a name for any of the characters.",
-      "judge_correct": false,
+      "judge_correct": true,
       "kle_full": 1.5967033592254254,
       "cost": {
         "t_seconds": 23.227464918978512,
