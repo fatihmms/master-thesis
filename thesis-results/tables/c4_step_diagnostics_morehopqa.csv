@@ -1,0 +1,5 @@
+model,dataset,signal,n_total,n_valid,mean_n_steps,median_n_steps,min_n_steps,max_n_steps,cap_hit_rate,samples_per_step,format_failure_rate,format_failure_halluc_rate,clean_flagged_rate,mean_step_clusters,single_cluster_step_rate,n_seg_mismatch
+llama31_8b,morehopqa,blackbox,1000,861,4.859466,5.000000,2,5,0.925668,10,0.139000,0.992806,0.444444,6.516730,0.027964,0
+llama31_8b,morehopqa,whitebox,1000,861,4.859466,5.000000,2,5,0.925668,10,0.139000,0.992806,0.444444,,,0
+mistral7b_v03,morehopqa,blackbox,1000,977,4.709314,5.000000,2,5,0.788127,10,0.023000,0.782609,0.785714,6.832210,0.022169,0
+mistral7b_v03,morehopqa,whitebox,1000,977,4.709314,5.000000,2,5,0.788127,10,0.023000,0.782609,0.785714,,,0

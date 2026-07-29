@@ -1,0 +1,17 @@
+model,signal,scope,n_points,spearman_rho,p_value
+llama31_8b,blackbox,overall,12,-0.713287,0.009202
+llama31_8b,blackbox,triviaqa,4,-0.400000,0.600000
+llama31_8b,blackbox,nqopen,4,-0.200000,0.800000
+llama31_8b,blackbox,morehopqa,4,0.000000,1.000000
+llama31_8b,whitebox,overall,12,-0.720280,0.008240
+llama31_8b,whitebox,triviaqa,4,0.800000,0.200000
+llama31_8b,whitebox,nqopen,4,0.400000,0.600000
+llama31_8b,whitebox,morehopqa,4,0.200000,0.800000
+mistral7b_v03,blackbox,overall,12,-0.762238,0.003950
+mistral7b_v03,blackbox,triviaqa,4,-0.800000,0.200000
+mistral7b_v03,blackbox,nqopen,4,1.000000,0.000000
+mistral7b_v03,blackbox,morehopqa,4,0.000000,1.000000
+mistral7b_v03,whitebox,overall,12,-0.724087,0.007749
+mistral7b_v03,whitebox,triviaqa,4,-0.316228,0.683772
+mistral7b_v03,whitebox,nqopen,4,-0.316228,0.683772
+mistral7b_v03,whitebox,morehopqa,4,0.737865,0.262135
